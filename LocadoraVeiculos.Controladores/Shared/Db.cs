@@ -19,7 +19,6 @@ namespace eAgenda.Controladores.Shared
 
         static Db()
         {
-            //ALTERAR AQUI -------------------------------------------------------------------------------------------------------------
             throw new NotImplementedException();
             bancoDeDados = ConfigurationManager.AppSettings["bancoDeDados"];
 
@@ -28,7 +27,6 @@ namespace eAgenda.Controladores.Shared
             nomeProvider = ConfigurationManager.ConnectionStrings[bancoDeDados].ProviderName;
 
             fabricaProvedor = DbProviderFactories.GetFactory(nomeProvider);
-            //ALTERAR AQUI -------------------------------------------------------------------------------------------------------------
         }
 
         public static int Insert(string sql, Dictionary<string, object> parameters)
@@ -185,14 +183,7 @@ namespace eAgenda.Controladores.Shared
 
         private static string AppendSelectIdentity(this string sql)
         {
-            switch (nomeProvider)
-            {
-                case "System.Data.SqlClient": return sql + ";SELECT SCOPE_IDENTITY()";
-
-                case "System.Data.SQLite": return sql + ";SELECT LAST_INSERT_ROWID()";
-
-                default: return sql;
-            }
+            return sql + ";SELECT SCOPE_IDENTITY()";
         }
 
         public static bool IsNullOrEmpty(this object value)
