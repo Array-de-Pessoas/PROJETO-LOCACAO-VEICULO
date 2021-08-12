@@ -5,7 +5,7 @@ namespace LocadoraVeiculos.Dominio.Shared
     public abstract class EntidadeBase
     {
         public int id;
-        public int Id { get => id; }
+        public int Id { get => id; set => id = value; }
 
         public abstract string Validar();
 
