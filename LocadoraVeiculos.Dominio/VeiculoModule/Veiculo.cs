@@ -9,6 +9,21 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
 {
     public class Veiculo : EntidadeBase
     {
+
+        string placa;
+        string cor;
+        string marca;
+        int ano;
+        string tipoCombustivel;
+        double quantidadeLitros;
+        int numeroPortas;
+        int capacidadeDePessoas;
+        string tamanhoPortaMalas;
+        //foto
+        int kilometragem;
+        int id_grupoVeiculo;
+        
+
         public override string Validar()
         {
 
