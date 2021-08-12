@@ -9,7 +9,7 @@
     [NumeroPortas]      INT             NOT NULL,
     [CapacidadePessoas] INT             NOT NULL,
     [TamanhoPortaMalas] VARCHAR (50)    NOT NULL,
-    [Foto]              IMAGE           NOT NULL,
+    [Foto]              IMAGE           NULL,
     [Kilometragem]      INT             NOT NULL,
     [IdGrupoVeiculos]   INT             NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),

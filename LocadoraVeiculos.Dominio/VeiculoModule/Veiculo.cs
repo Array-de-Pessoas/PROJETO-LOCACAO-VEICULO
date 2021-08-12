@@ -10,18 +10,18 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
     public class Veiculo : EntidadeBase
     {
 
-        string placa;
-        string cor;
-        string marca;
-        int ano;
-        string tipoCombustivel;
-        double quantidadeLitros;
-        int numeroPortas;
-        int capacidadeDePessoas;
-        string tamanhoPortaMalas;
-        //foto
-        int kilometragem;
-        int id_grupoVeiculo;
+      public string placa;
+      public string cor;
+      public string marca;
+      public int ano;
+      public string tipoCombustivel;
+      public double quantidadeLitros;
+      public int numeroPortas;
+      public int capacidadeDePessoas;
+      public string tamanhoPortaMalas;
+      //foto
+      public int kilometragem;
+      public int idGrupoVeiculo;
 
         public Veiculo(string placa, string cor, string marca, int ano, string tipoCombustivel, double quantidadeLitros, int numeroPortas, int capacidadeDePessoas, string tamanhoPortaMalas, int kilometragem, int id_grupoVeiculo)
         {
@@ -35,7 +35,7 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
             this.capacidadeDePessoas = capacidadeDePessoas;
             this.tamanhoPortaMalas = tamanhoPortaMalas;
             this.kilometragem = kilometragem;
-            this.id_grupoVeiculo = id_grupoVeiculo;
+            this.idGrupoVeiculo = id_grupoVeiculo;
         }
 
         public override string Validar()
@@ -76,7 +76,7 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
             {
                 return "Campo tamanho do porta-malas é obrigatório";
             }
-            else if (id_grupoVeiculo == 0)
+            else if (idGrupoVeiculo == 0)
             {
                 return "Campo grupo de veículo é obrigatório";
             }
