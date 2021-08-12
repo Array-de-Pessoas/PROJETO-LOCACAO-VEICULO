@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocadoraVeiculos.Tests.ClienteModule
+namespace LocadoraVeiculos.Tests.VeiculoModule
 {
     [TestClass]
-    public class ControladorClienteTest
+    public class ControladorVeiculoTest
     {
+
     }
 }

@@ -61,6 +61,7 @@ namespace LocadoraVeiculos.Dominio
             {
                 return "Endereço do cliente não pode ser nulo";
             }
+            return null;
         }
     }
 }
