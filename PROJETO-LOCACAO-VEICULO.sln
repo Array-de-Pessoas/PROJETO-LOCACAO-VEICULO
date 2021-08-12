@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraVeiculos.Controlado
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraVeiculos.WindowsForm", "LocadoraVeiculos.WindowsForm\LocadoraVeiculos.WindowsForm.csproj", "{06F3FC65-A81C-437B-A2D3-949E7CB17C8A}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LocadoraVeiculos.DataBase.SqlSever", "LocadoraVeiculos.DataBase.SqlSever\LocadoraVeiculos.DataBase.SqlSever.sqlproj", "{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,12 @@ Global
 		{06F3FC65-A81C-437B-A2D3-949E7CB17C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06F3FC65-A81C-437B-A2D3-949E7CB17C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06F3FC65-A81C-437B-A2D3-949E7CB17C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +54,7 @@ Global
 		{69E2FDD5-2BDF-4AEC-93CB-2C19C2200A60} = {B066717A-35BF-49B5-870F-3C90FB296C66}
 		{F69C3646-BA00-43C5-ACB4-F04C49D95725} = {7D2673AF-BEE6-48F7-9D0B-097D22B3A266}
 		{06F3FC65-A81C-437B-A2D3-949E7CB17C8A} = {7D2673AF-BEE6-48F7-9D0B-097D22B3A266}
+		{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E} = {7D2673AF-BEE6-48F7-9D0B-097D22B3A266}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {339883FA-86C6-4BA5-AE1C-437FD0527FF6}
