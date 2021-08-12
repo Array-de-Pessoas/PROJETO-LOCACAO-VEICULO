@@ -10,17 +10,12 @@ using System.Windows.Forms;
 
 namespace LocadoraVeiculos.WindowsForm
 {
-    public partial class TelaPrincipal : Form
+    public partial class LoginForm : Form
     {
-        public TelaPrincipal()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
-        private void btnAcessar_Click(object sender, EventArgs e)
-        {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Visible = true;
-        }
     }
 }

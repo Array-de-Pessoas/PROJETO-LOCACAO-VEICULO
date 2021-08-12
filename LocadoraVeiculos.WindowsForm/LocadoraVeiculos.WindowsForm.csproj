@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelaPrincipalCadastros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TelaPrincipalCadastros.Designer.cs">
+      <DependentUpon>TelaPrincipalCadastros.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,7 +80,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TelaPrincipal.resx">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPrincipalCadastros.resx">
+      <DependentUpon>TelaPrincipalCadastros.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -83,6 +105,42 @@
     <Folder Include="Features\" />
     <Folder Include="Libraries\" />
     <Folder Include="Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn Opções.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem Acessar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Only the color blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usúario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Senha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new contato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Linha de separação.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novo botão adicionar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
