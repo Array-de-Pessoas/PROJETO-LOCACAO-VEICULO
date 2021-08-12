@@ -13,51 +13,51 @@ namespace LocadoraVeiculos.Controladores.FuncionarioModule
     public class ControladorFuncionario : Controlador<Funcionario>
     {
         private const string sqlInserirFuncionario =
-            @"INSERT INTO TBCONTATO 
+            @"INSERT INTO TBFUNCIONARIO 
 	                (
-		                [NOME], 
-		                [EMAIL], 
-		                [TELEFONE],
-                        [CARGO], 
-		                [EMPRESA]
+		                [Nome], 
+		                [Usuario], 
+		                [Senha],
+                        [DataEntrada], 
+		                [Salario]
 	                ) 
 	                VALUES
 	                (
-                        @NOME, 
-                        @EMAIL,
-                        @TELEFONE,
-		                @CARGO, 
-		                @EMPRESA
+                        @Nome, 
+                        @Usuario,
+                        @Senha,
+		                @DataEntrada, 
+		                @Salario
 	                )";
 
         private const string sqlEditarFuncionario =
-            @"UPDATE TBCONTATO
+            @"UPDATE TBFUNCIONARIO
                     SET
-                        [NOME] = @NOME,
-		                [EMAIL] = @EMAIL, 
-		                [TELEFONE] = @TELEFONE,
-                        [CARGO] = @CARGO,
-                        [EMPRESA] = @EMPRESA
+                        [Nome] = @Nome,
+		                [Usuario] = @Usuario, 
+		                [Senha] = @Senha,
+                        [DataEntrada] = @DataEntrada,
+                        [Salario] = @Salario
                     WHERE 
                         ID = @ID";
 
         private const string sqlExcluirFuncionario =
             @"DELETE 
 	                FROM
-                        TBCONTATO
+                        TBFUNCIONARIO
                     WHERE 
                         ID = @ID";
 
         private const string sqlSelecionarFuncionarioPorId =
             @"SELECT
-                        [ID],
-		                [NOME], 
-		                [EMAIL], 
-		                [TELEFONE],
-                        [CARGO], 
-		                [EMPRESA]
+                        [Id],
+		                [Nome], 
+		                [Usuario], 
+		                [Senha],
+                        [DataEntrada], 
+		                [Salario]
 	                FROM
-                        TBCONTATO
+                        TBFUNCIONARIO
                     WHERE 
                         ID = @ID";
 
@@ -70,13 +70,13 @@ namespace LocadoraVeiculos.Controladores.FuncionarioModule
                         [CARGO], 
 		                [EMPRESA]
 	                FROM
-                        TBCONTATO ORDER BY CARGO;";
+                        TBFUNCIONARIO ORDER BY Nome;";
 
         private const string sqlExisteFuncionario =
             @"SELECT 
                 COUNT(*) 
             FROM 
-                [TBCONTATO]
+                [TBFUNCIONARIO]
             WHERE 
                 [ID] = @ID";
 
