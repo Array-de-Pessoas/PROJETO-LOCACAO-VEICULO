@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraVeiculos.Dominio", "LocadoraVeiculos.Dominio\LocadoraVeiculos.Dominio.csproj", "{FA47A745-B014-4153-B064-3E9AC4F7EBF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B066717A-35BF-49B5-870F-3C90FB296C66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7D2673AF-BEE6-48F7-9D0B-097D22B3A266}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraVeiculos.Tests", "LocadoraVeiculos.Tests\LocadoraVeiculos.Tests.csproj", "{69E2FDD5-2BDF-4AEC-93CB-2C19C2200A60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraVeiculos.Controladores", "LocadoraVeiculos.Controladores\LocadoraVeiculos.Controladores.csproj", "{F69C3646-BA00-43C5-ACB4-F04C49D95725}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraVeiculos.WindowsForm", "LocadoraVeiculos.WindowsForm\LocadoraVeiculos.WindowsForm.csproj", "{06F3FC65-A81C-437B-A2D3-949E7CB17C8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA47A745-B014-4153-B064-3E9AC4F7EBF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA47A745-B014-4153-B064-3E9AC4F7EBF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA47A745-B014-4153-B064-3E9AC4F7EBF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA47A745-B014-4153-B064-3E9AC4F7EBF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E2FDD5-2BDF-4AEC-93CB-2C19C2200A60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E2FDD5-2BDF-4AEC-93CB-2C19C2200A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E2FDD5-2BDF-4AEC-93CB-2C19C2200A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E2FDD5-2BDF-4AEC-93CB-2C19C2200A60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69C3646-BA00-43C5-ACB4-F04C49D95725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69C3646-BA00-43C5-ACB4-F04C49D95725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69C3646-BA00-43C5-ACB4-F04C49D95725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69C3646-BA00-43C5-ACB4-F04C49D95725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F3FC65-A81C-437B-A2D3-949E7CB17C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F3FC65-A81C-437B-A2D3-949E7CB17C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F3FC65-A81C-437B-A2D3-949E7CB17C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F3FC65-A81C-437B-A2D3-949E7CB17C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA47A745-B014-4153-B064-3E9AC4F7EBF7} = {7D2673AF-BEE6-48F7-9D0B-097D22B3A266}
+		{69E2FDD5-2BDF-4AEC-93CB-2C19C2200A60} = {B066717A-35BF-49B5-870F-3C90FB296C66}
+		{F69C3646-BA00-43C5-ACB4-F04C49D95725} = {7D2673AF-BEE6-48F7-9D0B-097D22B3A266}
+		{06F3FC65-A81C-437B-A2D3-949E7CB17C8A} = {7D2673AF-BEE6-48F7-9D0B-097D22B3A266}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {339883FA-86C6-4BA5-AE1C-437FD0527FF6}
+	EndGlobalSection
+EndGlobal
