@@ -19,6 +19,7 @@ namespace LocadoraVeiculos.Dominio
         string CNH { get; set; }
         string NomeDoCondutor { get; set; }
         DateTime DataValidadeCNH { get; set; }
+
         //cliente não e o condutor
         public Cliente(string NomeCliente, string Endereco, string Telefone, string CPFDoCliente, string CNPJ, string CPFDoCondutor, string RGDoCondutor, string CNH, string NomeDoCondutor, DateTime DataValidadeCNH)
         {
@@ -49,6 +50,8 @@ namespace LocadoraVeiculos.Dominio
 
         public override string Validar()
         {
+            string resultadoValidacao = "";
+
             if (string.IsNullOrEmpty(NomeCliente))
             {
                 return "Nome do cliente não pode ser nulo";
@@ -61,6 +64,8 @@ namespace LocadoraVeiculos.Dominio
             {
                 return "Endereço do cliente não pode ser nulo";
             }
+
+            return resultadoValidacao;
         }
     }
 }

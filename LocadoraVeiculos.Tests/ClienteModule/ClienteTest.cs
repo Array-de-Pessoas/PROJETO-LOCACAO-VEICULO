@@ -19,7 +19,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveRetornarInvalido()
         {
-            Cliente cliente = new Cliente();
+            //Cliente cliente = new Cliente();
 
         }
     }

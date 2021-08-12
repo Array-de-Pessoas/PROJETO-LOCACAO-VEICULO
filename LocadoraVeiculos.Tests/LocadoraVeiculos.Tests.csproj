@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="ClienteModule\ClienteTest.cs" />
     <Compile Include="ClienteModule\ControladorClienteTest.cs" />
+    <Compile Include="FuncionarioModule\FuncionarioTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VeiculoModule\ControladorContato.cs" />
     <Compile Include="VeiculoModule\VeiculoTest.cs" />
