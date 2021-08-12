@@ -63,6 +63,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Balão_de_login {
+            get {
+                object obj = ResourceManager.GetObject("Balão_de_login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Btn_Opções {
             get {
                 object obj = ResourceManager.GetObject("Btn_Opções", resourceCulture);
@@ -96,6 +106,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Imagem_Acessar {
             get {
                 object obj = ResourceManager.GetObject("Imagem_Acessar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagem_conta {
+            get {
+                object obj = ResourceManager.GetObject("imagem_conta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,36 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Novo_botão_adicionar {
             get {
                 object obj = ResourceManager.GetObject("Novo_botão_adicionar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Novo_botão_editar {
+            get {
+                object obj = ResourceManager.GetObject("Novo_botão_editar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Novo_botão_excluir {
+            get {
+                object obj = ResourceManager.GetObject("Novo_botão_excluir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Novo_botão_filtro {
+            get {
+                object obj = ResourceManager.GetObject("Novo_botão_filtro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -22,5 +22,13 @@ namespace LocadoraVeiculos.WindowsForm
             LoginForm loginForm = new LoginForm();
             loginForm.Visible = true;
         }
+
+        public void MudarPannel()
+        {
+            panelTelaPrincipal.Controls.Remove(ImagemInicio);
+            panelTelaPrincipal.Controls.Add(new TelaPrincipalCadastros());
+            this.Show( new TelaPrincipalCadastros());
+            btnAcessar.Visible = false;
+        }
     }
 }

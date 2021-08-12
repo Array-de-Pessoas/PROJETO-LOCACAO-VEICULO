@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace LocadoraVeiculos.WindowsForm
 {
-    public partial class LoginForm : Form
+    public partial class MostrarConta : UserControl
     {
-        public LoginForm()
+        public MostrarConta()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            TelaPrincipal telaPrincipal = new TelaPrincipal();
-            telaPrincipal.MudarPannel();
-            
         }
     }
 }

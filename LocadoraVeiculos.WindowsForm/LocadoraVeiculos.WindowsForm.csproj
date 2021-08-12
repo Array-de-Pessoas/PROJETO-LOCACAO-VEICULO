@@ -55,6 +55,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MostrarConta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MostrarConta.Designer.cs">
+      <DependentUpon>MostrarConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarConta.resx">
+      <DependentUpon>MostrarConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -141,6 +150,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Novo botão adicionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novo botão excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novo botão editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novo botão filtro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Balão de login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem conta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
