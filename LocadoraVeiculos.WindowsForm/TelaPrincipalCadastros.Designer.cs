@@ -40,7 +40,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.gRUPODEVEÍCULOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpcaoCadastroServicos = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ImagemChave = new System.Windows.Forms.PictureBox();
             this.btnVizualizarConta = new System.Windows.Forms.Button();
             this.TxtCadastroSelecionado = new System.Windows.Forms.Label();
             this.ImagemLinha = new System.Windows.Forms.PictureBox();
@@ -50,10 +50,13 @@ namespace LocadoraVeiculos.WindowsForm
             this.ImagemLinha2 = new System.Windows.Forms.PictureBox();
             this.btnFiltro = new System.Windows.Forms.Button();
             this.panelTelaContaRegistradas = new System.Windows.Forms.Panel();
+            this.toolTipBtnAdicionar = new System.Windows.Forms.ToolTip(this.components);
+            this.panelTabelas = new System.Windows.Forms.Panel();
             this.StripMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagemChave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemLinha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemLinha2)).BeginInit();
+            this.panelTabelas.SuspendLayout();
             this.SuspendLayout();
             // 
             // StripMenu
@@ -100,7 +103,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.OpcaoCadastroFuncionarios.Font = new System.Drawing.Font("Bahnschrift Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpcaoCadastroFuncionarios.Name = "OpcaoCadastroFuncionarios";
-            this.OpcaoCadastroFuncionarios.Size = new System.Drawing.Size(224, 26);
+            this.OpcaoCadastroFuncionarios.Size = new System.Drawing.Size(214, 26);
             this.OpcaoCadastroFuncionarios.Text = "FUNCIONÁRIOS";
             this.OpcaoCadastroFuncionarios.Click += new System.EventHandler(this.OpcaoCadastroFuncionarios_Click);
             // 
@@ -108,7 +111,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.OpcaoCadastroClientes.Font = new System.Drawing.Font("Bahnschrift Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpcaoCadastroClientes.Name = "OpcaoCadastroClientes";
-            this.OpcaoCadastroClientes.Size = new System.Drawing.Size(224, 26);
+            this.OpcaoCadastroClientes.Size = new System.Drawing.Size(214, 26);
             this.OpcaoCadastroClientes.Text = "CLIENTES";
             this.OpcaoCadastroClientes.Click += new System.EventHandler(this.OpcaoCadastroClientes_Click);
             // 
@@ -118,7 +121,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.gRUPODEVEÍCULOSToolStripMenuItem});
             this.OpcaoCadastroVeiculos.Font = new System.Drawing.Font("Bahnschrift Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpcaoCadastroVeiculos.Name = "OpcaoCadastroVeiculos";
-            this.OpcaoCadastroVeiculos.Size = new System.Drawing.Size(224, 26);
+            this.OpcaoCadastroVeiculos.Size = new System.Drawing.Size(214, 26);
             this.OpcaoCadastroVeiculos.Text = "VEÍCULOS";
             this.OpcaoCadastroVeiculos.Click += new System.EventHandler(this.OpcaoCadastroVeiculos_Click);
             // 
@@ -133,7 +136,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.OpcaoCadastroServicos.Font = new System.Drawing.Font("Bahnschrift Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpcaoCadastroServicos.Name = "OpcaoCadastroServicos";
-            this.OpcaoCadastroServicos.Size = new System.Drawing.Size(224, 26);
+            this.OpcaoCadastroServicos.Size = new System.Drawing.Size(214, 26);
             this.OpcaoCadastroServicos.Text = "SERVIÇOS";
             this.OpcaoCadastroServicos.Click += new System.EventHandler(this.OpcaoCadastroServicos_Click);
             // 
@@ -143,15 +146,15 @@ namespace LocadoraVeiculos.WindowsForm
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // pictureBox1
+            // ImagemChave
             // 
-            this.pictureBox1.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Chave;
-            this.pictureBox1.Location = new System.Drawing.Point(484, 194);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(275, 291);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.ImagemChave.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Chave;
+            this.ImagemChave.Location = new System.Drawing.Point(276, 169);
+            this.ImagemChave.Name = "ImagemChave";
+            this.ImagemChave.Size = new System.Drawing.Size(275, 291);
+            this.ImagemChave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImagemChave.TabIndex = 1;
+            this.ImagemChave.TabStop = false;
             // 
             // btnVizualizarConta
             // 
@@ -196,7 +199,9 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(163, 45);
             this.btnAdicionar.TabIndex = 5;
+            this.toolTipBtnAdicionar.SetToolTip(this.btnAdicionar, "swswswsw");
             this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // btnEditar
             // 
@@ -210,6 +215,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnEditar.Size = new System.Drawing.Size(163, 45);
             this.btnEditar.TabIndex = 6;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -222,6 +228,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnExcluir.Size = new System.Drawing.Size(163, 45);
             this.btnExcluir.TabIndex = 7;
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // ImagemLinha2
             // 
@@ -258,12 +265,22 @@ namespace LocadoraVeiculos.WindowsForm
             this.panelTelaContaRegistradas.Size = new System.Drawing.Size(163, 154);
             this.panelTelaContaRegistradas.TabIndex = 10;
             // 
+            // panelTabelas
+            // 
+            this.panelTabelas.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
+            this.panelTabelas.Controls.Add(this.ImagemChave);
+            this.panelTabelas.Location = new System.Drawing.Point(226, 3);
+            this.panelTabelas.Name = "panelTabelas";
+            this.panelTabelas.Size = new System.Drawing.Size(878, 641);
+            this.panelTabelas.TabIndex = 11;
+            // 
             // TelaPrincipalCadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.panelTabelas);
             this.Controls.Add(this.panelTelaContaRegistradas);
             this.Controls.Add(this.btnFiltro);
             this.Controls.Add(this.ImagemLinha2);
@@ -273,16 +290,16 @@ namespace LocadoraVeiculos.WindowsForm
             this.Controls.Add(this.ImagemLinha);
             this.Controls.Add(this.TxtCadastroSelecionado);
             this.Controls.Add(this.btnVizualizarConta);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.StripMenu);
             this.DoubleBuffered = true;
             this.Name = "TelaPrincipalCadastros";
             this.Size = new System.Drawing.Size(1107, 647);
             this.StripMenu.ResumeLayout(false);
             this.StripMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagemChave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemLinha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemLinha2)).EndInit();
+            this.panelTabelas.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,7 +316,7 @@ namespace LocadoraVeiculos.WindowsForm
         private System.Windows.Forms.ToolStripMenuItem OpcaoCadastroClientes;
         private System.Windows.Forms.ToolStripMenuItem OpcaoCadastroVeiculos;
         private System.Windows.Forms.ToolStripMenuItem OpcaoCadastroServicos;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ImagemChave;
         private System.Windows.Forms.Button btnVizualizarConta;
         private System.Windows.Forms.Label TxtCadastroSelecionado;
         private System.Windows.Forms.PictureBox ImagemLinha;
@@ -310,5 +327,7 @@ namespace LocadoraVeiculos.WindowsForm
         private System.Windows.Forms.Button btnFiltro;
         private System.Windows.Forms.Panel panelTelaContaRegistradas;
         private System.Windows.Forms.ToolStripMenuItem gRUPODEVEÍCULOSToolStripMenuItem;
+        private System.Windows.Forms.ToolTip toolTipBtnAdicionar;
+        private System.Windows.Forms.Panel panelTabelas;
     }
 }

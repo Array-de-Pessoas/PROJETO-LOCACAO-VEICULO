@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace LocadoraVeiculos.WindowsForm
 {
     public partial class TelaPrincipalCadastros : UserControl
     {
+        private ICadastravel operacoes;
+
         public TelaPrincipalCadastros()
         {
             InitializeComponent();
@@ -26,6 +29,7 @@ namespace LocadoraVeiculos.WindowsForm
             btnFiltro.Visible = false;
             ImagemLinha.Visible = false;
             ImagemLinha2.Visible = false;
+            TxtCadastroSelecionado.Text = "";
         }
 
         public void MostrarOpcoes()
@@ -38,24 +42,28 @@ namespace LocadoraVeiculos.WindowsForm
             ImagemLinha2.Visible = true;
         }
 
-        private void OpcaoCadastroFuncionarios_Click(object sender, EventArgs e)
+        public void OpcaoCadastroFuncionarios_Click(object sender, EventArgs e)
         {
+            TxtCadastroSelecionado.Text = "FUNCIONÁRIOS";
             MostrarOpcoes();
         }
 
         private void OpcaoCadastroClientes_Click(object sender, EventArgs e)
         {
             MostrarOpcoes();
+            TxtCadastroSelecionado.Text = "CLIENTES";
         }
 
         private void OpcaoCadastroVeiculos_Click(object sender, EventArgs e)
         {
             MostrarOpcoes();
+            
         }
 
         private void OpcaoCadastroServicos_Click(object sender, EventArgs e)
         {
             MostrarOpcoes();
+            TxtCadastroSelecionado.Text = "SERVIÇOS";
         }
 
         private void btnVizualizarConta_Click(object sender, EventArgs e)
@@ -65,8 +73,41 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void gRUPODEVEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GrupoDeVeiculosForm grupoDeVeiculos = new GrupoDeVeiculosForm();
-            grupoDeVeiculos.Visible = true;
+            TxtCadastroSelecionado.Text = "GRUPO DE VEÍCULOS";
+            MostrarOpcoes();
+            ImagemChave.Visible = false;
+            ConfigurarPanelRegistros();
+            operacoes = new OperacoesGrupoVeiculos();
+        }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            if (TxtCadastroSelecionado.Text == "GRUPO DE VEÍCULOS")
+            {
+                operacoes.InserirNovoRegistro();
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (TxtCadastroSelecionado.Text == "GRUPO DE VEÍCULOS")
+            {
+                operacoes.EditarRegistro();
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (TxtCadastroSelecionado.Text == "GRUPO DE VEÍCULOS")
+            {
+                operacoes.ExcluirRegistro();
+            }
+        }
+
+        private void ConfigurarPanelRegistros()
+        {
+            panelTabelas.Controls.Clear();
+            panelTabelas.Controls.Add(new TabelaGrupoVeiculos());
         }
     }
 }

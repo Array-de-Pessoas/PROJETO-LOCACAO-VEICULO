@@ -55,6 +55,9 @@
     <Compile Include="GrupoDeVeiculosForm.Designer.cs">
       <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
+    <Compile Include="ICadastravel.cs" />
+    <Compile Include="IConfiguracaoToolBox.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +69,13 @@
     </Compile>
     <Compile Include="MostrarConta.Designer.cs">
       <DependentUpon>MostrarConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperacoesGrupoVeiculos.cs" />
+    <Compile Include="TabelaGrupoVeiculos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabelaGrupoVeiculos.Designer.cs">
+      <DependentUpon>TabelaGrupoVeiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
@@ -100,6 +110,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TabelaGrupoVeiculos.resx">
+      <DependentUpon>TabelaGrupoVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +193,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fuquinha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LocadoraVeiculos.Controladores\LocadoraVeiculos.Controladores.csproj">
+      <Project>{F69C3646-BA00-43C5-ACB4-F04C49D95725}</Project>
+      <Name>LocadoraVeiculos.Controladores</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LocadoraVeiculos.Dominio\LocadoraVeiculos.Dominio.csproj">
+      <Project>{fa47a745-b014-4153-b064-3e9ac4f7ebf7}</Project>
+      <Name>LocadoraVeiculos.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

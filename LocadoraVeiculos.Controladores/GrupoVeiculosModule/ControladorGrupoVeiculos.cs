@@ -45,12 +45,29 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
 
         public override string Editar(int id, GrupoVeiculos registro)
         {
-            throw new NotImplementedException();
+            string resultadoValidacao = registro.Validar();
+
+            if (resultadoValidacao == "ESTA_VALIDO")
+            {
+                registro.Id = id;
+                Db.Update(sqlEditarGrupoVeiculos, ObtemParametrosGrupoVeiculos(registro));
+            }
+
+            return resultadoValidacao;
         }
 
         public override bool Excluir(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Db.Delete(sqlExcluirGrupoVeiculos, AdicionarParametro("ID", id));
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public override bool Existe(int id)
