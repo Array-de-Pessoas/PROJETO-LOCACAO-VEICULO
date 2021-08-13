@@ -22,7 +22,7 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
                 [Ano],
                 [TipoCombustivel],
                 [QuantidadeLitros], 
-                [NumerosPortas], 
+                [NumeroPortas], 
                 [CapacidadePessoas], 
                 [TamanhoPortaMalas],
                 [Foto],
@@ -30,16 +30,17 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
                 [IdGrupoVeiculos]
                 )
             VALUES(
-                @Placa
-                @Cor
-                @Marca
-                @Ano
-                @TipoCombustivel
-                @NumeroPortas
-                @CapacidadePessoas
-                @TamanhoPortaMalas
-                @Foto
-                @Kilometragem
+                @Placa,
+                @Cor,
+                @Marca,
+                @Ano,
+                @TipoCombustivel,
+                @QuantidadeLitros,
+                @NumeroPortas,
+                @CapacidadePessoas,
+                @TamanhoPortaMalas,
+                @Foto,
+                @Kilometragem,
                 @IdGrupoVeiculos)
             ";
 
@@ -57,7 +58,7 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
                         [Ano] = @Ano,
                         [TipoCombustivel] = @TipoCombustivel,
                         [QuantidadeLitros] = @QuantidadeLitros, 
-                        [NumerosPortas] = @NumeroPortas, 
+                        [NumeroPortas] = @NumeroPortas, 
                         [CapacidadePessoas] = @CapacidadePessoas, 
                         [TamanhoPortaMalas] = @TamanhoPortaMalas,
                         [Foto] = @Foto,
