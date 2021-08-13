@@ -19,7 +19,6 @@ namespace eAgenda.Controladores.Shared
 
         static Db()
         {
-            throw new NotImplementedException();
             bancoDeDados = ConfigurationManager.AppSettings["bancoDeDados"];
 
             connectionString = ConfigurationManager.ConnectionStrings[bancoDeDados].ConnectionString;

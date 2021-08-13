@@ -63,12 +63,12 @@ namespace LocadoraVeiculos.Controladores.FuncionarioModule
 
         private const string sqlSelecionarTodosFuncionarios =
             @"SELECT
-                        [ID],
-		                [NOME], 
-		                [EMAIL], 
-		                [TELEFONE],
-                        [CARGO], 
-		                [EMPRESA]
+                        [Id],
+		                [Nome], 
+		                [Usuario], 
+		                [Senha],
+                        [DataEntrada], 
+		                [Salario]
 	                FROM
                         TBFUNCIONARIO ORDER BY Nome;";
 
