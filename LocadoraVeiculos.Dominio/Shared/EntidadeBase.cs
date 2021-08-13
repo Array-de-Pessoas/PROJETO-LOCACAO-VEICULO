@@ -4,8 +4,10 @@ namespace LocadoraVeiculos.Dominio.Shared
 {
     public abstract class EntidadeBase
     {
-        public int id;
-        public int Id { get => id; }
+        public int Id;
+        public string grupo;
+        
+        public string Grupo { get => grupo;}
 
         public abstract string Validar();
 
