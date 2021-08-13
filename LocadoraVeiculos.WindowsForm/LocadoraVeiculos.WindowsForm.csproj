@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GrupoDeVeiculosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrupoDeVeiculosForm.Designer.cs">
+      <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="TelaPrincipalCadastros.Designer.cs">
       <DependentUpon>TelaPrincipalCadastros.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GrupoDeVeiculosForm.resx">
+      <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +174,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imagem conta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fundo Tela Cadastro Grupo de Veiculos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fuquinha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

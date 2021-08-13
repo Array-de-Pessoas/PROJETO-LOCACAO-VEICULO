@@ -19,15 +19,13 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void btnAcessar_Click(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Visible = true;
+            MudarPannel();
         }
 
         public void MudarPannel()
         {
             panelTelaPrincipal.Controls.Remove(ImagemInicio);
             panelTelaPrincipal.Controls.Add(new TelaPrincipalCadastros());
-            this.Show( new TelaPrincipalCadastros());
             btnAcessar.Visible = false;
         }
     }

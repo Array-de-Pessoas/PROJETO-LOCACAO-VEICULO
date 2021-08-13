@@ -57,5 +57,16 @@ namespace LocadoraVeiculos.WindowsForm
         {
             MostrarOpcoes();
         }
+
+        private void btnVizualizarConta_Click(object sender, EventArgs e)
+        {
+            panelTelaContaRegistradas.Controls.Add(new MostrarConta());
+        }
+
+        private void gRUPODEVEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GrupoDeVeiculosForm grupoDeVeiculos = new GrupoDeVeiculosForm();
+            grupoDeVeiculos.Visible = true;
+        }
     }
 }
