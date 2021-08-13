@@ -38,6 +38,8 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
             this.idGrupoVeiculo = id_grupoVeiculo;
         }
 
+       
+
         public override string Validar()
         {
             if (string.IsNullOrEmpty(placa))

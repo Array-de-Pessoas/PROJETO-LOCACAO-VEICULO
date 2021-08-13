@@ -13,6 +13,7 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
 {
     public class ControladorVeiculo : Controlador<Veiculo>
     {
+        #region scriptsSQL
         private const string sqlInserirVeiculo =
             @"INSERT INTO TBVEICULO(
                 [Placa],
@@ -44,22 +45,78 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
 
         private const string sqlSelecionarVeiculoPorId =
             @"
-                SELECT * FROM TBVEICULO WHERE [Id] = @ID
+                SELECT * FROM TBVEICULO WHERE [Id] = @Id
               ";
 
+        private const string sqlEditarVeiculo =
+            @"UPDATE TBVEICULO
+                    SET
+                        [Placa] = @Placa,
+                        [Cor] = @Cor,
+                        [Marca] = @Marca,
+                        [Ano] = @Ano,
+                        [TipoCombustivel] = @TipoCombustivel,
+                        [QuantidadeLitros] = @QuantidadeLitros, 
+                        [NumerosPortas] = @NumeroPortas, 
+                        [CapacidadePessoas] = @CapacidadePessoas, 
+                        [TamanhoPortaMalas] = @TamanhoPortaMalas,
+                        [Foto] = @Foto,
+                        [Kilometragem] = @Kilometragem,
+                        [IdGrupoVeiculos] = @IdGrupoVeiculos                     
+                    WHERE 
+                        [Id] = @Id";
+
+        private const string sqlExcluirFuncionario =
+           @"DELETE 
+	                FROM
+                        TBVEICULO
+                    WHERE 
+                        [Id] = @Id";
+
+        private const string sqlSelecionarTodosFuncionarios =
+           @"SELECT *
+	                FROM
+                        TBVEICULO ORDER BY [Ano];";
+
+        private const string sqlExisteVeiculo =
+           @"SELECT 
+                COUNT(*) 
+            FROM 
+                [TBVEICULO]
+            WHERE 
+                [Id] = @Id";
+
+        #endregion
         public override string Editar(int id, Veiculo registro)
         {
-            throw new NotImplementedException();
+            string resultadoValidacao = registro.Validar();
+
+            if (resultadoValidacao == "VALIDO")
+            {
+                registro.id = id;
+                Db.Update(sqlEditarVeiculo, ObtemParametrosVeiculo(registro));
+            }
+
+            return resultadoValidacao;
         }
 
         public override bool Excluir(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Db.Delete(sqlExcluirFuncionario, AdicionarParametro("Id", id));
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public override bool Existe(int id)
         {
-            throw new NotImplementedException();
+            return Db.Exists(sqlExisteVeiculo, AdicionarParametro("Id", id));
         }
 
         public override string InserirNovo(Veiculo registro)
@@ -79,7 +136,7 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
 
         public override List<Veiculo> SelecionarTodos()
         {
-            throw new NotImplementedException();
+            return Db.GetAll(sqlSelecionarTodosFuncionarios, ConverterEmVeiculo);
         }
 
         private Dictionary<string, object> ObtemParametrosVeiculo(Veiculo veiculo)
