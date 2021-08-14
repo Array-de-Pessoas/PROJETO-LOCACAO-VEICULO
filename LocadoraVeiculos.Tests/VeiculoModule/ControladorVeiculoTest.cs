@@ -9,16 +9,19 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace LocadoraVeiculos.Tests.VeiculoModule
 {
     [TestClass]
-    public class ControladorVeiculoTest
+    public partial class ControladorVeiculoTest
     {
         ControladorVeiculo controladorVeiculo;
 
         public ControladorVeiculoTest()
-        {        
+        {
+            ResetaTabela();
+        
             controladorVeiculo = new ControladorVeiculo();
         }
 
@@ -26,7 +29,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         {
             SqlConnection con;
             SqlCommand comando;
-            string enderecoDeConexao = @"Data Source=(LocalDb)\MSSqlLocalDB;Initial Catalog=DBLocadoraVeiculo;Integrated Security=True;Pooling=False";
+            string enderecoDeConexao = @"Data Source=(LocalDb)\mssqlLocalDB;Initial Catalog=DBLocalVeiculo;Integrated Security=True;Pooling=False";
             //abre conexao
             con = new SqlConnection(enderecoDeConexao);
             con.Open();
@@ -44,47 +47,56 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         public void deveCadastrarVeiculoNoBanco()
         {
             //arrange
-            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", 300, 4, 5, "G", 10000, 1);
+            //Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+          
+            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", null, 300, 4, 5, "G", 10000, 1);
             //act
             controladorVeiculo.InserirNovo(veiculo);
             //assert
-            var veiculoEncontrado = controladorVeiculo.SelecionarPorId(veiculo.id);
-            veiculoEncontrado.Should().Be(veiculo);
+            var veiculoEncontrado = controladorVeiculo.SelecionarPorId(veiculo.Id);
+            Assert.AreEqual(veiculo.placa, veiculoEncontrado.placa);
 
         }
         [TestMethod]
         public void deveEditarVeiculoNoBanco()
         {
             //arrange
-            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", 300, 4, 5, "G", 10000, 1);
-            var veiculoEditado = new Veiculo("ADA-1000", "Preto", "Ford", 2015, "Gasolina", 300, 4, 5, "G", 10000, 1);
+            Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+
+            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, 1);
+            var veiculoEditado = new Veiculo("ADA-1000", "Preto", "Ford", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, 1);
             //act
             controladorVeiculo.InserirNovo(veiculo);
-            controladorVeiculo.Editar(0,veiculoEditado);
+            controladorVeiculo.Editar(1,veiculoEditado);
             //assert
-            var veiculoEncontrado = controladorVeiculo.SelecionarPorId(0);
-            veiculoEncontrado.Should().Be(veiculoEditado);
+            var veiculoEncontrado = controladorVeiculo.SelecionarPorId(1);
+            Assert.AreEqual(veiculoEditado.placa, veiculoEncontrado.placa);
+          
 
         }
         [TestMethod]
         public void deveExcluirVeiculoNoBanco()
         {
             //arrange
-            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", 300, 4, 5, "G", 10000, 1);
+            Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+
+            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, 1);
          
             //act
             controladorVeiculo.InserirNovo(veiculo);
-            controladorVeiculo.Excluir(0);
+            controladorVeiculo.Excluir(1);
             //assert
-            var veiculoEncontrado = controladorVeiculo.SelecionarPorId(0);
-            veiculoEncontrado.Should().Be(null);
+            var veiculoEncontrado = controladorVeiculo.SelecionarPorId(1);
+            Assert.IsNull(veiculoEncontrado);
         }
         [TestMethod]
         public void deveSelecionarTodosVeiculosDoBanco()
         {
             //arrange
-            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", 300, 4, 5, "G", 10000, 1);
-            var veiculo2 = new Veiculo("ADA-1000", "Preto", "Ford", 2015, "Gasolina", 300, 4, 5, "G", 10000, 1);
+            Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+
+            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, 1);
+            var veiculo2 = new Veiculo("ADA-1000", "Preto", "Ford", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, 1);
             //act
             controladorVeiculo.InserirNovo(veiculo);
             controladorVeiculo.InserirNovo(veiculo2);
@@ -96,10 +108,12 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         public void deveVerificarSeExisteVeiculoNoBanco()
         {
             //arrange
-            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", 300, 4, 5, "G", 10000, 1);       
+            Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+
+            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, 1);       
             //act
             controladorVeiculo.InserirNovo(veiculo);
-            var resultado = controladorVeiculo.Existe(0);
+            var resultado = controladorVeiculo.Existe(1);
             //assert
             resultado.Should().Be(true);
         }

@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,9 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         public void deveRetornarVeiculoInvalido()
         {
             //arrange
-            Veiculo veiculoInvalido = new Veiculo("","Azul", "FIAT", 2015, "Gasolina", 300, 4, 5, "G", 10000, 1);
+            Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+         
+            Veiculo veiculoInvalido = new Veiculo("","Azul", "FIAT", 2015, "Gasolina",foto, 300, 4, 5, "G", 10000, 1);
             //act
             string resultado = veiculoInvalido.Validar();
             //assert
@@ -31,7 +34,8 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         public void deveRetornarVeiculoValido()
         {
             //arrange
-            Veiculo veiculoInvalido = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", 300, 4, 5, "G", 10000, 1);
+            Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+            Veiculo veiculoInvalido = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",foto, 300, 4, 5, "G", 10000, 1);
             //act
             string resultado = veiculoInvalido.Validar();
             //assert

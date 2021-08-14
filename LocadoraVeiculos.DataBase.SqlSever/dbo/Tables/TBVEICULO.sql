@@ -9,10 +9,12 @@
     [NumeroPortas]      INT             NOT NULL,
     [CapacidadePessoas] INT             NOT NULL,
     [TamanhoPortaMalas] VARCHAR (50)    NOT NULL,
-    [Foto]              IMAGE           NULL,
+    [Foto]              NVARCHAR (50)   NULL,
     [Kilometragem]      INT             NOT NULL,
     [IdGrupoVeiculos]   INT             NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_TBVEICULO_TBGRUPOVEICULOS] FOREIGN KEY ([IdGrupoVeiculos]) REFERENCES [dbo].[TBGRUPOVEICULOS] ([Id])
 );
+
+
 
