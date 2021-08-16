@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LocadoraVeiculos.Controladores.VeiculoModule;
+using LocadoraVeiculos.Dominio.VeiculoModule;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace LocadoraVeiculos.WindowsForm.Feature.VeiculoModule
 {
     public partial class VeiculoForm : Form
     {
+        OpenFileDialog openFileDialog = new OpenFileDialog();
+        ControladorVeiculo controladorVeiculo = new ControladorVeiculo();
         public VeiculoForm()
         {
             InitializeComponent();
@@ -19,12 +23,37 @@ namespace LocadoraVeiculos.WindowsForm.Feature.VeiculoModule
 
         private void VeiculoForm_Load(object sender, EventArgs e)
         {
-
+            //List<Veiculo> veiculos = controladorVeiculo.SelecionarTodos();
+            //foreach (var item in veiculos)
+            //{
+            //    cbTipoVeiculo.Items.Insert(item.Id,item.ano);           
+            //}            
         }
 
-        private void pictureBox11_Click(object sender, EventArgs e)
+        private void btnAdicionarImagem_Click(object sender, EventArgs e)
         {
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                this.pictureBox.Image = Image.FromFile(openFileDialog.FileName);
+            }
+        }
 
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            string placa = txtPlaca.Text;
+            string cor = txtCor.Text;
+            string marca = txtMarca.Text;
+            int ano = Convert.ToInt32(txtAno.Text);
+            string tipoCombustivel = txtTipoCombustivel.Text;
+            Image image = pictureBox.Image;
+            double quantidadeLitros = Convert.ToDouble(txtQuantidadeLitros.Text);
+            int numeroPortas = Convert.ToInt32(txtPortas.Text);
+            int capacidadePessoas = Convert.ToInt32(txtCapacidadePessoas.Text);
+            string tamanhoPortaMalas = txtTamanhoPortaMalas.Text;
+            int kilometragem = Convert.ToInt32(txtKm.Text);
+            int id_grupoVeiculo = Convert.ToInt32(cbTipoVeiculo.SelectedIndex);
+            Veiculo veiculo = new Veiculo(placa,cor,marca,ano,tipoCombustivel,image,quantidadeLitros,numeroPortas,capacidadePessoas,tamanhoPortaMalas,kilometragem,id_grupoVeiculo);
+            controladorVeiculo.InserirNovo(veiculo);
         }
     }
 }

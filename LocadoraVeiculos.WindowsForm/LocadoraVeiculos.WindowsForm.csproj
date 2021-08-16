@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Feature\VeiculoModule\TabelaVeiculos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Feature\VeiculoModule\TabelaVeiculos.Designer.cs">
+      <DependentUpon>TabelaVeiculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Feature\VeiculoModule\VeiculoForm.Designer.cs">
       <DependentUpon>VeiculoForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Feature\VeiculoModule\TabelaVeiculos.resx">
+      <DependentUpon>TabelaVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -140,6 +149,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Placa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addImagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LocadoraVeiculos.Controladores\LocadoraVeiculos.Controladores.csproj">
+      <Project>{F69C3646-BA00-43C5-ACB4-F04C49D95725}</Project>
+      <Name>LocadoraVeiculos.Controladores</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LocadoraVeiculos.Dominio\LocadoraVeiculos.Dominio.csproj">
+      <Project>{FA47A745-B014-4153-B064-3E9AC4F7EBF7}</Project>
+      <Name>LocadoraVeiculos.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
