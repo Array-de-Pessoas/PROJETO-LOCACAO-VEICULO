@@ -15,10 +15,13 @@ namespace LocadoraVeiculos.WindowsForm
     {
         private ICadastravel operacoes;
 
+        public static TelaPrincipalCadastros Instancia;
+
         public TelaPrincipalCadastros()
         {
             InitializeComponent();
             ConfiguracoesDeInicio();
+            Instancia = this;
         }
 
         private void ConfiguracoesDeInicio()
@@ -74,10 +77,12 @@ namespace LocadoraVeiculos.WindowsForm
         private void gRUPODEVEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TxtCadastroSelecionado.Text = "GRUPO DE VEÍCULOS";
+           
             MostrarOpcoes();
             ImagemChave.Visible = false;
+            operacoes = new OperacoesGrupoVeiculos(new ControladorGrupoVeiculos());
             ConfigurarPanelRegistros();
-            operacoes = new OperacoesGrupoVeiculos();
+           
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -106,8 +111,13 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void ConfigurarPanelRegistros()
         {
+            UserControl tabela = operacoes.ObterTabela();
+
+            tabela.Dock = DockStyle.Fill;
+
             panelTabelas.Controls.Clear();
-            panelTabelas.Controls.Add(new TabelaGrupoVeiculos());
+
+            panelTabelas.Controls.Add(tabela);
         }
     }
 }

@@ -26,11 +26,24 @@ namespace LocadoraVeiculos.WindowsForm
             controladorGrupo = new ControladorGrupoVeiculos();
         }
 
+        public GrupoVeiculos GrupoVeiculos
+        {
+            get { return grupoVeiculos; }
+
+            set
+            {
+                grupoVeiculos = value;
+
+                TxtNomeGrupoVeiculos.Text = grupoVeiculos.Grupo;
+                
+            }
+        }
+
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            string grupo = TxtNomeGrupoVeiculos.Text;
+            string Grupo = TxtNomeGrupoVeiculos.Text;
 
-            grupoVeiculos = new GrupoVeiculos(grupo);
+            grupoVeiculos = new GrupoVeiculos(Grupo);
 
             string resultadoValidacao = grupoVeiculos.Validar();
 
@@ -41,6 +54,7 @@ namespace LocadoraVeiculos.WindowsForm
                 DialogResult = DialogResult.None;
             }
 
+            
         }
     }
 }

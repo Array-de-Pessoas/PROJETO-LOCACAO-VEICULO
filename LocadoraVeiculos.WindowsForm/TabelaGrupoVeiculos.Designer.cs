@@ -35,12 +35,16 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             // dataGridGrupoVeiculos
             // 
+            this.dataGridGrupoVeiculos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridGrupoVeiculos.BackgroundColor = System.Drawing.Color.White;
             this.dataGridGrupoVeiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridGrupoVeiculos.Location = new System.Drawing.Point(3, 3);
+            this.dataGridGrupoVeiculos.Location = new System.Drawing.Point(0, 3);
             this.dataGridGrupoVeiculos.Name = "dataGridGrupoVeiculos";
             this.dataGridGrupoVeiculos.RowHeadersWidth = 51;
             this.dataGridGrupoVeiculos.RowTemplate.Height = 24;
-            this.dataGridGrupoVeiculos.Size = new System.Drawing.Size(689, 597);
+            this.dataGridGrupoVeiculos.Size = new System.Drawing.Size(895, 643);
             this.dataGridGrupoVeiculos.TabIndex = 0;
             // 
             // TabelaGrupoVeiculos
@@ -49,7 +53,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridGrupoVeiculos);
             this.Name = "TabelaGrupoVeiculos";
-            this.Size = new System.Drawing.Size(695, 603);
+            this.Size = new System.Drawing.Size(885, 649);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGrupoVeiculos)).EndInit();
             this.ResumeLayout(false);
 

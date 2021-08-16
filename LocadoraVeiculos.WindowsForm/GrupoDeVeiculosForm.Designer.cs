@@ -33,12 +33,14 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnVoltar = new System.Windows.Forms.Button();
             this.ImagemFusca = new System.Windows.Forms.PictureBox();
             this.TxtNomeGrupoVeiculos = new System.Windows.Forms.TextBox();
+            this.TxtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemFusca)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGravar
             // 
             this.btnGravar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnGravar.Location = new System.Drawing.Point(228, 308);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(81, 47);
@@ -61,7 +63,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.ImagemFusca.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
             this.ImagemFusca.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Fuquinha;
-            this.ImagemFusca.Location = new System.Drawing.Point(129, 57);
+            this.ImagemFusca.Location = new System.Drawing.Point(128, 33);
             this.ImagemFusca.Name = "ImagemFusca";
             this.ImagemFusca.Size = new System.Drawing.Size(148, 132);
             this.ImagemFusca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -71,11 +73,20 @@ namespace LocadoraVeiculos.WindowsForm
             // TxtNomeGrupoVeiculos
             // 
             this.TxtNomeGrupoVeiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNomeGrupoVeiculos.Location = new System.Drawing.Point(76, 177);
+            this.TxtNomeGrupoVeiculos.Location = new System.Drawing.Point(75, 189);
             this.TxtNomeGrupoVeiculos.Multiline = true;
             this.TxtNomeGrupoVeiculos.Name = "TxtNomeGrupoVeiculos";
             this.TxtNomeGrupoVeiculos.Size = new System.Drawing.Size(261, 41);
             this.TxtNomeGrupoVeiculos.TabIndex = 3;
+            // 
+            // TxtId
+            // 
+            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtId.Location = new System.Drawing.Point(173, 156);
+            this.TxtId.Multiline = true;
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(53, 27);
+            this.TxtId.TabIndex = 4;
             // 
             // GrupoDeVeiculosForm
             // 
@@ -84,6 +95,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Fundo_Tela_Cadastro_Grupo_de_Veiculos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(408, 367);
+            this.Controls.Add(this.TxtId);
             this.Controls.Add(this.TxtNomeGrupoVeiculos);
             this.Controls.Add(this.ImagemFusca);
             this.Controls.Add(this.btnVoltar);
@@ -104,5 +116,6 @@ namespace LocadoraVeiculos.WindowsForm
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.PictureBox ImagemFusca;
         private System.Windows.Forms.TextBox TxtNomeGrupoVeiculos;
+        private System.Windows.Forms.TextBox TxtId;
     }
 }

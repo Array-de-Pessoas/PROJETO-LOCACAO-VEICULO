@@ -1,8 +1,9 @@
-﻿using eAgenda.Controladores.Shared;
+﻿using LocadoraVeiculos.Controladores.Shared;
 using LocadoraVeiculos.Controladores.Shared;
 using LocadoraVeiculos.Dominio.GrupoVeiculosModule;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
     public class ControladorGrupoVeiculos : Controlador<GrupoVeiculos>
     {
         private const string sqlInserirGrupoVeiculo =
-            @"INSERT INTO TBGRUPOVEICULOS
+            @"INSERT INTO [TBGRUPOVEICULOS]
                      (
                          [GRUPO]
                      )
@@ -29,9 +30,7 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
                         ID = @ID";
 
         private const string sqlExcluirGrupoVeiculos =
-            @"DELETE 
-	                FROM
-                        TBGRUPOVEICULOS
+            @"DELETE FROM [TBGRUPOVEICULOS]
                     WHERE 
                         ID = @ID";
 
@@ -42,6 +41,24 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
                 [TBGRUPOVEICULOS]
             WHERE 
                 [ID] = @ID";
+
+        private const string sqlSelecionarGrupoPorId =
+            @"SELECT 
+                [ID],
+                [GRUPO]      
+             FROM
+                [TBGRUPOVEICULOS]
+             WHERE 
+                [ID] = 0";
+
+        private const string sqlSelecionarTodosGruposVeiculos =
+            @"SELECT 
+                [ID],       
+                [GRUPO]     
+            FROM
+                [TBGRUPOVEICULOS] T";
+           
+
 
         public override string Editar(int id, GrupoVeiculos registro)
         {
@@ -72,7 +89,7 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
 
         public override bool Existe(int id)
         {
-            throw new NotImplementedException();
+            return Db.Exists(sqlExisteGrupoVeiculos, AdicionarParametro("ID", id));
         }
 
         public override string InserirNovo(GrupoVeiculos registro)
@@ -89,18 +106,29 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
 
         public override GrupoVeiculos SelecionarPorId(int id)
         {
-            throw new NotImplementedException();
+            return Db.Get(sqlSelecionarGrupoPorId, ConverterEmTarefa, AdicionarParametro("ID", id));
+        }
+
+        private GrupoVeiculos ConverterEmTarefa(IDataReader reader)
+        {
+            var grupo = Convert.ToString(reader["GRUPO"]);
+           
+            GrupoVeiculos Grupo = new GrupoVeiculos(grupo);
+
+            Grupo.Id = Convert.ToInt32(reader["ID"]);
+           
+            return Grupo;
         }
 
         public override List<GrupoVeiculos> SelecionarTodos()
         {
-            throw new NotImplementedException();
+            return Db.GetAll(sqlSelecionarTodosGruposVeiculos, ConverterEmTarefa);
         }
 
         private Dictionary<string, object> ObtemParametrosGrupoVeiculos(GrupoVeiculos registro)
         {
             var parametros = new Dictionary<string, object>();
-
+            
             parametros.Add("ID", registro.Id);
             parametros.Add("GRUPO", registro.Grupo);
           

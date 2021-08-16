@@ -9,12 +9,12 @@ namespace LocadoraVeiculos.Dominio.GrupoVeiculosModule
 {
     public class GrupoVeiculos : EntidadeBase, IEquatable<GrupoVeiculos>
     {
-        public string Grupo { get; }
-
         public GrupoVeiculos(string grupo)
         {
             Grupo = grupo;
         }
+
+        public string Grupo { get; }
 
         public bool Equals(GrupoVeiculos other)
         {
@@ -41,13 +41,13 @@ namespace LocadoraVeiculos.Dominio.GrupoVeiculosModule
             return Equals(obj as GrupoVeiculos);
         }
 
+       
         public override int GetHashCode()
         {
             int hashCode = -677046642;
             hashCode = hashCode * -1521134295 + Id.GetHashCode();
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(grupo);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Grupo);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Grupo);
+            
             return hashCode;
         }
     }

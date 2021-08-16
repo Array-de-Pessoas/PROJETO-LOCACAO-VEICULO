@@ -12,20 +12,14 @@ namespace LocadoraVeiculos.WindowsForm
 {
     public partial class TelaPrincipal : Form
     {
-        private ICadastravel operacoes;
-
+       
         public static TelaPrincipal Instancia;
 
         public TelaPrincipal()
         {
             InitializeComponent();
-
+            StatusAplicacao.Text = "Início";
             Instancia = this;
-        }
-
-        public void AtualizarRodape(string mensagem)
-        {
-            StatusAplicacao.Text = mensagem;
         }
 
         private void btnAcessar_Click(object sender, EventArgs e)
@@ -38,6 +32,7 @@ namespace LocadoraVeiculos.WindowsForm
             panelTelaPrincipal.Controls.Remove(ImagemInicio);
             panelTelaPrincipal.Controls.Add(new TelaPrincipalCadastros());
             btnAcessar.Visible = false;
+            StatusAplicacao.Text = "                                                     Menu principal";
         }
 
         

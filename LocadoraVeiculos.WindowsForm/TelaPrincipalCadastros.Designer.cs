@@ -182,7 +182,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.ImagemLinha.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ImagemLinha.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Linha_de_separação;
-            this.ImagemLinha.Location = new System.Drawing.Point(46, 193);
+            this.ImagemLinha.Location = new System.Drawing.Point(22, 193);
             this.ImagemLinha.Name = "ImagemLinha";
             this.ImagemLinha.Size = new System.Drawing.Size(139, 15);
             this.ImagemLinha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -195,7 +195,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdicionar.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Novo_botão_adicionar;
-            this.btnAdicionar.Location = new System.Drawing.Point(33, 214);
+            this.btnAdicionar.Location = new System.Drawing.Point(3, 214);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(163, 45);
             this.btnAdicionar.TabIndex = 5;
@@ -210,7 +210,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEditar.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Novo_botão_editar;
-            this.btnEditar.Location = new System.Drawing.Point(33, 265);
+            this.btnEditar.Location = new System.Drawing.Point(6, 265);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(163, 45);
             this.btnEditar.TabIndex = 6;
@@ -223,7 +223,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExcluir.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Novo_botão_excluir;
-            this.btnExcluir.Location = new System.Drawing.Point(33, 316);
+            this.btnExcluir.Location = new System.Drawing.Point(6, 316);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(163, 45);
             this.btnExcluir.TabIndex = 7;
@@ -234,7 +234,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.ImagemLinha2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ImagemLinha2.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Linha_de_separação;
-            this.ImagemLinha2.Location = new System.Drawing.Point(46, 367);
+            this.ImagemLinha2.Location = new System.Drawing.Point(30, 367);
             this.ImagemLinha2.Name = "ImagemLinha2";
             this.ImagemLinha2.Size = new System.Drawing.Size(139, 15);
             this.ImagemLinha2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -247,7 +247,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnFiltro.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Novo_botão_filtro;
-            this.btnFiltro.Location = new System.Drawing.Point(33, 388);
+            this.btnFiltro.Location = new System.Drawing.Point(6, 388);
             this.btnFiltro.Name = "btnFiltro";
             this.btnFiltro.Size = new System.Drawing.Size(163, 45);
             this.btnFiltro.TabIndex = 9;
@@ -260,7 +260,7 @@ namespace LocadoraVeiculos.WindowsForm
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTelaContaRegistradas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelTelaContaRegistradas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelTelaContaRegistradas.Location = new System.Drawing.Point(46, 439);
+            this.panelTelaContaRegistradas.Location = new System.Drawing.Point(22, 439);
             this.panelTelaContaRegistradas.Name = "panelTelaContaRegistradas";
             this.panelTelaContaRegistradas.Size = new System.Drawing.Size(163, 154);
             this.panelTelaContaRegistradas.TabIndex = 10;
@@ -269,9 +269,9 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.panelTabelas.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
             this.panelTabelas.Controls.Add(this.ImagemChave);
-            this.panelTabelas.Location = new System.Drawing.Point(226, 3);
+            this.panelTabelas.Location = new System.Drawing.Point(218, 0);
             this.panelTabelas.Name = "panelTabelas";
-            this.panelTabelas.Size = new System.Drawing.Size(878, 641);
+            this.panelTabelas.Size = new System.Drawing.Size(899, 652);
             this.panelTabelas.TabIndex = 11;
             // 
             // TelaPrincipalCadastros

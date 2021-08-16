@@ -6,7 +6,7 @@ using System.Configuration;
 using System.Data.SQLite;
 using System.Data.Common;
 
-namespace eAgenda.Controladores.Shared
+namespace LocadoraVeiculos.Controladores.Shared
 {
     public delegate T ConverterDelegate<T>(IDataReader reader);
 
@@ -19,16 +19,13 @@ namespace eAgenda.Controladores.Shared
 
         static Db()
         {
-            //ALTERAR AQUI -------------------------------------------------------------------------------------------------------------
-            throw new NotImplementedException();
             bancoDeDados = ConfigurationManager.AppSettings["bancoDeDados"];
 
             connectionString = ConfigurationManager.ConnectionStrings[bancoDeDados].ConnectionString;
-            
+
             nomeProvider = ConfigurationManager.ConnectionStrings[bancoDeDados].ProviderName;
 
             fabricaProvedor = DbProviderFactories.GetFactory(nomeProvider);
-            //ALTERAR AQUI -------------------------------------------------------------------------------------------------------------
         }
 
         public static int Insert(string sql, Dictionary<string, object> parameters)
