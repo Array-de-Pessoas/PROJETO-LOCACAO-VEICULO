@@ -78,6 +78,19 @@
     <Compile Include="GrupoVeiculosModule\TabelaGrupoVeiculos.Designer.cs">
       <DependentUpon>TabelaGrupoVeiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\FuncionarioModule\TabelaFuncionarioControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\FuncionarioModule\TabelaFuncionarioControl.Designer.cs">
+      <DependentUpon>TabelaFuncionarioControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\FuncionarioModule\TelaFuncionarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\FuncionarioModule\TelaFuncionarioForm.Designer.cs">
+      <DependentUpon>TelaFuncionarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\DataGridViewExtensions.cs" />
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarConta.resx">
       <DependentUpon>MostrarConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\FuncionarioModule\TabelaFuncionarioControl.resx">
+      <DependentUpon>TabelaFuncionarioControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\FuncionarioModule\TelaFuncionarioForm.resx">
+      <DependentUpon>TelaFuncionarioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,7 +153,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\" />
     <Folder Include="Libraries\" />
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +245,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Imagem 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundCadastro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Senha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data_de_entrada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LocadoraVeiculos.Controladores\LocadoraVeiculos.Controladores.csproj">
+      <Project>{f69c3646-ba00-43c5-acb4-f04c49d95725}</Project>
+      <Name>LocadoraVeiculos.Controladores</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LocadoraVeiculos.Dominio\LocadoraVeiculos.Dominio.csproj">
+      <Project>{fa47a745-b014-4153-b064-3e9ac4f7ebf7}</Project>
+      <Name>LocadoraVeiculos.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
