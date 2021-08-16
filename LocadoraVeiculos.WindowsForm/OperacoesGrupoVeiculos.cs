@@ -42,15 +42,34 @@ namespace LocadoraVeiculos.WindowsForm
             {
                 controlador.Editar(id, grupoForm.GrupoVeiculos);
 
-                List<GrupoVeiculos> tarefas = controlador.SelecionarTodos();
+                List<GrupoVeiculos> grupos = controlador.SelecionarTodos();
 
-                tabelaGrupo.AtualizarRegistros(tarefas);
+                tabelaGrupo.AtualizarRegistros(grupos);
             }
         }
 
         public void ExcluirRegistro()
         {
-            System.Windows.Forms.MessageBox.Show("Tem certeza que deseja remover esse item?");
+            int id = tabelaGrupo.ObtemIdSelecionado();
+
+            if (id == 0)
+            {
+                MessageBox.Show("Selecione um Grupo para poder excluir!", "Exclusão de Grupos de veículos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            GrupoVeiculos grupoSelecionado = controlador.SelecionarPorId(id);
+
+            if (MessageBox.Show($"Tem certeza que deseja excluir o Grupo: [{grupoSelecionado.Grupo}] ?",
+                "Exclusão de Grupo de veículos", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                controlador.Excluir(id);
+
+                List<GrupoVeiculos> grupos = controlador.SelecionarTodos();
+
+                tabelaGrupo.AtualizarRegistros(grupos);
+            }
         }
 
         public void FiltrarRegistros()
@@ -65,6 +84,10 @@ namespace LocadoraVeiculos.WindowsForm
             if (tela.ShowDialog() == DialogResult.OK)
             {
                 controlador.InserirNovo(tela.GrupoVeiculos);
+
+                List<GrupoVeiculos> grupos = controlador.SelecionarTodos();
+
+                tabelaGrupo.AtualizarRegistros(grupos);
             }
         }
 

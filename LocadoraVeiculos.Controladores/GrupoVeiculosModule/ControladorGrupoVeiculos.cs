@@ -32,7 +32,7 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
         private const string sqlExcluirGrupoVeiculos =
             @"DELETE FROM [TBGRUPOVEICULOS]
                     WHERE 
-                        ID = @ID";
+                        [ID] = @ID";
 
         private const string sqlExisteGrupoVeiculos =
             @"SELECT 
@@ -49,7 +49,7 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
              FROM
                 [TBGRUPOVEICULOS]
              WHERE 
-                [ID] = 0";
+                [ID] = @ID";
 
         private const string sqlSelecionarTodosGruposVeiculos =
             @"SELECT 
