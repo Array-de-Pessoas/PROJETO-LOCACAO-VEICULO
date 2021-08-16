@@ -6,7 +6,7 @@ using System.Configuration;
 using System.Data.SQLite;
 using System.Data.Common;
 
-namespace eAgenda.Controladores.Shared
+namespace LocadoraVeiculos.Controladores.Shared
 {
     public delegate T ConverterDelegate<T>(IDataReader reader);
 
@@ -22,7 +22,7 @@ namespace eAgenda.Controladores.Shared
             bancoDeDados = ConfigurationManager.AppSettings["bancoDeDados"];
 
             connectionString = ConfigurationManager.ConnectionStrings[bancoDeDados].ConnectionString;
-            
+
             nomeProvider = ConfigurationManager.ConnectionStrings[bancoDeDados].ProviderName;
 
             fabricaProvedor = DbProviderFactories.GetFactory(nomeProvider);
