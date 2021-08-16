@@ -58,16 +58,16 @@ namespace LocadoraVeiculos.WindowsForm
             this.panelTelaEntrada.Controls.Add(this.BarraDeStatusLogin);
             this.panelTelaEntrada.Location = new System.Drawing.Point(0, -1);
             this.panelTelaEntrada.Name = "panelTelaEntrada";
-            this.panelTelaEntrada.Size = new System.Drawing.Size(394, 392);
+            this.panelTelaEntrada.Size = new System.Drawing.Size(442, 392);
             this.panelTelaEntrada.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(141, 271);
+            this.button1.Location = new System.Drawing.Point(163, 271);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 55);
+            this.button1.Size = new System.Drawing.Size(109, 46);
             this.button1.TabIndex = 6;
             this.button1.Text = "CONFIRMAR";
             this.button1.UseVisualStyleBackColor = false;
@@ -75,7 +75,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(141, 204);
+            this.textBox2.Location = new System.Drawing.Point(163, 204);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(227, 35);
@@ -83,7 +83,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 160);
+            this.textBox1.Location = new System.Drawing.Point(163, 160);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(227, 35);
@@ -92,7 +92,7 @@ namespace LocadoraVeiculos.WindowsForm
             // ImagemSenha
             // 
             this.ImagemSenha.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Senha;
-            this.ImagemSenha.Location = new System.Drawing.Point(36, 201);
+            this.ImagemSenha.Location = new System.Drawing.Point(58, 201);
             this.ImagemSenha.Name = "ImagemSenha";
             this.ImagemSenha.Size = new System.Drawing.Size(99, 38);
             this.ImagemSenha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,7 +102,7 @@ namespace LocadoraVeiculos.WindowsForm
             // ImagemUsuario
             // 
             this.ImagemUsuario.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Usúario;
-            this.ImagemUsuario.Location = new System.Drawing.Point(12, 149);
+            this.ImagemUsuario.Location = new System.Drawing.Point(34, 149);
             this.ImagemUsuario.Name = "ImagemUsuario";
             this.ImagemUsuario.Size = new System.Drawing.Size(123, 46);
             this.ImagemUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,9 +112,9 @@ namespace LocadoraVeiculos.WindowsForm
             // ImagemEntrar
             // 
             this.ImagemEntrar.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Entrar;
-            this.ImagemEntrar.Location = new System.Drawing.Point(117, 51);
+            this.ImagemEntrar.Location = new System.Drawing.Point(116, 57);
             this.ImagemEntrar.Name = "ImagemEntrar";
-            this.ImagemEntrar.Size = new System.Drawing.Size(174, 69);
+            this.ImagemEntrar.Size = new System.Drawing.Size(205, 69);
             this.ImagemEntrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagemEntrar.TabIndex = 1;
             this.ImagemEntrar.TabStop = false;
@@ -126,7 +126,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.StatusLogin});
             this.BarraDeStatusLogin.Location = new System.Drawing.Point(0, 366);
             this.BarraDeStatusLogin.Name = "BarraDeStatusLogin";
-            this.BarraDeStatusLogin.Size = new System.Drawing.Size(394, 26);
+            this.BarraDeStatusLogin.Size = new System.Drawing.Size(442, 26);
             this.BarraDeStatusLogin.TabIndex = 0;
             this.BarraDeStatusLogin.Text = "statusStrip1";
             // 
@@ -140,7 +140,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 391);
+            this.ClientSize = new System.Drawing.Size(442, 391);
             this.Controls.Add(this.panelTelaEntrada);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";

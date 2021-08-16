@@ -123,6 +123,66 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Imagem_1 {
+            get {
+                object obj = ResourceManager.GetObject("Imagem_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imagem_2 {
+            get {
+                object obj = ResourceManager.GetObject("Imagem_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imagem_3 {
+            get {
+                object obj = ResourceManager.GetObject("Imagem_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imagem_4 {
+            get {
+                object obj = ResourceManager.GetObject("Imagem_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imagem_5 {
+            get {
+                object obj = ResourceManager.GetObject("Imagem_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imagem_6 {
+            get {
+                object obj = ResourceManager.GetObject("Imagem_6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Imagem_Acessar {
             get {
                 object obj = ResourceManager.GetObject("Imagem_Acessar", resourceCulture);
@@ -236,6 +296,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Opção_nome_do_grupo {
             get {
                 object obj = ResourceManager.GetObject("Opção_nome_do_grupo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sem_conta {
+            get {
+                object obj = ResourceManager.GetObject("Sem_conta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

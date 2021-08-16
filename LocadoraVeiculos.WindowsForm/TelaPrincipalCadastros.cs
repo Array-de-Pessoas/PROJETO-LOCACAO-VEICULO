@@ -94,7 +94,7 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void gRUPODEVEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TxtCadastroSelecionado.Text = "GRUPO DE VEÍCULOS";
+            TxtCadastroSelecionado.Text = " GRUPO DE VEÍCULOS";
             MostrarOpcoes();
             ImagemChave.Visible = false;
             operacoes = new OperacoesGrupoVeiculos(new ControladorGrupoVeiculos());
@@ -105,7 +105,7 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            if (TxtCadastroSelecionado.Text == "GRUPO DE VEÍCULOS")
+            if (TxtCadastroSelecionado.Text == " GRUPO DE VEÍCULOS")
             {
                 operacoes.InserirNovoRegistro();
             }
@@ -113,7 +113,7 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (TxtCadastroSelecionado.Text == "GRUPO DE VEÍCULOS")
+            if (TxtCadastroSelecionado.Text == " GRUPO DE VEÍCULOS")
             {
                 operacoes.EditarRegistro();
             }
@@ -121,7 +121,7 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (TxtCadastroSelecionado.Text == "GRUPO DE VEÍCULOS")
+            if (TxtCadastroSelecionado.Text == " GRUPO DE VEÍCULOS")
             {
                 operacoes.ExcluirRegistro();
             }

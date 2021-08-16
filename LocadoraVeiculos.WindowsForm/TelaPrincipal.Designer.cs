@@ -74,6 +74,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.panelTelaPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTelaPrincipal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelTelaPrincipal.Controls.Add(this.btnAcessar);
             this.panelTelaPrincipal.Controls.Add(this.ImagemInicio);
             this.panelTelaPrincipal.Location = new System.Drawing.Point(0, 0);
@@ -106,6 +107,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1107, 676);
             this.Controls.Add(this.panelTelaPrincipal);
             this.Controls.Add(this.statusStrip1);

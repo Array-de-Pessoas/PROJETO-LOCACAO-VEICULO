@@ -16,5 +16,11 @@ namespace LocadoraVeiculos.WindowsForm
         {
             InitializeComponent();
         }
+
+        private void LinkSairConta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.Show();
+        }
     }
 }

@@ -207,5 +207,26 @@
   <ItemGroup>
     <None Include="Resources\Opção nome do grupo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem conta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem 6.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
