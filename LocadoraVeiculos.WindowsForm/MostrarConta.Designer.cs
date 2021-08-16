@@ -40,7 +40,7 @@ namespace LocadoraVeiculos.WindowsForm
             // ImagemConta1
             // 
             this.ImagemConta1.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.imagem_conta;
-            this.ImagemConta1.Location = new System.Drawing.Point(37, 13);
+            this.ImagemConta1.Location = new System.Drawing.Point(46, 13);
             this.ImagemConta1.Name = "ImagemConta1";
             this.ImagemConta1.Size = new System.Drawing.Size(67, 54);
             this.ImagemConta1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -52,7 +52,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.ImagemBalao.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Balão_de_login;
             this.ImagemBalao.Location = new System.Drawing.Point(3, 0);
             this.ImagemBalao.Name = "ImagemBalao";
-            this.ImagemBalao.Size = new System.Drawing.Size(132, 153);
+            this.ImagemBalao.Size = new System.Drawing.Size(150, 153);
             this.ImagemBalao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagemBalao.TabIndex = 0;
             this.ImagemBalao.TabStop = false;
@@ -63,7 +63,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.TxtNomeConta.BackColor = System.Drawing.Color.White;
             this.TxtNomeConta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtNomeConta.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
-            this.TxtNomeConta.Location = new System.Drawing.Point(43, 70);
+            this.TxtNomeConta.Location = new System.Drawing.Point(56, 70);
             this.TxtNomeConta.Name = "TxtNomeConta";
             this.TxtNomeConta.Size = new System.Drawing.Size(46, 17);
             this.TxtNomeConta.TabIndex = 2;

@@ -47,42 +47,60 @@ namespace LocadoraVeiculos.WindowsForm
 
         public void OpcaoCadastroFuncionarios_Click(object sender, EventArgs e)
         {
-            TxtCadastroSelecionado.Text = "FUNCIONÁRIOS";
+            panelTabelas.Controls.Clear();
+            TxtCadastroSelecionado.Text = "       FUNCIONÁRIOS";
             MostrarOpcoes();
+            ImagemChave.Visible = false;
+            // Implementação da Carol
         }
 
         private void OpcaoCadastroClientes_Click(object sender, EventArgs e)
         {
             MostrarOpcoes();
-            TxtCadastroSelecionado.Text = "CLIENTES";
+            TxtCadastroSelecionado.Text = "           CLIENTES";
+            panelTabelas.Controls.Clear();
         }
 
         private void OpcaoCadastroVeiculos_Click(object sender, EventArgs e)
         {
+            panelTabelas.Controls.Clear();
+            TxtCadastroSelecionado.Text = "           VEÍCULOS";
             MostrarOpcoes();
-            
+            ImagemChave.Visible = false;
+            // implementação do João
         }
 
         private void OpcaoCadastroServicos_Click(object sender, EventArgs e)
         {
+            panelTabelas.Controls.Clear();
             MostrarOpcoes();
-            TxtCadastroSelecionado.Text = "SERVIÇOS";
+            TxtCadastroSelecionado.Text = "           SERVIÇOS";
+            
         }
 
         private void btnVizualizarConta_Click(object sender, EventArgs e)
         {
-            panelTelaContaRegistradas.Controls.Add(new MostrarConta());
+            if (panelTelaContaRegistradas.Controls.Count == 0)
+            {
+                panelTelaContaRegistradas.Controls.Add(new MostrarConta());
+                return;
+            }
+            if (panelTelaContaRegistradas.Controls.Count == 1)
+            {
+                panelTelaContaRegistradas.Controls.Clear();
+                return;
+            }
         }
 
         private void gRUPODEVEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TxtCadastroSelecionado.Text = "GRUPO DE VEÍCULOS";
-           
             MostrarOpcoes();
             ImagemChave.Visible = false;
             operacoes = new OperacoesGrupoVeiculos(new ControladorGrupoVeiculos());
             ConfigurarPanelRegistros();
-           
+            btnFiltro.Visible = false;
+
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)

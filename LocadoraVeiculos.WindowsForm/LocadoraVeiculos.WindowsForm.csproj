@@ -49,16 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataGridViewExtensions.cs" />
-    <Compile Include="GrupoDeVeiculosForm.cs">
+    <Compile Include="Shared\DataGridViewExtensions.cs" />
+    <Compile Include="GrupoVeiculosModule\GrupoDeVeiculosForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GrupoDeVeiculosForm.Designer.cs">
+    <Compile Include="GrupoVeiculosModule\GrupoDeVeiculosForm.Designer.cs">
       <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
-    <Compile Include="ICadastravel.cs" />
-    <Compile Include="IConfiguracaoToolBox.cs" />
+    <Compile Include="Shared\ICadastravel.cs" />
+    <Compile Include="Shared\IConfiguracaoToolBox.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +71,11 @@
     <Compile Include="MostrarConta.Designer.cs">
       <DependentUpon>MostrarConta.cs</DependentUpon>
     </Compile>
-    <Compile Include="OperacoesGrupoVeiculos.cs" />
-    <Compile Include="TabelaGrupoVeiculos.cs">
+    <Compile Include="GrupoVeiculosModule\OperacoesGrupoVeiculos.cs" />
+    <Compile Include="GrupoVeiculosModule\TabelaGrupoVeiculos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabelaGrupoVeiculos.Designer.cs">
+    <Compile Include="GrupoVeiculosModule\TabelaGrupoVeiculos.Designer.cs">
       <DependentUpon>TabelaGrupoVeiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaPrincipal.cs">
@@ -92,7 +92,7 @@
     <Compile Include="TelaPrincipalCadastros.Designer.cs">
       <DependentUpon>TelaPrincipalCadastros.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GrupoDeVeiculosForm.resx">
+    <EmbeddedResource Include="GrupoVeiculosModule\GrupoDeVeiculosForm.resx">
       <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
@@ -111,7 +111,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TabelaGrupoVeiculos.resx">
+    <EmbeddedResource Include="GrupoVeiculosModule\TabelaGrupoVeiculos.resx">
       <DependentUpon>TabelaGrupoVeiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaPrincipal.resx">
@@ -136,7 +136,6 @@
   <ItemGroup>
     <Folder Include="Features\" />
     <Folder Include="Libraries\" />
-    <Folder Include="Shared\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Btn Opções.png" />
@@ -190,9 +189,6 @@
     <None Include="Resources\imagem conta.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fundo Tela Cadastro Grupo de Veiculos.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Fuquinha.png" />
   </ItemGroup>
   <ItemGroup>
@@ -204,6 +200,12 @@
       <Project>{fa47a745-b014-4153-b064-3e9ac4f7ebf7}</Project>
       <Name>LocadoraVeiculos.Dominio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fundo Tela Cadastro Grupo de Veiculos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Opção nome do grupo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

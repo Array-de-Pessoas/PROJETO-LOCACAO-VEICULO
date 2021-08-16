@@ -25,6 +25,7 @@ namespace LocadoraVeiculos.WindowsForm
         private void btnAcessar_Click(object sender, EventArgs e)
         {
             MudarPannel();
+            Text = "Locadora Veículos";
         }
 
         public void MudarPannel()

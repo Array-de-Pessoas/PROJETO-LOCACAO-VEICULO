@@ -103,7 +103,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.OpcaoCadastroFuncionarios.Font = new System.Drawing.Font("Bahnschrift Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpcaoCadastroFuncionarios.Name = "OpcaoCadastroFuncionarios";
-            this.OpcaoCadastroFuncionarios.Size = new System.Drawing.Size(214, 26);
+            this.OpcaoCadastroFuncionarios.Size = new System.Drawing.Size(224, 26);
             this.OpcaoCadastroFuncionarios.Text = "FUNCIONÁRIOS";
             this.OpcaoCadastroFuncionarios.Click += new System.EventHandler(this.OpcaoCadastroFuncionarios_Click);
             // 
@@ -111,7 +111,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.OpcaoCadastroClientes.Font = new System.Drawing.Font("Bahnschrift Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpcaoCadastroClientes.Name = "OpcaoCadastroClientes";
-            this.OpcaoCadastroClientes.Size = new System.Drawing.Size(214, 26);
+            this.OpcaoCadastroClientes.Size = new System.Drawing.Size(224, 26);
             this.OpcaoCadastroClientes.Text = "CLIENTES";
             this.OpcaoCadastroClientes.Click += new System.EventHandler(this.OpcaoCadastroClientes_Click);
             // 
@@ -121,7 +121,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.gRUPODEVEÍCULOSToolStripMenuItem});
             this.OpcaoCadastroVeiculos.Font = new System.Drawing.Font("Bahnschrift Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpcaoCadastroVeiculos.Name = "OpcaoCadastroVeiculos";
-            this.OpcaoCadastroVeiculos.Size = new System.Drawing.Size(214, 26);
+            this.OpcaoCadastroVeiculos.Size = new System.Drawing.Size(224, 26);
             this.OpcaoCadastroVeiculos.Text = "VEÍCULOS";
             this.OpcaoCadastroVeiculos.Click += new System.EventHandler(this.OpcaoCadastroVeiculos_Click);
             // 
@@ -136,7 +136,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.OpcaoCadastroServicos.Font = new System.Drawing.Font("Bahnschrift Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpcaoCadastroServicos.Name = "OpcaoCadastroServicos";
-            this.OpcaoCadastroServicos.Size = new System.Drawing.Size(214, 26);
+            this.OpcaoCadastroServicos.Size = new System.Drawing.Size(224, 26);
             this.OpcaoCadastroServicos.Text = "SERVIÇOS";
             this.OpcaoCadastroServicos.Click += new System.EventHandler(this.OpcaoCadastroServicos_Click);
             // 
@@ -172,7 +172,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.TxtCadastroSelecionado.AutoSize = true;
             this.TxtCadastroSelecionado.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtCadastroSelecionado.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCadastroSelecionado.Location = new System.Drawing.Point(69, 172);
+            this.TxtCadastroSelecionado.Location = new System.Drawing.Point(27, 172);
             this.TxtCadastroSelecionado.Name = "TxtCadastroSelecionado";
             this.TxtCadastroSelecionado.Size = new System.Drawing.Size(76, 18);
             this.TxtCadastroSelecionado.TabIndex = 3;
@@ -182,7 +182,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.ImagemLinha.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ImagemLinha.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Linha_de_separação;
-            this.ImagemLinha.Location = new System.Drawing.Point(22, 193);
+            this.ImagemLinha.Location = new System.Drawing.Point(46, 193);
             this.ImagemLinha.Name = "ImagemLinha";
             this.ImagemLinha.Size = new System.Drawing.Size(139, 15);
             this.ImagemLinha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -195,11 +195,11 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdicionar.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Novo_botão_adicionar;
-            this.btnAdicionar.Location = new System.Drawing.Point(3, 214);
+            this.btnAdicionar.Location = new System.Drawing.Point(30, 214);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(163, 45);
             this.btnAdicionar.TabIndex = 5;
-            this.toolTipBtnAdicionar.SetToolTip(this.btnAdicionar, "swswswsw");
+            this.toolTipBtnAdicionar.SetToolTip(this.btnAdicionar, "Adicionar um novo");
             this.btnAdicionar.UseVisualStyleBackColor = false;
             this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
@@ -210,10 +210,11 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEditar.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Novo_botão_editar;
-            this.btnEditar.Location = new System.Drawing.Point(6, 265);
+            this.btnEditar.Location = new System.Drawing.Point(30, 265);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(163, 45);
             this.btnEditar.TabIndex = 6;
+            this.toolTipBtnAdicionar.SetToolTip(this.btnEditar, "Editar item selecionado");
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -223,10 +224,11 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExcluir.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Novo_botão_excluir;
-            this.btnExcluir.Location = new System.Drawing.Point(6, 316);
+            this.btnExcluir.Location = new System.Drawing.Point(30, 316);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(163, 45);
             this.btnExcluir.TabIndex = 7;
+            this.toolTipBtnAdicionar.SetToolTip(this.btnExcluir, "Excluir item selecionado");
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
@@ -234,7 +236,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.ImagemLinha2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ImagemLinha2.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Linha_de_separação;
-            this.ImagemLinha2.Location = new System.Drawing.Point(30, 367);
+            this.ImagemLinha2.Location = new System.Drawing.Point(46, 367);
             this.ImagemLinha2.Name = "ImagemLinha2";
             this.ImagemLinha2.Size = new System.Drawing.Size(139, 15);
             this.ImagemLinha2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -247,7 +249,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnFiltro.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Novo_botão_filtro;
-            this.btnFiltro.Location = new System.Drawing.Point(6, 388);
+            this.btnFiltro.Location = new System.Drawing.Point(30, 388);
             this.btnFiltro.Name = "btnFiltro";
             this.btnFiltro.Size = new System.Drawing.Size(163, 45);
             this.btnFiltro.TabIndex = 9;
@@ -260,7 +262,7 @@ namespace LocadoraVeiculos.WindowsForm
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTelaContaRegistradas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelTelaContaRegistradas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelTelaContaRegistradas.Location = new System.Drawing.Point(22, 439);
+            this.panelTelaContaRegistradas.Location = new System.Drawing.Point(30, 439);
             this.panelTelaContaRegistradas.Name = "panelTelaContaRegistradas";
             this.panelTelaContaRegistradas.Size = new System.Drawing.Size(163, 154);
             this.panelTelaContaRegistradas.TabIndex = 10;

@@ -32,10 +32,10 @@ namespace LocadoraVeiculos.WindowsForm
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.StatusAplicacao = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.panelTelaPrincipal = new System.Windows.Forms.Panel();
             this.btnAcessar = new System.Windows.Forms.Button();
             this.ImagemInicio = new System.Windows.Forms.PictureBox();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.statusStrip1.SuspendLayout();
             this.panelTelaPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemInicio)).BeginInit();
@@ -59,6 +59,15 @@ namespace LocadoraVeiculos.WindowsForm
             this.StatusAplicacao.Name = "StatusAplicacao";
             this.StatusAplicacao.Size = new System.Drawing.Size(47, 20);
             this.StatusAplicacao.Text = "status";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Btn_Opções;
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // panelTelaPrincipal
             // 
@@ -93,15 +102,6 @@ namespace LocadoraVeiculos.WindowsForm
             this.ImagemInicio.TabIndex = 0;
             this.ImagemInicio.TabStop = false;
             // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Btn_Opções;
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
-            // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -110,9 +110,11 @@ namespace LocadoraVeiculos.WindowsForm
             this.Controls.Add(this.panelTelaPrincipal);
             this.Controls.Add(this.statusStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1125, 723);
+            this.MinimumSize = new System.Drawing.Size(1125, 723);
             this.Name = "TelaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tela Principal - Inicio";
+            this.Text = "Locadora Veículos - Inicio";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.panelTelaPrincipal.ResumeLayout(false);
