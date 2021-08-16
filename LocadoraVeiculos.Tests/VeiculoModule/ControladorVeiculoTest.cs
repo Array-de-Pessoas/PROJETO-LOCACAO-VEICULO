@@ -1,5 +1,4 @@
-﻿using eAgenda.Controladores.Shared;
-using LocadoraVeiculos.Controladores.VeiculoModule;
+﻿using LocadoraVeiculos.Controladores.VeiculoModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FluentAssertions;

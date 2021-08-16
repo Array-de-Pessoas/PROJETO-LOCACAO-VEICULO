@@ -49,14 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Shared\DataGridViewExtensions.cs" />
-    <Compile Include="GrupoVeiculosModule\GrupoDeVeiculosForm.cs">
+    <Compile Include="Features\GrupoVeiculosModule\GrupoDeVeiculosForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GrupoVeiculosModule\GrupoDeVeiculosForm.Designer.cs">
+    <Compile Include="Features\GrupoVeiculosModule\GrupoDeVeiculosForm.Designer.cs">
       <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
+    <Compile Include="Features\GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
+    <Compile Include="Shared\DataGridViewExtensions.cs" />
     <Compile Include="Shared\ICadastravel.cs" />
     <Compile Include="Shared\IConfiguracaoToolBox.cs" />
     <Compile Include="LoginForm.cs">
@@ -71,11 +71,11 @@
     <Compile Include="MostrarConta.Designer.cs">
       <DependentUpon>MostrarConta.cs</DependentUpon>
     </Compile>
-    <Compile Include="GrupoVeiculosModule\OperacoesGrupoVeiculos.cs" />
-    <Compile Include="GrupoVeiculosModule\TabelaGrupoVeiculos.cs">
+    <Compile Include="Features\GrupoVeiculosModule\OperacoesGrupoVeiculos.cs" />
+    <Compile Include="Features\GrupoVeiculosModule\TabelaGrupoVeiculos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GrupoVeiculosModule\TabelaGrupoVeiculos.Designer.cs">
+    <Compile Include="Features\GrupoVeiculosModule\TabelaGrupoVeiculos.Designer.cs">
       <DependentUpon>TabelaGrupoVeiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\FuncionarioModule\TabelaFuncionarioControl.cs">
@@ -90,7 +90,6 @@
     <Compile Include="Features\FuncionarioModule\TelaFuncionarioForm.Designer.cs">
       <DependentUpon>TelaFuncionarioForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shared\DataGridViewExtensions.cs" />
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,7 +104,7 @@
     <Compile Include="TelaPrincipalCadastros.Designer.cs">
       <DependentUpon>TelaPrincipalCadastros.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GrupoVeiculosModule\GrupoDeVeiculosForm.resx">
+    <EmbeddedResource Include="Features\GrupoVeiculosModule\GrupoDeVeiculosForm.resx">
       <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
@@ -130,7 +129,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="GrupoVeiculosModule\TabelaGrupoVeiculos.resx">
+    <EmbeddedResource Include="Features\GrupoVeiculosModule\TabelaGrupoVeiculos.resx">
       <DependentUpon>TabelaGrupoVeiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaPrincipal.resx">

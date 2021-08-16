@@ -1,4 +1,5 @@
 ﻿using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

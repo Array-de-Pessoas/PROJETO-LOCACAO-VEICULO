@@ -8,8 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LocadoraVeiculos.WindowsForm.Shared;
 
-namespace LocadoraVeiculos.WindowsForm
+namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 {
     public partial class TabelaGrupoVeiculos : UserControl
     {

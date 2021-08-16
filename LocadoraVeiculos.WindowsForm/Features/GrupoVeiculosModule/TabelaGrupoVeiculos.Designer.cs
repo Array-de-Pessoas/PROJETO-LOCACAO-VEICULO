@@ -1,5 +1,5 @@
 ﻿
-namespace LocadoraVeiculos.WindowsForm
+namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 {
     partial class TabelaGrupoVeiculos
     {
@@ -36,8 +36,8 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             // dataGridGrupoVeiculos
             // 
-            this.dataGridGrupoVeiculos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridGrupoVeiculos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridGrupoVeiculos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

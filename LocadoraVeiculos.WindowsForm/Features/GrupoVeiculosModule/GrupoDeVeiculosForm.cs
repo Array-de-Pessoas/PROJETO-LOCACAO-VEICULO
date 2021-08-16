@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace LocadoraVeiculos.WindowsForm
+namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 {
     public partial class GrupoDeVeiculosForm : Form
     {
