@@ -84,6 +84,8 @@
     <Compile Include="ClienteModule\ControladorClienteTest.cs" />
     <Compile Include="FuncionarioModule\ControladorFuncionarioTest.cs" />
     <Compile Include="FuncionarioModule\FuncionarioTest.cs" />
+    <Compile Include="GrupoVeiculosModule\ControladorGrupoVeiculosTest.cs" />
+    <Compile Include="GrupoVeiculosModule\GrupoVeiculosTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VeiculoModule\ControladorVeiculoTest.cs" />
     <Compile Include="VeiculoModule\VeiculoTest.cs" />
