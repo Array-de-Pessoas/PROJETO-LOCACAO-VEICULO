@@ -129,6 +129,9 @@ namespace LocadoraVeiculos.WindowsForm
             this.ResumeLayout(false);
             this.PerformLayout();
 
+            this.Load += new System.EventHandler(this.TelaPrincipal_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

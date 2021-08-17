@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -93,7 +94,7 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
 
             if (resultadoValidacao == "VALIDO")
             {
-                registro.id = id;
+                registro.Id = id;
                 Db.Update(sqlEditarVeiculo, ObtemParametrosVeiculo(registro));
             }
 
@@ -124,7 +125,7 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
             string resultadoValidacao = registro.Validar();
             if (resultadoValidacao == "VALIDO")
             {
-                registro.id = Db.Insert(sqlInserirVeiculo, ObtemParametrosVeiculo(registro));
+                registro.Id = Db.Insert(sqlInserirVeiculo, ObtemParametrosVeiculo(registro));
             }
             return resultadoValidacao;
         }
@@ -153,7 +154,7 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
             parametros.Add("NumeroPortas", veiculo.numeroPortas);
             parametros.Add("CapacidadePessoas", veiculo.capacidadeDePessoas);
             parametros.Add("TamanhoPortaMalas", veiculo.tamanhoPortaMalas);
-            parametros.Add("Foto", null);
+            parametros.Add("Foto", veiculo.foto);
             parametros.Add("Kilometragem", veiculo.kilometragem);
             parametros.Add("IdGrupoVeiculos", veiculo.idGrupoVeiculo);
 
@@ -167,17 +168,18 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
             string cor= Convert.ToString(reader["Cor"]);
             string marca= Convert.ToString(reader["Marca"]);
             int ano = Convert.ToInt32(reader["Ano"]);
-            string tipoCombustivel = Convert.ToString(reader["TipoCombustivel"]) ;
+            string tipoCombustivel = Convert.ToString(reader["TipoCombustivel"]) ;    
+            Image foto = reader["Foto"] == DBNull.Value ? null : (Image)reader["Foto"];
             double quantidadeLitros = Convert.ToDouble(reader["QuantidadeLitros"]);
             int numeroPortas = Convert.ToInt32(reader["NumeroPortas"]);
-            int capacidadeDePessoas = Convert.ToInt32(reader["CapacidadeDePessoas"]);
+            int capacidadeDePessoas = Convert.ToInt32(reader["CapacidadePessoas"]);
             string tamanhoPortaMalas = Convert.ToString(reader["TamanhoPortaMalas"]);
             int kilometragem = Convert.ToInt32(reader["Kilometragem"]);
-            int idGrupoVeiculo = Convert.ToInt32(reader["IdGrupoVeiculo"]);
+            int idGrupoVeiculo = Convert.ToInt32(reader["IdGrupoVeiculos"]);
 
-            Veiculo veiculo = new Veiculo(placa,cor,marca,ano,tipoCombustivel,quantidadeLitros,numeroPortas,capacidadeDePessoas,tamanhoPortaMalas,kilometragem,idGrupoVeiculo);
+            Veiculo veiculo = new Veiculo(placa,cor,marca,ano,tipoCombustivel,foto,quantidadeLitros,numeroPortas,capacidadeDePessoas,tamanhoPortaMalas,kilometragem,idGrupoVeiculo);
 
-            veiculo.id = id;
+            veiculo.Id = id;
 
             return veiculo;
         }

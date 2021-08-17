@@ -92,6 +92,15 @@
     <Compile Include="Features\FuncionarioModule\TelaFuncionarioForm.Designer.cs">
       <DependentUpon>TelaFuncionarioForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\VeiculoModule\ConfiguracaoVeiculoToolBox.cs" />
+    <Compile Include="Feature\VeiculoModule\OperacoesVeiculo.cs" />
+    <Compile Include="Feature\VeiculoModule\TabelaVeiculosControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Feature\VeiculoModule\TabelaVeiculosControl.Designer.cs">
+      <DependentUpon>TabelaVeiculosControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\DataGridViewExtensions.cs" />
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +109,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Feature\VeiculoModule\TelaVeiculoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\VeiculoModule\TelaVeiculoForm.Designer.cs">
+      <DependentUpon>TelaVeiculoForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Feature\VeiculoModule\TabelaVeiculosControl.resx">
+      <DependentUpon>TabelaVeiculosControl.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="TelaPrincipalCadastros.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +149,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Feature\VeiculoModule\TelaVeiculoForm.resx">
+      <DependentUpon>TelaVeiculoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPrincipal.resx">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Features\GrupoVeiculosModule\TabelaGrupoVeiculos.resx">
       <DependentUpon>TabelaGrupoVeiculos.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +179,67 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Libraries\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nova_imagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tamanho_porta_malas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tipo_de_veiculo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ano.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capacidade_porta_malas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chassi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Combustivel %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Combustivel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detalhes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Km.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Litros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Placa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addImagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LocadoraVeiculos.Controladores\LocadoraVeiculos.Controladores.csproj">
+      <Project>{F69C3646-BA00-43C5-ACB4-F04C49D95725}</Project>
+      <Name>LocadoraVeiculos.Controladores</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LocadoraVeiculos.Dominio\LocadoraVeiculos.Dominio.csproj">
+      <Project>{FA47A745-B014-4153-B064-3E9AC4F7EBF7}</Project>
+      <Name>LocadoraVeiculos.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Btn Opções.png" />

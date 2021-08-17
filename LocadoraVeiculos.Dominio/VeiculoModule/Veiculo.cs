@@ -1,35 +1,40 @@
 ﻿using LocadoraVeiculos.Dominio.Shared;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
+using Image = System.Drawing.Image;
 
 namespace LocadoraVeiculos.Dominio.VeiculoModule
 {
     public class Veiculo : EntidadeBase
     {
 
-      public string placa;
-      public string cor;
-      public string marca;
-      public int ano;
-      public string tipoCombustivel;
-      public double quantidadeLitros;
-      public int numeroPortas;
-      public int capacidadeDePessoas;
-      public string tamanhoPortaMalas;
-      //foto
-      public int kilometragem;
-      public int idGrupoVeiculo;
+        public string placa;
+        public string cor;
+        public string marca;
+        public int ano;
+        public string tipoCombustivel;
+        public Image foto;
+        public double quantidadeLitros;
+        public int numeroPortas;
+        public int capacidadeDePessoas;
+        public string tamanhoPortaMalas;
 
-        public Veiculo(string placa, string cor, string marca, int ano, string tipoCombustivel, double quantidadeLitros, int numeroPortas, int capacidadeDePessoas, string tamanhoPortaMalas, int kilometragem, int id_grupoVeiculo)
+        public int kilometragem;
+        public int idGrupoVeiculo;
+
+        public Veiculo(string placa, string cor, string marca, int ano, string tipoCombustivel, Image foto, double quantidadeLitros, int numeroPortas, int capacidadeDePessoas, string tamanhoPortaMalas, int kilometragem, int id_grupoVeiculo)
         {
             this.placa = placa;
             this.cor = cor;
             this.marca = marca;
             this.ano = ano;
             this.tipoCombustivel = tipoCombustivel;
+            this.foto = foto;
             this.quantidadeLitros = quantidadeLitros;
             this.numeroPortas = numeroPortas;
             this.capacidadeDePessoas = capacidadeDePessoas;
@@ -38,7 +43,7 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
             this.idGrupoVeiculo = id_grupoVeiculo;
         }
 
-       
+
 
         public override string Validar()
         {
