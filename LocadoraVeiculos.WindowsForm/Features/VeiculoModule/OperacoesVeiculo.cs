@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LocadoraVeiculos.WindowsForm.Feature.VeiculoModule
+namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 {
     
     public class OperacoesVeiculo
