@@ -84,6 +84,7 @@
     <Compile Include="FuncionarioModule\FuncionarioTest.cs" />
     <Compile Include="GrupoVeiculosModule\ControladorGrupoVeiculosTest.cs" />
     <Compile Include="GrupoVeiculosModule\GrupoVeiculosTest.cs" />
+    <Compile Include="LoginModule\LoginTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VeiculoModule\ControladorVeiculoTest.cs" />
     <Compile Include="VeiculoModule\VeiculoTest.cs" />
@@ -104,6 +105,10 @@
     <ProjectReference Include="..\LocadoraVeiculos.Dominio\LocadoraVeiculos.Dominio.csproj">
       <Project>{fa47a745-b014-4153-b064-3e9ac4f7ebf7}</Project>
       <Name>LocadoraVeiculos.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LocadoraVeiculos.WindowsForm\LocadoraVeiculos.WindowsForm.csproj">
+      <Project>{06F3FC65-A81C-437B-A2D3-949E7CB17C8A}</Project>
+      <Name>LocadoraVeiculos.WindowsForm</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

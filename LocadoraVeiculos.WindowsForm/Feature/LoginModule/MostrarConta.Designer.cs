@@ -29,7 +29,7 @@ namespace LocadoraVeiculos.WindowsForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.LinkSairConta = new System.Windows.Forms.LinkLabel();
+            this.LinkConta = new System.Windows.Forms.LinkLabel();
             this.TxtNomeConta = new System.Windows.Forms.Label();
             this.ImagemConta1 = new System.Windows.Forms.PictureBox();
             this.ImagemBalao = new System.Windows.Forms.PictureBox();
@@ -37,18 +37,18 @@ namespace LocadoraVeiculos.WindowsForm
             ((System.ComponentModel.ISupportInitialize)(this.ImagemBalao)).BeginInit();
             this.SuspendLayout();
             // 
-            // LinkSairConta
+            // LinkConta
             // 
-            this.LinkSairConta.AutoSize = true;
-            this.LinkSairConta.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
-            this.LinkSairConta.LinkColor = System.Drawing.Color.CornflowerBlue;
-            this.LinkSairConta.Location = new System.Drawing.Point(52, 87);
-            this.LinkSairConta.Name = "LinkSairConta";
-            this.LinkSairConta.Size = new System.Drawing.Size(47, 17);
-            this.LinkSairConta.TabIndex = 3;
-            this.LinkSairConta.TabStop = true;
-            this.LinkSairConta.Text = "Entrar";
-            this.LinkSairConta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkSairConta_LinkClicked);
+            this.LinkConta.AutoSize = true;
+            this.LinkConta.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
+            this.LinkConta.LinkColor = System.Drawing.Color.CornflowerBlue;
+            this.LinkConta.Location = new System.Drawing.Point(52, 87);
+            this.LinkConta.Name = "LinkConta";
+            this.LinkConta.Size = new System.Drawing.Size(47, 17);
+            this.LinkConta.TabIndex = 3;
+            this.LinkConta.TabStop = true;
+            this.LinkConta.Text = "Entrar";
+            this.LinkConta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkSairConta_LinkClicked);
             // 
             // TxtNomeConta
             // 
@@ -89,7 +89,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Controls.Add(this.LinkSairConta);
+            this.Controls.Add(this.LinkConta);
             this.Controls.Add(this.TxtNomeConta);
             this.Controls.Add(this.ImagemConta1);
             this.Controls.Add(this.ImagemBalao);
@@ -107,6 +107,6 @@ namespace LocadoraVeiculos.WindowsForm
         private System.Windows.Forms.PictureBox ImagemBalao;
         private System.Windows.Forms.PictureBox ImagemConta1;
         private System.Windows.Forms.Label TxtNomeConta;
-        private System.Windows.Forms.LinkLabel LinkSairConta;
+        private System.Windows.Forms.LinkLabel LinkConta;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using LocadoraVeiculos.WindowsForm.Feature.LoginModule;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,6 +48,11 @@ namespace LocadoraVeiculos.WindowsForm
 
         public void OpcaoCadastroFuncionarios_Click(object sender, EventArgs e)
         {
+            if (UsuarioParaValidacao.MudarConta == null)
+            {
+                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                return;
+            }
             panelTabelas.Controls.Clear();
             TxtCadastroSelecionado.Text = "       FUNCIONÁRIOS";
             MostrarOpcoes();
@@ -56,6 +62,11 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void OpcaoCadastroClientes_Click(object sender, EventArgs e)
         {
+            if(UsuarioParaValidacao.MudarConta == null)
+            {
+                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                return;
+            }
             MostrarOpcoes();
             TxtCadastroSelecionado.Text = "           CLIENTES";
             panelTabelas.Controls.Clear();
@@ -63,6 +74,11 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void OpcaoCadastroVeiculos_Click(object sender, EventArgs e)
         {
+            if (UsuarioParaValidacao.MudarConta == null)
+            {
+                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                return;
+            }
             panelTabelas.Controls.Clear();
             TxtCadastroSelecionado.Text = "           VEÍCULOS";
             MostrarOpcoes();
@@ -72,6 +88,11 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void OpcaoCadastroServicos_Click(object sender, EventArgs e)
         {
+            if (UsuarioParaValidacao.MudarConta == null)
+            {
+                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                return;
+            }
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
             TxtCadastroSelecionado.Text = "           SERVIÇOS";
@@ -94,6 +115,11 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void gRUPODEVEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (UsuarioParaValidacao.MudarConta == null)
+            {
+                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                return;
+            }
             TxtCadastroSelecionado.Text = " GRUPO DE VEÍCULOS";
             MostrarOpcoes();
             ImagemChave.Visible = false;
