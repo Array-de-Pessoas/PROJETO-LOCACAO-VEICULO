@@ -145,6 +145,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Location = new System.Drawing.Point(25, 241);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(88, 37);
@@ -164,6 +165,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             // btnGravar
             // 
             this.btnGravar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnGravar.Location = new System.Drawing.Point(405, 241);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(88, 37);

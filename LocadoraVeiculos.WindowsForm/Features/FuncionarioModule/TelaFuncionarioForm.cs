@@ -27,7 +27,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
 
             set
             {
-                Funcionario = value;
+                funcionario = value;
 
                 txtId.Text = funcionario.Id.ToString();
                 txtNome.Text = funcionario.Nome.ToString();
