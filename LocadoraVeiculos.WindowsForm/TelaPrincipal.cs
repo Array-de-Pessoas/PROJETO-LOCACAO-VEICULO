@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LocadoraVeiculos.WindowsForm.Feature.VeiculoModule;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace LocadoraVeiculos.WindowsForm
         public TelaPrincipal()
         {
             InitializeComponent();
+            
+        }
+
+        private void TelaPrincipal_Load(object sender, EventArgs e)
+        {
+            TelaVeiculoForm telaVeiculoForm = new TelaVeiculoForm();
+            telaVeiculoForm.ShowDialog();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace LocadoraVeiculos.WindowsForm.Feature.VeiculoModule
 {
-    partial class TabelaVeiculos
+    partial class TabelaVeiculosControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,35 +29,35 @@ namespace LocadoraVeiculos.WindowsForm.Feature.VeiculoModule
         /// </summary>
         private void InitializeComponent()
         {
-            this.DataGridDeVeiculos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridDeVeiculos)).BeginInit();
+            this.dataGridVeiculo = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).BeginInit();
             this.SuspendLayout();
             // 
-            // DataGridDeVeiculos
+            // dataGridVeiculo
             // 
-            this.DataGridDeVeiculos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
-            this.DataGridDeVeiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridDeVeiculos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataGridDeVeiculos.Location = new System.Drawing.Point(0, 0);
-            this.DataGridDeVeiculos.Name = "DataGridDeVeiculos";
-            this.DataGridDeVeiculos.Size = new System.Drawing.Size(679, 458);
-            this.DataGridDeVeiculos.TabIndex = 0;
+            this.dataGridVeiculo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
+            this.dataGridVeiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridVeiculo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridVeiculo.Location = new System.Drawing.Point(0, 0);
+            this.dataGridVeiculo.Name = "dataGridVeiculo";
+            this.dataGridVeiculo.Size = new System.Drawing.Size(679, 458);
+            this.dataGridVeiculo.TabIndex = 0;
             // 
-            // TabelaVeiculos
+            // TabelaVeiculosControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
-            this.Controls.Add(this.DataGridDeVeiculos);
-            this.Name = "TabelaVeiculos";
+            this.Controls.Add(this.dataGridVeiculo);
+            this.Name = "TabelaVeiculosControl";
             this.Size = new System.Drawing.Size(679, 458);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridDeVeiculos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DataGridDeVeiculos;
+        private System.Windows.Forms.DataGridView dataGridVeiculo;
     }
 }

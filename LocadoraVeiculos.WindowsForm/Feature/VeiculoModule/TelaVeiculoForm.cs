@@ -12,11 +12,12 @@ using System.Windows.Forms;
 
 namespace LocadoraVeiculos.WindowsForm.Feature.VeiculoModule
 {
-    public partial class VeiculoForm : Form
+    public partial class TelaVeiculoForm : Form
     {
         OpenFileDialog openFileDialog = new OpenFileDialog();
         ControladorVeiculo controladorVeiculo = new ControladorVeiculo();
-        public VeiculoForm()
+        Veiculo veiculo;
+        public TelaVeiculoForm()
         {
             InitializeComponent();
         }
@@ -29,7 +30,30 @@ namespace LocadoraVeiculos.WindowsForm.Feature.VeiculoModule
             //    cbTipoVeiculo.Items.Insert(item.Id,item.ano);           
             //}            
         }
+        public Veiculo Veiculo
+        {
+            get { return veiculo; }
 
+            set
+            {
+                veiculo = value;
+
+                txtId.Text = veiculo.Id.ToString();
+                txtPlaca.Text = veiculo.placa;
+                txtCor.Text = veiculo.cor;
+                txtMarca.Text = veiculo.marca;
+                txtTipoCombustivel.Text = veiculo.tipoCombustivel;
+                pictureBox.Image = veiculo.foto;
+                txtQuantidadeLitros.Text = veiculo.quantidadeLitros.ToString();
+                txtCapacidadePessoas.Text = veiculo.capacidadeDePessoas.ToString();
+                txtAno.Text = veiculo.ano.ToString();
+                txtPortas.Text = veiculo.numeroPortas.ToString();
+                txtTamanhoPortaMalas.Text = veiculo.tamanhoPortaMalas;
+                txtKm.Text = veiculo.kilometragem.ToString();
+                cbTipoVeiculo.SelectedIndex = veiculo.idGrupoVeiculo;
+                
+            }
+        }
         private void btnAdicionarImagem_Click(object sender, EventArgs e)
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -54,6 +78,11 @@ namespace LocadoraVeiculos.WindowsForm.Feature.VeiculoModule
             int id_grupoVeiculo = Convert.ToInt32(cbTipoVeiculo.SelectedIndex);
             Veiculo veiculo = new Veiculo(placa,cor,marca,ano,tipoCombustivel,image,quantidadeLitros,numeroPortas,capacidadePessoas,tamanhoPortaMalas,kilometragem,id_grupoVeiculo);
             controladorVeiculo.InserirNovo(veiculo);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

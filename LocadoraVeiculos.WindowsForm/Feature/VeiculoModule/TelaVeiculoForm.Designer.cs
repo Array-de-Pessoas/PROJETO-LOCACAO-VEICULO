@@ -1,7 +1,7 @@
 ﻿
 namespace LocadoraVeiculos.WindowsForm.Feature.VeiculoModule
 {
-    partial class VeiculoForm
+    partial class TelaVeiculoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -334,6 +334,7 @@ namespace LocadoraVeiculos.WindowsForm.Feature.VeiculoModule
             this.btnCancelar.TabIndex = 40;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAdicionarImagem
             // 
@@ -357,7 +358,7 @@ namespace LocadoraVeiculos.WindowsForm.Feature.VeiculoModule
             this.cbTipoVeiculo.Size = new System.Drawing.Size(152, 28);
             this.cbTipoVeiculo.TabIndex = 42;
             // 
-            // VeiculoForm
+            // TelaVeiculoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -395,7 +396,7 @@ namespace LocadoraVeiculos.WindowsForm.Feature.VeiculoModule
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.pictureBox5);
             this.DoubleBuffered = true;
-            this.Name = "VeiculoForm";
+            this.Name = "TelaVeiculoForm";
             this.Text = "VeiculoForm";
             this.Load += new System.EventHandler(this.VeiculoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
