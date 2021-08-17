@@ -2,7 +2,7 @@
 using FluentAssertions;
 using System;
 using LocadoraVeiculos.Controladores.FuncionarioModule;
-using eAgenda.Controladores.Shared;
+using LocadoraVeiculos.Controladores.Shared;
 using LocadoraVeiculos.Dominio.FuncionarioModule;
 
 namespace LocadoraVeiculos.Tests.FuncionarioModule
