@@ -30,6 +30,7 @@ namespace LocadoraVeiculos.WindowsForm
             if (login == "Existe")
             {
                 this.Close();
+                UsuarioParaValidacao.MudarConta = "ContaAcessada";
             }
             if (login == "NaoExiste")
             {

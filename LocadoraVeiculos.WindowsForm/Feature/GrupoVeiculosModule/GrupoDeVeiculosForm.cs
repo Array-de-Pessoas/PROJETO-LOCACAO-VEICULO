@@ -53,9 +53,7 @@ namespace LocadoraVeiculos.WindowsForm
                 string primeiroErro = new StringReader(resultadoValidacao).ReadLine();
 
                 DialogResult = DialogResult.None;
-            }
-
-            
+            } 
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

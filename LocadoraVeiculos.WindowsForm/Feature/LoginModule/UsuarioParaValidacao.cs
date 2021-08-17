@@ -10,5 +10,6 @@ namespace LocadoraVeiculos.WindowsForm.Feature.LoginModule
     {
         public static string Usuario;
         public static string Senha;
+        public static string MudarConta;
     }
 }
