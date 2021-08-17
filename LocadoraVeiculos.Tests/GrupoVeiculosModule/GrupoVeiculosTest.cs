@@ -10,7 +10,20 @@ namespace LocadoraVeiculos.Tests.GrupoVeiculosModule
     public class GrupoVeiculosTest
     {
         [TestMethod]
-        public void DeveValidarNomeGrupo()
+        public void DeveValidarNomeGrupo_Vazio()
+        {
+            // ARRANGE
+            var grupoVeiculos = new GrupoVeiculos(null);
+
+            // ACTION
+            var resultadoValidacao = grupoVeiculos.Validar();
+
+            //ASSERT
+            resultadoValidacao.Should().Be("O campo Nome do grupo é obrigatório");
+        }
+
+        [TestMethod]
+        public void DeveValidarNomeGrupoCorreto()
         {
             // ARRANGE
             var grupoVeiculos = new GrupoVeiculos("SUV");
@@ -19,7 +32,7 @@ namespace LocadoraVeiculos.Tests.GrupoVeiculosModule
             var resultadoValidacao = grupoVeiculos.Validar();
 
             //ASSERT
-            //resultadoValidacao.Should().Be("O campo Grupo está inválido");
+            resultadoValidacao.Should().Be("ESTA_VALIDO");
         }
     }
 }
