@@ -16,7 +16,7 @@ namespace LocadoraVeiculos.Tests.FuncionarioModule
         public ControladorFuncionarioTest()
         {
             controlador = new ControladorFuncionario();
-            Db.Update("DELETE FROM [TBFUNCIONARIO]");
+            Db.Update("DELETE FROM [TBFUNCIONARIO]; DBCC CHECKIDENT('TBVEICULO', RESEED, 0)");
         }
 
         [TestMethod]

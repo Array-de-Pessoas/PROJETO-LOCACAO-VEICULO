@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using LocadoraVeiculos.Controladores.Shared;
+using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using LocadoraVeiculos.Dominio.GrupoVeiculosModule;
 
 namespace LocadoraVeiculos.Tests.VeiculoModule
 {
@@ -16,30 +19,15 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
     public partial class ControladorVeiculoTest
     {
         ControladorVeiculo controladorVeiculo;
+        ControladorGrupoVeiculos controladorGrupoVeiculo;
 
         public ControladorVeiculoTest()
         {
-            ResetaTabela();
-        
             controladorVeiculo = new ControladorVeiculo();
-        }
+            controladorGrupoVeiculo = new ControladorGrupoVeiculos();
 
-        public void ResetaTabela()
-        {
-            SqlConnection con;
-            SqlCommand comando;
-            string enderecoDeConexao = @"Data Source=(LocalDb)\mssqlLocalDB;Initial Catalog=DBLocalVeiculo;Integrated Security=True;Pooling=False";
-            //abre conexao
-            con = new SqlConnection(enderecoDeConexao);
-            con.Open();
-            //config comando
-            comando = new SqlCommand();
-            comando.Connection = con;
-            string sqlReseta = @"DELETE FROM TBVEICULO; DBCC CHECKIDENT('TBVEICULO', RESEED, 0)";
-
-            comando.CommandText = sqlReseta;
-            comando.ExecuteNonQuery();
-            con.Close();
+            Db.Update("DELETE FROM [TBVEICULO]; DBCC CHECKIDENT('TBVEICULO', RESEED, 0)");
+            Db.Update("DELETE FROM [TBGRUPOVEICULOS]; DBCC CHECKIDENT('TBVEICULO', RESEED, 0)");
         }
 
         [TestMethod]
@@ -47,10 +35,15 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         {
             //arrange
             //Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
-          
-            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", null, 300, 4, 5, "G", 10000, 1);
+
+            var novoGrupo = new GrupoVeiculos("SUV");
+            controladorGrupoVeiculo.InserirNovo(novoGrupo);
+
+            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", null, 300, 4, 5, "G", 10000, novoGrupo.Id);
+            
             //act
             controladorVeiculo.InserirNovo(veiculo);
+            
             //assert
             var veiculoEncontrado = controladorVeiculo.SelecionarPorId(veiculo.Id);
             Assert.AreEqual(veiculo.placa, veiculoEncontrado.placa);
@@ -60,10 +53,13 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         public void deveEditarVeiculoNoBanco()
         {
             //arrange
-            Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+            //Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
 
-            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, 1);
-            var veiculoEditado = new Veiculo("ADA-1000", "Preto", "Ford", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, 1);
+            var novoGrupo = new GrupoVeiculos("SUV");
+            controladorGrupoVeiculo.InserirNovo(novoGrupo);
+
+            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, novoGrupo.Id);
+            var veiculoEditado = new Veiculo("ADA-1000", "Preto", "Ford", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, novoGrupo.Id);
             //act
             controladorVeiculo.InserirNovo(veiculo);
             controladorVeiculo.Editar(1,veiculoEditado);
@@ -77,9 +73,12 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         public void deveExcluirVeiculoNoBanco()
         {
             //arrange
-            Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+            //Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
 
-            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, 1);
+            var novoGrupo = new GrupoVeiculos("SUV");
+            controladorGrupoVeiculo.InserirNovo(novoGrupo);
+
+            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, novoGrupo.Id);
          
             //act
             controladorVeiculo.InserirNovo(veiculo);
@@ -92,10 +91,13 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         public void deveSelecionarTodosVeiculosDoBanco()
         {
             //arrange
-            Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+            //Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
 
-            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, 1);
-            var veiculo2 = new Veiculo("ADA-1000", "Preto", "Ford", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, 1);
+            var novoGrupo = new GrupoVeiculos("SUV");
+            controladorGrupoVeiculo.InserirNovo(novoGrupo);
+
+            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, novoGrupo.Id);
+            var veiculo2 = new Veiculo("ADA-1000", "Preto", "Ford", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, novoGrupo.Id);
             //act
             controladorVeiculo.InserirNovo(veiculo);
             controladorVeiculo.InserirNovo(veiculo2);
@@ -107,9 +109,12 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         public void deveVerificarSeExisteVeiculoNoBanco()
         {
             //arrange
-            Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+            //Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
 
-            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, 1);       
+            var novoGrupo = new GrupoVeiculos("SUV");
+            controladorGrupoVeiculo.InserirNovo(novoGrupo);
+
+            var veiculo = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",null, 300, 4, 5, "G", 10000, novoGrupo.Id);       
             //act
             controladorVeiculo.InserirNovo(veiculo);
             var resultado = controladorVeiculo.Existe(1);

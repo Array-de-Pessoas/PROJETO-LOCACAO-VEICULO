@@ -21,9 +21,9 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         public void deveRetornarVeiculoInvalido()
         {
             //arrange
-            Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+            //Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
          
-            Veiculo veiculoInvalido = new Veiculo("","Azul", "FIAT", 2015, "Gasolina",foto, 300, 4, 5, "G", 10000, 1);
+            Veiculo veiculoInvalido = new Veiculo("","Azul", "FIAT", 2015, "Gasolina", null, 300, 4, 5, "G", 10000, 1);
             //act
             string resultado = veiculoInvalido.Validar();
             //assert
@@ -34,8 +34,9 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         public void deveRetornarVeiculoValido()
         {
             //arrange
-            Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
-            Veiculo veiculoInvalido = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina",foto, 300, 4, 5, "G", 10000, 1);
+            //Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
+
+            Veiculo veiculoInvalido = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", null, 300, 4, 5, "G", 10000, 1);
             //act
             string resultado = veiculoInvalido.Validar();
             //assert
