@@ -53,9 +53,14 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             if (resultadoValidacao != "ESTA_VALIDO")
             {
                 string primeiroErro = new StringReader(resultadoValidacao).ReadLine();
-                //TelaPrincipalForm.Instancia.AtualizarRodape(primeiroErro);
+                TelaPrincipal.Instancia.AtualizarRodape(primeiroErro);
                 DialogResult = DialogResult.None;
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            TelaPrincipal.Instancia.AtualizarRodape("");
         }
     }
 }

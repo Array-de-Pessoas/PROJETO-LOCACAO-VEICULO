@@ -1,4 +1,6 @@
-﻿using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+﻿using LocadoraVeiculos.Controladores.FuncionarioModule;
+using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using System;
 using System.Collections.Generic;
@@ -33,7 +35,6 @@ namespace LocadoraVeiculos.WindowsForm
             btnFiltro.Visible = false;
             ImagemLinha.Visible = false;
             ImagemLinha2.Visible = false;
-            TxtCadastroSelecionado.Text = "";
         }
 
         public void MostrarOpcoes()
@@ -49,23 +50,22 @@ namespace LocadoraVeiculos.WindowsForm
         public void OpcaoCadastroFuncionarios_Click(object sender, EventArgs e)
         {
             panelTabelas.Controls.Clear();
-            TxtCadastroSelecionado.Text = "       FUNCIONÁRIOS";
             MostrarOpcoes();
             ImagemChave.Visible = false;
-            // Implementação da Carol
+            operacoes = new OperacoesFuncionario(new ControladorFuncionario());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
         }
 
         private void OpcaoCadastroClientes_Click(object sender, EventArgs e)
         {
             MostrarOpcoes();
-            TxtCadastroSelecionado.Text = "           CLIENTES";
             panelTabelas.Controls.Clear();
         }
 
         private void OpcaoCadastroVeiculos_Click(object sender, EventArgs e)
         {
             panelTabelas.Controls.Clear();
-            TxtCadastroSelecionado.Text = "           VEÍCULOS";
             MostrarOpcoes();
             ImagemChave.Visible = false;
             // implementação do João
@@ -75,8 +75,7 @@ namespace LocadoraVeiculos.WindowsForm
         {
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
-            TxtCadastroSelecionado.Text = "           SERVIÇOS";
-            
+
         }
 
         private void btnVizualizarConta_Click(object sender, EventArgs e)
@@ -95,7 +94,6 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void gRUPODEVEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TxtCadastroSelecionado.Text = " GRUPO DE VEÍCULOS";
             MostrarOpcoes();
             ImagemChave.Visible = false;
             operacoes = new OperacoesGrupoVeiculos(new ControladorGrupoVeiculos());
@@ -106,26 +104,17 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            if (TxtCadastroSelecionado.Text == " GRUPO DE VEÍCULOS")
-            {
-                operacoes.InserirNovoRegistro();
-            }
+            operacoes.InserirNovoRegistro();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (TxtCadastroSelecionado.Text == " GRUPO DE VEÍCULOS")
-            {
-                operacoes.EditarRegistro();
-            }
+            operacoes.EditarRegistro();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (TxtCadastroSelecionado.Text == " GRUPO DE VEÍCULOS")
-            {
-                operacoes.ExcluirRegistro();
-            }
+            operacoes.ExcluirRegistro();
         }
 
         private void ConfigurarPanelRegistros()

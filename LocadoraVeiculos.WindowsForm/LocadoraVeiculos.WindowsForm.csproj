@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\FuncionarioModule\ConfiguracaoFuncionarioTooBox.cs" />
+    <Compile Include="Features\FuncionarioModule\OperacoesFuncionario.cs" />
     <Compile Include="Features\GrupoVeiculosModule\GrupoDeVeiculosForm.cs">
       <SubType>Form</SubType>
     </Compile>

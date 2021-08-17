@@ -23,6 +23,11 @@ namespace LocadoraVeiculos.WindowsForm
             Instancia = this;
         }
 
+        public void AtualizarRodape(string mensagem)
+        {
+            StatusAplicacao.Text = mensagem;
+        }
+
         private void btnAcessar_Click(object sender, EventArgs e)
         {
             MudarPannel();
