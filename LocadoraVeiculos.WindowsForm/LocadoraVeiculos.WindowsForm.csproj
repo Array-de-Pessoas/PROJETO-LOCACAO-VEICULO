@@ -100,7 +100,6 @@
     <Compile Include="Feature\VeiculoModule\TabelaVeiculosControl.Designer.cs">
       <DependentUpon>TabelaVeiculosControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shared\DataGridViewExtensions.cs" />
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\GrupoVeiculosModule\TabelaGrupoVeiculos.resx">
       <DependentUpon>TabelaGrupoVeiculos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaPrincipal.resx">
-      <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaPrincipalCadastros.resx">
       <DependentUpon>TelaPrincipalCadastros.cs</DependentUpon>
