@@ -10,13 +10,13 @@ using System.Windows.Forms;
 namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 {
     
-    public class OperacoesVeiculo
+    public class OperacoesVeiculo : ICadastravel
     {
         ControladorVeiculo controladorVeiculo;
         TabelaVeiculosControl tabelaVeiculosControl;
-        public OperacoesVeiculo()
+        public OperacoesVeiculo(ControladorVeiculo controladorVeiculo)
         {
-            controladorVeiculo = new ControladorVeiculo();
+            this.controladorVeiculo = controladorVeiculo;
             tabelaVeiculosControl = new TabelaVeiculosControl();
         }
         public void EditarRegistro()

@@ -1,5 +1,6 @@
 ﻿using LocadoraVeiculos.Controladores.FuncionarioModule;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using LocadoraVeiculos.Controladores.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using System;
@@ -68,7 +69,9 @@ namespace LocadoraVeiculos.WindowsForm
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
             ImagemChave.Visible = false;
-            // implementação do João
+            operacoes = new OperacoesVeiculo(new ControladorVeiculo());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
         }
 
         private void OpcaoCadastroServicos_Click(object sender, EventArgs e)

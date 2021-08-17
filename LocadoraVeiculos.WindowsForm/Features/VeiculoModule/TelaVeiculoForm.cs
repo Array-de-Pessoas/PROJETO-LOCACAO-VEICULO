@@ -1,4 +1,6 @@
-﻿using LocadoraVeiculos.Controladores.VeiculoModule;
+﻿using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using LocadoraVeiculos.Controladores.VeiculoModule;
+using LocadoraVeiculos.Dominio.GrupoVeiculosModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
     {
         OpenFileDialog openFileDialog = new OpenFileDialog();
         ControladorVeiculo controladorVeiculo = new ControladorVeiculo();
+        ControladorGrupoVeiculos controladorGrupoVeiculos = new ControladorGrupoVeiculos();
         Veiculo veiculo;
+        GrupoVeiculos grupoVeiculos;
         public TelaVeiculoForm()
         {
             InitializeComponent();
@@ -24,11 +28,11 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 
         private void VeiculoForm_Load(object sender, EventArgs e)
         {
-            //List<Veiculo> veiculos = controladorVeiculo.SelecionarTodos();
-            //foreach (var item in veiculos)
-            //{
-            //    cbTipoVeiculo.Items.Insert(item.Id,item.ano);           
-            //}            
+            List<GrupoVeiculos> grupoVeiculos = controladorGrupoVeiculos.SelecionarTodos();
+            foreach (var item in grupoVeiculos)
+            {
+                cbTipoVeiculo.Items.Insert(item.Id, item.Grupo);
+            }
         }
         public Veiculo Veiculo
         {
