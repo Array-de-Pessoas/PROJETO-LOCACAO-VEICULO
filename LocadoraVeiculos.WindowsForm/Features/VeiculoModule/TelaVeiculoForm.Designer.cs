@@ -29,6 +29,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaVeiculoForm));
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -88,10 +89,12 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             // pictureBox
             // 
             this.pictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox.Location = new System.Drawing.Point(434, 141);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(316, 192);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 11;
             this.pictureBox.TabStop = false;
             // 
@@ -225,6 +228,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(354, 62);
             this.txtId.Name = "txtId";
@@ -396,8 +400,12 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.pictureBox5);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "TelaVeiculoForm";
-            this.Text = "VeiculoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de veículo";
             this.Load += new System.EventHandler(this.VeiculoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

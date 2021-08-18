@@ -20,19 +20,22 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
         ControladorVeiculo controladorVeiculo = new ControladorVeiculo();
         ControladorGrupoVeiculos controladorGrupoVeiculos = new ControladorGrupoVeiculos();
         Veiculo veiculo;
-        GrupoVeiculos grupoVeiculos;
         public TelaVeiculoForm()
         {
             InitializeComponent();
         }
-
         private void VeiculoForm_Load(object sender, EventArgs e)
         {
+            CarregarComboBox();
+
+        }
+        private void CarregarComboBox()
+        {
             List<GrupoVeiculos> grupoVeiculos = controladorGrupoVeiculos.SelecionarTodos();
-            foreach (var item in grupoVeiculos)
-            {
-                cbTipoVeiculo.Items.Insert(item.Id, item.Grupo);
-            }
+
+            cbTipoVeiculo.DisplayMember = "Grupo";
+            cbTipoVeiculo.ValueMember = "Id";
+            cbTipoVeiculo.DataSource = grupoVeiculos;
         }
         public Veiculo Veiculo
         {
@@ -54,8 +57,8 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
                 txtPortas.Text = veiculo.numeroPortas.ToString();
                 txtTamanhoPortaMalas.Text = veiculo.tamanhoPortaMalas;
                 txtKm.Text = veiculo.kilometragem.ToString();
-                cbTipoVeiculo.SelectedIndex = veiculo.idGrupoVeiculo;
-                
+                cbTipoVeiculo.SelectedValue = veiculo.idGrupoVeiculo;
+
             }
         }
         private void btnAdicionarImagem_Click(object sender, EventArgs e)
@@ -63,9 +66,10 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 this.pictureBox.Image = Image.FromFile(openFileDialog.FileName);
+                btnAdicionarImagem.Visible = false;
             }
-        }
 
+        }
         private void btnGravar_Click(object sender, EventArgs e)
         {
             string placa = txtPlaca.Text;
@@ -79,11 +83,10 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             int capacidadePessoas = Convert.ToInt32(txtCapacidadePessoas.Text);
             string tamanhoPortaMalas = txtTamanhoPortaMalas.Text;
             int kilometragem = Convert.ToInt32(txtKm.Text);
-            int id_grupoVeiculo = Convert.ToInt32(cbTipoVeiculo.SelectedIndex);
-            Veiculo veiculo = new Veiculo(placa,cor,marca,ano,tipoCombustivel,image,quantidadeLitros,numeroPortas,capacidadePessoas,tamanhoPortaMalas,kilometragem,id_grupoVeiculo);
+            int id_grupoVeiculo = Convert.ToInt32(cbTipoVeiculo.SelectedValue);
+            Veiculo veiculo = new Veiculo(placa, cor, marca, ano, tipoCombustivel, image, quantidadeLitros, numeroPortas, capacidadePessoas, tamanhoPortaMalas, kilometragem, id_grupoVeiculo);
             controladorVeiculo.InserirNovo(veiculo);
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();

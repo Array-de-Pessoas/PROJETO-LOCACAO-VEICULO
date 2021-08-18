@@ -26,7 +26,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
         {
             var colunas = new DataGridViewColumn[]
             {
-                new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id"},
+                //new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Placa", HeaderText = "Placa"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Cor", HeaderText = "Cor"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Marca", HeaderText = "Marca"},
@@ -53,8 +53,8 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             dataGridVeiculo.Rows.Clear();
 
             foreach (Veiculo veiculo in veiculos)
-            {           
-                dataGridVeiculo.Rows.Add(veiculo.Id, veiculo.placa, veiculo.cor,veiculo.marca,veiculo.ano,veiculo.tipoCombustivel,veiculo.foto,veiculo.quantidadeLitros,veiculo.numeroPortas,veiculo.capacidadeDePessoas,veiculo.tamanhoPortaMalas,veiculo.kilometragem, veiculo.idGrupoVeiculo);
+            {
+                dataGridVeiculo.Rows.Add(veiculo.placa, veiculo.cor, veiculo.marca, veiculo.ano, veiculo.tipoCombustivel, veiculo.foto, veiculo.quantidadeLitros, veiculo.numeroPortas, veiculo.capacidadeDePessoas, veiculo.tamanhoPortaMalas, veiculo.kilometragem, veiculo.idGrupoVeiculo);
             }
         }
     }
