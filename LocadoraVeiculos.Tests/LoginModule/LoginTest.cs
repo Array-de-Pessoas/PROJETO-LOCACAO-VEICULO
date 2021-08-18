@@ -19,18 +19,5 @@ namespace LocadoraVeiculos.Tests.LoginModule
             UsuarioParaValidacao.Usuario = null;
             UsuarioParaValidacao.Senha = null;
         }
-
-        [TestMethod]
-        public void DeveValidarSeNaoExiste()
-        {
-            UsuarioParaValidacao.Usuario = "Lucas";
-            UsuarioParaValidacao.Senha = "124321";
-
-            OperacoesLogin operacoes = new OperacoesLogin();
-            operacoes.ValidarSeExiste();
-
-            UsuarioParaValidacao.Usuario = null;
-            UsuarioParaValidacao.Senha = null;
-        }
     }
 }

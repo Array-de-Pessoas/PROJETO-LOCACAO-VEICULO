@@ -60,7 +60,6 @@
     </Compile>
     <Compile Include="Feature\GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
     <Compile Include="Shared\ICadastravel.cs" />
-    <Compile Include="Shared\ICadastravelLogin.cs" />
     <Compile Include="Shared\IConfiguracaoToolBox.cs" />
     <Compile Include="Feature\LoginModule\LoginForm.cs">
       <SubType>Form</SubType>

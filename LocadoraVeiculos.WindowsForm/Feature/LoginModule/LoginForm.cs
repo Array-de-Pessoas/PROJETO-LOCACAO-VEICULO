@@ -25,16 +25,34 @@ namespace LocadoraVeiculos.WindowsForm
         {
             UsuarioParaValidacao.Usuario = textBox1.Text;
             UsuarioParaValidacao.Senha = textBox2.Text;
+
+            if (textBox1.TextLength == 0)
+            {
+                StatusLogin.Text = "O campo usuário está vazio";
+                return;
+            }
+            if (textBox2.TextLength == 0)
+            {
+                StatusLogin.Text = "O campo senha está vazio";
+                return;
+            }
+
             OperacoesLogin operacoesLogin = new OperacoesLogin();
             operacoesLogin.ValidarSeExiste();
+
             if (login == "Existe")
             {
                 this.Close();
                 UsuarioParaValidacao.MudarConta = "ContaAcessada";
+                login = null;
             }
             if (login == "NaoExiste")
             {
                 StatusLogin.Text = "Login não encontrado, tente novamente ou crie um novo";
+            }
+            if (login == "DadosIncorretos")
+            {
+                StatusLogin.Text = "Dados do usuário ou senha estão incorretos";
             }
         }
 
@@ -46,6 +64,11 @@ namespace LocadoraVeiculos.WindowsForm
         public void LoginNaoEncontrado()
         {
             login = "NaoExiste";
+        }
+
+        public void DadosIncorretos()
+        {
+            login = "DadosIncorretos";
         }
     }
 }

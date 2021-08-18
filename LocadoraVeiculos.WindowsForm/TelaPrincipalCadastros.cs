@@ -21,11 +21,12 @@ namespace LocadoraVeiculos.WindowsForm
         public TelaPrincipalCadastros()
         {
             InitializeComponent();
-            ConfiguracoesDeInicio();
             Instancia = this;
+            ConfiguracoesDeInicio();
+
         }
 
-        private void ConfiguracoesDeInicio()
+        public void ConfiguracoesDeInicio()
         {
             btnAdicionar.Visible = false;
             btnEditar.Visible = false;
@@ -48,11 +49,6 @@ namespace LocadoraVeiculos.WindowsForm
 
         public void OpcaoCadastroFuncionarios_Click(object sender, EventArgs e)
         {
-            if (UsuarioParaValidacao.MudarConta == null)
-            {
-                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
-                return;
-            }
             panelTabelas.Controls.Clear();
             TxtCadastroSelecionado.Text = "       FUNCIONÁRIOS";
             MostrarOpcoes();
@@ -131,14 +127,16 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            if (TxtCadastroSelecionado.Text == " GRUPO DE VEÍCULOS")
-            {
-                operacoes.InserirNovoRegistro();
-            }
+            operacoes.InserirNovoRegistro();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (UsuarioParaValidacao.MudarConta == null)
+            {
+                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                return;
+            }
             if (TxtCadastroSelecionado.Text == " GRUPO DE VEÍCULOS")
             {
                 operacoes.EditarRegistro();
@@ -147,6 +145,11 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            if (UsuarioParaValidacao.MudarConta == null)
+            {
+                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                return;
+            }
             if (TxtCadastroSelecionado.Text == " GRUPO DE VEÍCULOS")
             {
                 operacoes.ExcluirRegistro();
@@ -162,6 +165,15 @@ namespace LocadoraVeiculos.WindowsForm
             panelTabelas.Controls.Clear();
 
             panelTabelas.Controls.Add(tabela);
+        }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            if (UsuarioParaValidacao.MudarConta == null)
+            {
+                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                return;
+            }
         }
     }
 }

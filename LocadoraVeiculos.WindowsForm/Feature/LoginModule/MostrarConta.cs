@@ -35,12 +35,11 @@ namespace LocadoraVeiculos.WindowsForm
             {
                 LoginForm login = new LoginForm();
                 login.Show();
-                this.Controls.Clear();
                 return;
             }
             if (LinkConta.Text == "Sair")
             {
-                UsuarioParaValidacao.MudarConta = "";
+                UsuarioParaValidacao.MudarConta = null;
                 ImagemConta1.Image = Properties.Resources.Sem_conta;
                 TxtNomeConta.Text = "Faça login";
                 LinkConta.Text = "Entrar";

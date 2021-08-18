@@ -254,6 +254,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnFiltro.Size = new System.Drawing.Size(163, 45);
             this.btnFiltro.TabIndex = 9;
             this.btnFiltro.UseVisualStyleBackColor = false;
+            this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
             // 
             // panelTelaContaRegistradas
             // 

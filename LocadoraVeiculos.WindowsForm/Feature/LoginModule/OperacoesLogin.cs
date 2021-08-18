@@ -1,5 +1,4 @@
 ﻿using LocadoraVeiculos.Controladores.FuncionarioModule;
-using LocadoraVeiculos.WindowsForm.Shared;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -9,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LocadoraVeiculos.WindowsForm.Feature.LoginModule
 {
-    public class OperacoesLogin : ICadastravelLogin
+    public class OperacoesLogin 
     {
         static List<String> PegarValor = new List<string>();
         LoginForm login = new LoginForm();
@@ -56,6 +55,10 @@ namespace LocadoraVeiculos.WindowsForm.Feature.LoginModule
             if (PegarValor.Count == 0)
             {
                 login.LoginNaoEncontrado();
+            }
+            if (PegarValor.Count == 1)
+            {
+                login.DadosIncorretos();
             }
             PegarValor.Clear();
         }
