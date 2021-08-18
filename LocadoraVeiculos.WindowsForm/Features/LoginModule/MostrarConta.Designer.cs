@@ -1,5 +1,5 @@
 ﻿
-namespace LocadoraVeiculos.WindowsForm
+namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
 {
     partial class MostrarConta
     {

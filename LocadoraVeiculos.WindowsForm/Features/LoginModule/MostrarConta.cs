@@ -1,4 +1,4 @@
-﻿using LocadoraVeiculos.WindowsForm.Feature.LoginModule;
+﻿using LocadoraVeiculos.WindowsForm.Features.LoginModule;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LocadoraVeiculos.WindowsForm
+namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
 {
     public partial class MostrarConta : UserControl
     {

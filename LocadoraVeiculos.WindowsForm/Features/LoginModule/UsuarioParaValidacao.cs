@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocadoraVeiculos.WindowsForm.Feature.LoginModule
+namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
 {
     public static class UsuarioParaValidacao
     {

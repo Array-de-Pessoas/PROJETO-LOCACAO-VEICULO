@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace LocadoraVeiculos.WindowsForm
+namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 {
     public partial class TabelaGrupoVeiculos : UserControl
     {

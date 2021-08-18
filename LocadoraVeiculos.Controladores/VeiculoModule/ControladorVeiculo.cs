@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LocadoraVeiculos.Controladores.Shared;
-using LocadoraVeiculos.Controladores.Shared;
 using LocadoraVeiculos.Dominio.VeiculoModule;
 
 

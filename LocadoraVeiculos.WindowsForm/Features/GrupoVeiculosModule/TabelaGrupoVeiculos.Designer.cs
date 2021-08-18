@@ -1,5 +1,5 @@
 ﻿
-namespace LocadoraVeiculos.WindowsForm
+namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 {
     partial class TabelaGrupoVeiculos
     {

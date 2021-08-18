@@ -49,35 +49,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Feature\LoginModule\OperacoesLogin.cs" />
-    <Compile Include="Feature\LoginModule\UsuarioParaValidacao.cs" />
+    <Compile Include="Features\LoginModule\OperacoesLogin.cs" />
+    <Compile Include="Features\LoginModule\UsuarioParaValidacao.cs" />
     <Compile Include="Shared\DataGridViewExtensions.cs" />
-    <Compile Include="Feature\GrupoVeiculosModule\GrupoDeVeiculosForm.cs">
+    <Compile Include="Features\GrupoVeiculosModule\GrupoDeVeiculosForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\GrupoVeiculosModule\GrupoDeVeiculosForm.Designer.cs">
+    <Compile Include="Features\GrupoVeiculosModule\GrupoDeVeiculosForm.Designer.cs">
       <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
+    <Compile Include="Features\GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
     <Compile Include="Shared\ICadastravel.cs" />
     <Compile Include="Shared\IConfiguracaoToolBox.cs" />
-    <Compile Include="Feature\LoginModule\LoginForm.cs">
+    <Compile Include="Features\LoginModule\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\LoginModule\LoginForm.Designer.cs">
+    <Compile Include="Features\LoginModule\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\LoginModule\MostrarConta.cs">
+    <Compile Include="Features\LoginModule\MostrarConta.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Feature\LoginModule\MostrarConta.Designer.cs">
+    <Compile Include="Features\LoginModule\MostrarConta.Designer.cs">
       <DependentUpon>MostrarConta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\GrupoVeiculosModule\OperacoesGrupoVeiculos.cs" />
-    <Compile Include="Feature\GrupoVeiculosModule\TabelaGrupoVeiculos.cs">
+    <Compile Include="Features\GrupoVeiculosModule\OperacoesGrupoVeiculos.cs" />
+    <Compile Include="Features\GrupoVeiculosModule\TabelaGrupoVeiculos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Feature\GrupoVeiculosModule\TabelaGrupoVeiculos.Designer.cs">
+    <Compile Include="Features\GrupoVeiculosModule\TabelaGrupoVeiculos.Designer.cs">
       <DependentUpon>TabelaGrupoVeiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaPrincipal.cs">
@@ -94,13 +94,13 @@
     <Compile Include="TelaPrincipalCadastros.Designer.cs">
       <DependentUpon>TelaPrincipalCadastros.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Feature\GrupoVeiculosModule\GrupoDeVeiculosForm.resx">
+    <EmbeddedResource Include="Features\GrupoVeiculosModule\GrupoDeVeiculosForm.resx">
       <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Feature\LoginModule\LoginForm.resx">
+    <EmbeddedResource Include="Features\LoginModule\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Feature\LoginModule\MostrarConta.resx">
+    <EmbeddedResource Include="Features\LoginModule\MostrarConta.resx">
       <DependentUpon>MostrarConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -113,7 +113,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Feature\GrupoVeiculosModule\TabelaGrupoVeiculos.resx">
+    <EmbeddedResource Include="Features\GrupoVeiculosModule\TabelaGrupoVeiculos.resx">
       <DependentUpon>TabelaGrupoVeiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaPrincipal.resx">
