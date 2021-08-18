@@ -61,16 +61,16 @@
     <Compile Include="Shared\DataGridViewExtensions.cs" />
     <Compile Include="Shared\ICadastravel.cs" />
     <Compile Include="Shared\IConfiguracaoToolBox.cs" />
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Features\LoginModule\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Features\LoginModule\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MostrarConta.cs">
+    <Compile Include="Features\LoginModule\MostrarConta.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MostrarConta.Designer.cs">
+    <Compile Include="Features\LoginModule\MostrarConta.Designer.cs">
       <DependentUpon>MostrarConta.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\GrupoVeiculosModule\OperacoesGrupoVeiculos.cs" />
@@ -126,10 +126,10 @@
     <EmbeddedResource Include="Features\GrupoVeiculosModule\GrupoDeVeiculosForm.resx">
       <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Features\LoginModule\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MostrarConta.resx">
+    <EmbeddedResource Include="Features\LoginModule\MostrarConta.resx">
       <DependentUpon>MostrarConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\FuncionarioModule\TabelaFuncionarioControl.resx">
@@ -290,16 +290,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fuquinha.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LocadoraVeiculos.Controladores\LocadoraVeiculos.Controladores.csproj">
-      <Project>{F69C3646-BA00-43C5-ACB4-F04C49D95725}</Project>
-      <Name>LocadoraVeiculos.Controladores</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LocadoraVeiculos.Dominio\LocadoraVeiculos.Dominio.csproj">
-      <Project>{fa47a745-b014-4153-b064-3e9ac4f7ebf7}</Project>
-      <Name>LocadoraVeiculos.Dominio</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fundo Tela Cadastro Grupo de Veiculos.png" />

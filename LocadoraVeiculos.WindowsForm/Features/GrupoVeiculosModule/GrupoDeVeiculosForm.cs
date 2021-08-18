@@ -1,4 +1,5 @@
-﻿using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+﻿
+using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
 using LocadoraVeiculos.Dominio.GrupoVeiculosModule;
 using System;
 using System.Collections.Generic;
@@ -52,9 +53,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
                 string primeiroErro = new StringReader(resultadoValidacao).ReadLine();
 
                 DialogResult = DialogResult.None;
-            }
-
-            
+            } 
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

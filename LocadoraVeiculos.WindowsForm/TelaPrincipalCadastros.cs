@@ -23,11 +23,12 @@ namespace LocadoraVeiculos.WindowsForm
         public TelaPrincipalCadastros()
         {
             InitializeComponent();
-            ConfiguracoesDeInicio();
             Instancia = this;
+            ConfiguracoesDeInicio();
+
         }
 
-        private void ConfiguracoesDeInicio()
+        public void ConfiguracoesDeInicio()
         {
             btnAdicionar.Visible = false;
             btnEditar.Visible = false;
@@ -59,12 +60,22 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void OpcaoCadastroClientes_Click(object sender, EventArgs e)
         {
+            if(UsuarioParaValidacao.MudarConta == null)
+            {
+                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                return;
+            }
             MostrarOpcoes();
             panelTabelas.Controls.Clear();
         }
 
         private void OpcaoCadastroVeiculos_Click(object sender, EventArgs e)
         {
+            if (UsuarioParaValidacao.MudarConta == null)
+            {
+                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                return;
+            }
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
             ImagemChave.Visible = false;
@@ -73,6 +84,11 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void OpcaoCadastroServicos_Click(object sender, EventArgs e)
         {
+            if (UsuarioParaValidacao.MudarConta == null)
+            {
+                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                return;
+            }
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
 
@@ -126,6 +142,15 @@ namespace LocadoraVeiculos.WindowsForm
             panelTabelas.Controls.Clear();
 
             panelTabelas.Controls.Add(tabela);
+        }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            if (UsuarioParaValidacao.MudarConta == null)
+            {
+                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                return;
+            }
         }
     }
 }
