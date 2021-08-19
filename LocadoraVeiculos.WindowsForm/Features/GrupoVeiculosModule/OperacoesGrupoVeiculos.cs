@@ -45,6 +45,8 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
                 List<GrupoVeiculos> grupos = controlador.SelecionarTodos();
 
                 tabelaGrupo.AtualizarRegistros(grupos);
+
+                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Grupo: [{grupoForm.GrupoVeiculos.Grupo}] editado com sucesso");
             }
         }
 
@@ -69,6 +71,8 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
                 List<GrupoVeiculos> grupos = controlador.SelecionarTodos();
 
                 tabelaGrupo.AtualizarRegistros(grupos);
+
+                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Grupo: [{grupoSelecionado.Grupo}] excluido com sucesso");
             }
         }
 
@@ -88,6 +92,8 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
                 List<GrupoVeiculos> grupos = controlador.SelecionarTodos();
 
                 tabelaGrupo.AtualizarRegistros(grupos);
+
+                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Grupo: [{tela.GrupoVeiculos.Grupo}] adicionado com sucesso");
             }
         }
 

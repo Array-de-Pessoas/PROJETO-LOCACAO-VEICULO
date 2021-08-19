@@ -15,6 +15,10 @@ namespace LocadoraVeiculos.Dominio.FuncionarioModule
         public DateTime DataEntrada { get; }
         public decimal Salario { get; }
 
+        public Funcionario()
+        {
+        }
+
         public Funcionario(string nome, string usuario, string senha, DateTime dataEntrada, decimal salario)
         {
             Nome = nome;
@@ -65,6 +69,9 @@ namespace LocadoraVeiculos.Dominio.FuncionarioModule
 
             if (string.IsNullOrEmpty(Senha))
                 resultadoValidacao = "O campo senha não pode estar vazio";
+
+            if (DataEntrada > DateTime.Now)
+                resultadoValidacao = "O campo data precisa ser menor que a data atual";
 
             if (resultadoValidacao == "")
                 resultadoValidacao = "ESTA_VALIDO";

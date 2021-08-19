@@ -1,66 +1,73 @@
 ﻿using LocadoraVeiculos.Controladores.FuncionarioModule;
+using LocadoraVeiculos.Dominio.FuncionarioModule;
+using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
 {
-    public class OperacoesLogin 
+    public class OperacoesLogin
     {
-        static List<String> PegarValor = new List<string>();
-        LoginForm login = new LoginForm();
+        private readonly ControladorFuncionario controlador;
+        private static string usuario;
 
-        public void ValidarSeExiste()
+        public string Usuario
         {
-            string AdressDBFuncionario = @"Data Source=(LocalDb)\MSSqlLocalDB;Initial Catalog=DBTarefas;Integrated Security=True;Pooling=False";
+            get { return usuario; }
+            set { usuario = value; }
+        }
 
-            SqlConnection connectionWithFuncionario = new SqlConnection();
-            connectionWithFuncionario.ConnectionString = AdressDBFuncionario;
+        public OperacoesLogin()
+        {
+            controlador = new ControladorFuncionario();
+        }
 
-            connectionWithFuncionario.Open();
-
-            SqlCommand commandGet = new SqlCommand();
-            commandGet.Connection = connectionWithFuncionario;
-
-            string sqlGet =
-                @"SELECT * FROM TBFUNCIONARIO
-                  ";
-
-            commandGet.CommandText = sqlGet;
-
-            using (SqlDataReader oReader = commandGet.ExecuteReader())
+        public void RealizarLogin()
+        {
+            LoginForm tela = new LoginForm();
+            if (tela.ShowDialog() == DialogResult.OK)
             {
-                while (oReader.Read())
+                if (tela.LoginFuncionario != null)
+                    Usuario = tela.LoginFuncionario.Usuario;
+            }
+        }
+
+        public Funcionario LoginTest(string usuario, string senha)
+        {
+            LoginForm tela = new LoginForm();
+            List<Funcionario> funcionarios = controlador.SelecionarTodos();
+            foreach (var item in funcionarios)
+            {
+                if (usuario == item.Usuario)
                 {
-                    string usuario = oReader["USUARIO"].ToString();
-                    if (usuario == UsuarioParaValidacao.Usuario)
-                    {
-                        PegarValor.Add(usuario);
-                    }
-                    string senha = oReader["SENHA"].ToString();
-                    if (senha == UsuarioParaValidacao.Senha)
-                    {
-                        PegarValor.Add(senha);
-                    }
+                    if (senha == item.Senha)
+                        return item;
+
+                    else
+                        return null;
                 }
             }
-            connectionWithFuncionario.Close();
-            if (PegarValor.Count == 2)
+            return null;
+        }
+
+        public void NovoLogin()
+        {
+            TelaFuncionarioForm tela = new TelaFuncionarioForm();
+
+            if (tela.ShowDialog() == DialogResult.OK)
             {
-                login.LoginEncontrado();
+                controlador.InserirNovo(tela.Funcionario);
             }
-            if (PegarValor.Count == 0)
-            {
-                login.LoginNaoEncontrado();
-            }
-            if (PegarValor.Count == 1)
-            {
-                login.DadosIncorretos();
-            }
-            PegarValor.Clear();
+        }
+
+        public string GerarUsuario()
+        {
+            return usuario;
         }
     }
 }
+

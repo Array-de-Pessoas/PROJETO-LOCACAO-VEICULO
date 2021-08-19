@@ -1,4 +1,7 @@
-﻿using LocadoraVeiculos.WindowsForm.Features.LoginModule;
+﻿using LocadoraVeiculos.Controladores.FuncionarioModule;
+using LocadoraVeiculos.Dominio.FuncionarioModule;
+using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
+using LocadoraVeiculos.WindowsForm.Features.LoginModule;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,62 +16,52 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
 {
     public partial class LoginForm : Form
     {
+        private OperacoesLogin operacoes;
+        private Funcionario funcionario;
+        public Funcionario LoginFuncionario
+        {
+            get { return funcionario; }
+            set
+            {
+                funcionario = value;
+            }
+        }
+
         public LoginForm()
         {
             InitializeComponent();
-            StatusLogin.Text = "Entre com o seu Login";
+            StatusLogin.Text = "Entre com a sua conta";
+            operacoes = new OperacoesLogin();
         }
 
-        public static string login;
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            UsuarioParaValidacao.Usuario = textBox1.Text;
-            UsuarioParaValidacao.Senha = textBox2.Text;
+            string usuario = txtUsuario.Text;
+            string senha = txtSenha.Text;
 
-            if (textBox1.TextLength == 0)
+            if (string.IsNullOrEmpty(usuario))
             {
-                StatusLogin.Text = "O campo usuário está vazio";
-                return;
+                StatusLogin.Text = "O campo usuário está inválido";
+                MessageBox.Show("O campo usuário está inválido", "Tente novamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            if (textBox2.TextLength == 0)
+            else if (string.IsNullOrEmpty(senha))
             {
-                StatusLogin.Text = "O campo senha está vazio";
-                return;
+                StatusLogin.Text = "O campo senha está inválido";
+                MessageBox.Show("O campo senha está inválido", "Tente novamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-            OperacoesLogin operacoesLogin = new OperacoesLogin();
-            operacoesLogin.ValidarSeExiste();
-
-            if (login == "Existe")
+            else
             {
-                this.Close();
-                UsuarioParaValidacao.MudarConta = "ContaAcessada";
-                login = null;
-            }
-            if (login == "NaoExiste")
-            {
-                StatusLogin.Text = "Login não encontrado, tente novamente ou crie um novo";
-            }
-            if (login == "DadosIncorretos")
-            {
-                StatusLogin.Text = "Dados do usuário ou senha estão incorretos";
+                LoginFuncionario = operacoes.LoginTest(usuario, senha);
+                if (LoginFuncionario == null)
+                {
+                    MessageBox.Show("O usuário está inválido", "Tente novamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
 
-        public void LoginEncontrado()
+        private void linkCriarLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            login = "Existe";
-        }
-
-        public void LoginNaoEncontrado()
-        {
-            login = "NaoExiste";
-        }
-
-        public void DadosIncorretos()
-        {
-            login = "DadosIncorretos";
+            operacoes.NovoLogin();
         }
     }
 }

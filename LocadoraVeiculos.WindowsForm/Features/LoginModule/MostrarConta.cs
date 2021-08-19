@@ -13,39 +13,54 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
 {
     public partial class MostrarConta : UserControl
     {
+        private OperacoesLogin operacoes;
+        private static string status;
+        
         public MostrarConta()
         {
             InitializeComponent();
-            InicializarConta();
+            operacoes = new OperacoesLogin();
+            Status = "Entrar";
         }
 
-        private void InicializarConta()
-        {
-            if(UsuarioParaValidacao.MudarConta == "ContaAcessada")
-            {
-                ImagemConta1.Image = Properties.Resources.Imagem_3;
-                TxtNomeConta.Text = UsuarioParaValidacao.Usuario;
-                LinkConta.Text = "Sair";
-            }
-        }
+        public string Status { get => status; set => status = value; }
 
         private void LinkSairConta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (LinkConta.Text == "Entrar")
+            Status = LinkConta.Text;
+
+            if (Status.Equals("Entrar"))
             {
-                LoginForm login = new LoginForm();
-                login.Show();
+                operacoes.RealizarLogin();
+                txtNomeConta.Text = operacoes.GerarUsuario();
+
+                if (operacoes.GerarUsuario() == null)
+                {
+                    txtNomeConta.Text = "Faça login";
+                    ImagemConta1.Image = Properties.Resources.Sem_conta;
+                    LinkConta.Text = "Entrar";
+                    Status = "Entrar";
+                    return;
+                }
+
+                LinkConta.Text = "Sair";
+                Status = "Sair";
+                ImagemConta1.Image = Properties.Resources.Imagem_3;
                 return;
             }
-            if (LinkConta.Text == "Sair")
+
+            if (Status.Equals("Sair"))
             {
-                UsuarioParaValidacao.MudarConta = null;
+                txtNomeConta.Text = "Faça login";
                 ImagemConta1.Image = Properties.Resources.Sem_conta;
-                TxtNomeConta.Text = "Faça login";
                 LinkConta.Text = "Entrar";
-                return;
+                Status = "Entrar";
+                operacoes.Usuario = null;
+                operacoes.GerarUsuario();
+
+                return ;
             }
-            
         }
+
     }
 }

@@ -2,6 +2,7 @@
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
+using LocadoraVeiculos.WindowsForm.Features.LoginModule;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace LocadoraVeiculos.WindowsForm
     public partial class TelaPrincipalCadastros : UserControl
     {
         private ICadastravel operacoes;
-
+        private OperacoesLogin login;
         public static TelaPrincipalCadastros Instancia;
 
         public TelaPrincipalCadastros()
@@ -25,7 +26,8 @@ namespace LocadoraVeiculos.WindowsForm
             InitializeComponent();
             Instancia = this;
             ConfiguracoesDeInicio();
-
+            login = new OperacoesLogin();
+            panelTelaContaRegistradas.Visible = false;
         }
 
         public void ConfiguracoesDeInicio()
@@ -36,6 +38,27 @@ namespace LocadoraVeiculos.WindowsForm
             btnFiltro.Visible = false;
             ImagemLinha.Visible = false;
             ImagemLinha2.Visible = false;
+            TxtCadastroSelecionado.Text = "";
+            if (panelTabelas.Controls.Count == 1)
+            {
+                panelTabelas.Controls.Clear();
+                ImagemChave.Visible = true;
+                panelTabelas.Controls.Add(ImagemChave);
+            }
+            if (panelTabelas.Controls.Count == 0)
+            {
+                panelTabelas.Controls.Clear();
+                ImagemChave.Visible = true;
+                panelTabelas.Controls.Add(ImagemChave);
+            }
+        }
+
+        public void ConfiguracaoMenu(bool valor)
+        {
+            OpcaoCadastroFuncionarios.Enabled = valor;
+            OpcaoCadastroClientes.Enabled = valor;
+            OpcaoCadastroServicos.Enabled = valor;
+            OpcaoCadastroVeiculos.Enabled = valor;
         }
 
         public void MostrarOpcoes()
@@ -50,6 +73,7 @@ namespace LocadoraVeiculos.WindowsForm
 
         public void OpcaoCadastroFuncionarios_Click(object sender, EventArgs e)
         {
+            TxtCadastroSelecionado.Text = "       FUNCIONÁRIO";
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
             ImagemChave.Visible = false;
@@ -60,35 +84,19 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void OpcaoCadastroClientes_Click(object sender, EventArgs e)
         {
-            if(UsuarioParaValidacao.MudarConta == null)
-            {
-                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
-                return;
-            }
+            TxtCadastroSelecionado.Text = "           CLIENTES";
             MostrarOpcoes();
             panelTabelas.Controls.Clear();
         }
 
         private void OpcaoCadastroVeiculos_Click(object sender, EventArgs e)
         {
-            if (UsuarioParaValidacao.MudarConta == null)
-            {
-                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
-                return;
-            }
-            panelTabelas.Controls.Clear();
-            MostrarOpcoes();
-            ImagemChave.Visible = false;
-            // implementação do João
+            //
         }
 
         private void OpcaoCadastroServicos_Click(object sender, EventArgs e)
         {
-            if (UsuarioParaValidacao.MudarConta == null)
-            {
-                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
-                return;
-            }
+            TxtCadastroSelecionado.Text = "           SERVIÇOS";
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
 
@@ -99,27 +107,46 @@ namespace LocadoraVeiculos.WindowsForm
             if (panelTelaContaRegistradas.Controls.Count == 0)
             {
                 panelTelaContaRegistradas.Controls.Add(new MostrarConta());
+                panelTelaContaRegistradas.Visible = true;
                 return;
             }
             if (panelTelaContaRegistradas.Controls.Count == 1)
             {
-                panelTelaContaRegistradas.Controls.Clear();
-                return;
+                if (panelTelaContaRegistradas.Visible == false)
+                {
+                    panelTelaContaRegistradas.Visible = true;
+                    return;
+                }
+            }
+            if (panelTelaContaRegistradas.Controls.Count == 1)
+            {
+                if (panelTelaContaRegistradas.Visible == true)
+                {
+                    panelTelaContaRegistradas.Visible = false;
+                    return;
+                }
             }
         }
 
         private void gRUPODEVEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TxtCadastroSelecionado.Text = " GRUPO DE VEÍCULOS";
+            panelTabelas.Controls.Clear();
             MostrarOpcoes();
             ImagemChave.Visible = false;
             operacoes = new OperacoesGrupoVeiculos(new ControladorGrupoVeiculos());
             ConfigurarPanelRegistros();
             btnFiltro.Visible = false;
-
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
+            if (login.GerarUsuario() == null)
+            {
+                ConfiguracoesDeInicio();
+                MessageBox.Show("Cadastre uma conta antes");
+                return;
+            }
             operacoes.InserirNovoRegistro();
         }
 
@@ -146,10 +173,27 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void btnFiltro_Click(object sender, EventArgs e)
         {
-            if (UsuarioParaValidacao.MudarConta == null)
+            MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+            return;
+        }
+
+        private void OpcoesCadastros_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StripMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (login.GerarUsuario() == null)
             {
-                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+                ConfiguracoesDeInicio();
+                ConfiguracaoMenu(false);
+                MessageBox.Show("Cadastre uma conta válida");
                 return;
+            }
+            else
+            {
+                ConfiguracaoMenu(true);
             }
         }
     }
