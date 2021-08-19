@@ -62,5 +62,10 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
         {
             TelaPrincipal.Instancia.AtualizarRodape("");
         }
+
+        private void TelaFuncionarioForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

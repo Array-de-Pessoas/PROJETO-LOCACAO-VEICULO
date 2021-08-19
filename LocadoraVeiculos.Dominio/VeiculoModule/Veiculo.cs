@@ -18,7 +18,7 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
         public string marca;
         public int ano;
         public string tipoCombustivel;
-        public Image foto;
+        public byte[] foto;
         public double quantidadeLitros;
         public int numeroPortas;
         public int capacidadeDePessoas;
@@ -27,7 +27,7 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
         public int kilometragem;
         public int idGrupoVeiculo;
 
-        public Veiculo(string placa, string cor, string marca, int ano, string tipoCombustivel, Image foto, double quantidadeLitros, int numeroPortas, int capacidadeDePessoas, string tamanhoPortaMalas, int kilometragem, int id_grupoVeiculo)
+        public Veiculo(string placa, string cor, string marca, int ano, string tipoCombustivel, byte[] foto, double quantidadeLitros, int numeroPortas, int capacidadeDePessoas, string tamanhoPortaMalas, int kilometragem, int id_grupoVeiculo)
         {
             this.placa = placa;
             this.cor = cor;
@@ -43,49 +43,51 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
             this.idGrupoVeiculo = id_grupoVeiculo;
         }
 
-
-
         public override string Validar()
         {
             if (string.IsNullOrEmpty(placa))
             {
                 return "Campo placa é obrigatório";
             }
-            else if (string.IsNullOrEmpty(cor))
+            if (string.IsNullOrEmpty(cor))
             {
                 return "Campo cor é obrigatório";
             }
-            else if (string.IsNullOrEmpty(marca))
+            if (string.IsNullOrEmpty(marca))
             {
                 return "Campo marca é obrigatório";
             }
-            else if (ano == 0)
+            if (ano == 0)
             {
                 return "Campo ano é obrigatório";
             }
-            else if (string.IsNullOrEmpty(tipoCombustivel))
+            if (string.IsNullOrEmpty(tipoCombustivel))
             {
                 return "Campo tipo combustível é obrigatório";
             }
-            else if (quantidadeLitros == 0)
+            if (quantidadeLitros == 0)
             {
-                return "Campo quantiade de litros do tanque é obrigatório";
+                return "Campo quantidade de litros do tanque é obrigatório";
             }
-            else if (numeroPortas == 0)
+            if (numeroPortas == 0)
             {
                 return "Campo Número de Portas é obrigatório";
             }
-            else if (capacidadeDePessoas == 0)
+            if (capacidadeDePessoas == 0)
             {
                 return "Campo capacidade de pessoas é obrigatório";
             }
-            else if (string.IsNullOrEmpty(tamanhoPortaMalas))
+            if (string.IsNullOrEmpty(tamanhoPortaMalas))
             {
                 return "Campo tamanho do porta-malas é obrigatório";
             }
-            else if (idGrupoVeiculo == 0)
+            if (idGrupoVeiculo == 0)
             {
                 return "Campo grupo de veículo é obrigatório";
+            }
+            if (foto == null)
+            {
+                return "Imagem do veículo é obrigatória";
             }
 
             return "VALIDO";

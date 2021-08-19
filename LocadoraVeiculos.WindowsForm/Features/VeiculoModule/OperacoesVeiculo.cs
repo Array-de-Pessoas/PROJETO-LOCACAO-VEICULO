@@ -43,6 +43,8 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
                 List<Veiculo> veiculos = controladorVeiculo.SelecionarTodos();
 
                 tabelaVeiculosControl.AtualizarRegistros(veiculos);
+
+                TelaPrincipal.Instancia.AtualizarRodape($"Veículo: [{telaVeiculoForm.Veiculo.marca}] editada com sucesso");
             }
         }
 
@@ -67,6 +69,8 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
                 List<Veiculo> grupos = controladorVeiculo.SelecionarTodos();
 
                 tabelaVeiculosControl.AtualizarRegistros(grupos);
+
+                TelaPrincipal.Instancia.AtualizarRodape($"Veículo removido com sucesso");
             }
         }
 
@@ -77,23 +81,25 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 
         public void InserirNovoRegistro()
         {
-            TelaVeiculoForm tela = new TelaVeiculoForm();
+            TelaVeiculoForm telaVeiculoForm = new TelaVeiculoForm();
 
-            if (tela.ShowDialog() == DialogResult.OK)
+            if (telaVeiculoForm.ShowDialog() == DialogResult.OK)
             {
-                controladorVeiculo.InserirNovo(tela.Veiculo);
+                controladorVeiculo.InserirNovo(telaVeiculoForm.Veiculo);
 
-                List<Veiculo> grupos = controladorVeiculo.SelecionarTodos();
+                List<Veiculo> veiculos = controladorVeiculo.SelecionarTodos();
 
-                tabelaVeiculosControl.AtualizarRegistros(grupos);
+                tabelaVeiculosControl.AtualizarRegistros(veiculos);
+
+                TelaPrincipal.Instancia.AtualizarRodape($"Veículo: [{telaVeiculoForm.Veiculo.marca}] inserido com sucesso");
             }
         }
 
         public UserControl ObterTabela()
         {
-            List<Veiculo> grupoVeiculos = controladorVeiculo.SelecionarTodos();
+            List<Veiculo> veiculos = controladorVeiculo.SelecionarTodos();
 
-            tabelaVeiculosControl.AtualizarRegistros(grupoVeiculos);
+            tabelaVeiculosControl.AtualizarRegistros(veiculos);
 
             return tabelaVeiculosControl;
         }

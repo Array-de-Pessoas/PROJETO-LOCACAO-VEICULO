@@ -58,8 +58,8 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAdicionarImagem = new System.Windows.Forms.Button();
             this.cbTipoVeiculo = new System.Windows.Forms.ComboBox();
+            this.btnAdicionarImagem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -101,7 +101,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             // pictureBox7
             // 
             this.pictureBox7.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Imagem;
-            this.pictureBox7.Location = new System.Drawing.Point(504, 108);
+            this.pictureBox7.Location = new System.Drawing.Point(506, 108);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(152, 27);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -224,7 +224,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.txtKm.Location = new System.Drawing.Point(227, 108);
             this.txtKm.Name = "txtKm";
             this.txtKm.Size = new System.Drawing.Size(152, 27);
-            this.txtKm.TabIndex = 25;
+            this.txtKm.TabIndex = 1;
             // 
             // txtId
             // 
@@ -241,7 +241,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.txtTipoCombustivel.Location = new System.Drawing.Point(227, 141);
             this.txtTipoCombustivel.Name = "txtTipoCombustivel";
             this.txtTipoCombustivel.Size = new System.Drawing.Size(152, 27);
-            this.txtTipoCombustivel.TabIndex = 28;
+            this.txtTipoCombustivel.TabIndex = 2;
             // 
             // txtPortas
             // 
@@ -249,7 +249,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.txtPortas.Location = new System.Drawing.Point(305, 372);
             this.txtPortas.Name = "txtPortas";
             this.txtPortas.Size = new System.Drawing.Size(74, 27);
-            this.txtPortas.TabIndex = 29;
+            this.txtPortas.TabIndex = 9;
             // 
             // txtCapacidadePessoas
             // 
@@ -257,7 +257,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.txtCapacidadePessoas.Location = new System.Drawing.Point(305, 405);
             this.txtCapacidadePessoas.Name = "txtCapacidadePessoas";
             this.txtCapacidadePessoas.Size = new System.Drawing.Size(74, 27);
-            this.txtCapacidadePessoas.TabIndex = 30;
+            this.txtCapacidadePessoas.TabIndex = 10;
             // 
             // txtTamanhoPortaMalas
             // 
@@ -265,7 +265,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.txtTamanhoPortaMalas.Location = new System.Drawing.Point(305, 438);
             this.txtTamanhoPortaMalas.Name = "txtTamanhoPortaMalas";
             this.txtTamanhoPortaMalas.Size = new System.Drawing.Size(74, 27);
-            this.txtTamanhoPortaMalas.TabIndex = 31;
+            this.txtTamanhoPortaMalas.TabIndex = 11;
             // 
             // txtQuantidadeLitros
             // 
@@ -273,7 +273,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.txtQuantidadeLitros.Location = new System.Drawing.Point(227, 174);
             this.txtQuantidadeLitros.Name = "txtQuantidadeLitros";
             this.txtQuantidadeLitros.Size = new System.Drawing.Size(152, 27);
-            this.txtQuantidadeLitros.TabIndex = 32;
+            this.txtQuantidadeLitros.TabIndex = 3;
             // 
             // txtMarca
             // 
@@ -281,7 +281,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.txtMarca.Location = new System.Drawing.Point(270, 273);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(109, 27);
-            this.txtMarca.TabIndex = 33;
+            this.txtMarca.TabIndex = 6;
             // 
             // txtAno
             // 
@@ -289,7 +289,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.txtAno.Location = new System.Drawing.Point(270, 306);
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(109, 27);
-            this.txtAno.TabIndex = 34;
+            this.txtAno.TabIndex = 7;
             // 
             // txtCor
             // 
@@ -297,7 +297,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.txtCor.Location = new System.Drawing.Point(227, 207);
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(152, 27);
-            this.txtCor.TabIndex = 35;
+            this.txtCor.TabIndex = 4;
             // 
             // txtDetalhes
             // 
@@ -314,15 +314,16 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.txtPlaca.Location = new System.Drawing.Point(270, 339);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(109, 27);
-            this.txtPlaca.TabIndex = 38;
+            this.txtPlaca.TabIndex = 8;
             // 
             // btnGravar
             // 
             this.btnGravar.BackColor = System.Drawing.Color.White;
+            this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGravar.Location = new System.Drawing.Point(649, 480);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(101, 65);
+            this.btnGravar.Size = new System.Drawing.Size(101, 43);
             this.btnGravar.TabIndex = 39;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
@@ -334,24 +335,11 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(42, 480);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(101, 65);
+            this.btnCancelar.Size = new System.Drawing.Size(101, 43);
             this.btnCancelar.TabIndex = 40;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnAdicionarImagem
-            // 
-            this.btnAdicionarImagem.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdicionarImagem.FlatAppearance.BorderSize = 0;
-            this.btnAdicionarImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarImagem.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.addImagem;
-            this.btnAdicionarImagem.Location = new System.Drawing.Point(444, 152);
-            this.btnAdicionarImagem.Name = "btnAdicionarImagem";
-            this.btnAdicionarImagem.Size = new System.Drawing.Size(295, 165);
-            this.btnAdicionarImagem.TabIndex = 41;
-            this.btnAdicionarImagem.UseVisualStyleBackColor = false;
-            this.btnAdicionarImagem.Click += new System.EventHandler(this.btnAdicionarImagem_Click);
             // 
             // cbTipoVeiculo
             // 
@@ -360,7 +348,24 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.cbTipoVeiculo.Location = new System.Drawing.Point(227, 240);
             this.cbTipoVeiculo.Name = "cbTipoVeiculo";
             this.cbTipoVeiculo.Size = new System.Drawing.Size(152, 28);
-            this.cbTipoVeiculo.TabIndex = 42;
+            this.cbTipoVeiculo.TabIndex = 5;
+            // 
+            // btnAdicionarImagem
+            // 
+            this.btnAdicionarImagem.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionarImagem.FlatAppearance.BorderSize = 0;
+            this.btnAdicionarImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionarImagem.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.btnAddImagem48;
+            this.btnAdicionarImagem.Location = new System.Drawing.Point(692, 84);
+            this.btnAdicionarImagem.Name = "btnAdicionarImagem";
+            this.btnAdicionarImagem.Size = new System.Drawing.Size(58, 51);
+            this.btnAdicionarImagem.TabIndex = 12;
+            this.btnAdicionarImagem.UseVisualStyleBackColor = false;
+            this.btnAdicionarImagem.Click += new System.EventHandler(this.btnAdicionarImagem_Click_1);
+            this.btnAdicionarImagem.Enter += new System.EventHandler(this.btnAdicionarImagem_Enter);
+            this.btnAdicionarImagem.MouseEnter += new System.EventHandler(this.btnAdicionarImagem_MouseEnter);
+            this.btnAdicionarImagem.MouseLeave += new System.EventHandler(this.btnAdicionarImagem_MouseLeave);
+            this.btnAdicionarImagem.MouseHover += new System.EventHandler(this.btnAdicionarImagem_MouseHover);
             // 
             // TelaVeiculoForm
             // 
@@ -368,9 +373,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Nova_imagem;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(797, 582);
-            this.Controls.Add(this.cbTipoVeiculo);
+            this.ClientSize = new System.Drawing.Size(797, 570);
             this.Controls.Add(this.btnAdicionarImagem);
+            this.Controls.Add(this.cbTipoVeiculo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.txtPlaca);
@@ -407,6 +412,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de veículo";
             this.Load += new System.EventHandler(this.VeiculoForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TelaVeiculoForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -455,7 +461,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAdicionarImagem;
         private System.Windows.Forms.ComboBox cbTipoVeiculo;
+        private System.Windows.Forms.Button btnAdicionarImagem;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 {
-    class ConfiguracaoVeiculoToolBox : IConfiguracaoToolBox
+    public class ConfiguracaoVeiculoToolBox : IConfiguracaoToolBox
     {
         public string ToolTipAdicionar
         {

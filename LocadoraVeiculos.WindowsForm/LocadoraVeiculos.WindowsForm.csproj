@@ -359,5 +359,8 @@
   <ItemGroup>
     <None Include="Resources\IconParaCadastro.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAddImagem48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
