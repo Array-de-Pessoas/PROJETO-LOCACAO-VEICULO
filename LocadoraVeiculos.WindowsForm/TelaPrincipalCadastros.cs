@@ -60,52 +60,26 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void OpcaoCadastroClientes_Click(object sender, EventArgs e)
         {
-            if(UsuarioParaValidacao.MudarConta == null)
-            {
-                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
-                return;
-            }
-            MostrarOpcoes();
-            panelTabelas.Controls.Clear();
+            MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+            return;
         }
 
         private void OpcaoCadastroVeiculos_Click(object sender, EventArgs e)
         {
-            if (UsuarioParaValidacao.MudarConta == null)
-            {
-                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
-                return;
-            }
-            panelTabelas.Controls.Clear();
-            MostrarOpcoes();
-            ImagemChave.Visible = false;
+            MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+            return;
             // implementação do João
         }
 
         private void OpcaoCadastroServicos_Click(object sender, EventArgs e)
         {
-            if (UsuarioParaValidacao.MudarConta == null)
-            {
-                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
-                return;
-            }
-            panelTabelas.Controls.Clear();
-            MostrarOpcoes();
+            MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+            return;
 
         }
 
         private void btnVizualizarConta_Click(object sender, EventArgs e)
         {
-            if (panelTelaContaRegistradas.Controls.Count == 0)
-            {
-                panelTelaContaRegistradas.Controls.Add(new MostrarConta());
-                return;
-            }
-            if (panelTelaContaRegistradas.Controls.Count == 1)
-            {
-                panelTelaContaRegistradas.Controls.Clear();
-                return;
-            }
         }
 
         private void gRUPODEVEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -146,11 +120,8 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void btnFiltro_Click(object sender, EventArgs e)
         {
-            if (UsuarioParaValidacao.MudarConta == null)
-            {
-                MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
-                return;
-            }
+            MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
+            return;
         }
     }
 }
