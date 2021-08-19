@@ -124,14 +124,14 @@
   <data name="Entrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Usúario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Usúario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Km" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Km.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Litros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Litros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Imagem_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagem 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Senha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Senha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Only_the_color_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Only the color blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -141,6 +141,9 @@
   </data>
   <data name="Chassi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chassi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carroImagemPadrao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carroImagemPadrao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new_contato" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new contato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,23 +163,20 @@
   <data name="Capacidade_porta_malas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Capacidade_porta_malas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Linha_de_separação" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Linha de separação.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Imagem_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagem 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Litros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Litros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Imagem_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Imagem 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Btn_Opções" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Btn Opções.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnAddImagem48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnAddImagem48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fuquinha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fuquinha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,14 +199,17 @@
   <data name="Novo_botão_filtro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Novo botão filtro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Senha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Senha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Imagem_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagem 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Imagem_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagem 6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Combustivel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Combustivel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="New_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="addImagem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addImagem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,8 +223,8 @@
   <data name="Detalhes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Detalhes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="New_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\New Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Balão_de_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Balão de login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Novo_botão_adicionar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Novo botão adicionar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,8 +232,8 @@
   <data name="Tamanho_porta_malas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tamanho_porta_malas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Imagem_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Imagem 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Km" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Km.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Novo_botão_editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Novo botão editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +241,8 @@
   <data name="Nova_imagem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nova_imagem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Balão_de_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Balão de login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Usúario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Usúario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imagem_conta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagem conta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,10 +250,13 @@
   <data name="Combustivel__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Combustivel (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Imagem_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagem 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Placa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Placa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnAddImagem48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnAddImagem48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CarroDeImagemPadro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CarroDeImagemPadro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -91,6 +91,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.CarroDeImagemPadro;
             this.pictureBox.Location = new System.Drawing.Point(434, 141);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(316, 192);
@@ -101,7 +102,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             // pictureBox7
             // 
             this.pictureBox7.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Imagem;
-            this.pictureBox7.Location = new System.Drawing.Point(506, 108);
+            this.pictureBox7.Location = new System.Drawing.Point(435, 108);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(152, 27);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -68,14 +68,18 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             string placa = txtPlaca.Text;
             string cor = txtCor.Text;
             string marca = txtMarca.Text;
-            int ano = Convert.ToInt32(txtAno.Text);
             string tipoCombustivel = txtTipoCombustivel.Text;
-            byte[] image = ConverterImageParaByte(pictureBox.Image);
-            double quantidadeLitros = Convert.ToDouble(txtQuantidadeLitros.Text);
-            int numeroPortas = Convert.ToInt32(txtPortas.Text);
-            int capacidadePessoas = Convert.ToInt32(txtCapacidadePessoas.Text);
             string tamanhoPortaMalas = txtTamanhoPortaMalas.Text;
-            int kilometragem = Convert.ToInt32(txtKm.Text);
+            byte[] image = ConverterImageParaByte(pictureBox.Image);
+
+            int ano, numeroPortas, capacidadePessoas, kilometragem;
+            double quantidadeLitros;
+
+            Int32.TryParse(txtAno.Text, out ano);                   
+            Double.TryParse(txtQuantidadeLitros.Text, out quantidadeLitros);
+            Int32.TryParse(txtPortas.Text, out numeroPortas);
+            Int32.TryParse(txtCapacidadePessoas.Text , out capacidadePessoas);
+            Int32.TryParse(txtKm.Text, out kilometragem);           
             int id_grupoVeiculo = Convert.ToInt32(cbTipoVeiculo.SelectedValue);
 
             veiculo = new Veiculo(placa, cor, marca, ano, tipoCombustivel, image, quantidadeLitros,
