@@ -186,6 +186,7 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void vEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TxtCadastroSelecionado.Text = "           VEÍCULOS";
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
             ImagemChave.Visible = false;

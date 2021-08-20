@@ -62,16 +62,16 @@ namespace LocadoraVeiculos.Dominio.FuncionarioModule
             string resultadoValidacao = "";
 
             if (string.IsNullOrEmpty(Nome))
-                resultadoValidacao = "O campo nome não pode estar vazio";
+                resultadoValidacao = "                                                     O campo nome não pode estar vazio";
 
             if (string.IsNullOrEmpty(Usuario))
-                resultadoValidacao = "O campo usuário não pode estar vazio";
+                resultadoValidacao = "                                                     O campo usuário não pode estar vazio";
 
             if (string.IsNullOrEmpty(Senha))
-                resultadoValidacao = "O campo senha não pode estar vazio";
+                resultadoValidacao = "                                                     O campo senha não pode estar vazio";
 
             if (DataEntrada > DateTime.Now)
-                resultadoValidacao = "O campo data precisa ser menor que a data atual";
+                resultadoValidacao = "                                                     O campo data precisa ser menor que a data atual";
 
             if (resultadoValidacao == "")
                 resultadoValidacao = "ESTA_VALIDO";

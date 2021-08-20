@@ -47,55 +47,55 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
         {
             if (string.IsNullOrEmpty(placa))
             {
-                return "Campo placa é obrigatório";
+                return "                                                     Campo placa é obrigatório";
             }
             if (string.IsNullOrEmpty(cor))
             {
-                return "Campo cor é obrigatório";
+                return "                                                     Campo cor é obrigatório";
             }
             if (string.IsNullOrEmpty(marca))
             {
-                return "Campo marca é obrigatório";
+                return "                                                     Campo marca é obrigatório";
             }
             if (ano == 0)
             {
-                return "Campo ano é obrigatório";
+                return "                                                     Campo ano é obrigatório";
             }
             if (ano < 0)
             {
-                return "Campo ano tem que ser valido";
+                return "                                                     Campo ano tem que ser valido";
             }
             if (ano > DateTime.Now.Year)
             {
-                return "Campo ano tem que ser valido";
+                return "                                                     Campo ano tem que ser valido";
             }
             if (string.IsNullOrEmpty(tipoCombustivel))
             {
-                return "Campo tipo combustível é obrigatório";
+                return "                                                     Campo tipo combustível é obrigatório";
             }
             if (quantidadeLitros == 0)
             {
-                return "Campo quantidade de litros do tanque é obrigatório";
+                return "                                                     Campo quantidade de litros do tanque é obrigatório";
             }
             if (numeroPortas == 0)
             {
-                return "Campo Número de Portas é obrigatório";
+                return "                                                     Campo Número de Portas é obrigatório";
             }
             if (capacidadeDePessoas == 0)
             {
-                return "Campo capacidade de pessoas é obrigatório";
+                return "                                                     Campo capacidade de pessoas é obrigatório";
             }
             if (string.IsNullOrEmpty(tamanhoPortaMalas))
             {
-                return "Campo tamanho do porta-malas é obrigatório";
+                return "                                                     Campo tamanho do porta-malas é obrigatório";
             }
             if (idGrupoVeiculo == 0)
             {
-                return "Campo grupo de veículo é obrigatório";
+                return "                                                     Campo grupo de veículo é obrigatório";
             }
             if (foto == null)
             {
-                return "Imagem do veículo é obrigatória";
+                return "                                                     Imagem do veículo é obrigatória";
             }
 
             return "VALIDO";

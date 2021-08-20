@@ -44,7 +44,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 
                 tabelaVeiculosControl.AtualizarRegistros(veiculos);
 
-                TelaPrincipal.Instancia.AtualizarRodape($"Veículo: [{telaVeiculoForm.Veiculo.marca}] editada com sucesso");
+                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Veículo: [{telaVeiculoForm.Veiculo.marca}] editada com sucesso");
             }
         }
 
@@ -70,7 +70,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 
                 tabelaVeiculosControl.AtualizarRegistros(grupos);
 
-                TelaPrincipal.Instancia.AtualizarRodape($"Veículo removido com sucesso");
+                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Veículo removido com sucesso");
             }
         }
 
@@ -91,7 +91,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 
                 tabelaVeiculosControl.AtualizarRegistros(veiculos);
 
-                TelaPrincipal.Instancia.AtualizarRodape($"Veículo: [{telaVeiculoForm.Veiculo.marca}] inserido com sucesso");
+                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Veículo: [{telaVeiculoForm.Veiculo.marca}] inserido com sucesso");
             }
         }
 
