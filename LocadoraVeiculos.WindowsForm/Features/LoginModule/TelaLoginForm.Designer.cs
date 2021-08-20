@@ -1,7 +1,7 @@
 ﻿
 namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
 {
-    partial class LoginForm
+    partial class TelaLoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLoginForm));
             this.panelTelaEntrada = new System.Windows.Forms.Panel();
             this.linkCriarLogin = new System.Windows.Forms.LinkLabel();
             this.btnConfirmar = new System.Windows.Forms.Button();

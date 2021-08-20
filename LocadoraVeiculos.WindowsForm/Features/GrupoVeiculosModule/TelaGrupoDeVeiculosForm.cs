@@ -15,13 +15,13 @@ using System.Windows.Forms;
 
 namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 {
-    public partial class GrupoDeVeiculosForm : Form
+    public partial class TelaGrupoDeVeiculosForm : Form
     {
         private GrupoVeiculos grupoVeiculos;
 
         private readonly ControladorGrupoVeiculos controladorGrupo = null;
 
-        public GrupoDeVeiculosForm()
+        public TelaGrupoDeVeiculosForm()
         {
             InitializeComponent();
             controladorGrupo = new ControladorGrupoVeiculos();

@@ -334,7 +334,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(42, 480);
+            this.btnCancelar.Location = new System.Drawing.Point(542, 480);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 43);
             this.btnCancelar.TabIndex = 40;

@@ -34,7 +34,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 
             GrupoVeiculos grupoSelecionado = controlador.SelecionarPorId(id);
 
-            GrupoDeVeiculosForm grupoForm = new GrupoDeVeiculosForm();
+            TelaGrupoDeVeiculosForm grupoForm = new TelaGrupoDeVeiculosForm();
 
             grupoForm.GrupoVeiculos = grupoSelecionado;
 
@@ -83,7 +83,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 
         public void InserirNovoRegistro()
         {
-            GrupoDeVeiculosForm tela = new GrupoDeVeiculosForm();
+            TelaGrupoDeVeiculosForm tela = new TelaGrupoDeVeiculosForm();
             
             if (tela.ShowDialog() == DialogResult.OK)
             {

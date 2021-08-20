@@ -28,7 +28,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
 
         public void RealizarLogin()
         {
-            LoginForm tela = new LoginForm();
+            TelaLoginForm tela = new TelaLoginForm();
             if (tela.ShowDialog() == DialogResult.OK)
             {
                 if (tela.LoginFuncionario != null)
@@ -38,7 +38,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
 
         public Funcionario LoginTest(string usuario, string senha)
         {
-            LoginForm tela = new LoginForm();
+            TelaLoginForm tela = new TelaLoginForm();
             List<Funcionario> funcionarios = controlador.SelecionarTodos();
             foreach (var item in funcionarios)
             {

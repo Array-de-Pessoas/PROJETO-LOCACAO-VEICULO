@@ -51,22 +51,22 @@
   <ItemGroup>
     <Compile Include="Features\FuncionarioModule\ConfiguracaoFuncionarioTooBox.cs" />
     <Compile Include="Features\FuncionarioModule\OperacoesFuncionario.cs" />
-    <Compile Include="Features\GrupoVeiculosModule\GrupoDeVeiculosForm.cs">
+    <Compile Include="Features\GrupoVeiculosModule\TelaGrupoDeVeiculosForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Features\GrupoVeiculosModule\GrupoDeVeiculosForm.Designer.cs">
-      <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
+    <Compile Include="Features\GrupoVeiculosModule\TelaGrupoDeVeiculosForm.Designer.cs">
+      <DependentUpon>TelaGrupoDeVeiculosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
     <Compile Include="Features\LoginModule\OperacoesLogin.cs" />
     <Compile Include="Shared\DataGridViewExtensions.cs" />
     <Compile Include="Shared\ICadastravel.cs" />
     <Compile Include="Shared\IConfiguracaoToolBox.cs" />
-    <Compile Include="Features\LoginModule\LoginForm.cs">
+    <Compile Include="Features\LoginModule\TelaLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Features\LoginModule\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="Features\LoginModule\TelaLoginForm.Designer.cs">
+      <DependentUpon>TelaLoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\LoginModule\MostrarConta.cs">
       <SubType>UserControl</SubType>
@@ -124,11 +124,11 @@
     <Compile Include="TelaPrincipalCadastros.Designer.cs">
       <DependentUpon>TelaPrincipalCadastros.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Features\GrupoVeiculosModule\GrupoDeVeiculosForm.resx">
-      <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
+    <EmbeddedResource Include="Features\GrupoVeiculosModule\TelaGrupoDeVeiculosForm.resx">
+      <DependentUpon>TelaGrupoDeVeiculosForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Features\LoginModule\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="Features\LoginModule\TelaLoginForm.resx">
+      <DependentUpon>TelaLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\LoginModule\MostrarConta.resx">
       <DependentUpon>MostrarConta.cs</DependentUpon>

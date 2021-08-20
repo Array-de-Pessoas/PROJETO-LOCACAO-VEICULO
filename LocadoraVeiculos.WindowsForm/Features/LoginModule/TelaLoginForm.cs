@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
 {
-    public partial class LoginForm : Form
+    public partial class TelaLoginForm : Form
     {
         private OperacoesLogin operacoes;
         private Funcionario funcionario;
@@ -27,7 +27,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
             }
         }
 
-        public LoginForm()
+        public TelaLoginForm()
         {
             InitializeComponent();
             StatusLogin.Text = "Entre com a sua conta";
