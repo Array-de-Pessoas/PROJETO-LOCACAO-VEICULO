@@ -1,5 +1,4 @@
-﻿using LocadoraVeiculos.WindowsForm.Features.LoginModule;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace LocadoraVeiculos.Tests.LoginModule
@@ -10,6 +9,13 @@ namespace LocadoraVeiculos.Tests.LoginModule
         [TestMethod]
         public void DeveValidarSeExiste()
         {
+            UsuarioParaValidacao.Senha = "124321";
+
+            OperacoesLogin operacoes = new OperacoesLogin();
+            operacoes.ValidarSeExiste();
+
+            UsuarioParaValidacao.Usuario = null;
+            UsuarioParaValidacao.Senha = null;
         }
     }
 }

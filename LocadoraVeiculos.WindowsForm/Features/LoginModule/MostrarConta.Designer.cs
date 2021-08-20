@@ -30,7 +30,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
         private void InitializeComponent()
         {
             this.LinkConta = new System.Windows.Forms.LinkLabel();
-            this.TxtNomeConta = new System.Windows.Forms.Label();
+            this.txtNomeConta = new System.Windows.Forms.Label();
             this.ImagemConta1 = new System.Windows.Forms.PictureBox();
             this.ImagemBalao = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemConta1)).BeginInit();
@@ -50,17 +50,17 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
             this.LinkConta.Text = "Entrar";
             this.LinkConta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkSairConta_LinkClicked);
             // 
-            // TxtNomeConta
+            // txtNomeConta
             // 
-            this.TxtNomeConta.AutoSize = true;
-            this.TxtNomeConta.BackColor = System.Drawing.Color.White;
-            this.TxtNomeConta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TxtNomeConta.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
-            this.TxtNomeConta.Location = new System.Drawing.Point(40, 70);
-            this.TxtNomeConta.Name = "TxtNomeConta";
-            this.TxtNomeConta.Size = new System.Drawing.Size(73, 17);
-            this.TxtNomeConta.TabIndex = 2;
-            this.TxtNomeConta.Text = "Faça login";
+            this.txtNomeConta.AutoSize = true;
+            this.txtNomeConta.BackColor = System.Drawing.Color.White;
+            this.txtNomeConta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtNomeConta.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
+            this.txtNomeConta.Location = new System.Drawing.Point(40, 70);
+            this.txtNomeConta.Name = "txtNomeConta";
+            this.txtNomeConta.Size = new System.Drawing.Size(73, 17);
+            this.txtNomeConta.TabIndex = 2;
+            this.txtNomeConta.Text = "Faça login";
             // 
             // ImagemConta1
             // 
@@ -90,7 +90,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Controls.Add(this.LinkConta);
-            this.Controls.Add(this.TxtNomeConta);
+            this.Controls.Add(this.txtNomeConta);
             this.Controls.Add(this.ImagemConta1);
             this.Controls.Add(this.ImagemBalao);
             this.Name = "MostrarConta";
@@ -106,7 +106,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
 
         private System.Windows.Forms.PictureBox ImagemBalao;
         private System.Windows.Forms.PictureBox ImagemConta1;
-        private System.Windows.Forms.Label TxtNomeConta;
+        private System.Windows.Forms.Label txtNomeConta;
         private System.Windows.Forms.LinkLabel LinkConta;
     }
 }

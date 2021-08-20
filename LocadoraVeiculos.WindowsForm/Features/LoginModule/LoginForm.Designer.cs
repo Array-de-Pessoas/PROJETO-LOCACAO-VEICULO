@@ -31,15 +31,15 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panelTelaEntrada = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.linkCriarLogin = new System.Windows.Forms.LinkLabel();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.ImagemSenha = new System.Windows.Forms.PictureBox();
             this.ImagemUsuario = new System.Windows.Forms.PictureBox();
             this.ImagemEntrar = new System.Windows.Forms.PictureBox();
             this.BarraDeStatusLogin = new System.Windows.Forms.StatusStrip();
             this.StatusLogin = new System.Windows.Forms.ToolStripStatusLabel();
-            this.linkCriarLogin = new System.Windows.Forms.LinkLabel();
             this.panelTelaEntrada.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemUsuario)).BeginInit();
@@ -51,9 +51,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
             // 
             this.panelTelaEntrada.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
             this.panelTelaEntrada.Controls.Add(this.linkCriarLogin);
-            this.panelTelaEntrada.Controls.Add(this.button1);
-            this.panelTelaEntrada.Controls.Add(this.textBox2);
-            this.panelTelaEntrada.Controls.Add(this.textBox1);
+            this.panelTelaEntrada.Controls.Add(this.btnConfirmar);
+            this.panelTelaEntrada.Controls.Add(this.txtSenha);
+            this.panelTelaEntrada.Controls.Add(this.txtUsuario);
             this.panelTelaEntrada.Controls.Add(this.ImagemSenha);
             this.panelTelaEntrada.Controls.Add(this.ImagemUsuario);
             this.panelTelaEntrada.Controls.Add(this.ImagemEntrar);
@@ -63,33 +63,47 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
             this.panelTelaEntrada.Size = new System.Drawing.Size(442, 392);
             this.panelTelaEntrada.TabIndex = 0;
             // 
-            // button1
+            // linkCriarLogin
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(163, 271);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 46);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "CONFIRMAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.linkCriarLogin.AutoSize = true;
+            this.linkCriarLogin.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
+            this.linkCriarLogin.LinkColor = System.Drawing.Color.White;
+            this.linkCriarLogin.Location = new System.Drawing.Point(160, 226);
+            this.linkCriarLogin.Name = "linkCriarLogin";
+            this.linkCriarLogin.Size = new System.Drawing.Size(194, 17);
+            this.linkCriarLogin.TabIndex = 7;
+            this.linkCriarLogin.TabStop = true;
+            this.linkCriarLogin.Text = "Não tem um login? crie agora";
+            this.linkCriarLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCriarLogin_LinkClicked);
             // 
-            // textBox2
+            // btnConfirmar
             // 
-            this.textBox2.Location = new System.Drawing.Point(163, 188);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(227, 35);
-            this.textBox2.TabIndex = 5;
+            this.btnConfirmar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnConfirmar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnConfirmar.Location = new System.Drawing.Point(163, 271);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(109, 46);
+            this.btnConfirmar.TabIndex = 6;
+            this.btnConfirmar.Text = "CONFIRMAR";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // textBox1
+            // txtSenha
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 144);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 35);
-            this.textBox1.TabIndex = 4;
+            this.txtSenha.Location = new System.Drawing.Point(163, 188);
+            this.txtSenha.Multiline = true;
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(227, 35);
+            this.txtSenha.TabIndex = 5;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(163, 144);
+            this.txtUsuario.Multiline = true;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(227, 35);
+            this.txtUsuario.TabIndex = 4;
             // 
             // ImagemSenha
             // 
@@ -138,18 +152,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
             this.StatusLogin.Size = new System.Drawing.Size(86, 20);
             this.StatusLogin.Text = "StatusLogin";
             // 
-            // linkCriarLogin
-            // 
-            this.linkCriarLogin.AutoSize = true;
-            this.linkCriarLogin.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
-            this.linkCriarLogin.LinkColor = System.Drawing.Color.White;
-            this.linkCriarLogin.Location = new System.Drawing.Point(160, 226);
-            this.linkCriarLogin.Name = "linkCriarLogin";
-            this.linkCriarLogin.Size = new System.Drawing.Size(194, 17);
-            this.linkCriarLogin.TabIndex = 7;
-            this.linkCriarLogin.TabStop = true;
-            this.linkCriarLogin.Text = "Não tem um login? crie agora";
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -182,9 +184,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
         private System.Windows.Forms.ToolStripStatusLabel StatusLogin;
         private System.Windows.Forms.PictureBox ImagemUsuario;
         private System.Windows.Forms.PictureBox ImagemSenha;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.LinkLabel linkCriarLogin;
     }
 }

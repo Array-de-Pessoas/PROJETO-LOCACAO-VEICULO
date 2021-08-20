@@ -54,18 +54,20 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             // 
             this.txtId.Enabled = false;
             this.txtId.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtId.Location = new System.Drawing.Point(236, 30);
+            this.txtId.Location = new System.Drawing.Point(315, 37);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(82, 20);
+            this.txtId.Size = new System.Drawing.Size(108, 22);
             this.txtId.TabIndex = 0;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 78);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 96);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(77, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -73,17 +75,19 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(102, 76);
+            this.txtNome.Location = new System.Drawing.Point(136, 94);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(391, 22);
+            this.txtNome.Size = new System.Drawing.Size(520, 26);
             this.txtNome.TabIndex = 2;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(25, 118);
+            this.pictureBox2.Location = new System.Drawing.Point(33, 145);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(71, 22);
+            this.pictureBox2.Size = new System.Drawing.Size(95, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -91,17 +95,19 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(102, 118);
+            this.txtUsuario.Location = new System.Drawing.Point(136, 145);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(391, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(520, 26);
             this.txtUsuario.TabIndex = 4;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(24, 158);
+            this.pictureBox3.Location = new System.Drawing.Point(32, 194);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 22);
+            this.pictureBox3.Size = new System.Drawing.Size(80, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
@@ -109,9 +115,10 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(25, 195);
+            this.pictureBox4.Location = new System.Drawing.Point(33, 240);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(134, 22);
+            this.pictureBox4.Size = new System.Drawing.Size(179, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
@@ -119,25 +126,28 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(102, 158);
+            this.txtSenha.Location = new System.Drawing.Point(136, 194);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(216, 22);
+            this.txtSenha.Size = new System.Drawing.Size(287, 26);
             this.txtSenha.TabIndex = 7;
             // 
             // dateDataEntrada
             // 
             this.dateDataEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateDataEntrada.Location = new System.Drawing.Point(174, 195);
+            this.dateDataEntrada.Location = new System.Drawing.Point(232, 240);
+            this.dateDataEntrada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateDataEntrada.Name = "dateDataEntrada";
-            this.dateDataEntrada.Size = new System.Drawing.Size(96, 20);
+            this.dateDataEntrada.Size = new System.Drawing.Size(127, 22);
             this.dateDataEntrada.TabIndex = 8;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(301, 195);
+            this.pictureBox5.Location = new System.Drawing.Point(401, 240);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(74, 22);
+            this.pictureBox5.Size = new System.Drawing.Size(99, 27);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
@@ -146,9 +156,10 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(25, 241);
+            this.btnCancelar.Location = new System.Drawing.Point(33, 297);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(88, 37);
+            this.btnCancelar.Size = new System.Drawing.Size(117, 46);
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -157,18 +168,20 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             // txtSalario
             // 
             this.txtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalario.Location = new System.Drawing.Point(392, 195);
+            this.txtSalario.Location = new System.Drawing.Point(523, 240);
+            this.txtSalario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(101, 22);
+            this.txtSalario.Size = new System.Drawing.Size(133, 26);
             this.txtSalario.TabIndex = 13;
             // 
             // btnGravar
             // 
             this.btnGravar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnGravar.Location = new System.Drawing.Point(405, 241);
+            this.btnGravar.Location = new System.Drawing.Point(540, 297);
+            this.btnGravar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(88, 37);
+            this.btnGravar.Size = new System.Drawing.Size(117, 46);
             this.btnGravar.TabIndex = 14;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
@@ -176,11 +189,11 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             // 
             // TelaFuncionarioForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(527, 311);
+            this.ClientSize = new System.Drawing.Size(703, 383);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.btnCancelar);
@@ -195,9 +208,16 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtId);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(721, 430);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(721, 430);
             this.Name = "TelaFuncionarioForm";
-            this.Text = "TelaFuncionarioForm";
-            this.Load += new System.EventHandler(this.TelaFuncionarioForm_Load);
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de Funcionários";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

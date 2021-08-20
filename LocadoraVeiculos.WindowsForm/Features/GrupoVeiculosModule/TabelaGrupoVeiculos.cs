@@ -40,7 +40,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             foreach (GrupoVeiculos grupo in grupos)
             {
                 dataGridGrupoVeiculos.Rows.Add(grupo.Id, grupo.Grupo);
-                    
             }
         }
     }

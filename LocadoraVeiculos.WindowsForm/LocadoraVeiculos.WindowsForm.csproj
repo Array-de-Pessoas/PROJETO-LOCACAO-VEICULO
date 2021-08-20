@@ -58,6 +58,7 @@
       <DependentUpon>GrupoDeVeiculosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
+    <Compile Include="Features\LoginModule\OperacoesLogin.cs" />
     <Compile Include="Shared\DataGridViewExtensions.cs" />
     <Compile Include="Shared\ICadastravel.cs" />
     <Compile Include="Shared\IConfiguracaoToolBox.cs" />
