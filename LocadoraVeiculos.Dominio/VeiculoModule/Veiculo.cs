@@ -61,6 +61,14 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
             {
                 return "Campo ano é obrigatório";
             }
+            if (ano < 0)
+            {
+                return "Campo ano tem que ser valido";
+            }
+            if (ano > DateTime.Now.Year)
+            {
+                return "Campo ano tem que ser valido";
+            }
             if (string.IsNullOrEmpty(tipoCombustivel))
             {
                 return "Campo tipo combustível é obrigatório";
