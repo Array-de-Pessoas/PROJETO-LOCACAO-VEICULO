@@ -144,7 +144,7 @@ namespace LocadoraVeiculos.WindowsForm
             if (login.GerarUsuario() == null)
             {
                 ConfiguracoesDeInicio();
-                MessageBox.Show("Cadastre uma conta antes");
+                MessageBox.Show("Cadastre uma conta válida");
                 return;
             }
             operacoes.InserirNovoRegistro();
@@ -152,11 +152,23 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (login.GerarUsuario() == null)
+            {
+                ConfiguracoesDeInicio();
+                MessageBox.Show("Cadastre uma conta válida");
+                return;
+            }
             operacoes.EditarRegistro();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            if (login.GerarUsuario() == null)
+            {
+                ConfiguracoesDeInicio();
+                MessageBox.Show("Cadastre uma conta válida");
+                return;
+            }
             operacoes.ExcluirRegistro();
         }
 
@@ -173,8 +185,12 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void btnFiltro_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
-            return;
+            if (login.GerarUsuario() == null)
+            {
+                ConfiguracoesDeInicio();
+                MessageBox.Show("Cadastre uma conta válida");
+                return;
+            }
         }
 
         private void OpcoesCadastros_Click(object sender, EventArgs e)

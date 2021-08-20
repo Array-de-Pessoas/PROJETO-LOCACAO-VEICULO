@@ -60,7 +60,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            TelaPrincipal.Instancia.AtualizarRodape("");
+            this.Close();
         }
     }
 }

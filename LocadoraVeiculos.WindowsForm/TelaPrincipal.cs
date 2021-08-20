@@ -42,6 +42,9 @@ namespace LocadoraVeiculos.WindowsForm
             StatusAplicacao.Text = "                                                     Menu principal";
         }
 
-        
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Opção em desenvolvimento");
+        }
     }
 }
