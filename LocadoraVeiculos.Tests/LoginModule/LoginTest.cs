@@ -9,13 +9,7 @@ namespace LocadoraVeiculos.Tests.LoginModule
         [TestMethod]
         public void DeveValidarSeExiste()
         {
-            UsuarioParaValidacao.Senha = "124321";
 
-            OperacoesLogin operacoes = new OperacoesLogin();
-            operacoes.ValidarSeExiste();
-
-            UsuarioParaValidacao.Usuario = null;
-            UsuarioParaValidacao.Senha = null;
         }
     }
 }
