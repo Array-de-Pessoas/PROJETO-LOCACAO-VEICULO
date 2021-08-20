@@ -168,8 +168,13 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
             string cor= Convert.ToString(reader["Cor"]);
             string marca= Convert.ToString(reader["Marca"]);
             int ano = Convert.ToInt32(reader["Ano"]);
-            string tipoCombustivel = Convert.ToString(reader["TipoCombustivel"]) ;    
-            Image foto = reader["Foto"] == DBNull.Value ? null : (Image)reader["Foto"];
+            string tipoCombustivel = Convert.ToString(reader["TipoCombustivel"]) ;
+            byte[] foto;
+            if (reader["Foto"] != DBNull.Value)
+                foto = (byte[])reader["Foto"];
+            else
+                foto = null;
+            //Image foto = reader["Foto"] == DBNull.Value ? null : (Image)reader["Foto"];
             double quantidadeLitros = Convert.ToDouble(reader["QuantidadeLitros"]);
             int numeroPortas = Convert.ToInt32(reader["NumeroPortas"]);
             int capacidadeDePessoas = Convert.ToInt32(reader["CapacidadePessoas"]);

@@ -197,6 +197,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.FuncionarioModule
             this.DoubleBuffered = true;
             this.Name = "TelaFuncionarioForm";
             this.Text = "TelaFuncionarioForm";
+            this.Load += new System.EventHandler(this.TelaFuncionarioForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

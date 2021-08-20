@@ -27,19 +27,18 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             var colunas = new DataGridViewColumn[]
             {
                 new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "Placa", HeaderText = "Placa"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "Cor", HeaderText = "Cor"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "Kilometragem", HeaderText = "Kilometragem"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "TipoCombustivel", HeaderText = "Combustível"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "QuantidadeLitros", HeaderText = "Litros"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "IdGrupoVeiculo", HeaderText = "Grupo de veículo"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Marca", HeaderText = "Marca"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Placa", HeaderText = "Placa"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "TipoCombustivel", HeaderText = "Tipo Combustível"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "Imagem", HeaderText = "Imagem"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "QuantidadeLitros", HeaderText = "Quantidade de Litros"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "NumeroPortas", HeaderText = "Número de Portas"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "Cor", HeaderText = "Cor"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "Ano", HeaderText = "Ano"},                            
+                new DataGridViewTextBoxColumn { DataPropertyName = "NumeroPortas", HeaderText = "Número de Portas"},         
                 new DataGridViewTextBoxColumn { DataPropertyName = "CapacidadePessoas", HeaderText = "Capacidade de Pessoas"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "TamanhoPortaMalas", HeaderText = "Tamanho do Porta-malas"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "Kilometragem", HeaderText = "Kilometragem"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "IdGrupoVeiculo", HeaderText = "Grupo de veículo"},
-
+                new DataGridViewTextBoxColumn { DataPropertyName = "Imagem", HeaderText = "Imagem"},
             };
 
             return colunas;
@@ -53,8 +52,10 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             dataGridVeiculo.Rows.Clear();
 
             foreach (Veiculo veiculo in veiculos)
-            {           
-                dataGridVeiculo.Rows.Add(veiculo.Id, veiculo.placa, veiculo.cor,veiculo.marca,veiculo.ano,veiculo.tipoCombustivel,veiculo.foto,veiculo.quantidadeLitros,veiculo.numeroPortas,veiculo.capacidadeDePessoas,veiculo.tamanhoPortaMalas,veiculo.kilometragem, veiculo.idGrupoVeiculo);
+            {
+                dataGridVeiculo.Rows.Add(veiculo.Id,veiculo.kilometragem, veiculo.tipoCombustivel,veiculo.quantidadeLitros, veiculo.idGrupoVeiculo,veiculo.marca,veiculo.placa,veiculo.cor,
+                    veiculo.ano,veiculo.numeroPortas,veiculo.capacidadeDePessoas, veiculo.tamanhoPortaMalas, veiculo.foto
+                    );
             }
         }
     }

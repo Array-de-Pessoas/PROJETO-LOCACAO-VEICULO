@@ -1,5 +1,6 @@
 ﻿using LocadoraVeiculos.Controladores.FuncionarioModule;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using LocadoraVeiculos.Controladores.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using System;
@@ -66,9 +67,7 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void OpcaoCadastroVeiculos_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Entre com uma conta válida para fazer o cadastro!");
-            return;
-            // implementação do João
+           
         }
 
         private void OpcaoCadastroServicos_Click(object sender, EventArgs e)
@@ -116,6 +115,16 @@ namespace LocadoraVeiculos.WindowsForm
             panelTabelas.Controls.Clear();
 
             panelTabelas.Controls.Add(tabela);
+        }
+
+        private void vEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelTabelas.Controls.Clear();
+            MostrarOpcoes();
+            ImagemChave.Visible = false;
+            operacoes = new OperacoesVeiculo(new ControladorVeiculo());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
         }
 
         private void btnFiltro_Click(object sender, EventArgs e)
