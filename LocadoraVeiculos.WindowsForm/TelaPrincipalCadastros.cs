@@ -1,9 +1,11 @@
 ﻿using LocadoraVeiculos.Controladores.FuncionarioModule;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using LocadoraVeiculos.WindowsForm.Features.LoginModule;
+using LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -100,6 +102,9 @@ namespace LocadoraVeiculos.WindowsForm
             TxtCadastroSelecionado.Text = "           SERVIÇOS";
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
+            operacoes = new OperacoesTaxasServicos(new ControladorTaxasServicos());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
 
         }
 

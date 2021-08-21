@@ -59,6 +59,20 @@
     </Compile>
     <Compile Include="Features\GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
     <Compile Include="Features\LoginModule\OperacoesLogin.cs" />
+    <Compile Include="Features\TaxasServicosModule\ConfiguracaoTaxasServicosToolbox.cs" />
+    <Compile Include="Features\TaxasServicosModule\OperacoesTaxasServicos.cs" />
+    <Compile Include="Features\TaxasServicosModule\TabelaTaxasServicos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\TaxasServicosModule\TabelaTaxasServicos.Designer.cs">
+      <DependentUpon>TabelaTaxasServicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\TaxasServicosModule\TaxasServicosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\TaxasServicosModule\TaxasServicosForm.Designer.cs">
+      <DependentUpon>TaxasServicosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Shared\DataGridViewExtensions.cs" />
     <Compile Include="Shared\ICadastravel.cs" />
     <Compile Include="Shared\IConfiguracaoToolBox.cs" />
@@ -115,6 +129,12 @@
     <Compile Include="Features\VeiculoModule\TelaVeiculoForm.Designer.cs">
       <DependentUpon>TelaVeiculoForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Features\TaxasServicosModule\TabelaTaxasServicos.resx">
+      <DependentUpon>TabelaTaxasServicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\TaxasServicosModule\TaxasServicosForm.resx">
+      <DependentUpon>TaxasServicosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Features\VeiculoModule\TabelaVeiculosControl.resx">
       <DependentUpon>TabelaVeiculosControl.cs</DependentUpon>
     </EmbeddedResource>
