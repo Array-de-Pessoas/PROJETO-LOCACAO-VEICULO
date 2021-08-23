@@ -50,6 +50,8 @@ namespace LocadoraVeiculos.Dominio.GrupoVeiculosModule
                 resultadoValidacao = "O campo Valor da Diária do Plano Controlado é obrigatório";
             if (ValorDoKMPlanoDiario == 0)
                 resultadoValidacao = "O campo Valor do KM rodado do Plano Diário é obrigatório";
+            if (LimiteKMPlanoControlado == 0)
+                resultadoValidacao = "O campo Limite de KM do Plano Controlado é obrigatório";
             if (ValorKmExcedentePlanoControlado == 0)
                 resultadoValidacao = "O campo Valor do KM Excente do Plano Controlado é obrigatório";
                   
