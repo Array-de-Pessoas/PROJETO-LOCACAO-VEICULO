@@ -100,7 +100,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Fundo_Tela_Cadastro_Grupo_de_Veiculos;
+            this.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Grupo_de_Veiculos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(308, 305);
             this.Controls.Add(this.pictureBox1);

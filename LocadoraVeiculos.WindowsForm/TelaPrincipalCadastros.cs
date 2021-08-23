@@ -1,9 +1,11 @@
 ﻿using LocadoraVeiculos.Controladores.FuncionarioModule;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using LocadoraVeiculos.WindowsForm.Features.LoginModule;
+using LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,19 +90,6 @@ namespace LocadoraVeiculos.WindowsForm
             TxtCadastroSelecionado.Text = "           CLIENTES";
             MostrarOpcoes();
             panelTabelas.Controls.Clear();
-        }
-
-        private void OpcaoCadastroVeiculos_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
-        private void OpcaoCadastroServicos_Click(object sender, EventArgs e)
-        {
-            TxtCadastroSelecionado.Text = "           SERVIÇOS";
-            panelTabelas.Controls.Clear();
-            MostrarOpcoes();
-
         }
 
         private void btnVizualizarConta_Click(object sender, EventArgs e)
@@ -205,11 +194,6 @@ namespace LocadoraVeiculos.WindowsForm
             }
         }
 
-        private void OpcoesCadastros_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void StripMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             if (login.GerarUsuario() == null)
@@ -223,6 +207,16 @@ namespace LocadoraVeiculos.WindowsForm
             {
                 ConfiguracaoMenu(true);
             }
+        }
+
+        private void tAXASESERVIÇOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TxtCadastroSelecionado.Text = "    TAXAS E SERVIÇOS";
+            panelTabelas.Controls.Clear();
+            MostrarOpcoes();
+            operacoes = new OperacoesTaxasServicos(new ControladorTaxasServicos());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
         }
     }
 }

@@ -59,6 +59,20 @@
     </Compile>
     <Compile Include="Features\GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
     <Compile Include="Features\LoginModule\OperacoesLogin.cs" />
+    <Compile Include="Features\TaxasServicosModule\ConfiguracaoTaxasServicosToolbox.cs" />
+    <Compile Include="Features\TaxasServicosModule\OperacoesTaxasServicos.cs" />
+    <Compile Include="Features\TaxasServicosModule\TabelaTaxasServicos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\TaxasServicosModule\TabelaTaxasServicos.Designer.cs">
+      <DependentUpon>TabelaTaxasServicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\TaxasServicosModule\TaxasServicosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\TaxasServicosModule\TaxasServicosForm.Designer.cs">
+      <DependentUpon>TaxasServicosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Shared\DataGridViewExtensions.cs" />
     <Compile Include="Shared\ICadastravel.cs" />
     <Compile Include="Shared\IConfiguracaoToolBox.cs" />
@@ -115,6 +129,12 @@
     <Compile Include="Features\VeiculoModule\TelaVeiculoForm.Designer.cs">
       <DependentUpon>TelaVeiculoForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Features\TaxasServicosModule\TabelaTaxasServicos.resx">
+      <DependentUpon>TabelaTaxasServicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\TaxasServicosModule\TaxasServicosForm.resx">
+      <DependentUpon>TaxasServicosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Features\VeiculoModule\TabelaVeiculosControl.resx">
       <DependentUpon>TabelaVeiculosControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,9 +313,6 @@
     <None Include="Resources\Fuquinha.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fundo Tela Cadastro Grupo de Veiculos.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Opção nome do grupo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -358,6 +375,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CarroDeImagemPadro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grupo de Veiculos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fundo Tela Cadastro Grupo de Veiculos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taxa fixa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nome 23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taxa diária.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
