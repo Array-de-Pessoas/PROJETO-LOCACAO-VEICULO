@@ -259,4 +259,22 @@
   <data name="CarroDeImagemPadro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CarroDeImagemPadro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Grupo_de_Veiculos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Grupo de Veiculos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Id" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Id.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nome_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nome 23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Taxa_diária" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Taxa diária.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Taxa_fixa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Taxa fixa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Valor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Valor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

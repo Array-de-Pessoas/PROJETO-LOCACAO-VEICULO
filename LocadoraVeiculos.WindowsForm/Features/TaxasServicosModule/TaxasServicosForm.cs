@@ -16,6 +16,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
     public partial class TaxasServicosForm : Form
     {
         private TaxasServicos taxasServicos;
+        public string TipoDeTaxa;
 
         private readonly ControladorTaxasServicos controladorTaxas = null;
 
@@ -33,7 +34,8 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             {
                 taxasServicos = value;
 
-                txtTipo.Text = taxasServicos.TipoTaxa;
+                txtId.Text = taxasServicos.Id.ToString();
+                TipoDeTaxa = taxasServicos.TipoTaxa;
                 txtNome.Text = taxasServicos.Nome;
                 txtValor.Text = taxasServicos.Valor.ToString();
 
@@ -42,7 +44,16 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            string Tipo = txtTipo.Text;
+            if (RbnTaxaDiaria.Checked)
+            {
+                TipoDeTaxa = "Diaria";
+            }
+            if (RbnTaxaFixa.Checked)
+            {
+                TipoDeTaxa = "Fixa";
+            }
+
+            string Tipo = TipoDeTaxa;
             string Nome = txtNome.Text;
             decimal Valor = Convert.ToDecimal(txtValor.Text);
 
@@ -56,6 +67,11 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
 
                 DialogResult = DialogResult.None;
             }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

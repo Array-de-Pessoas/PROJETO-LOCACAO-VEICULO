@@ -92,22 +92,6 @@ namespace LocadoraVeiculos.WindowsForm
             panelTabelas.Controls.Clear();
         }
 
-        private void OpcaoCadastroVeiculos_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
-        private void OpcaoCadastroServicos_Click(object sender, EventArgs e)
-        {
-            TxtCadastroSelecionado.Text = "           SERVIÇOS";
-            panelTabelas.Controls.Clear();
-            MostrarOpcoes();
-            operacoes = new OperacoesTaxasServicos(new ControladorTaxasServicos());
-            ConfigurarPanelRegistros();
-            btnFiltro.Visible = false;
-
-        }
-
         private void btnVizualizarConta_Click(object sender, EventArgs e)
         {
             if (panelTelaContaRegistradas.Controls.Count == 0)
@@ -210,11 +194,6 @@ namespace LocadoraVeiculos.WindowsForm
             }
         }
 
-        private void OpcoesCadastros_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void StripMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             if (login.GerarUsuario() == null)
@@ -228,6 +207,16 @@ namespace LocadoraVeiculos.WindowsForm
             {
                 ConfiguracaoMenu(true);
             }
+        }
+
+        private void tAXASESERVIÇOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TxtCadastroSelecionado.Text = "    TAXAS E SERVIÇOS";
+            panelTabelas.Controls.Clear();
+            MostrarOpcoes();
+            operacoes = new OperacoesTaxasServicos(new ControladorTaxasServicos());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
         }
     }
 }

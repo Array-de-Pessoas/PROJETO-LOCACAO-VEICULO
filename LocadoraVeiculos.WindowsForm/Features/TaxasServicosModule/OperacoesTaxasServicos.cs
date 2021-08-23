@@ -45,7 +45,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
 
                 tabela.AtualizarRegistros(grupos);
 
-                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Grupo: [{taxasServicosForm.TaxasServicos}] editado com sucesso");
+                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Grupo: [{taxasServicosForm.TaxasServicos.Nome}] editado com sucesso");
             }
         }
 
@@ -62,7 +62,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
 
             TaxasServicos taxasServicosSelecionado = controlador.SelecionarPorId(id);
 
-            if (MessageBox.Show($"Tem certeza que deseja excluir o Grupo: [{taxasServicosSelecionado}] ?",
+            if (MessageBox.Show($"Tem certeza que deseja excluir o Grupo: [{taxasServicosSelecionado.Nome}] ?",
                 "Exclusão de Grupo de veículos", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 controlador.Excluir(id);
@@ -71,7 +71,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
 
                 tabela.AtualizarRegistros(taxasServicos);
 
-                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Grupo: [{taxasServicosSelecionado}] excluido com sucesso");
+                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Grupo: [{taxasServicosSelecionado.Nome}] excluido com sucesso");
             }
         }
 
@@ -92,7 +92,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
 
                 tabela.AtualizarRegistros(taxasServicos);
 
-                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Grupo: [{tela.TaxasServicos}] adicionado com sucesso");
+                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Grupo: [{tela.TaxasServicos.Nome}] adicionado com sucesso");
             }
         }
 

@@ -313,9 +313,6 @@
     <None Include="Resources\Fuquinha.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fundo Tela Cadastro Grupo de Veiculos.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Opção nome do grupo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -378,6 +375,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CarroDeImagemPadro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grupo de Veiculos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fundo Tela Cadastro Grupo de Veiculos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taxa fixa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nome 23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taxa diária.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
