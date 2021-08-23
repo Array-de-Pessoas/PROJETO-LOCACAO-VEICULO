@@ -1,7 +1,9 @@
-﻿using LocadoraVeiculos.Controladores.FuncionarioModule;
+﻿using LocadoraVeiculos.Controladores.CombustivelModule;
+using LocadoraVeiculos.Controladores.FuncionarioModule;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
+using LocadoraVeiculos.WindowsForm.Features.CombustivelModule;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using LocadoraVeiculos.WindowsForm.Features.LoginModule;
@@ -215,6 +217,16 @@ namespace LocadoraVeiculos.WindowsForm
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
             operacoes = new OperacoesTaxasServicos(new ControladorTaxasServicos());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
+        }
+
+        private void cOMBUSTÍVELToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TxtCadastroSelecionado.Text = "       COMBUSTÍVEL";
+            panelTabelas.Controls.Clear();
+            MostrarOpcoes();
+            operacoes = new OperacoesCombustivel(new ControladorCombustivel());
             ConfigurarPanelRegistros();
             btnFiltro.Visible = false;
         }

@@ -51,7 +51,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(167, 249);
+            this.txtNome.Location = new System.Drawing.Point(127, 234);
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(303, 35);
@@ -60,7 +60,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             // txtValor
             // 
             this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.Location = new System.Drawing.Point(167, 302);
+            this.txtValor.Location = new System.Drawing.Point(127, 275);
             this.txtValor.Multiline = true;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(108, 35);
@@ -70,9 +70,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             // 
             this.btnGravar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnGravar.Location = new System.Drawing.Point(446, 360);
+            this.btnGravar.Location = new System.Drawing.Point(350, 361);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(84, 52);
+            this.btnGravar.Size = new System.Drawing.Size(92, 53);
             this.btnGravar.TabIndex = 7;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
@@ -82,9 +82,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             // 
             this.btnVoltar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnVoltar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnVoltar.Location = new System.Drawing.Point(356, 360);
+            this.btnVoltar.Location = new System.Drawing.Point(252, 361);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(84, 52);
+            this.btnVoltar.Size = new System.Drawing.Size(92, 53);
             this.btnVoltar.TabIndex = 8;
             this.btnVoltar.Text = "Cancelar";
             this.btnVoltar.UseVisualStyleBackColor = false;
@@ -93,7 +93,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Nome_23;
-            this.pictureBox1.Location = new System.Drawing.Point(75, 249);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 234);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(91, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,7 +103,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             // pictureBox2
             // 
             this.pictureBox2.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Valor;
-            this.pictureBox2.Location = new System.Drawing.Point(75, 302);
+            this.pictureBox2.Location = new System.Drawing.Point(30, 275);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(91, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -113,7 +113,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             // pictureBox3
             // 
             this.pictureBox3.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Id;
-            this.pictureBox3.Location = new System.Drawing.Point(188, 58);
+            this.pictureBox3.Location = new System.Drawing.Point(167, 42);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(39, 29);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,7 +124,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             // 
             this.RbnTaxaDiaria.AutoSize = true;
             this.RbnTaxaDiaria.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
-            this.RbnTaxaDiaria.Location = new System.Drawing.Point(84, 160);
+            this.RbnTaxaDiaria.Location = new System.Drawing.Point(36, 154);
             this.RbnTaxaDiaria.Name = "RbnTaxaDiaria";
             this.RbnTaxaDiaria.Size = new System.Drawing.Size(17, 16);
             this.RbnTaxaDiaria.TabIndex = 12;
@@ -135,7 +135,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             // 
             this.RbnTaxaFixa.AutoSize = true;
             this.RbnTaxaFixa.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
-            this.RbnTaxaFixa.Location = new System.Drawing.Point(318, 160);
+            this.RbnTaxaFixa.Location = new System.Drawing.Point(242, 154);
             this.RbnTaxaFixa.Name = "RbnTaxaFixa";
             this.RbnTaxaFixa.Size = new System.Drawing.Size(17, 16);
             this.RbnTaxaFixa.TabIndex = 13;
@@ -147,16 +147,16 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(233, 58);
+            this.txtId.Location = new System.Drawing.Point(200, 42);
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(158, 29);
+            this.txtId.Size = new System.Drawing.Size(106, 29);
             this.txtId.TabIndex = 14;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Taxa_diária;
-            this.pictureBox4.Location = new System.Drawing.Point(107, 136);
+            this.pictureBox4.Location = new System.Drawing.Point(59, 125);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(177, 59);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -166,7 +166,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             // pictureBox5
             // 
             this.pictureBox5.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Taxa_fixa;
-            this.pictureBox5.Location = new System.Drawing.Point(341, 146);
+            this.pictureBox5.Location = new System.Drawing.Point(265, 135);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(165, 49);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -177,9 +177,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Fundo_Tela_Cadastro_Grupo_de_Veiculos;
+            this.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Novo_Cadastro_de_Taxas;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(582, 452);
+            this.ClientSize = new System.Drawing.Size(466, 439);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.txtId);
@@ -193,9 +193,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.txtNome);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(600, 499);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(600, 499);
             this.Name = "TaxasServicosForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

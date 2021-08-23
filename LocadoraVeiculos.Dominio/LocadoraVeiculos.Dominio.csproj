@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente\Cliente.cs" />
+    <Compile Include="CombustivelModule\Combustivel.cs" />
     <Compile Include="FuncionarioModule\Funcionario.cs" />
     <Compile Include="GrupoVeiculosModule\GrupoVeiculos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

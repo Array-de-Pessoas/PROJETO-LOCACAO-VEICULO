@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[TBCOMBUSTIVEL]
+(
+	[Id]   INT             IDENTITY (1, 1) NOT NULL,
+    [TipoCombustivel] VARCHAR(100) NOT NULL, 
+    [Valor] DECIMAL(18, 2) NOT NULL
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+)

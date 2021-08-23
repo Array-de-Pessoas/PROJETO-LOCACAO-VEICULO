@@ -40,7 +40,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridTaxasServicos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
             this.dataGridTaxasServicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridTaxasServicos.Location = new System.Drawing.Point(3, 3);
+            this.dataGridTaxasServicos.Location = new System.Drawing.Point(15, 3);
             this.dataGridTaxasServicos.Name = "dataGridTaxasServicos";
             this.dataGridTaxasServicos.RowHeadersWidth = 51;
             this.dataGridTaxasServicos.RowTemplate.Height = 24;

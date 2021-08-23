@@ -38,7 +38,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
                 TipoDeTaxa = taxasServicos.TipoTaxa;
                 txtNome.Text = taxasServicos.Nome;
                 txtValor.Text = taxasServicos.Valor.ToString();
-
             }
         }
 

@@ -40,6 +40,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.gRUPODEVEÍCULOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vEÍCULOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpcaoCadastroServicos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tAXASESERVIÇOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ImagemChave = new System.Windows.Forms.PictureBox();
             this.btnVizualizarConta = new System.Windows.Forms.Button();
@@ -53,7 +54,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.panelTelaContaRegistradas = new System.Windows.Forms.Panel();
             this.toolTipBtnAdicionar = new System.Windows.Forms.ToolTip(this.components);
             this.panelTabelas = new System.Windows.Forms.Panel();
-            this.tAXASESERVIÇOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cOMBUSTÍVELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemChave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemLinha)).BeginInit();
@@ -123,12 +124,12 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.OpcaoCadastroVeiculos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gRUPODEVEÍCULOSToolStripMenuItem,
-            this.vEÍCULOSToolStripMenuItem});
+            this.vEÍCULOSToolStripMenuItem,
+            this.cOMBUSTÍVELToolStripMenuItem});
             this.OpcaoCadastroVeiculos.Font = new System.Drawing.Font("Bahnschrift Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpcaoCadastroVeiculos.Name = "OpcaoCadastroVeiculos";
             this.OpcaoCadastroVeiculos.Size = new System.Drawing.Size(224, 26);
             this.OpcaoCadastroVeiculos.Text = "VEÍCULOS";
-           
             // 
             // gRUPODEVEÍCULOSToolStripMenuItem
             // 
@@ -152,7 +153,13 @@ namespace LocadoraVeiculos.WindowsForm
             this.OpcaoCadastroServicos.Name = "OpcaoCadastroServicos";
             this.OpcaoCadastroServicos.Size = new System.Drawing.Size(224, 26);
             this.OpcaoCadastroServicos.Text = "SERVIÇOS";
-            
+            // 
+            // tAXASESERVIÇOSToolStripMenuItem
+            // 
+            this.tAXASESERVIÇOSToolStripMenuItem.Name = "tAXASESERVIÇOSToolStripMenuItem";
+            this.tAXASESERVIÇOSToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.tAXASESERVIÇOSToolStripMenuItem.Text = "TAXAS E SERVIÇOS";
+            this.tAXASESERVIÇOSToolStripMenuItem.Click += new System.EventHandler(this.tAXASESERVIÇOSToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -301,12 +308,12 @@ namespace LocadoraVeiculos.WindowsForm
             this.panelTabelas.Size = new System.Drawing.Size(899, 652);
             this.panelTabelas.TabIndex = 11;
             // 
-            // tAXASESERVIÇOSToolStripMenuItem
+            // cOMBUSTÍVELToolStripMenuItem
             // 
-            this.tAXASESERVIÇOSToolStripMenuItem.Name = "tAXASESERVIÇOSToolStripMenuItem";
-            this.tAXASESERVIÇOSToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
-            this.tAXASESERVIÇOSToolStripMenuItem.Text = "TAXAS E SERVIÇOS";
-            this.tAXASESERVIÇOSToolStripMenuItem.Click += new System.EventHandler(this.tAXASESERVIÇOSToolStripMenuItem_Click);
+            this.cOMBUSTÍVELToolStripMenuItem.Name = "cOMBUSTÍVELToolStripMenuItem";
+            this.cOMBUSTÍVELToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.cOMBUSTÍVELToolStripMenuItem.Text = "COMBUSTÍVEL";
+            this.cOMBUSTÍVELToolStripMenuItem.Click += new System.EventHandler(this.cOMBUSTÍVELToolStripMenuItem_Click);
             // 
             // TelaPrincipalCadastros
             // 
@@ -366,5 +373,6 @@ namespace LocadoraVeiculos.WindowsForm
         private System.Windows.Forms.Panel panelTabelas;
         private System.Windows.Forms.ToolStripMenuItem vEÍCULOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tAXASESERVIÇOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cOMBUSTÍVELToolStripMenuItem;
     }
 }

@@ -49,6 +49,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\CombustivelModule\ConfiguracaoCombustivelToolBox.cs" />
+    <Compile Include="Features\CombustivelModule\OperacoesCombustivel.cs" />
+    <Compile Include="Features\CombustivelModule\TabelaCombustivelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\CombustivelModule\TabelaCombustivelControl.Designer.cs">
+      <DependentUpon>TabelaCombustivelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CombustivelModule\TelaCombustivelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\CombustivelModule\TelaCombustivelForm.Designer.cs">
+      <DependentUpon>TelaCombustivelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\FuncionarioModule\ConfiguracaoFuncionarioTooBox.cs" />
     <Compile Include="Features\FuncionarioModule\OperacoesFuncionario.cs" />
     <Compile Include="Features\GrupoVeiculosModule\TelaGrupoDeVeiculosForm.cs">
@@ -129,6 +143,12 @@
     <Compile Include="Features\VeiculoModule\TelaVeiculoForm.Designer.cs">
       <DependentUpon>TelaVeiculoForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Features\CombustivelModule\TabelaCombustivelControl.resx">
+      <DependentUpon>TabelaCombustivelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\CombustivelModule\TelaCombustivelForm.resx">
+      <DependentUpon>TelaCombustivelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Features\TaxasServicosModule\TabelaTaxasServicos.resx">
       <DependentUpon>TabelaTaxasServicos.cs</DependentUpon>
     </EmbeddedResource>
@@ -396,6 +416,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Taxa diária.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadastro de combustivel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\85372_gas_pump_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novo Cadastro de Taxas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

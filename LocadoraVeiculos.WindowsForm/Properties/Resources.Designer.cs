@@ -113,6 +113,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cadastro_de_combustivel {
+            get {
+                object obj = ResourceManager.GetObject("Cadastro_de_combustivel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Capacidade_porta_malas {
             get {
                 object obj = ResourceManager.GetObject("Capacidade_porta_malas", resourceCulture);
@@ -226,6 +236,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Fuquinha {
             get {
                 object obj = ResourceManager.GetObject("Fuquinha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gas {
+            get {
+                object obj = ResourceManager.GetObject("Gas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -466,6 +486,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Novo_botão_filtro {
             get {
                 object obj = ResourceManager.GetObject("Novo_botão_filtro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Novo_Cadastro_de_Taxas {
+            get {
+                object obj = ResourceManager.GetObject("Novo_Cadastro_de_Taxas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -277,4 +277,13 @@
   <data name="Valor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Valor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cadastro_de_combustivel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cadastro de combustivel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\85372_gas_pump_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Novo_Cadastro_de_Taxas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Novo Cadastro de Taxas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
