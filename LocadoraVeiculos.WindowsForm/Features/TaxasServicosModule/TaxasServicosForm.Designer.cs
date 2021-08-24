@@ -193,7 +193,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.txtNome);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(484, 486);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(484, 486);
             this.Name = "TaxasServicosForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

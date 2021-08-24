@@ -426,5 +426,8 @@
   <ItemGroup>
     <None Include="Resources\Novo Cadastro de Taxas.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tipo de combustivel.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

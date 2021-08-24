@@ -593,6 +593,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Tipo_de_combustivel {
+            get {
+                object obj = ResourceManager.GetObject("Tipo_de_combustivel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tipo_de_veiculo {
             get {
                 object obj = ResourceManager.GetObject("Tipo_de_veiculo", resourceCulture);
