@@ -1,8 +1,10 @@
-﻿using LocadoraVeiculos.Controladores.CombustivelModule;
+﻿using LocadoraVeiculos.Controladores.ClienteModule;
+using LocadoraVeiculos.Controladores.CombustivelModule;
 using LocadoraVeiculos.Controladores.FuncionarioModule;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
+using LocadoraVeiculos.WindowsForm.Features.ClienteModule;
 using LocadoraVeiculos.WindowsForm.Features.CombustivelModule;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
@@ -89,9 +91,12 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void OpcaoCadastroClientes_Click(object sender, EventArgs e)
         {
-            TxtCadastroSelecionado.Text = "           CLIENTES";
-            MostrarOpcoes();
+            TxtCadastroSelecionado.Text = "          CLIENTE";
             panelTabelas.Controls.Clear();
+            MostrarOpcoes();
+            operacoes = new OperacoesCliente(new ControladorCliente());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
         }
 
         private void btnVizualizarConta_Click(object sender, EventArgs e)

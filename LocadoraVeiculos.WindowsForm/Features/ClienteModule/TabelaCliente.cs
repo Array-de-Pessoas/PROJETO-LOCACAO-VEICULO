@@ -36,16 +36,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.ClienteModule
 
                 new DataGridViewTextBoxColumn { DataPropertyName = "CPFOUCNPJ", HeaderText = "CPFOUCNPJ"},
 
-                new DataGridViewTextBoxColumn { DataPropertyName = "NOMECONDUTOR", HeaderText = "NOMECONDUTOR"},
-
-                new DataGridViewTextBoxColumn { DataPropertyName = "CNH", HeaderText = "CNH"},
-
-                new DataGridViewTextBoxColumn { DataPropertyName = "CPFCONDUTOR", HeaderText = "CPFCONDUTOR"},
-
-                new DataGridViewTextBoxColumn { DataPropertyName = "RG", HeaderText = "RG"},
-
-                new DataGridViewTextBoxColumn { DataPropertyName = "DATAVALIDADECNH", HeaderText = "DATAVALIDADECNH"},
-
             };
 
             return colunas;

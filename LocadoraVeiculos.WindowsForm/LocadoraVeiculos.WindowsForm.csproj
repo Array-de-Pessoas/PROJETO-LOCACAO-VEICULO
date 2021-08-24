@@ -448,5 +448,32 @@
   <ItemGroup>
     <None Include="Resources\Tipo de combustivel.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Telefone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Endereço.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cpf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Condutor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPF ou CNPJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data validacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cnh.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

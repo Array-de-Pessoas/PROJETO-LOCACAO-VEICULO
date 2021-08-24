@@ -289,4 +289,31 @@
   <data name="Tipo_de_combustivel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tipo de combustivel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cnh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cnh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Condutor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Condutor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cpf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cpf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CPF_ou_CNPJ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CPF ou CNPJ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Data_validacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Data validacao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Endereço" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Endereço.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tela_cadastro_clientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tela cadastro clientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Telefone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Telefone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

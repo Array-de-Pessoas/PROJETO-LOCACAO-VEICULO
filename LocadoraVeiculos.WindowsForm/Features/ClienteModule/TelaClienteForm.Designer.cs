@@ -29,200 +29,288 @@ namespace LocadoraVeiculos.WindowsForm.Features.ClienteModule
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.txtNomeCliente = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.txtNomeCondutor = new System.Windows.Forms.TextBox();
+            this.txtCPFcondutor = new System.Windows.Forms.TextBox();
+            this.txtCNH = new System.Windows.Forms.TextBox();
+            this.txtRG = new System.Windows.Forms.TextBox();
+            this.dateTimeValidacaoCNH = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxTipoId = new System.Windows.Forms.ComboBox();
+            this.btnGravar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNomeCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(201, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
+            this.txtNomeCliente.Location = new System.Drawing.Point(217, 103);
+            this.txtNomeCliente.Name = "txtNomeCliente";
+            this.txtNomeCliente.Size = new System.Drawing.Size(165, 22);
+            this.txtNomeCliente.TabIndex = 0;
             // 
-            // textBox2
+            // txtEndereco
             // 
-            this.textBox2.Location = new System.Drawing.Point(201, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 1;
+            this.txtEndereco.Location = new System.Drawing.Point(217, 143);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(165, 22);
+            this.txtEndereco.TabIndex = 1;
             // 
-            // textBox3
+            // txtTelefone
             // 
-            this.textBox3.Location = new System.Drawing.Point(201, 119);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 2;
+            this.txtTelefone.Location = new System.Drawing.Point(217, 186);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(165, 22);
+            this.txtTelefone.TabIndex = 2;
             // 
-            // textBox5
+            // txtNomeCondutor
             // 
-            this.textBox5.Location = new System.Drawing.Point(201, 211);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 4;
+            this.txtNomeCondutor.Location = new System.Drawing.Point(217, 278);
+            this.txtNomeCondutor.Name = "txtNomeCondutor";
+            this.txtNomeCondutor.Size = new System.Drawing.Size(165, 22);
+            this.txtNomeCondutor.TabIndex = 4;
             // 
-            // textBox6
+            // txtCPFcondutor
             // 
-            this.textBox6.Location = new System.Drawing.Point(201, 255);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 5;
+            this.txtCPFcondutor.Location = new System.Drawing.Point(217, 322);
+            this.txtCPFcondutor.Name = "txtCPFcondutor";
+            this.txtCPFcondutor.Size = new System.Drawing.Size(165, 22);
+            this.txtCPFcondutor.TabIndex = 5;
             // 
-            // textBox7
+            // txtCNH
             // 
-            this.textBox7.Location = new System.Drawing.Point(201, 298);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 6;
+            this.txtCNH.Location = new System.Drawing.Point(217, 365);
+            this.txtCNH.Name = "txtCNH";
+            this.txtCNH.Size = new System.Drawing.Size(165, 22);
+            this.txtCNH.TabIndex = 6;
             // 
-            // textBox8
+            // txtRG
             // 
-            this.textBox8.Location = new System.Drawing.Point(201, 343);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 7;
+            this.txtRG.Location = new System.Drawing.Point(217, 410);
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(165, 22);
+            this.txtRG.TabIndex = 7;
             // 
-            // dateTimePicker1
+            // dateTimeValidacaoCNH
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(201, 388);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dateTimeValidacaoCNH.Location = new System.Drawing.Point(217, 455);
+            this.dateTimeValidacaoCNH.Name = "dateTimeValidacaoCNH";
+            this.dateTimeValidacaoCNH.Size = new System.Drawing.Size(200, 22);
+            this.dateTimeValidacaoCNH.TabIndex = 8;
             // 
-            // comboBox1
+            // comboBoxTipoId
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxTipoId.FormattingEnabled = true;
+            this.comboBoxTipoId.Items.AddRange(new object[] {
             "CPF",
             "CNPJ"});
-            this.comboBox1.Location = new System.Drawing.Point(201, 161);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxTipoId.Location = new System.Drawing.Point(217, 228);
+            this.comboBoxTipoId.Name = "comboBoxTipoId";
+            this.comboBoxTipoId.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxTipoId.TabIndex = 9;
+            this.comboBoxTipoId.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label1
+            // btnGravar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(124, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "label1";
+            this.btnGravar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnGravar.Location = new System.Drawing.Point(323, 526);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(100, 43);
+            this.btnGravar.TabIndex = 19;
+            this.btnGravar.Text = "Gravar";
+            this.btnGravar.UseVisualStyleBackColor = false;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
-            // label2
+            // btnCancelar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "label2";
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCancelar.Location = new System.Drawing.Point(217, 526);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(100, 43);
+            this.btnCancelar.TabIndex = 20;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label3
+            // txtId
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(124, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "label3";
+            this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(190, 39);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 22);
+            this.txtId.TabIndex = 21;
             // 
-            // label4
+            // pictureBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(124, 168);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "label4";
+            this.pictureBox1.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Telefone;
+            this.pictureBox1.Location = new System.Drawing.Point(129, 182);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
-            // label5
+            // pictureBox2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(124, 216);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "label5";
+            this.pictureBox2.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Endereço;
+            this.pictureBox2.Location = new System.Drawing.Point(127, 135);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(84, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
             // 
-            // label6
+            // pictureBox3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(124, 260);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "label6";
+            this.pictureBox3.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Nome_23;
+            this.pictureBox3.Location = new System.Drawing.Point(153, 103);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(58, 22);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
             // 
-            // label7
+            // pictureBox4
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(124, 303);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "label7";
+            this.pictureBox4.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.CPF_ou_CNPJ;
+            this.pictureBox4.Location = new System.Drawing.Point(119, 225);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(90, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 25;
+            this.pictureBox4.TabStop = false;
             // 
-            // label8
+            // pictureBox5
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(124, 343);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 17);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "label8";
+            this.pictureBox5.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Condutor;
+            this.pictureBox5.Location = new System.Drawing.Point(129, 269);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(82, 31);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 26;
+            this.pictureBox5.TabStop = false;
             // 
-            // label9
+            // pictureBox6
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(124, 388);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 17);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "label9";
+            this.pictureBox6.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Cpf;
+            this.pictureBox6.Location = new System.Drawing.Point(163, 317);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(48, 27);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 27;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Rg;
+            this.pictureBox7.Location = new System.Drawing.Point(169, 357);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(42, 30);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 28;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Cnh;
+            this.pictureBox8.Location = new System.Drawing.Point(163, 401);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(50, 31);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 29;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Data_validacao;
+            this.pictureBox9.Location = new System.Drawing.Point(29, 446);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(184, 31);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 30;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Id;
+            this.pictureBox10.Location = new System.Drawing.Point(158, 39);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(33, 22);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 31;
+            this.pictureBox10.TabStop = false;
             // 
             // TelaClienteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 484);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Tela_cadastro_clientes;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(446, 591);
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGravar);
+            this.Controls.Add(this.comboBoxTipoId);
+            this.Controls.Add(this.dateTimeValidacaoCNH);
+            this.Controls.Add(this.txtRG);
+            this.Controls.Add(this.txtCNH);
+            this.Controls.Add(this.txtCPFcondutor);
+            this.Controls.Add(this.txtNomeCondutor);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtEndereco);
+            this.Controls.Add(this.txtNomeCliente);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(464, 638);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(464, 638);
             this.Name = "TelaClienteForm";
-            this.Text = "TelaClienteForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de cliente";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,23 +318,27 @@ namespace LocadoraVeiculos.WindowsForm.Features.ClienteModule
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtNomeCliente;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.TextBox txtNomeCondutor;
+        private System.Windows.Forms.TextBox txtCPFcondutor;
+        private System.Windows.Forms.TextBox txtCNH;
+        private System.Windows.Forms.TextBox txtRG;
+        private System.Windows.Forms.DateTimePicker dateTimeValidacaoCNH;
+        private System.Windows.Forms.ComboBox comboBoxTipoId;
+        private System.Windows.Forms.Button btnGravar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }
