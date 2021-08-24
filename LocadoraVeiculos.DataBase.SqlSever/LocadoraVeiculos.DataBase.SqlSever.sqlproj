@@ -69,4 +69,7 @@
     <Build Include="dbo\Tables\TBFUNCIONARIO.sql" />
     <Build Include="dbo\Tables\TBCOMBUSTIVEL.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="LocadoraVeiculos.DataBase.SqlSever.refactorlog" />
+  </ItemGroup>
 </Project>

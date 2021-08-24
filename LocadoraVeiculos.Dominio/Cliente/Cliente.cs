@@ -7,45 +7,61 @@ using System.Threading.Tasks;
 
 namespace LocadoraVeiculos.Dominio
 {
-    public class Cliente : EntidadeBase
+    public class Cliente : EntidadeBase, IEquatable<Cliente>
     {
-        string NomeCliente { get; set; }
-        string Endereco { get; set; }
-        string Telefone { get; set; }
-        string CPFDoCliente { get; set; }
-        string CNPJ { get; set; }
-        string CPFDoCondutor { get; set; }
-        string RGDoCondutor { get; set; }
-        string CNH { get; set; }
-        string NomeDoCondutor { get; set; }
-        DateTime DataValidadeCNH { get; set; }
+        public string NomeCliente { get; }
+        public string Endereco { get;}
+        public string Telefone { get;}
+        public string TipoDeIdentidade { get;}
+        public string CPFDoCondutor { get;}
+        public string RGDoCondutor { get;}
+        public string CNH { get;}
+        public string NomeDoCondutor { get;}
+        public DateTime DataValidadeCNH { get;}
 
-        //cliente não e o condutor
-        public Cliente(string NomeCliente, string Endereco, string Telefone, string CPFDoCliente, string CNPJ, string CPFDoCondutor, string RGDoCondutor, string CNH, string NomeDoCondutor, DateTime DataValidadeCNH)
-        {
-            this.NomeCliente = NomeCliente;
-            this.Endereco = Endereco;
-            this.Telefone = Telefone;
-            this.CPFDoCliente = CPFDoCliente;
-            this.CNPJ = CNPJ;
-            this.CPFDoCondutor = CPFDoCondutor;
-            this.RGDoCondutor = RGDoCondutor;
-            this.CNH = CNH;
-            this.NomeDoCondutor = NomeDoCondutor;
-            this.DataValidadeCNH = DataValidadeCNH;
-        }
-
-        //cliente é o condutor
-        public Cliente(string nomeCliente, string endereco, string telefone, string cPFDoCliente, string cNPJ, string rGDoCondutor, string cNH, DateTime dataValidadeCNH)
+        
+        public Cliente(string nomeCliente, string endereco, string telefone, string tipoDeIdentidade, string nomeDoCondutor, string cpfCondutor, string rGDoCondutor, string cNH, DateTime dataValidadeCNH)
         {
             NomeCliente = nomeCliente;
             Endereco = endereco;
             Telefone = telefone;
-            CPFDoCliente = cPFDoCliente;
-            CNPJ = cNPJ;
-            RGDoCondutor = rGDoCondutor;
+            TipoDeIdentidade = tipoDeIdentidade;
+            NomeDoCondutor = nomeDoCondutor;
             CNH = cNH;
+            CPFDoCondutor = cpfCondutor;
+            RGDoCondutor = rGDoCondutor;
             DataValidadeCNH = dataValidadeCNH;
+        }
+
+        public bool Equals(Cliente other)
+        {
+            return other != null &&
+                   Id == other.Id &&
+                   NomeCliente == other.NomeCliente &&
+                   Endereco == other.Endereco &&
+                   Telefone == other.Telefone &&
+                   TipoDeIdentidade == other.TipoDeIdentidade &&
+                   NomeDoCondutor == other.NomeDoCondutor &&
+                   CNH == other.CNH &&
+                   CPFDoCondutor == other.CPFDoCondutor &&
+                   RGDoCondutor == other.RGDoCondutor &&
+                   DataValidadeCNH == other.DataValidadeCNH;
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = -677046642;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(NomeCliente);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Endereco);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Telefone);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(TipoDeIdentidade);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(NomeDoCondutor);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(CNH);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(CPFDoCondutor);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(RGDoCondutor);
+            hashCode = hashCode * -1521134295 + DataValidadeCNH.GetHashCode();
+            return hashCode;
         }
 
         public override string Validar()
@@ -64,8 +80,15 @@ namespace LocadoraVeiculos.Dominio
             {
                 return "Endereço do cliente não pode ser nulo";
             }
+            if (resultadoValidacao == "")
+                resultadoValidacao = "ESTA_VALIDO";
 
             return resultadoValidacao;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as Cliente);
         }
     }
 }
