@@ -70,15 +70,35 @@ namespace LocadoraVeiculos.Dominio
 
             if (string.IsNullOrEmpty(NomeCliente))
             {
-                return "Nome do cliente não pode ser nulo";
+                return "                                                     O campo nome do cliente não pode estar vazio";
             }
             else if (string.IsNullOrEmpty(Endereco))
             {
-                return "Endereço do cliente não pode ser nulo";
+                return "                                                     O campo endereço não pode estar vazio";
             }
             else if (string.IsNullOrEmpty(Telefone))
             {
-                return "Endereço do cliente não pode ser nulo";
+                return "                                                     O campo telefone não pode estar vazio";
+            }
+            else if (string.IsNullOrEmpty(TipoDeIdentidade))
+            {
+                return "                                                     O campo tipo de identidade não pode estar vazio";
+            }
+            else if (string.IsNullOrEmpty(NomeDoCondutor))
+            {
+                return "                                                     O campo nome do condutor não pode estar vazio";
+            }
+            else if (string.IsNullOrEmpty(CNH))
+            {
+                return "                                                     O campo CNH não pode estar vazio";
+            }
+            else if (string.IsNullOrEmpty(CPFDoCondutor))
+            {
+                return "                                                     O campo CPF do condutor não pode estar vazio";
+            }
+            else if (string.IsNullOrEmpty(RGDoCondutor))
+            {
+                return "                                                     O campo RG não pode estar vazio";
             }
             if (resultadoValidacao == "")
                 resultadoValidacao = "ESTA_VALIDO";

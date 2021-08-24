@@ -38,15 +38,15 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveAtualizar()
         {
-            var cliente = new Cliente("João", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var cliente = new Cliente("Lucas", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
             controlador.InserirNovo(cliente);
 
-            var novoCliente = new Cliente("Lucas", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var novoCliente = new Cliente("João", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
 
             controlador.Editar(cliente.Id, novoCliente);
 
-            //Cliente ClienteSelecionado = controlador.SelecionarPorId(cliente.Id);
-            //ClienteSelecionado.Should().Be(novoCliente);
+            Cliente ClienteSelecionado = controlador.SelecionarPorId(cliente.Id);
+            ClienteSelecionado.NomeCliente.Should().Be(novoCliente.NomeCliente);
         }
 
         [TestMethod]

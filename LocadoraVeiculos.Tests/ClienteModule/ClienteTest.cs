@@ -1,69 +1,104 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using FluentAssertions;
+using LocadoraVeiculos.Dominio;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace LocadoraVeiculos.Tests.ClienteModule
 {
-    /// <summary>
-    /// Summary description for ClienteTest
-    /// </summary>
     [TestClass]
+    [TestCategory("Dominio")]
     public class ClienteTest
     {
-        public ClienteTest()
+        [TestMethod]
+        public void DeveValidarTodosOsCampos()
         {
-            //
-            // TODO: Add constructor logic here
-            //
+            var cliente = new Cliente("Lucas", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+
+            var resultadoValidacao = cliente.Validar();
+
+            resultadoValidacao.Should().Be("ESTA_VALIDO");
         }
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
-        #region Additional test attributes
-        //
-        // You can use the following additional attributes as you write your tests:
-        //
-        // Use ClassInitialize to run code before running the first test in the class
-        // [ClassInitialize()]
-        // public static void MyClassInitialize(TestContext testContext) { }
-        //
-        // Use ClassCleanup to run code after all tests in a class have run
-        // [ClassCleanup()]
-        // public static void MyClassCleanup() { }
-        //
-        // Use TestInitialize to run code before running each test 
-        // [TestInitialize()]
-        // public void MyTestInitialize() { }
-        //
-        // Use TestCleanup to run code after each test has run
-        // [TestCleanup()]
-        // public void MyTestCleanup() { }
-        //
-        #endregion
 
         [TestMethod]
-        public void TestMethod1()
+        public void DeveValidarNomeCliente()
         {
-            //
-            // TODO: Add test logic here
-            //
+            var cliente = new Cliente("", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+
+            var resultadoValidacao = cliente.Validar();
+
+            resultadoValidacao.Should().Be("                                                     O campo nome do cliente não pode estar vazio");
+        }
+
+        [TestMethod]
+        public void DeveValidarEndereco()
+        {
+            var cliente = new Cliente("Lucas", "", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+
+            var resultadoValidacao = cliente.Validar();
+
+            resultadoValidacao.Should().Be("                                                     O campo endereço não pode estar vazio");
+        }
+
+        [TestMethod]
+        public void DeveValidarTelefone()
+        {
+            var cliente = new Cliente("Lucas", "Lages SC", "", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+
+            var resultadoValidacao = cliente.Validar();
+
+            resultadoValidacao.Should().Be("                                                     O campo telefone não pode estar vazio");
+        }
+
+        [TestMethod]
+        public void DeveValidarCPFouCNPJ()
+        {
+            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+
+            var resultadoValidacao = cliente.Validar();
+
+            resultadoValidacao.Should().Be("                                                     O campo tipo de identidade não pode estar vazio");
+        }
+
+        [TestMethod]
+        public void DeveValidarNomeCondutor()
+        {
+            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "CPF", "", "3222548", "6.111.792", "5547", DateTime.Now);
+
+            var resultadoValidacao = cliente.Validar();
+
+            resultadoValidacao.Should().Be("                                                     O campo nome do condutor não pode estar vazio");
+        }
+
+        [TestMethod]
+        public void DeveValidarCPFcondutor()
+        {
+            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "CPF", "Lucas", "", "6.111.792", "5547", DateTime.Now);
+
+            var resultadoValidacao = cliente.Validar();
+
+            resultadoValidacao.Should().Be("                                                     O campo CPF do condutor não pode estar vazio");
+        }
+
+        [TestMethod]
+        public void DeveValidarRG()
+        {
+            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "CPF", "Lucas", "554874554", "", "5547", DateTime.Now);
+
+            var resultadoValidacao = cliente.Validar();
+
+            resultadoValidacao.Should().Be("                                                     O campo RG não pode estar vazio");
+        }
+
+        [TestMethod]
+        public void DeveValidarCNH()
+        {
+            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "CPF", "Lucas", "554874554", "554877", "", DateTime.Now);
+
+            var resultadoValidacao = cliente.Validar();
+
+            resultadoValidacao.Should().Be("                                                     O campo CNH não pode estar vazio");
         }
     }
 }

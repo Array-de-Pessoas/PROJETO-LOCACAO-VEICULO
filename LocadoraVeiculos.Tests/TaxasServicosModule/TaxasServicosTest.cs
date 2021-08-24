@@ -9,7 +9,6 @@ namespace LocadoraVeiculos.Tests.TaxasServicosModule
     [TestCategory("Dominio")]
     public class FuncionarioTest
     {
-
         [TestMethod]
         public void DeveValidarTodosOsCampos()
         {
