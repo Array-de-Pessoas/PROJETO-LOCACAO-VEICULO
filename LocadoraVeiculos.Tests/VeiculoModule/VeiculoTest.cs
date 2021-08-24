@@ -27,7 +27,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             //act
             string resultado = veiculoInvalido.Validar();
             //assert
-            Assert.AreEqual("Campo placa é obrigatório", resultado);
+            Assert.AreEqual("                                                     Campo placa é obrigatório", resultado);
         }
         //cenário 2
         [TestMethod]
@@ -36,7 +36,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             //arrange
             //Image foto = Image.FromFile(@"C:\Users\Cliente\Desktop\Re.jpg");
 
-            Veiculo veiculoInvalido = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", null, 300, 4, 5, "G", 10000, 1);
+            Veiculo veiculoInvalido = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 }, 300, 4, 5, "G", 10000, 1);
             //act
             string resultado = veiculoInvalido.Validar();
             //assert

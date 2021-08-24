@@ -20,7 +20,7 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
                         [ValorDiariaPlanoLivre],
                         [ValorDoKMPlanoDiario],
                         [LimiteKMPlanoControlado],
-                        [ValorKmExcedentePlanoControlado],
+                        [ValorKmExcedentePlanoControlado]
 
                      )
                      VALUES
@@ -31,19 +31,19 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
                         @ValorDiariaPlanoLivre,
                         @ValorDoKMPlanoDiario,
                         @LimiteKMPlanoControlado,
-                        @ValorKmExcedentePlanoControlado,
+                        @ValorKmExcedentePlanoControlado
                      )";
 
         private const string sqlEditarGrupoVeiculos =
             @"UPDATE TBGRUPOVEICULOS
                     SET
-                        [GRUPO] = @GRUPO
+                        [GRUPO] = @GRUPO,
                         [ValorDiariaPlanoDiario] =        @ValorDiariaPlanoDiario,
                         [ValorDiariaPlanoControlado] =    @ValorDiariaPlanoControlado,
                         [ValorDiariaPlanoLivre] =         @ValorDiariaPlanoLivre,
                         [ValorDoKMPlanoDiario] =          @ValorDoKMPlanoDiario,
                         [LimiteKMPlanoControlado] =       @LimiteKMPlanoControlado,
-                        [ValorKmExcedentePlanoControlado] @ValorKmExcedentePlanoControlado, 
+                        [ValorKmExcedentePlanoControlado]= @ValorKmExcedentePlanoControlado
                     WHERE 
                         ID = @ID";
 

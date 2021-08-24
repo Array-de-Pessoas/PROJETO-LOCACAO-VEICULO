@@ -10,7 +10,7 @@ namespace LocadoraVeiculos.Tests.GrupoVeiculosModule
     public class GrupoVeiculosTest
     {
         [TestMethod]
-        public void DeveValidarNomeGrupo_Vazio()
+        public void DeveValidarKMRodadoGrupo_Vazio()
         {
             // ARRANGE
             var grupoVeiculos = new GrupoVeiculos("A", 0, 100, 100, 100, 100, 100);

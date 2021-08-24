@@ -10,7 +10,7 @@ namespace LocadoraVeiculos.Dominio.GrupoVeiculosModule
     public class GrupoVeiculos : EntidadeBase, IEquatable<GrupoVeiculos>
     {
 
-        public GrupoVeiculos(string grupo, double ValorDiariaPlanoDiario, double ValorDiariaPlanoControlado, double ValorDiariaPlanoLivre, double ValorDoKmPlanoDiario, double LimiteKMPlanoControlado, double ValorKmExcedentePlanoControlado)
+        public GrupoVeiculos(string grupo, double ValorDiariaPlanoDiario, double ValorDiariaPlanoControlado, double ValorDiariaPlanoLivre, double ValorDoKMPlanoDiario, double LimiteKMPlanoControlado, double ValorKmExcedentePlanoControlado)
         {
             Grupo = grupo;
             this.ValorDiariaPlanoDiario = ValorDiariaPlanoDiario;

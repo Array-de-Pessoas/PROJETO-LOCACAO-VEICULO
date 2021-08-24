@@ -359,5 +359,17 @@
   <ItemGroup>
     <None Include="Resources\CarroDeImagemPadro.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valor_diario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valor_por_km_rodado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valor_km_excedente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Limite_de_km.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

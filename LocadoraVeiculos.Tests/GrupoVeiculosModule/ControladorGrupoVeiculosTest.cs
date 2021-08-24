@@ -31,7 +31,7 @@ namespace LocadoraVeiculos.Tests.GrupoVeiculosModule
 
             //assert
             var GrupoEncontrado = controlador.SelecionarPorId(novoGrupo.Id);
-            GrupoEncontrado.Should().Be(novoGrupo);
+            GrupoEncontrado.Grupo.Should().Be(novoGrupo.Grupo);
         }
 
         [TestMethod]
