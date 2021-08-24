@@ -24,7 +24,7 @@ namespace LocadoraVeiculos.Tests.GrupoVeiculosModule
         public void DeveInserir_GrupoVeiculos()
         {
             //arrange
-            var novoGrupo = new GrupoVeiculos("SUV");
+            var novoGrupo = new GrupoVeiculos("SUV", 100,100,100,100,100,100);
 
             //action
             controlador.InserirNovo(novoGrupo);
@@ -37,10 +37,10 @@ namespace LocadoraVeiculos.Tests.GrupoVeiculosModule
         [TestMethod]
         public void DeveAtualizar_GrupoVeiculos()
         {
-            var grupoVeiculos = new GrupoVeiculos("SUV AD");
+            var grupoVeiculos = new GrupoVeiculos("SUV AD", 100, 100, 100, 100, 100, 100);
             controlador.InserirNovo(grupoVeiculos);
 
-            var novogrupoVeiculos = new GrupoVeiculos("Suv");
+            var novogrupoVeiculos = new GrupoVeiculos("Suv", 100,100,100,100,100,100);
 
             controlador.Editar(grupoVeiculos.Id, novogrupoVeiculos);
 
@@ -51,7 +51,7 @@ namespace LocadoraVeiculos.Tests.GrupoVeiculosModule
         [TestMethod]
         public void DeveExcluir_GrupoVeiculos()
         {
-            var grupoVeiculos = new GrupoVeiculos("SUV");
+            var grupoVeiculos = new GrupoVeiculos("SUV", 100, 100, 100, 100, 100, 100);
             controlador.InserirNovo(grupoVeiculos);
 
             controlador.Excluir(grupoVeiculos.Id);
@@ -63,7 +63,7 @@ namespace LocadoraVeiculos.Tests.GrupoVeiculosModule
         [TestMethod]
         public void DeveSelecionar_GrupoVeiculos_PorId()
         {
-            var grupoVeiculos = new GrupoVeiculos("SUV");
+            var grupoVeiculos = new GrupoVeiculos("SUV", 100, 100, 100, 100, 100, 100);
             controlador.InserirNovo(grupoVeiculos);
 
             GrupoVeiculos funcionarioEncontrado = controlador.SelecionarPorId(grupoVeiculos.Id);
@@ -74,13 +74,13 @@ namespace LocadoraVeiculos.Tests.GrupoVeiculosModule
         [TestMethod]
         public void DeveSelecionar_TodosGrupoVeiculos()
         {
-            var gf1 = new GrupoVeiculos("SUV A");
+            var gf1 = new GrupoVeiculos("SUV A", 100, 100, 100, 100, 100, 100);
             controlador.InserirNovo(gf1);
 
-            var gf2 = new GrupoVeiculos("SUV B");
+            var gf2 = new GrupoVeiculos("SUV B", 100, 100, 100, 100, 100, 100);
             controlador.InserirNovo(gf2);
 
-            var gf3 = new GrupoVeiculos("SUV C");
+            var gf3 = new GrupoVeiculos("SUV C", 100, 100, 100, 100, 100, 100);
             controlador.InserirNovo(gf3);
 
             var grupoVeiculos = controlador.SelecionarTodos();
