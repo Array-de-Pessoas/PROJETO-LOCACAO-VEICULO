@@ -226,6 +226,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.txtKm.Name = "txtKm";
             this.txtKm.Size = new System.Drawing.Size(152, 27);
             this.txtKm.TabIndex = 1;
+            this.txtKm.Text = "0";
             // 
             // txtId
             // 

@@ -45,13 +45,21 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
 
         public override string Validar()
         {
-            if (string.IsNullOrEmpty(placa))
+            if (string.IsNullOrEmpty(tipoCombustivel))
             {
-                return "                                                     Campo placa é obrigatório";
+                return "                                                     Campo tipo combustível é obrigatório";
+            }
+            if (quantidadeLitros == 0)
+            {
+                return "                                                     Campo quantidade de litros do tanque é obrigatório";
             }
             if (string.IsNullOrEmpty(cor))
             {
                 return "                                                     Campo cor é obrigatório";
+            }
+            if (idGrupoVeiculo == 0)
+            {
+                return "                                                     Campo grupo de veículo é obrigatório";
             }
             if (string.IsNullOrEmpty(marca))
             {
@@ -69,14 +77,10 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
             {
                 return "                                                     Campo ano tem que ser valido";
             }
-            if (string.IsNullOrEmpty(tipoCombustivel))
+            if (string.IsNullOrEmpty(placa))
             {
-                return "                                                     Campo tipo combustível é obrigatório";
-            }
-            if (quantidadeLitros == 0)
-            {
-                return "                                                     Campo quantidade de litros do tanque é obrigatório";
-            }
+                return "                                                     Campo placa é obrigatório";
+            }        
             if (numeroPortas == 0)
             {
                 return "                                                     Campo Número de Portas é obrigatório";
@@ -88,16 +92,11 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
             if (string.IsNullOrEmpty(tamanhoPortaMalas))
             {
                 return "                                                     Campo tamanho do porta-malas é obrigatório";
-            }
-            if (idGrupoVeiculo == 0)
-            {
-                return "                                                     Campo grupo de veículo é obrigatório";
-            }
+            }          
             if (foto == null)
             {
                 return "                                                     Imagem do veículo é obrigatória";
             }
-
             return "VALIDO";
         }
 

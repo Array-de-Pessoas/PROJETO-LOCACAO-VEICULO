@@ -10,23 +10,23 @@ namespace LocadoraVeiculos.Tests.GrupoVeiculosModule
     public class GrupoVeiculosTest
     {
         [TestMethod]
-        public void DeveValidarNomeGrupo_Vazio()
+        public void DeveValidarKMRodadoGrupo_Vazio()
         {
             // ARRANGE
-            var grupoVeiculos = new GrupoVeiculos(null);
+            var grupoVeiculos = new GrupoVeiculos("A", 0, 100, 100, 100, 100, 100);
 
             // ACTION
             var resultadoValidacao = grupoVeiculos.Validar();
 
             //ASSERT
-            resultadoValidacao.Should().Be("O campo Nome do grupo é obrigatório");
+            resultadoValidacao.Should().Be("O campo Valor da Diária do Plano Diário é obrigatório");
         }
 
         [TestMethod]
         public void DeveValidarNomeGrupoCorreto()
         {
             // ARRANGE
-            var grupoVeiculos = new GrupoVeiculos("SUV");
+            var grupoVeiculos = new GrupoVeiculos("SUV", 100, 100, 100, 100, 100, 100);
 
             // ACTION
             var resultadoValidacao = grupoVeiculos.Validar();

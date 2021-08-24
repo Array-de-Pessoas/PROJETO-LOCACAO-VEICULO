@@ -433,6 +433,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Limite_de_km {
+            get {
+                object obj = ResourceManager.GetObject("Limite_de_km", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Linha_de_separação {
             get {
                 object obj = ResourceManager.GetObject("Linha_de_separação", resourceCulture);
@@ -716,6 +726,36 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Valor {
             get {
                 object obj = ResourceManager.GetObject("Valor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Valor_diario {
+            get {
+                object obj = ResourceManager.GetObject("Valor_diario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Valor_km_excedente {
+            get {
+                object obj = ResourceManager.GetObject("Valor_km_excedente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Valor_por_km_rodado {
+            get {
+                object obj = ResourceManager.GetObject("Valor_por_km_rodado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

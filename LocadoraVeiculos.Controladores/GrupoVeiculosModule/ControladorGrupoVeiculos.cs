@@ -14,17 +14,36 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
         private const string sqlInserirGrupoVeiculo =
             @"INSERT INTO [TBGRUPOVEICULOS]
                      (
-                         [GRUPO]
+                        [GRUPO],
+                        [ValorDiariaPlanoDiario],
+                        [ValorDiariaPlanoControlado],
+                        [ValorDiariaPlanoLivre],
+                        [ValorDoKMPlanoDiario],
+                        [LimiteKMPlanoControlado],
+                        [ValorKmExcedentePlanoControlado]
+
                      )
                      VALUES
                      (
-                         @GRUPO
+                        @GRUPO,
+                        @ValorDiariaPlanoDiario,
+                        @ValorDiariaPlanoControlado,
+                        @ValorDiariaPlanoLivre,
+                        @ValorDoKMPlanoDiario,
+                        @LimiteKMPlanoControlado,
+                        @ValorKmExcedentePlanoControlado
                      )";
 
         private const string sqlEditarGrupoVeiculos =
             @"UPDATE TBGRUPOVEICULOS
                     SET
-                        [GRUPO] = @GRUPO
+                        [GRUPO] = @GRUPO,
+                        [ValorDiariaPlanoDiario] =        @ValorDiariaPlanoDiario,
+                        [ValorDiariaPlanoControlado] =    @ValorDiariaPlanoControlado,
+                        [ValorDiariaPlanoLivre] =         @ValorDiariaPlanoLivre,
+                        [ValorDoKMPlanoDiario] =          @ValorDoKMPlanoDiario,
+                        [LimiteKMPlanoControlado] =       @LimiteKMPlanoControlado,
+                        [ValorKmExcedentePlanoControlado]= @ValorKmExcedentePlanoControlado
                     WHERE 
                         ID = @ID";
 
@@ -43,8 +62,7 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
 
         private const string sqlSelecionarGrupoPorId =
             @"SELECT 
-                [ID],
-                [GRUPO]      
+                *     
              FROM
                 [TBGRUPOVEICULOS]
              WHERE 
@@ -52,12 +70,9 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
 
         private const string sqlSelecionarTodosGruposVeiculos =
             @"SELECT 
-                [ID],       
-                [GRUPO]     
+                *  
             FROM
                 [TBGRUPOVEICULOS] T";
-           
-
 
         public override string Editar(int id, GrupoVeiculos registro)
         {
@@ -111,11 +126,17 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
         private GrupoVeiculos ConverterEmTarefa(IDataReader reader)
         {
             var grupo = Convert.ToString(reader["GRUPO"]);
-           
-            GrupoVeiculos Grupo = new GrupoVeiculos(grupo);
+            var valorDiariaPlanoDiario = Convert.ToDouble(reader["ValorDiariaPlanoDiario"]);
+            var valorDiariaPlanoControlado = Convert.ToDouble(reader["ValorDiariaPlanoControlado"]);
+            var valorDiariaPlanoLivre = Convert.ToDouble(reader["ValorDiariaPlanoLivre"]);
+            var valorDoKMPlanoDiario = Convert.ToDouble(reader["ValorDoKMPlanoDiario"]);
+            var limiteKMPlanoControlado = Convert.ToDouble(reader["LimiteKMPlanoControlado"]);
+            var valorKmExcedentePlanoControlado = Convert.ToDouble(reader["ValorKmExcedentePlanoControlado"]);
+
+            GrupoVeiculos Grupo = new GrupoVeiculos(grupo,valorDiariaPlanoDiario, valorDiariaPlanoControlado, valorDiariaPlanoLivre, valorDoKMPlanoDiario,limiteKMPlanoControlado,valorKmExcedentePlanoControlado);
 
             Grupo.Id = Convert.ToInt32(reader["ID"]);
-           
+
             return Grupo;
         }
 
@@ -127,9 +148,15 @@ namespace LocadoraVeiculos.Controladores.GrupoVeiculosModule
         private Dictionary<string, object> ObtemParametrosGrupoVeiculos(GrupoVeiculos registro)
         {
             var parametros = new Dictionary<string, object>();
-            
+
             parametros.Add("ID", registro.Id);
             parametros.Add("GRUPO", registro.Grupo);
+            parametros.Add("ValorDiariaPlanoDiario", registro.ValorDiariaPlanoDiario);
+            parametros.Add("ValorDiariaPlanoControlado", registro.ValorDiariaPlanoControlado);
+            parametros.Add("ValorDiariaPlanoLivre", registro.ValorDiariaPlanoLivre);
+            parametros.Add("ValorDoKMPlanoDiario", registro.ValorDoKMPlanoDiario);
+            parametros.Add("LimiteKMPlanoControlado", registro.LimiteKMPlanoControlado);
+            parametros.Add("ValorKmExcedentePlanoControlado", registro.ValorKmExcedentePlanoControlado);
           
             return parametros;
         }

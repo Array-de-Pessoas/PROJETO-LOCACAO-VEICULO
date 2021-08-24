@@ -19,12 +19,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
     {
         private GrupoVeiculos grupoVeiculos;
 
-        private readonly ControladorGrupoVeiculos controladorGrupo = null;
-
-        public TelaGrupoDeVeiculosForm()
+        public GrupoDeVeiculosForm()
         {
-            InitializeComponent();
-            controladorGrupo = new ControladorGrupoVeiculos();
+            InitializeComponent();       
         }
 
         public GrupoVeiculos GrupoVeiculos
@@ -36,7 +33,12 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
                 grupoVeiculos = value;
 
                 TxtNomeGrupoVeiculos.Text = grupoVeiculos.Grupo;
-                
+                txtValorDiariaPlanoDiario.Text = grupoVeiculos.ValorDiariaPlanoDiario.ToString();
+                txtValorDiariaPlanoControlado.Text = grupoVeiculos.ValorDiariaPlanoControlado.ToString();
+                txtValorDiariaPlanoLivre.Text = grupoVeiculos.ValorDiariaPlanoLivre.ToString();
+                txtLimiteKMPlanoControlado.Text = grupoVeiculos.LimiteKMPlanoControlado.ToString();
+                txtValorDoKMPlanoDiario.Text = grupoVeiculos.ValorDoKMPlanoDiario.ToString();
+                txtValorKmExcedentePlanoControlado.Text = grupoVeiculos.ValorKmExcedentePlanoControlado.ToString();
             }
         }
 
@@ -44,21 +46,31 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
         {
             string Grupo = TxtNomeGrupoVeiculos.Text;
 
-            grupoVeiculos = new GrupoVeiculos(Grupo);
+            double valorDiariaPlanoDiario, valorDiariaPlanoControlado, valorDiariaPlanoLivre, valorDoKMPlanoDiario, limiteKMPlanoControlado, valorKmExcedentePlanoControlado;
+            double.TryParse(txtValorDiariaPlanoDiario.Text, out valorDiariaPlanoDiario);
+            double.TryParse(txtValorDiariaPlanoControlado.Text, out valorDiariaPlanoControlado);
+            double.TryParse(txtValorDiariaPlanoLivre.Text, out valorDiariaPlanoLivre);
+            double.TryParse(txtValorDoKMPlanoDiario.Text, out valorDoKMPlanoDiario);
+            double.TryParse(txtLimiteKMPlanoControlado.Text, out limiteKMPlanoControlado);
+            double.TryParse(txtValorKmExcedentePlanoControlado.Text, out valorKmExcedentePlanoControlado);           
+
+            grupoVeiculos = new GrupoVeiculos(Grupo, valorDiariaPlanoDiario,valorDiariaPlanoControlado,valorDiariaPlanoLivre,valorDoKMPlanoDiario,limiteKMPlanoControlado,valorKmExcedentePlanoControlado);
 
             string resultadoValidacao = grupoVeiculos.Validar();
 
             if (resultadoValidacao != "ESTA_VALIDO")
             {
                 string primeiroErro = new StringReader(resultadoValidacao).ReadLine();
-
+                TelaPrincipal.Instancia.AtualizarRodape(primeiroErro);
                 DialogResult = DialogResult.None;
-            } 
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        
     }
 }

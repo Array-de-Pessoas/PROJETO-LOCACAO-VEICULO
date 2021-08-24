@@ -66,13 +66,16 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             if (MessageBox.Show($"Tem certeza que deseja excluir o Grupo: [{grupoSelecionado.Grupo}] ?",
                 "Exclusão de Grupo de veículos", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                controlador.Excluir(id);
+                bool excluido = controlador.Excluir(id);
 
                 List<GrupoVeiculos> grupos = controlador.SelecionarTodos();
 
                 tabelaGrupo.AtualizarRegistros(grupos);
-
-                TelaPrincipal.Instancia.AtualizarRodape($"                                                     Grupo: [{grupoSelecionado.Grupo}] excluido com sucesso");
+                if (excluido)
+                {
+                    TelaPrincipal.Instancia.AtualizarRodape($"                                                     Grupo: [{grupoSelecionado.Grupo}] excluido com sucesso");
+                }
+               
             }
         }
 

@@ -35,14 +35,14 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         {
 
             byte[] foto = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
-            var novoGrupo = new GrupoVeiculos("SUV");
+            var novoGrupo = new GrupoVeiculos("SUV", 100, 100, 100, 100, 100, 100);
             controladorGrupoVeiculo.InserirNovo(novoGrupo);
             veiculoFIAT = new Veiculo("ETH-3000", "Azul", "FIAT", 2015, "Gasolina", foto, 300, 4, 5, "G", 10000, novoGrupo.Id);
         }
 
         private void GerarVeiculoFORD()
         {
-            var novoGrupo = new GrupoVeiculos("SUV");
+            var novoGrupo = new GrupoVeiculos("SUV", 100, 100, 100, 100, 100, 100);
             controladorGrupoVeiculo.InserirNovo(novoGrupo);
             byte[] foto = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
             veiculoFORD = new Veiculo("ADA-1000", "Preto", "Ford", 2015, "Gasolina", foto, 300, 4, 5, "G", 10000, novoGrupo.Id);
