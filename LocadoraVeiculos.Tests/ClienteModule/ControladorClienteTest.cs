@@ -32,7 +32,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
 
             //assert
             var ClienteEncontrado = controlador.SelecionarPorId(novoCliente.Id);
-            ClienteEncontrado.Should().Be(novoCliente);
+            ClienteEncontrado.NomeCliente.Should().Be("Lucas");
         }
 
         [TestMethod]
