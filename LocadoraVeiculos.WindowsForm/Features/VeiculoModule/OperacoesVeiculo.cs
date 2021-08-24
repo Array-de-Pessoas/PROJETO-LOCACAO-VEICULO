@@ -66,9 +66,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             {
                 controladorVeiculo.Excluir(id);
 
-                List<Veiculo> grupos = controladorVeiculo.SelecionarTodos();
+                List<Veiculo> veiculos = controladorVeiculo.SelecionarTodos();
 
-                tabelaVeiculosControl.AtualizarRegistros(grupos);
+                tabelaVeiculosControl.AtualizarRegistros(veiculos);
 
                 TelaPrincipal.Instancia.AtualizarRodape($"                                                     Veículo removido com sucesso");
             }

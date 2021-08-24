@@ -4,6 +4,7 @@ using LocadoraVeiculos.Dominio.GrupoVeiculosModule;
 using FluentAssertions;
 using System;
 using LocadoraVeiculos.Controladores.Shared;
+using System.Collections.Generic;
 
 namespace LocadoraVeiculos.Tests.GrupoVeiculosModule
 {
@@ -56,8 +57,8 @@ namespace LocadoraVeiculos.Tests.GrupoVeiculosModule
 
             controlador.Excluir(grupoVeiculos.Id);
 
-            GrupoVeiculos contatoEncontrado = controlador.SelecionarPorId(grupoVeiculos.Id);
-            contatoEncontrado.Should().BeNull();
+            List<GrupoVeiculos> grupoveiculos = controlador.SelecionarTodos();
+            grupoveiculos.Count.Should().Be(0);
         }
 
         [TestMethod]
