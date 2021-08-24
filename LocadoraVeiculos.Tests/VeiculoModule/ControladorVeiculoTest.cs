@@ -12,6 +12,7 @@ using System.Drawing;
 using LocadoraVeiculos.Controladores.Shared;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
 using LocadoraVeiculos.Dominio.GrupoVeiculosModule;
+using NUnit.Framework;
 
 namespace LocadoraVeiculos.Tests.VeiculoModule
 {
@@ -21,16 +22,20 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
         ControladorVeiculo controladorVeiculo;
         ControladorGrupoVeiculos controladorGrupoVeiculo;
         Veiculo veiculoFIAT;
-        Veiculo veiculoFORD;
+        Veiculo veiculoFORD;           
+
         public ControladorVeiculoTest()
         {
             controladorVeiculo = new ControladorVeiculo();
-            controladorGrupoVeiculo = new ControladorGrupoVeiculos();
+            controladorGrupoVeiculo = new ControladorGrupoVeiculos();        
+        }
 
+        private void ResetarBanco()
+        {
             Db.Update("DELETE FROM [TBVEICULO]; DBCC CHECKIDENT('TBVEICULO', RESEED, 0)");
             Db.Update("DELETE FROM [TBGRUPOVEICULOS]; DBCC CHECKIDENT('TBVEICULO', RESEED, 0)");
-        }      
 
+        }
         private void GerarVeiculoFIAT()
         {
 
@@ -58,8 +63,8 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             
             //assert
             var veiculoEncontrado = controladorVeiculo.SelecionarPorId(veiculoFIAT.Id);
-            Assert.AreEqual(veiculoFIAT.placa, veiculoEncontrado.placa);
-
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(veiculoFIAT.placa, veiculoEncontrado.placa);
+            ResetarBanco();
         }
         [TestMethod]
         public void deveEditarVeiculoNoBanco()
@@ -72,9 +77,9 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             controladorVeiculo.Editar(1,veiculoFORD);
             //assert
             var veiculoEncontrado = controladorVeiculo.SelecionarPorId(1);
-            Assert.AreEqual(veiculoFORD.placa, veiculoEncontrado.placa);
-          
+            NUnit.Framework.Assert.AreEqual(veiculoFORD.placa, veiculoEncontrado.placa);
 
+            ResetarBanco();
         }
         [TestMethod]
         public void deveExcluirVeiculoNoBanco()
@@ -86,7 +91,8 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             controladorVeiculo.Excluir(1);
             //assert
             var veiculoEncontrado = controladorVeiculo.SelecionarPorId(1);
-            Assert.IsNull(veiculoEncontrado);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNull(veiculoEncontrado);
+            ResetarBanco();
         }
         [TestMethod]
         public void deveSelecionarTodosVeiculosDoBanco()
@@ -101,6 +107,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             List<Veiculo> veiculos = controladorVeiculo.SelecionarTodos();
             //assert
             veiculos.Count.Should().Be(2);
+            ResetarBanco();
         }
         [TestMethod]
         public void deveVerificarSeExisteVeiculoNoBanco()
@@ -112,6 +119,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             var resultado = controladorVeiculo.Existe(1);
             //assert
             resultado.Should().Be(true);
+            ResetarBanco();
         }
         
     }

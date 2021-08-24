@@ -39,17 +39,17 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtValorDoKMPlanoDiario = new System.Windows.Forms.TextBox();
             this.txtValorDiariaPlanoDiario = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtValorKmExcedentePlanoControlado = new System.Windows.Forms.TextBox();
+            this.txtLimiteKMPlanoControlado = new System.Windows.Forms.TextBox();
             this.txtValorDiariaPlanoControlado = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.txtValorDiariaPlanoLivre = new System.Windows.Forms.TextBox();
-            this.txtValorDoKMPlanoDiario = new System.Windows.Forms.TextBox();
-            this.txtLimiteKMPlanoControlado = new System.Windows.Forms.TextBox();
-            this.txtValorKmExcedentePlanoControlado = new System.Windows.Forms.TextBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemFusca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -68,7 +68,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             // 
             this.btnGravar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnGravar.Location = new System.Drawing.Point(499, 335);
+            this.btnGravar.Location = new System.Drawing.Point(488, 335);
             this.btnGravar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(125, 64);
@@ -80,7 +80,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnVoltar.Location = new System.Drawing.Point(499, 406);
+            this.btnVoltar.Location = new System.Drawing.Point(488, 403);
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(125, 65);
@@ -104,7 +104,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             // TxtNomeGrupoVeiculos
             // 
             this.TxtNomeGrupoVeiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNomeGrupoVeiculos.Location = new System.Drawing.Point(75, 189);
+            this.TxtNomeGrupoVeiculos.Location = new System.Drawing.Point(305, 194);
             this.TxtNomeGrupoVeiculos.Multiline = true;
             this.TxtNomeGrupoVeiculos.Name = "TxtNomeGrupoVeiculos";
             this.TxtNomeGrupoVeiculos.Size = new System.Drawing.Size(213, 34);
@@ -179,6 +179,16 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Plano Diário";
             // 
+            // txtValorDoKMPlanoDiario
+            // 
+            this.txtValorDoKMPlanoDiario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorDoKMPlanoDiario.Location = new System.Drawing.Point(233, 74);
+            this.txtValorDoKMPlanoDiario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtValorDoKMPlanoDiario.Multiline = true;
+            this.txtValorDoKMPlanoDiario.Name = "txtValorDoKMPlanoDiario";
+            this.txtValorDoKMPlanoDiario.Size = new System.Drawing.Size(146, 34);
+            this.txtValorDoKMPlanoDiario.TabIndex = 11;
+            // 
             // txtValorDiariaPlanoDiario
             // 
             this.txtValorDiariaPlanoDiario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,7 +209,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
-            
             // 
             // tabPage1
             // 
@@ -216,6 +225,26 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.tabPage1.Size = new System.Drawing.Size(390, 190);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Plano Controlado";
+            // 
+            // txtValorKmExcedentePlanoControlado
+            // 
+            this.txtValorKmExcedentePlanoControlado.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorKmExcedentePlanoControlado.Location = new System.Drawing.Point(229, 126);
+            this.txtValorKmExcedentePlanoControlado.Margin = new System.Windows.Forms.Padding(2);
+            this.txtValorKmExcedentePlanoControlado.Multiline = true;
+            this.txtValorKmExcedentePlanoControlado.Name = "txtValorKmExcedentePlanoControlado";
+            this.txtValorKmExcedentePlanoControlado.Size = new System.Drawing.Size(150, 34);
+            this.txtValorKmExcedentePlanoControlado.TabIndex = 14;
+            // 
+            // txtLimiteKMPlanoControlado
+            // 
+            this.txtLimiteKMPlanoControlado.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLimiteKMPlanoControlado.Location = new System.Drawing.Point(229, 74);
+            this.txtLimiteKMPlanoControlado.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLimiteKMPlanoControlado.Multiline = true;
+            this.txtLimiteKMPlanoControlado.Name = "txtLimiteKMPlanoControlado";
+            this.txtLimiteKMPlanoControlado.Size = new System.Drawing.Size(150, 34);
+            this.txtLimiteKMPlanoControlado.TabIndex = 13;
             // 
             // txtValorDiariaPlanoControlado
             // 
@@ -250,6 +279,16 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Plano Livre";
             // 
+            // txtValorDiariaPlanoLivre
+            // 
+            this.txtValorDiariaPlanoLivre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorDiariaPlanoLivre.Location = new System.Drawing.Point(224, 25);
+            this.txtValorDiariaPlanoLivre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtValorDiariaPlanoLivre.Multiline = true;
+            this.txtValorDiariaPlanoLivre.Name = "txtValorDiariaPlanoLivre";
+            this.txtValorDiariaPlanoLivre.Size = new System.Drawing.Size(150, 34);
+            this.txtValorDiariaPlanoLivre.TabIndex = 13;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Valor_diario;
@@ -261,47 +300,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
             // 
-            // txtValorDiariaPlanoLivre
-            // 
-            this.txtValorDiariaPlanoLivre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorDiariaPlanoLivre.Location = new System.Drawing.Point(224, 25);
-            this.txtValorDiariaPlanoLivre.Margin = new System.Windows.Forms.Padding(2);
-            this.txtValorDiariaPlanoLivre.Multiline = true;
-            this.txtValorDiariaPlanoLivre.Name = "txtValorDiariaPlanoLivre";
-            this.txtValorDiariaPlanoLivre.Size = new System.Drawing.Size(150, 34);
-            this.txtValorDiariaPlanoLivre.TabIndex = 13;
-            // 
-            // txtValorDoKMPlanoDiario
-            // 
-            this.txtValorDoKMPlanoDiario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorDoKMPlanoDiario.Location = new System.Drawing.Point(233, 74);
-            this.txtValorDoKMPlanoDiario.Margin = new System.Windows.Forms.Padding(2);
-            this.txtValorDoKMPlanoDiario.Multiline = true;
-            this.txtValorDoKMPlanoDiario.Name = "txtValorDoKMPlanoDiario";
-            this.txtValorDoKMPlanoDiario.Size = new System.Drawing.Size(146, 34);
-            this.txtValorDoKMPlanoDiario.TabIndex = 11;
-            // 
-            // txtLimiteKMPlanoControlado
-            // 
-            this.txtLimiteKMPlanoControlado.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLimiteKMPlanoControlado.Location = new System.Drawing.Point(229, 74);
-            this.txtLimiteKMPlanoControlado.Margin = new System.Windows.Forms.Padding(2);
-            this.txtLimiteKMPlanoControlado.Multiline = true;
-            this.txtLimiteKMPlanoControlado.Name = "txtLimiteKMPlanoControlado";
-            this.txtLimiteKMPlanoControlado.Size = new System.Drawing.Size(150, 34);
-            this.txtLimiteKMPlanoControlado.TabIndex = 13;
-            // 
-            // txtValorKmExcedentePlanoControlado
-            // 
-            this.txtValorKmExcedentePlanoControlado.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorKmExcedentePlanoControlado.Location = new System.Drawing.Point(229, 126);
-            this.txtValorKmExcedentePlanoControlado.Margin = new System.Windows.Forms.Padding(2);
-            this.txtValorKmExcedentePlanoControlado.Multiline = true;
-            this.txtValorKmExcedentePlanoControlado.Name = "txtValorKmExcedentePlanoControlado";
-            this.txtValorKmExcedentePlanoControlado.Size = new System.Drawing.Size(150, 34);
-            this.txtValorKmExcedentePlanoControlado.TabIndex = 14;
-            // 
-            // GrupoDeVeiculosForm
+            // TelaGrupoDeVeiculosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -319,7 +318,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.MaximumSize = new System.Drawing.Size(1000, 1000);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(324, 344);
-            this.Name = "GrupoDeVeiculosForm";
+            this.Name = "TelaGrupoDeVeiculosForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -19,7 +19,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
     {
         private GrupoVeiculos grupoVeiculos;
 
-        public GrupoDeVeiculosForm()
+        public TelaGrupoDeVeiculosForm()
         {
             InitializeComponent();       
         }
@@ -71,6 +71,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             this.Close();
         }
 
-        
+       
     }
 }

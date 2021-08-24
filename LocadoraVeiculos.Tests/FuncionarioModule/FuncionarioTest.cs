@@ -27,7 +27,7 @@ namespace LocadoraVeiculos.Tests.FuncionarioModule
 
             var resultadoValidacao = funcionario.Validar();
 
-            resultadoValidacao.Should().Be("O campo nome não pode estar vazio");
+            resultadoValidacao.Should().Be("                                                     O campo nome não pode estar vazio");
         }
 
         [TestMethod]
@@ -37,7 +37,7 @@ namespace LocadoraVeiculos.Tests.FuncionarioModule
 
             var resultadoValidacao = funcionario.Validar();
 
-            resultadoValidacao.Should().Be("O campo usuário não pode estar vazio");
+            resultadoValidacao.Should().Be("                                                     O campo usuário não pode estar vazio");
         }
 
         [TestMethod]
@@ -47,7 +47,7 @@ namespace LocadoraVeiculos.Tests.FuncionarioModule
 
             var resultadoValidacao = funcionario.Validar();
 
-            resultadoValidacao.Should().Be("O campo senha não pode estar vazio");
+            resultadoValidacao.Should().Be("                                                     O campo senha não pode estar vazio");
         }
 
     }
