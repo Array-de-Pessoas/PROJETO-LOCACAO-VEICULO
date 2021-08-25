@@ -7,6 +7,7 @@ using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Features.ClienteModule;
 using LocadoraVeiculos.WindowsForm.Features.CombustivelModule;
+using LocadoraVeiculos.WindowsForm.Features.Dashboard;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using LocadoraVeiculos.WindowsForm.Features.LoginModule;
@@ -41,6 +42,9 @@ namespace LocadoraVeiculos.WindowsForm
 
         public void ConfiguracoesDeInicio()
         {
+            btnCarrosAlugados.Visible = false;
+            btnCarrosDisponiveis.Visible = false;
+            btnLocacoesPendentes.Visible = false;
             btnAdicionar.Visible = false;
             btnEditar.Visible = false;
             btnExcluir.Visible = false;
@@ -238,14 +242,18 @@ namespace LocadoraVeiculos.WindowsForm
             btnFiltro.Visible = false;
         }
 
-        private void dASHBOARDToolStripMenuItem_Click(object sender, EventArgs e)
+        public void dASHBOARDToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (login.GerarUsuario() != null)
             {
-                panelTabelas.Controls.Add(new Dashboard());
+                panelTabelas.Controls.Clear();
+                Dashboard dashboard = new Dashboard();
+                panelTabelas.Controls.Add(dashboard);
                 ImagemChave.Visible = false;
+                btnCarrosDisponiveis.Visible = true;
+                btnCarrosAlugados.Visible = true;
+                btnLocacoesPendentes.Visible = true;
             }
-           
         }
 
         private void sEGUROSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -256,6 +264,12 @@ namespace LocadoraVeiculos.WindowsForm
             operacoes = new OperacoesSeguros(new ControladorSeguros());
             ConfigurarPanelRegistros();
             btnFiltro.Visible = false;
+        }
+
+        private void btnCarrosAlugados_Click(object sender, EventArgs e)
+        {
+            panelTabelas.Controls.Clear();
+            panelTabelas.Controls.Add(new TabelaCarrosAlugados());
         }
     }
 }

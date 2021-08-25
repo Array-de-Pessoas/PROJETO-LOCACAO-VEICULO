@@ -1,7 +1,7 @@
 ﻿
-namespace LocadoraVeiculos.WindowsForm
+namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
 {
-    partial class Dashboard
+    partial class TabelaCarrosDisponiveis
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,15 +31,12 @@ namespace LocadoraVeiculos.WindowsForm
         {
             this.SuspendLayout();
             // 
-            // Dashboard
+            // TabelaCarrosDisponiveis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.new_fundo;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Name = "Dashboard";
-            this.Size = new System.Drawing.Size(1203, 650);
+            this.Name = "TabelaCarrosDisponiveis";
+            this.Size = new System.Drawing.Size(601, 479);
             this.ResumeLayout(false);
 
         }

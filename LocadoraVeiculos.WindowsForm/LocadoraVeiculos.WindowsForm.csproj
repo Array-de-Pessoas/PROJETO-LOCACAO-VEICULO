@@ -82,6 +82,24 @@
     <Compile Include="Features\CombustivelModule\TelaCombustivelForm.Designer.cs">
       <DependentUpon>TelaCombustivelForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\Dashboard\TabelaCarrosAlugados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Dashboard\TabelaCarrosAlugados.Designer.cs">
+      <DependentUpon>TabelaCarrosAlugados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Dashboard\TabelaCarrosDisponiveis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Dashboard\TabelaCarrosDisponiveis.Designer.cs">
+      <DependentUpon>TabelaCarrosDisponiveis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Dashboard\TabelaLocacoesPendentes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Dashboard\TabelaLocacoesPendentes.Designer.cs">
+      <DependentUpon>TabelaLocacoesPendentes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\FuncionarioModule\ConfiguracaoFuncionarioTooBox.cs" />
     <Compile Include="Features\FuncionarioModule\OperacoesFuncionario.cs" />
     <Compile Include="Features\GrupoVeiculosModule\TelaGrupoDeVeiculosForm.cs">
@@ -196,6 +214,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\CombustivelModule\TelaCombustivelForm.resx">
       <DependentUpon>TelaCombustivelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Dashboard\TabelaCarrosAlugados.resx">
+      <DependentUpon>TabelaCarrosAlugados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Dashboard\TabelaCarrosDisponiveis.resx">
+      <DependentUpon>TabelaCarrosDisponiveis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Dashboard\TabelaLocacoesPendentes.resx">
+      <DependentUpon>TabelaLocacoesPendentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\LoginModule\TelaMudarImagem.resx">
       <DependentUpon>TelaMudarImagem.cs</DependentUpon>

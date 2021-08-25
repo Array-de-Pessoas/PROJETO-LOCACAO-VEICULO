@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LocadoraVeiculos.WindowsForm
+namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
 {
-    public partial class Dashboard : UserControl
+    public partial class TabelaCarrosDisponiveis : UserControl
     {
-        public Dashboard()
+        public TabelaCarrosDisponiveis()
         {
             InitializeComponent();
         }
-
     }
 }
