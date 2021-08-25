@@ -66,6 +66,7 @@
     <Compile Include="CombustivelModule\ControladorCombustivel.cs" />
     <Compile Include="FuncionarioModule\ControladorFuncionario.cs" />
     <Compile Include="GrupoVeiculosModule\ControladorGrupoVeiculos.cs" />
+    <Compile Include="LocacaoModule\ControladorLocacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shared\Controlador.cs" />
     <Compile Include="Shared\Db.cs" />

@@ -15,6 +15,18 @@ namespace LocadoraVeiculos.Dominio.LocacaoModule
         public DateTime dataLocacao;
         public DateTime dataDevolucao;
         public double preco;
+       
+
+        public Locacao(int id_cliente, int id_veiculo, int id_taxas, double preco, DateTime dataLocacao, DateTime dataDevolucao)
+        {
+            this.id_cliente = id_cliente;
+            this.id_veiculo = id_veiculo;
+            this.id_taxas = id_taxas;
+            this.preco = preco;
+            this.dataLocacao = dataLocacao;
+            this.dataDevolucao = dataDevolucao;
+        }
+
         public override string Validar()
         {
             if (id_cliente == 0)

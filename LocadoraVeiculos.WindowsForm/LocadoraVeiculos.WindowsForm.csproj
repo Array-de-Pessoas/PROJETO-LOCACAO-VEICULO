@@ -85,6 +85,20 @@
       <DependentUpon>TelaGrupoDeVeiculosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
+    <Compile Include="Features\LocacaoModule\ConfiguracaoLocacaoToolBox.cs" />
+    <Compile Include="Features\LocacaoModule\OperacaoLocacao.cs" />
+    <Compile Include="Features\LocacaoModule\TabelaLocacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\LocacaoModule\TabelaLocacao.Designer.cs">
+      <DependentUpon>TabelaLocacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\LocacaoModule\TelaLocacaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\LocacaoModule\TelaLocacaoForm.Designer.cs">
+      <DependentUpon>TelaLocacaoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\LoginModule\OperacoesLogin.cs" />
     <Compile Include="Features\TaxasServicosModule\ConfiguracaoTaxasServicosToolbox.cs" />
     <Compile Include="Features\TaxasServicosModule\OperacoesTaxasServicos.cs" />
@@ -167,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\CombustivelModule\TelaCombustivelForm.resx">
       <DependentUpon>TelaCombustivelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\LocacaoModule\TelaLocacaoForm.resx">
+      <DependentUpon>TelaLocacaoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\TaxasServicosModule\TabelaTaxasServicos.resx">
       <DependentUpon>TabelaTaxasServicos.cs</DependentUpon>
@@ -486,6 +503,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Limite_de_km.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Veiculo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taxa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data_de_locacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data_de_devolucao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
