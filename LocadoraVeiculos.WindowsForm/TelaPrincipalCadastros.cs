@@ -238,8 +238,12 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void dASHBOARDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panelTabelas.Controls.Add(new Dashboard());
-            ImagemChave.Visible = false;
+            if (login.GerarUsuario() != null)
+            {
+                panelTabelas.Controls.Add(new Dashboard());
+                ImagemChave.Visible = false;
+            }
+           
         }
     }
 }
