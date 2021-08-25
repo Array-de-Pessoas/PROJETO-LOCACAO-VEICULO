@@ -95,6 +95,8 @@
     <Compile Include="GrupoVeiculosModule\GrupoVeiculosTest.cs" />
     <Compile Include="LoginModule\LoginTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SegurosModule\SegurosTest.cs" />
+    <Compile Include="SegurosModule\ControladorSegurosTest.cs" />
     <Compile Include="TaxasServicosModule\TaxasServicosTest.cs" />
     <Compile Include="TaxasServicosModule\ControladorTaxasServicosTest.cs" />
     <Compile Include="VeiculoModule\ControladorVeiculoTest.cs" />

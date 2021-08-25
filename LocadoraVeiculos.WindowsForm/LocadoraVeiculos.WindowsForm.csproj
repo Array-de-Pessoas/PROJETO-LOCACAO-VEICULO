@@ -99,6 +99,19 @@
     <Compile Include="Features\LoginModule\TelaMudarImagem.Designer.cs">
       <DependentUpon>TelaMudarImagem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\SeguroModule\OperacoesSeguros.cs" />
+    <Compile Include="Features\SeguroModule\TabelaSeguros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\SeguroModule\TabelaSeguros.Designer.cs">
+      <DependentUpon>TabelaSeguros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\SeguroModule\TelaSegurosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\SeguroModule\TelaSegurosForm.Designer.cs">
+      <DependentUpon>TelaSegurosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\TaxasServicosModule\ConfiguracaoTaxasServicosToolbox.cs" />
     <Compile Include="Features\TaxasServicosModule\OperacoesTaxasServicos.cs" />
     <Compile Include="Features\TaxasServicosModule\TabelaTaxasServicos.cs">
@@ -186,6 +199,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\LoginModule\TelaMudarImagem.resx">
       <DependentUpon>TelaMudarImagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\SeguroModule\TabelaSeguros.resx">
+      <DependentUpon>TabelaSeguros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\SeguroModule\TelaSegurosForm.resx">
+      <DependentUpon>TelaSegurosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\TaxasServicosModule\TabelaTaxasServicos.resx">
       <DependentUpon>TabelaTaxasServicos.cs</DependentUpon>

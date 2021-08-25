@@ -13,7 +13,6 @@ namespace LocadoraVeiculos.Dominio.TaxasServicosModule
         public string Nome { get; }
         public decimal Valor { get; }
         
-
         public TaxasServicos(string tipoTaxa,string nome, decimal valor)
         {
             TipoTaxa = tipoTaxa;

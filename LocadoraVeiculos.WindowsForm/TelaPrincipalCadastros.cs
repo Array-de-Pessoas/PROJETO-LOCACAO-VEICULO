@@ -2,6 +2,7 @@
 using LocadoraVeiculos.Controladores.CombustivelModule;
 using LocadoraVeiculos.Controladores.FuncionarioModule;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Features.ClienteModule;
@@ -9,6 +10,7 @@ using LocadoraVeiculos.WindowsForm.Features.CombustivelModule;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using LocadoraVeiculos.WindowsForm.Features.LoginModule;
+using LocadoraVeiculos.WindowsForm.Features.SeguroModule;
 using LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule;
 using System;
 using System.Collections.Generic;
@@ -91,7 +93,7 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void OpcaoCadastroClientes_Click(object sender, EventArgs e)
         {
-            TxtCadastroSelecionado.Text = "          CLIENTE";
+            TxtCadastroSelecionado.Text = "           CLIENTE";
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
             operacoes = new OperacoesCliente(new ControladorCliente());
@@ -244,6 +246,16 @@ namespace LocadoraVeiculos.WindowsForm
                 ImagemChave.Visible = false;
             }
            
+        }
+
+        private void sEGUROSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TxtCadastroSelecionado.Text = "          SEGUROS";
+            panelTabelas.Controls.Clear();
+            MostrarOpcoes();
+            operacoes = new OperacoesSeguros(new ControladorSeguros());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
         }
     }
 }
