@@ -235,5 +235,16 @@ namespace LocadoraVeiculos.WindowsForm
             ConfigurarPanelRegistros();
             btnFiltro.Visible = false;
         }
+
+        private void OpcaoCadastroLocacao_Click(object sender, EventArgs e)
+        {
+            TxtCadastroSelecionado.Text = "       LOCAÇÃO";
+            panelTabelas.Controls.Clear();
+            MostrarOpcoes();
+            ImagemChave.Visible = false;
+            operacoes = new OperacoesFuncionario(new ControladorFuncionario());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
+        }
     }
 }
