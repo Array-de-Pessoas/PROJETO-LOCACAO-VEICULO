@@ -328,4 +328,19 @@
   <data name="Telefone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Telefone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Nova_imagem_para_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nova imagem para menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Editar_imagem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Editar imagem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2213" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2213.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tela_Dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tela Dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_fundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new fundo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

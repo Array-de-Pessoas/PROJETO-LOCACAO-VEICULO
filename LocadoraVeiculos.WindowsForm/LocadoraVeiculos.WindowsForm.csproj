@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\ClienteModule\OperacoesCliente.cs" />
     <Compile Include="Features\ClienteModule\TabelaCliente.cs">
       <SubType>UserControl</SubType>
@@ -85,7 +91,14 @@
       <DependentUpon>TelaGrupoDeVeiculosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
+    <Compile Include="Features\LoginModule\MudarImagem.cs" />
     <Compile Include="Features\LoginModule\OperacoesLogin.cs" />
+    <Compile Include="Features\LoginModule\TelaMudarImagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\LoginModule\TelaMudarImagem.Designer.cs">
+      <DependentUpon>TelaMudarImagem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\TaxasServicosModule\ConfiguracaoTaxasServicosToolbox.cs" />
     <Compile Include="Features\TaxasServicosModule\OperacoesTaxasServicos.cs" />
     <Compile Include="Features\TaxasServicosModule\TabelaTaxasServicos.cs">
@@ -156,6 +169,9 @@
     <Compile Include="Features\VeiculoModule\TelaVeiculoForm.Designer.cs">
       <DependentUpon>TelaVeiculoForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Features\ClienteModule\TabelaCliente.resx">
       <DependentUpon>TabelaCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\CombustivelModule\TelaCombustivelForm.resx">
       <DependentUpon>TelaCombustivelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\LoginModule\TelaMudarImagem.resx">
+      <DependentUpon>TelaMudarImagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\TaxasServicosModule\TabelaTaxasServicos.resx">
       <DependentUpon>TabelaTaxasServicos.cs</DependentUpon>
@@ -486,6 +505,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Limite_de_km.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nova imagem para menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar imagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2213.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new fundo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

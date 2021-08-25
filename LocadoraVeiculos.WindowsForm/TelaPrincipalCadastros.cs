@@ -235,5 +235,11 @@ namespace LocadoraVeiculos.WindowsForm
             ConfigurarPanelRegistros();
             btnFiltro.Visible = false;
         }
+
+        private void dASHBOARDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelTabelas.Controls.Add(new Dashboard());
+            ImagemChave.Visible = false;
+        }
     }
 }

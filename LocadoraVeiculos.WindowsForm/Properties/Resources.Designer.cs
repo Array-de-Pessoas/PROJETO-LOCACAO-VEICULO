@@ -63,6 +63,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2213 {
+            get {
+                object obj = ResourceManager.GetObject("_2213", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap addImagem {
             get {
                 object obj = ResourceManager.GetObject("addImagem", resourceCulture);
@@ -256,6 +266,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Detalhes {
             get {
                 object obj = ResourceManager.GetObject("Detalhes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Editar_imagem {
+            get {
+                object obj = ResourceManager.GetObject("Editar_imagem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -483,6 +503,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_fundo {
+            get {
+                object obj = ResourceManager.GetObject("new_fundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap new_menu {
             get {
                 object obj = ResourceManager.GetObject("new_menu", resourceCulture);
@@ -516,6 +546,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Nova_imagem {
             get {
                 object obj = ResourceManager.GetObject("Nova_imagem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Nova_imagem_para_menu {
+            get {
+                object obj = ResourceManager.GetObject("Nova_imagem_para_menu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -676,6 +716,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Tela_cadastro_clientes {
             get {
                 object obj = ResourceManager.GetObject("Tela_cadastro_clientes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_Dashboard {
+            get {
+                object obj = ResourceManager.GetObject("Tela_Dashboard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

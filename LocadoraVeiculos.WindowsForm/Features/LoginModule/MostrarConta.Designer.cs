@@ -29,6 +29,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnEditarImagem = new System.Windows.Forms.Button();
             this.LinkConta = new System.Windows.Forms.LinkLabel();
             this.txtNomeConta = new System.Windows.Forms.Label();
             this.ImagemConta1 = new System.Windows.Forms.PictureBox();
@@ -36,6 +37,20 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
             ((System.ComponentModel.ISupportInitialize)(this.ImagemConta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemBalao)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnEditarImagem
+            // 
+            this.btnEditarImagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
+            this.btnEditarImagem.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Editar_imagem;
+            this.btnEditarImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditarImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarImagem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
+            this.btnEditarImagem.Location = new System.Drawing.Point(119, 26);
+            this.btnEditarImagem.Name = "btnEditarImagem";
+            this.btnEditarImagem.Size = new System.Drawing.Size(20, 22);
+            this.btnEditarImagem.TabIndex = 4;
+            this.btnEditarImagem.UseVisualStyleBackColor = false;
+            this.btnEditarImagem.Click += new System.EventHandler(this.btnEditarImagem_Click);
             // 
             // LinkConta
             // 
@@ -89,6 +104,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Controls.Add(this.btnEditarImagem);
             this.Controls.Add(this.LinkConta);
             this.Controls.Add(this.txtNomeConta);
             this.Controls.Add(this.ImagemConta1);
@@ -108,5 +124,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
         private System.Windows.Forms.PictureBox ImagemConta1;
         private System.Windows.Forms.Label txtNomeConta;
         private System.Windows.Forms.LinkLabel LinkConta;
+        private System.Windows.Forms.Button btnEditarImagem;
     }
 }
