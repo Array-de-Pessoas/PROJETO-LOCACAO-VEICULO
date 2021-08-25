@@ -36,11 +36,14 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPreco = new System.Windows.Forms.TextBox();
             this.dtLocacao = new System.Windows.Forms.DateTimePicker();
             this.dtDevolucao = new System.Windows.Forms.DateTimePicker();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
+            this.cbCliente = new System.Windows.Forms.ComboBox();
+            this.cbVeiculo = new System.Windows.Forms.ComboBox();
+            this.cbTaxa = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,9 +56,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             // 
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(275, 52);
+            this.txtId.Location = new System.Drawing.Point(164, 49);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(177, 27);
+            this.txtId.Size = new System.Drawing.Size(133, 27);
             this.txtId.TabIndex = 28;
             // 
             // pictureBox4
@@ -118,14 +121,14 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.pictureBox6.TabIndex = 35;
             this.pictureBox6.TabStop = false;
             // 
-            // textBox1
+            // txtPreco
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(177, 241);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 27);
-            this.textBox1.TabIndex = 30;
+            this.txtPreco.Enabled = false;
+            this.txtPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.Location = new System.Drawing.Point(177, 241);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(228, 27);
+            this.txtPreco.TabIndex = 30;
             // 
             // dtLocacao
             // 
@@ -133,7 +136,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.dtLocacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtLocacao.Location = new System.Drawing.Point(246, 286);
             this.dtLocacao.Name = "dtLocacao";
-            this.dtLocacao.Size = new System.Drawing.Size(108, 29);
+            this.dtLocacao.Size = new System.Drawing.Size(159, 29);
             this.dtLocacao.TabIndex = 36;
             // 
             // dtDevolucao
@@ -142,14 +145,14 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.dtDevolucao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtDevolucao.Location = new System.Drawing.Point(246, 321);
             this.dtDevolucao.Name = "dtDevolucao";
-            this.dtDevolucao.Size = new System.Drawing.Size(108, 29);
+            this.dtDevolucao.Size = new System.Drawing.Size(159, 29);
             this.dtDevolucao.TabIndex = 37;
             // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(435, 437);
+            this.btnCancelar.Location = new System.Drawing.Point(177, 404);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 43);
             this.btnCancelar.TabIndex = 42;
@@ -161,12 +164,40 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.btnGravar.BackColor = System.Drawing.Color.White;
             this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGravar.Location = new System.Drawing.Point(542, 437);
+            this.btnGravar.Location = new System.Drawing.Point(304, 404);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(101, 43);
             this.btnGravar.TabIndex = 41;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
+            // 
+            // cbCliente
+            // 
+            this.cbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCliente.FormattingEnabled = true;
+            this.cbCliente.Location = new System.Drawing.Point(177, 121);
+            this.cbCliente.Name = "cbCliente";
+            this.cbCliente.Size = new System.Drawing.Size(228, 28);
+            this.cbCliente.TabIndex = 43;
+            // 
+            // cbVeiculo
+            // 
+            this.cbVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbVeiculo.FormattingEnabled = true;
+            this.cbVeiculo.Location = new System.Drawing.Point(177, 161);
+            this.cbVeiculo.Name = "cbVeiculo";
+            this.cbVeiculo.Size = new System.Drawing.Size(228, 28);
+            this.cbVeiculo.TabIndex = 44;
+            // 
+            // cbTaxa
+            // 
+            this.cbTaxa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTaxa.FormattingEnabled = true;
+            this.cbTaxa.Location = new System.Drawing.Point(177, 201);
+            this.cbTaxa.Name = "cbTaxa";
+            this.cbTaxa.Size = new System.Drawing.Size(228, 28);
+            this.cbTaxa.TabIndex = 45;
             // 
             // TelaLocacaoForm
             // 
@@ -174,7 +205,10 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Cadastro_de_combustivel;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(717, 527);
+            this.ClientSize = new System.Drawing.Size(455, 490);
+            this.Controls.Add(this.cbTaxa);
+            this.Controls.Add(this.cbVeiculo);
+            this.Controls.Add(this.cbCliente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.dtDevolucao);
@@ -184,13 +218,14 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.txtId);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TelaLocacaoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de locação";
+            this.Load += new System.EventHandler(this.TelaLocacaoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -211,10 +246,13 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.DateTimePicker dtLocacao;
         private System.Windows.Forms.DateTimePicker dtDevolucao;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGravar;
+        private System.Windows.Forms.ComboBox cbCliente;
+        private System.Windows.Forms.ComboBox cbVeiculo;
+        private System.Windows.Forms.ComboBox cbTaxa;
     }
 }
