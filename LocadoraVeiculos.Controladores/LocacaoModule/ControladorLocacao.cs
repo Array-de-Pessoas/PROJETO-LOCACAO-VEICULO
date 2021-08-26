@@ -93,7 +93,7 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             parametros.Add("Id", registro.Id);
             parametros.Add("id_cliente", registro.id_cliente);
             parametros.Add("id_veiculo", registro.id_veiculo);
-            parametros.Add("id_taxa", registro.id_taxas);
+            parametros.Add("id_taxa", registro.id_taxa);
             parametros.Add("preco", registro.preco);
             parametros.Add("dataLocacao", registro.dataLocacao);
             parametros.Add("dataDevolucao", registro.dataDevolucao);
