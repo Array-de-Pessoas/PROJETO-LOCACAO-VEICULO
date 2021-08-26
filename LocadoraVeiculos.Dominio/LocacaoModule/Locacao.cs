@@ -16,6 +16,7 @@ namespace LocadoraVeiculos.Dominio.LocacaoModule
         public DateTime dataLocacao;
         public DateTime dataDevolucao;
         public double preco;
+        //aaa
         public string plano;
 
         public Locacao(int id_cliente, int id_veiculo, int id_taxa, int id_seguro, double preco, DateTime dataLocacao, DateTime dataDevolucao, string plano)
