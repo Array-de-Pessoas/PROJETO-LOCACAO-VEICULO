@@ -80,12 +80,12 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             DateTime dataLocacao = dtLocacao.Value;
             DateTime dataDevolucao = dtDevolucao.Value;
 
-            if (veiculo.Validar() != "VALIDO")
-            {
-                string primeiroErro = new StringReader(veiculo.Validar()).ReadLine();
-                TelaPrincipal.Instancia.AtualizarRodape(primeiroErro);
-                DialogResult = DialogResult.None;
-            }
+            //if (veiculo.Validar() != "VALIDO")
+            //{
+            //    string primeiroErro = new StringReader(veiculo.Validar()).ReadLine();
+            //    TelaPrincipal.Instancia.AtualizarRodape(primeiroErro);
+            //    DialogResult = DialogResult.None;
+            //}
         }
     }
 }

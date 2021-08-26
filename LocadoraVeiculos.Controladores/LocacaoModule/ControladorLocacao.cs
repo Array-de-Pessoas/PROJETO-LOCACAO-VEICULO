@@ -147,11 +147,12 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             var id_cliente = Convert.ToInt32(reader["id_cliente"]);
             var id_veiculo = Convert.ToInt32(reader["id_veiculo"]);
             var id_taxas = Convert.ToInt32(reader["id_taxa"]);
+            var id_seguro = Convert.ToInt32(reader["id_seguro"]);
             var preco = Convert.ToDouble(reader["preco"]);
             var dataLocacao = Convert.ToDateTime(reader["dataLocacao"]);
-            var dataDevolucao = Convert.ToDateTime(reader["dataDevolucao"]);          
-
-            Locacao locacao = new Locacao(id_cliente, id_veiculo,id_taxas, preco, dataLocacao, dataDevolucao);
+            var dataDevolucao = Convert.ToDateTime(reader["dataDevolucao"]);
+            var plano = Convert.ToString(reader["planos"]);
+            Locacao locacao = new Locacao(id_cliente, id_veiculo,id_taxas, id_seguro, preco, dataLocacao, dataDevolucao,plano );
 
             locacao.Id = Convert.ToInt32(reader["Id"]);
 
