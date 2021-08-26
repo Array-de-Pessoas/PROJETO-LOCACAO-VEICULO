@@ -58,9 +58,9 @@ namespace LocadoraVeiculos.WindowsForm
             this.panelTelaContaRegistradas = new System.Windows.Forms.Panel();
             this.toolTipBtnAdicionar = new System.Windows.Forms.ToolTip(this.components);
             this.panelTabelas = new System.Windows.Forms.Panel();
-            this.btnLocacoesPendentes = new System.Windows.Forms.Button();
-            this.btnCarrosDisponiveis = new System.Windows.Forms.Button();
             this.btnCarrosAlugados = new System.Windows.Forms.Button();
+            this.btnCarrosDisponiveis = new System.Windows.Forms.Button();
+            this.btnLocacoesPendentes = new System.Windows.Forms.Button();
             this.StripMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemChave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemLinha)).BeginInit();
@@ -346,26 +346,6 @@ namespace LocadoraVeiculos.WindowsForm
             this.panelTabelas.Size = new System.Drawing.Size(907, 652);
             this.panelTabelas.TabIndex = 11;
             // 
-            // btnLocacoesPendentes
-            // 
-            this.btnLocacoesPendentes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLocacoesPendentes.Location = new System.Drawing.Point(29, 518);
-            this.btnLocacoesPendentes.Name = "btnLocacoesPendentes";
-            this.btnLocacoesPendentes.Size = new System.Drawing.Size(238, 32);
-            this.btnLocacoesPendentes.TabIndex = 2;
-            this.btnLocacoesPendentes.Text = "Vizualizar";
-            this.btnLocacoesPendentes.UseVisualStyleBackColor = false;
-            // 
-            // btnCarrosDisponiveis
-            // 
-            this.btnCarrosDisponiveis.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCarrosDisponiveis.Location = new System.Drawing.Point(321, 518);
-            this.btnCarrosDisponiveis.Name = "btnCarrosDisponiveis";
-            this.btnCarrosDisponiveis.Size = new System.Drawing.Size(259, 32);
-            this.btnCarrosDisponiveis.TabIndex = 3;
-            this.btnCarrosDisponiveis.Text = "Vizualizar";
-            this.btnCarrosDisponiveis.UseVisualStyleBackColor = false;
-            // 
             // btnCarrosAlugados
             // 
             this.btnCarrosAlugados.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -376,6 +356,28 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnCarrosAlugados.Text = "Vizualizar";
             this.btnCarrosAlugados.UseVisualStyleBackColor = false;
             this.btnCarrosAlugados.Click += new System.EventHandler(this.btnCarrosAlugados_Click);
+            // 
+            // btnCarrosDisponiveis
+            // 
+            this.btnCarrosDisponiveis.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCarrosDisponiveis.Location = new System.Drawing.Point(321, 518);
+            this.btnCarrosDisponiveis.Name = "btnCarrosDisponiveis";
+            this.btnCarrosDisponiveis.Size = new System.Drawing.Size(259, 32);
+            this.btnCarrosDisponiveis.TabIndex = 3;
+            this.btnCarrosDisponiveis.Text = "Vizualizar";
+            this.btnCarrosDisponiveis.UseVisualStyleBackColor = false;
+            this.btnCarrosDisponiveis.Click += new System.EventHandler(this.btnCarrosDisponiveis_Click);
+            // 
+            // btnLocacoesPendentes
+            // 
+            this.btnLocacoesPendentes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLocacoesPendentes.Location = new System.Drawing.Point(29, 518);
+            this.btnLocacoesPendentes.Name = "btnLocacoesPendentes";
+            this.btnLocacoesPendentes.Size = new System.Drawing.Size(238, 32);
+            this.btnLocacoesPendentes.TabIndex = 2;
+            this.btnLocacoesPendentes.Text = "Vizualizar";
+            this.btnLocacoesPendentes.UseVisualStyleBackColor = false;
+            this.btnLocacoesPendentes.Click += new System.EventHandler(this.btnLocacoesPendentes_Click);
             // 
             // TelaPrincipalCadastros
             // 
