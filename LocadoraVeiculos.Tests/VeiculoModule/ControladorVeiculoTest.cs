@@ -26,6 +26,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
 
         public ControladorVeiculoTest()
         {
+            ResetarBanco();
             controladorVeiculo = new ControladorVeiculo();
             controladorGrupoVeiculo = new ControladorGrupoVeiculos();        
         }
@@ -64,7 +65,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             //assert
             var veiculoEncontrado = controladorVeiculo.SelecionarPorId(veiculoFIAT.Id);
             Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(veiculoFIAT.placa, veiculoEncontrado.placa);
-            ResetarBanco();
+         
         }
         [TestMethod]
         public void deveEditarVeiculoNoBanco()
@@ -79,7 +80,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             var veiculoEncontrado = controladorVeiculo.SelecionarPorId(1);
             NUnit.Framework.Assert.AreEqual(veiculoFORD.placa, veiculoEncontrado.placa);
 
-            ResetarBanco();
+        
         }
         [TestMethod]
         public void deveExcluirVeiculoNoBanco()
@@ -92,7 +93,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             //assert
             var veiculoEncontrado = controladorVeiculo.SelecionarPorId(1);
             Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNull(veiculoEncontrado);
-            ResetarBanco();
+          
         }
         [TestMethod]
         public void deveSelecionarTodosVeiculosDoBanco()
@@ -107,7 +108,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             List<Veiculo> veiculos = controladorVeiculo.SelecionarTodos();
             //assert
             veiculos.Count.Should().Be(2);
-            ResetarBanco();
+         
         }
         [TestMethod]
         public void deveVerificarSeExisteVeiculoNoBanco()
@@ -119,7 +120,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             var resultado = controladorVeiculo.Existe(1);
             //assert
             resultado.Should().Be(true);
-            ResetarBanco();
+        
         }
         
     }
