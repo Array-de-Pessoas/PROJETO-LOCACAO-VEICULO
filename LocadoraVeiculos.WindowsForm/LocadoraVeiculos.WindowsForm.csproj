@@ -49,10 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.cs">
+    <Compile Include="Features\Dashboard\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="Features\Dashboard\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\ClienteModule\OperacoesCliente.cs" />
@@ -81,6 +81,12 @@
     </Compile>
     <Compile Include="Features\CombustivelModule\TelaCombustivelForm.Designer.cs">
       <DependentUpon>TelaCombustivelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CréditosModule\TelaCreditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\CréditosModule\TelaCreditos.Designer.cs">
+      <DependentUpon>TelaCreditos.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\Dashboard\TabelaCarrosAlugados.cs">
       <SubType>UserControl</SubType>
@@ -213,7 +219,7 @@
     <Compile Include="Features\VeiculoModule\TelaVeiculoForm.Designer.cs">
       <DependentUpon>TelaVeiculoForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="Features\Dashboard\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\ClienteModule\TabelaCliente.resx">
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\CombustivelModule\TelaCombustivelForm.resx">
       <DependentUpon>TelaCombustivelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\CréditosModule\TelaCreditos.resx">
+      <DependentUpon>TelaCreditos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Dashboard\TabelaCarrosAlugados.resx">
       <DependentUpon>TabelaCarrosAlugados.cs</DependentUpon>
@@ -575,9 +584,6 @@
     <None Include="Resources\Nova imagem para menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Editar imagem.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\2213.png" />
   </ItemGroup>
   <ItemGroup>
@@ -609,6 +615,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Planos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lupa informações.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icone alterar imagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar imagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tipo de seguro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Array de pessoas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

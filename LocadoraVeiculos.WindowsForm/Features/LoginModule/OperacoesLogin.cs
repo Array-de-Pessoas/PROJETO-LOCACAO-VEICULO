@@ -13,7 +13,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
     public class OperacoesLogin
     {
         private readonly ControladorFuncionario controlador;
-        private static string usuario;
+        public static string usuario;
 
         public string Usuario
         {
