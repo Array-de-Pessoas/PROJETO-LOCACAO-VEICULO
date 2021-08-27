@@ -307,8 +307,15 @@ namespace LocadoraVeiculos.WindowsForm
                     panelTabelas.Controls.Add(txtV1);
                     panelTabelas.Controls.Add(txtV2);
                     panelTabelas.Controls.Add(txtV3);
+                   
                 }
                 
+                panelTabelas.Controls.Add(btnCarrosAlugados);
+                panelTabelas.Controls.Add(btnCarrosDisponiveis);
+                panelTabelas.Controls.Add(btnLocacoesPendentes);
+                panelTabelas.Controls.Add(txtV1);
+                panelTabelas.Controls.Add(txtV2);
+                panelTabelas.Controls.Add(txtV3);
                 panelTabelas.Controls.Remove(tabelaLocacoes);
                 panelTabelas.Controls.Remove(tabelaCarrosDisponiveis);
                 panelTabelas.Controls.Remove(tabelaCarrosAlugados);

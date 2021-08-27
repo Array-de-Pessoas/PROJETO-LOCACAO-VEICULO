@@ -1,4 +1,5 @@
-﻿using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
+﻿using LocadoraVeiculos.WindowsForm.Features.CréditosModule;
+using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,9 +43,10 @@ namespace LocadoraVeiculos.WindowsForm
             StatusAplicacao.Text = "                                                     Menu principal";
         }
 
-        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        private void cRÉDITOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Opção em desenvolvimento");
+            TelaCreditos tela = new TelaCreditos();
+            tela.ShowDialog();
         }
     }
 }
