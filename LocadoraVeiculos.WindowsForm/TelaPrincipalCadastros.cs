@@ -27,6 +27,7 @@ namespace LocadoraVeiculos.WindowsForm
 {
     public partial class TelaPrincipalCadastros : UserControl
     {
+        // mortandela
         private ICadastravel operacoes;
         private OperacoesLogin login;
         public static TelaPrincipalCadastros Instancia;
