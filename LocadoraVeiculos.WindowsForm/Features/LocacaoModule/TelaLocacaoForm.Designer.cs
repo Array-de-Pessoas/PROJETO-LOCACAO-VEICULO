@@ -89,7 +89,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(214, 430);
+            this.btnCancelar.Location = new System.Drawing.Point(229, 430);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 43);
             this.btnCancelar.TabIndex = 51;
@@ -173,7 +173,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.pictureBox2.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Cliente;
             this.pictureBox2.Location = new System.Drawing.Point(90, 121);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(113, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(113, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 57;
             this.pictureBox2.TabStop = false;
@@ -183,7 +183,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.pictureBox1.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Veiculo;
             this.pictureBox1.Location = new System.Drawing.Point(71, 156);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 27);
+            this.pictureBox1.Size = new System.Drawing.Size(132, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 58;
             this.pictureBox1.TabStop = false;
@@ -191,17 +191,17 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             // pictureBox3
             // 
             this.pictureBox3.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Taxa;
-            this.pictureBox3.Location = new System.Drawing.Point(90, 190);
+            this.pictureBox3.Location = new System.Drawing.Point(90, 189);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(113, 27);
+            this.pictureBox3.Size = new System.Drawing.Size(113, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 59;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Combustivel;
-            this.pictureBox4.Location = new System.Drawing.Point(24, 224);
+            this.pictureBox4.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Seguros;
+            this.pictureBox4.Location = new System.Drawing.Point(24, 223);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(179, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,10 +210,10 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Combustivel;
-            this.pictureBox5.Location = new System.Drawing.Point(24, 257);
+            this.pictureBox5.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Planos;
+            this.pictureBox5.Location = new System.Drawing.Point(65, 257);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(179, 27);
+            this.pictureBox5.Size = new System.Drawing.Size(138, 27);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 61;
             this.pictureBox5.TabStop = false;
@@ -241,9 +241,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             // pictureBox9
             // 
             this.pictureBox9.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Preco;
-            this.pictureBox9.Location = new System.Drawing.Point(81, 361);
+            this.pictureBox9.Location = new System.Drawing.Point(100, 361);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(122, 27);
+            this.pictureBox9.Size = new System.Drawing.Size(103, 27);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 64;
             this.pictureBox9.TabStop = false;

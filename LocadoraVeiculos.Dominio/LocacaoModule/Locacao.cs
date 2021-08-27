@@ -59,11 +59,7 @@ namespace LocadoraVeiculos.Dominio.LocacaoModule
             if (dataDevolucao == DateTime.MinValue)
             {
                 return "O campo Data de devolução é obrigatório";
-            }
-            if (preco == 0)
-            {
-                return "O campo Cliente é obrigatório";
-            }
+            }          
             return "VALIDO";
         }
     }

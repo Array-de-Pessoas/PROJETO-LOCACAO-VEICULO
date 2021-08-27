@@ -39,6 +39,7 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
 
             if (telaLocacaoForm.ShowDialog() == DialogResult.OK)
             {
+                telaLocacaoForm.Locacao.preco = controladorLocacao.CalcularValorLocacao(telaLocacaoForm.Locacao);
                 controladorLocacao.Editar(id, telaLocacaoForm.Locacao);
 
                 List<Locacao> locacaos = controladorLocacao.SelecionarTodos();
@@ -86,6 +87,9 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
 
             if (telaLocacaoForm.ShowDialog() == DialogResult.OK)
             {
+                
+                telaLocacaoForm.Locacao.preco = controladorLocacao.CalcularValorLocacao(telaLocacaoForm.Locacao);
+
                 controladorLocacao.InserirNovo(telaLocacaoForm.Locacao);
 
                 List<Locacao> locacaos = controladorLocacao.SelecionarTodos();

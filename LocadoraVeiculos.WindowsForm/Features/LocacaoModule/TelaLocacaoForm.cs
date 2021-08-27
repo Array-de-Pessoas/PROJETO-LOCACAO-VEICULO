@@ -73,10 +73,13 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             cbVeiculo.ValueMember = "Id";
             cbVeiculo.DataSource = veiculos;
 
+            string[] planos= new string[3] { "Diário","Controlado","Livre"};
+
+            cbPlano.DataSource = planos;
 
             List<TaxasServicos> taxasServicos = controladorTaxasServicos.SelecionarTodos();
 
-            cbTaxa.DisplayMember = "TipoTaxa";
+            cbTaxa.DisplayMember = "Nome";
             cbTaxa.ValueMember = "Id";
             cbTaxa.DataSource = taxasServicos;
 
@@ -92,21 +95,18 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         }
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            int id_seguro, id_cliente, id_veiculo, id_taxa;
-            double preco;
+            double preco =0;
 
-            var plano = cbPlano.ValueMember;
-
-            int.TryParse(cbSeguro.ValueMember, out id_seguro);
-            int.TryParse(cbTaxa.ValueMember, out id_taxa);
-            int.TryParse(cbVeiculo.ValueMember, out id_veiculo);
-            int.TryParse(cbCliente.ValueMember, out id_cliente);
-            double.TryParse(txtPreco.Text, out preco);
+            string plano = Convert.ToString(cbPlano.SelectedValue);
+            int id_seguro = Convert.ToInt32(cbSeguro.SelectedValue);
+            int id_cliente = Convert.ToInt32(cbCliente.SelectedValue);
+            int id_veiculo = Convert.ToInt32(cbVeiculo.SelectedValue);
+            int id_taxa = Convert.ToInt32(cbTaxa.SelectedValue);      
 
             DateTime dataLocacao = dtLocacao.Value;
             DateTime dataDevolucao = dtDevolucao.Value;
 
-            Locacao locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano);
+            locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano);
 
             if (locacao.Validar() != "VALIDO")
             {

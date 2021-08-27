@@ -1,5 +1,13 @@
-﻿using LocadoraVeiculos.Controladores.Shared;
+﻿using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using LocadoraVeiculos.Controladores.SegurosModule;
+using LocadoraVeiculos.Controladores.Shared;
+using LocadoraVeiculos.Controladores.TaxasServicosModule;
+using LocadoraVeiculos.Controladores.VeiculoModule;
+using LocadoraVeiculos.Dominio.GrupoVeiculosModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
+using LocadoraVeiculos.Dominio.SegurosModule;
+using LocadoraVeiculos.Dominio.TaxasServicosModule;
+using LocadoraVeiculos.Dominio.VeiculoModule;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -165,6 +173,41 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             locacao.Id = Convert.ToInt32(reader["Id"]);
 
             return locacao;
+        }
+
+        public double CalcularValorLocacao(Locacao locacao)
+        {
+            TimeSpan diasAlugado = locacao.dataDevolucao - locacao.dataLocacao;
+
+            ControladorVeiculo controladorVeiculo = new ControladorVeiculo();
+            ControladorGrupoVeiculos controladorGrupoVeiculos = new ControladorGrupoVeiculos();
+            ControladorTaxasServicos controladorTaxasServicos = new ControladorTaxasServicos();
+            ControladorSeguros controladorSeguros = new ControladorSeguros();
+
+            Veiculo veiculoDaLocacao = controladorVeiculo.SelecionarPorId(locacao.id_veiculo);
+            GrupoVeiculos grupoVeiculoDaLocacao = controladorGrupoVeiculos.SelecionarPorId(veiculoDaLocacao.idGrupoVeiculo);
+            TaxasServicos taxasDaLocacao = controladorTaxasServicos.SelecionarPorId(locacao.id_taxa);
+            Seguros seguroDaLocacao = controladorSeguros.SelecionarPorId(locacao.id_seguro);
+
+            double valorDiaria = 0;
+            
+            if (locacao.plano == "Diário")
+            {
+                valorDiaria = grupoVeiculoDaLocacao.ValorDiariaPlanoDiario;
+            }
+            else if (locacao.plano == "Livre")
+            {
+                valorDiaria = grupoVeiculoDaLocacao.ValorDiariaPlanoLivre;
+
+            }
+            else if(locacao.plano == "Controlado")
+            {
+                valorDiaria = grupoVeiculoDaLocacao.ValorDiariaPlanoControlado;
+
+            }         
+
+            return (diasAlugado.Days * valorDiaria) + Convert.ToDouble(taxasDaLocacao.Valor) + (Convert.ToDouble(seguroDaLocacao.Valor)*diasAlugado.Days);
+            
         }
 
     }
