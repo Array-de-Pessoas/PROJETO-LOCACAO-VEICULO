@@ -16,5 +16,45 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         {
             InitializeComponent();
         }
+
+        private void cbCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbVeiculo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbTaxa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbSeguro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPlano_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtLocacao_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtDevolucao_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPreco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,7 +14,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 {
     public partial class TabelaVeiculosControl : UserControl
     {
-
         public TabelaVeiculosControl()
         {
             InitializeComponent();

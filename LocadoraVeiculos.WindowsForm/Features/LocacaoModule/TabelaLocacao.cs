@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LocadoraVeiculos.Dominio.LocacaoModule;
+using LocadoraVeiculos.WindowsForm.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,36 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         public TabelaLocacao()
         {
             InitializeComponent();
+            dataGridLocacao.ConfigurarGridZebrado();
+            dataGridLocacao.ConfigurarGridSomenteLeitura();
+            dataGridLocacao.Columns.AddRange(ObterColunas());
+        }
+        public DataGridViewColumn[] ObterColunas()
+        {
+            var colunas = new DataGridViewColumn[]
+            {             
+                new DataGridViewTextBoxColumn { DataPropertyName = "id_cliente", HeaderText = "Cliente"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "id_veiculo", HeaderText = "Veículo"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "DataLocacao", HeaderText = "Data locação"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "DataDevolucao", HeaderText = "Data devolução"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "Preco", HeaderText = "Preço"},         
+            };
+
+            return colunas;
+        }
+        public int ObtemIdSelecionado()
+        {
+            return dataGridLocacao.SelecionarId<int>();
+        }
+        public void AtualizarRegistros(List<Locacao> locacoes)
+        {
+            dataGridLocacao.Rows.Clear();
+
+            foreach (var locacao in locacoes)
+            {
+                dataGridLocacao.Rows.Add(locacao.Id, locacao.id_cliente, locacao.id_veiculo, locacao.dataLocacao, locacao.dataDevolucao, locacao.preco
+                    );
+            }
         }
     }
 }
