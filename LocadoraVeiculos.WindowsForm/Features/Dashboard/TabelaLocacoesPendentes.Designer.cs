@@ -35,13 +35,16 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
             // 
             // dataGridLocacoesPendentes
             // 
+            this.dataGridLocacoesPendentes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridLocacoesPendentes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
             this.dataGridLocacoesPendentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridLocacoesPendentes.Location = new System.Drawing.Point(3, 3);
             this.dataGridLocacoesPendentes.Name = "dataGridLocacoesPendentes";
             this.dataGridLocacoesPendentes.RowHeadersWidth = 51;
             this.dataGridLocacoesPendentes.RowTemplate.Height = 24;
-            this.dataGridLocacoesPendentes.Size = new System.Drawing.Size(868, 610);
+            this.dataGridLocacoesPendentes.Size = new System.Drawing.Size(793, 586);
             this.dataGridLocacoesPendentes.TabIndex = 0;
             // 
             // TabelaLocacoesPendentes
@@ -50,7 +53,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridLocacoesPendentes);
             this.Name = "TabelaLocacoesPendentes";
-            this.Size = new System.Drawing.Size(874, 616);
+            this.Size = new System.Drawing.Size(799, 589);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLocacoesPendentes)).EndInit();
             this.ResumeLayout(false);
 

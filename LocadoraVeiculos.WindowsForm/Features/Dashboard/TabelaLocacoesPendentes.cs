@@ -27,11 +27,11 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
             {
                 new DataGridViewTextBoxColumn { DataPropertyName = "CLIENTE", HeaderText = "CLIENTE"},
 
-                new DataGridViewTextBoxColumn { DataPropertyName = "DATADEVOLUCAO", HeaderText = "DATA DE DEVOLUCAO"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "DATADEVOLUCAO", HeaderText = "DATA DE DEVOLUÇÃO"},
 
-                new DataGridViewTextBoxColumn { DataPropertyName = "VEICULO", HeaderText = "VEICULO"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "VEICULO", HeaderText = "VEÍCULO"},
 
-                new DataGridViewTextBoxColumn { DataPropertyName = "PRECO", HeaderText = "PRECO"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "PRECO", HeaderText = "PREÇO"},
 
             };
 

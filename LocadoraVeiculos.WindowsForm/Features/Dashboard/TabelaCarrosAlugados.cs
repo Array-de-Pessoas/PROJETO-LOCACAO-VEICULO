@@ -29,7 +29,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
 
                 new DataGridViewTextBoxColumn { DataPropertyName = "MARCA", HeaderText = "MARCA"},
 
-                new DataGridViewTextBoxColumn { DataPropertyName = "GRUPOVEICULO", HeaderText = "GRUPOVEICULO"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "GRUPOVEICULO", HeaderText = "GRUPO DO VEÍCULO"},
 
                 new DataGridViewTextBoxColumn { DataPropertyName = "PLACA", HeaderText = "PLACA"},
 

@@ -556,9 +556,6 @@
     <None Include="Resources\Nova imagem para menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Editar imagem.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\2213.png" />
   </ItemGroup>
   <ItemGroup>
@@ -566,6 +563,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\new fundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lupa informações.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icone alterar imagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar imagem.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

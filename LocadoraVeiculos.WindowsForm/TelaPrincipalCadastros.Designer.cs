@@ -44,7 +44,6 @@ namespace LocadoraVeiculos.WindowsForm
             this.tAXASESERVIÇOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sEGUROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dASHBOARDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ImagemChave = new System.Windows.Forms.PictureBox();
             this.btnVizualizarConta = new System.Windows.Forms.Button();
@@ -58,9 +57,12 @@ namespace LocadoraVeiculos.WindowsForm
             this.panelTelaContaRegistradas = new System.Windows.Forms.Panel();
             this.toolTipBtnAdicionar = new System.Windows.Forms.ToolTip(this.components);
             this.panelTabelas = new System.Windows.Forms.Panel();
-            this.btnCarrosAlugados = new System.Windows.Forms.Button();
-            this.btnCarrosDisponiveis = new System.Windows.Forms.Button();
             this.btnLocacoesPendentes = new System.Windows.Forms.Button();
+            this.btnCarrosDisponiveis = new System.Windows.Forms.Button();
+            this.btnCarrosAlugados = new System.Windows.Forms.Button();
+            this.txtV1 = new System.Windows.Forms.Label();
+            this.txtV2 = new System.Windows.Forms.Label();
+            this.txtV3 = new System.Windows.Forms.Label();
             this.StripMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemChave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemLinha)).BeginInit();
@@ -77,8 +79,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.toolStripMenuItem1,
             this.TxtMenu,
             this.OpcoesCadastros,
-            this.toolStripMenuItem2,
-            this.dASHBOARDToolStripMenuItem});
+            this.toolStripMenuItem2});
             this.StripMenu.Location = new System.Drawing.Point(0, 0);
             this.StripMenu.Name = "StripMenu";
             this.StripMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -98,6 +99,8 @@ namespace LocadoraVeiculos.WindowsForm
             this.TxtMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TxtMenu.Name = "TxtMenu";
             this.TxtMenu.Size = new System.Drawing.Size(152, 116);
+            this.TxtMenu.ToolTipText = "Dashboard";
+            this.TxtMenu.Click += new System.EventHandler(this.TxtMenu_Click);
             // 
             // OpcoesCadastros
             // 
@@ -187,14 +190,6 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 4);
-            // 
-            // dASHBOARDToolStripMenuItem
-            // 
-            this.dASHBOARDToolStripMenuItem.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dASHBOARDToolStripMenuItem.Name = "dASHBOARDToolStripMenuItem";
-            this.dASHBOARDToolStripMenuItem.Size = new System.Drawing.Size(152, 25);
-            this.dASHBOARDToolStripMenuItem.Text = "DASHBOARD";
-            this.dASHBOARDToolStripMenuItem.Click += new System.EventHandler(this.dASHBOARDToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -336,9 +331,12 @@ namespace LocadoraVeiculos.WindowsForm
             // panelTabelas
             // 
             this.panelTabelas.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Only_the_color_blue;
-            this.panelTabelas.Controls.Add(this.btnCarrosAlugados);
-            this.panelTabelas.Controls.Add(this.btnCarrosDisponiveis);
+            this.panelTabelas.Controls.Add(this.txtV3);
+            this.panelTabelas.Controls.Add(this.txtV2);
+            this.panelTabelas.Controls.Add(this.txtV1);
             this.panelTabelas.Controls.Add(this.btnLocacoesPendentes);
+            this.panelTabelas.Controls.Add(this.btnCarrosDisponiveis);
+            this.panelTabelas.Controls.Add(this.btnCarrosAlugados);
             this.panelTabelas.Controls.Add(this.ImagemChave);
             this.panelTabelas.Location = new System.Drawing.Point(211, 0);
             this.panelTabelas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -346,38 +344,80 @@ namespace LocadoraVeiculos.WindowsForm
             this.panelTabelas.Size = new System.Drawing.Size(907, 652);
             this.panelTabelas.TabIndex = 11;
             // 
-            // btnCarrosAlugados
+            // btnLocacoesPendentes
             // 
-            this.btnCarrosAlugados.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCarrosAlugados.Location = new System.Drawing.Point(629, 518);
-            this.btnCarrosAlugados.Name = "btnCarrosAlugados";
-            this.btnCarrosAlugados.Size = new System.Drawing.Size(229, 32);
-            this.btnCarrosAlugados.TabIndex = 4;
-            this.btnCarrosAlugados.Text = "Vizualizar";
-            this.btnCarrosAlugados.UseVisualStyleBackColor = false;
-            this.btnCarrosAlugados.Click += new System.EventHandler(this.btnCarrosAlugados_Click);
+            this.btnLocacoesPendentes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
+            this.btnLocacoesPendentes.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Lupa_informações;
+            this.btnLocacoesPendentes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLocacoesPendentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLocacoesPendentes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
+            this.btnLocacoesPendentes.Location = new System.Drawing.Point(132, 521);
+            this.btnLocacoesPendentes.Name = "btnLocacoesPendentes";
+            this.btnLocacoesPendentes.Size = new System.Drawing.Size(33, 29);
+            this.btnLocacoesPendentes.TabIndex = 10;
+            this.btnLocacoesPendentes.UseVisualStyleBackColor = false;
+            this.btnLocacoesPendentes.Click += new System.EventHandler(this.btnLocacoesPendentes_Click_1);
             // 
             // btnCarrosDisponiveis
             // 
-            this.btnCarrosDisponiveis.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCarrosDisponiveis.Location = new System.Drawing.Point(321, 518);
+            this.btnCarrosDisponiveis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
+            this.btnCarrosDisponiveis.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Lupa_informações;
+            this.btnCarrosDisponiveis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCarrosDisponiveis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarrosDisponiveis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
+            this.btnCarrosDisponiveis.Location = new System.Drawing.Point(428, 521);
             this.btnCarrosDisponiveis.Name = "btnCarrosDisponiveis";
-            this.btnCarrosDisponiveis.Size = new System.Drawing.Size(259, 32);
-            this.btnCarrosDisponiveis.TabIndex = 3;
-            this.btnCarrosDisponiveis.Text = "Vizualizar";
+            this.btnCarrosDisponiveis.Size = new System.Drawing.Size(33, 29);
+            this.btnCarrosDisponiveis.TabIndex = 9;
             this.btnCarrosDisponiveis.UseVisualStyleBackColor = false;
-            this.btnCarrosDisponiveis.Click += new System.EventHandler(this.btnCarrosDisponiveis_Click);
+            this.btnCarrosDisponiveis.Click += new System.EventHandler(this.btnCarrosDisponiveis_Click_1);
             // 
-            // btnLocacoesPendentes
+            // btnCarrosAlugados
             // 
-            this.btnLocacoesPendentes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLocacoesPendentes.Location = new System.Drawing.Point(29, 518);
-            this.btnLocacoesPendentes.Name = "btnLocacoesPendentes";
-            this.btnLocacoesPendentes.Size = new System.Drawing.Size(238, 32);
-            this.btnLocacoesPendentes.TabIndex = 2;
-            this.btnLocacoesPendentes.Text = "Vizualizar";
-            this.btnLocacoesPendentes.UseVisualStyleBackColor = false;
-            this.btnLocacoesPendentes.Click += new System.EventHandler(this.btnLocacoesPendentes_Click);
+            this.btnCarrosAlugados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
+            this.btnCarrosAlugados.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Lupa_informações;
+            this.btnCarrosAlugados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCarrosAlugados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarrosAlugados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
+            this.btnCarrosAlugados.Location = new System.Drawing.Point(736, 521);
+            this.btnCarrosAlugados.Name = "btnCarrosAlugados";
+            this.btnCarrosAlugados.Size = new System.Drawing.Size(33, 29);
+            this.btnCarrosAlugados.TabIndex = 8;
+            this.btnCarrosAlugados.UseVisualStyleBackColor = false;
+            this.btnCarrosAlugados.Click += new System.EventHandler(this.btnCarrosAlugados_Click_1);
+            // 
+            // txtV1
+            // 
+            this.txtV1.AutoSize = true;
+            this.txtV1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
+            this.txtV1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtV1.Location = new System.Drawing.Point(116, 553);
+            this.txtV1.Name = "txtV1";
+            this.txtV1.Size = new System.Drawing.Size(69, 17);
+            this.txtV1.TabIndex = 11;
+            this.txtV1.Text = "Vizualizar";
+            // 
+            // txtV2
+            // 
+            this.txtV2.AutoSize = true;
+            this.txtV2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
+            this.txtV2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtV2.Location = new System.Drawing.Point(411, 553);
+            this.txtV2.Name = "txtV2";
+            this.txtV2.Size = new System.Drawing.Size(69, 17);
+            this.txtV2.TabIndex = 12;
+            this.txtV2.Text = "Vizualizar";
+            // 
+            // txtV3
+            // 
+            this.txtV3.AutoSize = true;
+            this.txtV3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
+            this.txtV3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtV3.Location = new System.Drawing.Point(722, 553);
+            this.txtV3.Name = "txtV3";
+            this.txtV3.Size = new System.Drawing.Size(69, 17);
+            this.txtV3.TabIndex = 13;
+            this.txtV3.Text = "Vizualizar";
             // 
             // TelaPrincipalCadastros
             // 
@@ -406,6 +446,7 @@ namespace LocadoraVeiculos.WindowsForm
             ((System.ComponentModel.ISupportInitialize)(this.ImagemLinha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemLinha2)).EndInit();
             this.panelTabelas.ResumeLayout(false);
+            this.panelTabelas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,10 +480,12 @@ namespace LocadoraVeiculos.WindowsForm
         private System.Windows.Forms.ToolStripMenuItem tAXASESERVIÇOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cOMBUSTÍVELToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem dASHBOARDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sEGUROSToolStripMenuItem;
         private System.Windows.Forms.Button btnCarrosAlugados;
-        private System.Windows.Forms.Button btnCarrosDisponiveis;
         private System.Windows.Forms.Button btnLocacoesPendentes;
+        private System.Windows.Forms.Button btnCarrosDisponiveis;
+        private System.Windows.Forms.Label txtV1;
+        private System.Windows.Forms.Label txtV3;
+        private System.Windows.Forms.Label txtV2;
     }
 }
