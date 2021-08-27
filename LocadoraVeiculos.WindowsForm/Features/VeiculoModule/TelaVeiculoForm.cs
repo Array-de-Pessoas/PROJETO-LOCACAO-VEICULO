@@ -39,7 +39,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
                 veiculo = value;
 
                 txtId.Text = veiculo.Id.ToString();
-                txtPlaca.Text = veiculo.placa;
+                txtPlaca.Text = veiculo.Placa;
                 txtCor.Text = veiculo.cor;
                 txtMarca.Text = veiculo.marca;
                 txtTipoCombustivel.Text = veiculo.tipoCombustivel;

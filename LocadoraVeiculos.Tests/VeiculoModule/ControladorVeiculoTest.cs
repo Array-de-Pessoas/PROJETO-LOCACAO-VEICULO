@@ -64,7 +64,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             
             //assert
             var veiculoEncontrado = controladorVeiculo.SelecionarPorId(veiculoFIAT.Id);
-            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(veiculoFIAT.placa, veiculoEncontrado.placa);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(veiculoFIAT.Placa, veiculoEncontrado.Placa);
          
         }
         [TestMethod]
@@ -78,7 +78,7 @@ namespace LocadoraVeiculos.Tests.VeiculoModule
             controladorVeiculo.Editar(1,veiculoFORD);
             //assert
             var veiculoEncontrado = controladorVeiculo.SelecionarPorId(1);
-            NUnit.Framework.Assert.AreEqual(veiculoFORD.placa, veiculoEncontrado.placa);
+            NUnit.Framework.Assert.AreEqual(veiculoFORD.Placa, veiculoEncontrado.Placa);
 
         
         }

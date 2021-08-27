@@ -145,7 +145,7 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
             var parametros = new Dictionary<string, object>();
 
             parametros.Add("Id", veiculo.Id);
-            parametros.Add("Placa", veiculo.placa);
+            parametros.Add("Placa", veiculo.Placa);
             parametros.Add("Cor", veiculo.cor);
             parametros.Add("Marca", veiculo.marca);
             parametros.Add("Ano", veiculo.ano);

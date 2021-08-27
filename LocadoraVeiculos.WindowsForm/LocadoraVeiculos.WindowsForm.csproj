@@ -109,12 +109,12 @@
       <DependentUpon>TelaGrupoDeVeiculosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\GrupoVeiculosModule\ConfiguracaoGrupoVeiculosToolBox.cs" />
-    <Compile Include="Features\LocacaoModule\OperacaoLocacao.cs" />
-    <Compile Include="Features\LocacaoModule\TabelaLocacao.cs">
+    <Compile Include="Features\LocacaoModule\OperacoesLocacao.cs" />
+    <Compile Include="Features\LocacaoModule\TabelaLocacaoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Features\LocacaoModule\TabelaLocacao.Designer.cs">
-      <DependentUpon>TabelaLocacao.cs</DependentUpon>
+    <Compile Include="Features\LocacaoModule\TabelaLocacaoControl.Designer.cs">
+      <DependentUpon>TabelaLocacaoControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\LocacaoModule\TelaLocacaoForm.cs">
       <SubType>Form</SubType>
@@ -237,8 +237,8 @@
     <EmbeddedResource Include="Features\Dashboard\TabelaLocacoesPendentes.resx">
       <DependentUpon>TabelaLocacoesPendentes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Features\LocacaoModule\TabelaLocacao.resx">
-      <DependentUpon>TabelaLocacao.cs</DependentUpon>
+    <EmbeddedResource Include="Features\LocacaoModule\TabelaLocacaoControl.resx">
+      <DependentUpon>TabelaLocacaoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\LocacaoModule\TelaLocacaoForm.resx">
       <DependentUpon>TelaLocacaoForm.cs</DependentUpon>
@@ -585,6 +585,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\new fundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Veiculo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taxa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data_de_locacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data_de_devolucao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

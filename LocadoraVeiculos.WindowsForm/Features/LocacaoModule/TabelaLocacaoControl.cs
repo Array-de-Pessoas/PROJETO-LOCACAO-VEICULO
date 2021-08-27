@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 {
-    public partial class TabelaLocacao : UserControl
+    public partial class TabelaLocacaoControl : UserControl
     {
-        public TabelaLocacao()
+        public TabelaLocacaoControl()
         {
             InitializeComponent();
             dataGridLocacao.ConfigurarGridZebrado();

@@ -46,7 +46,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 
             foreach (Veiculo veiculo in veiculos)
             {
-                dataGridVeiculo.Rows.Add(veiculo.Id,veiculo.kilometragem,veiculo.marca,veiculo.placa,veiculo.cor,
+                dataGridVeiculo.Rows.Add(veiculo.Id,veiculo.kilometragem,veiculo.marca,veiculo.Placa,veiculo.cor,
                     veiculo.ano
                     );
             }

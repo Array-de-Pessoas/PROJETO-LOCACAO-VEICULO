@@ -1,7 +1,9 @@
-﻿using LocadoraVeiculos.Controladores.ClienteModule;
+﻿using LocadoraLocacaos.WindowsForm.Features.LocacaoModule;
+using LocadoraVeiculos.Controladores.ClienteModule;
 using LocadoraVeiculos.Controladores.CombustivelModule;
 using LocadoraVeiculos.Controladores.FuncionarioModule;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
@@ -270,6 +272,16 @@ namespace LocadoraVeiculos.WindowsForm
         {
             panelTabelas.Controls.Clear();
             panelTabelas.Controls.Add(new TabelaCarrosAlugados());
+        }
+
+        private void lOCAÇÃOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TxtCadastroSelecionado.Text = "          LOCAÇÃO";
+            panelTabelas.Controls.Clear();
+            MostrarOpcoes();
+            operacoes = new OperacoesLocacao(new ControladorLocacao());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
         }
     }
 }

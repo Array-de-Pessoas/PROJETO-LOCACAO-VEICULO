@@ -13,7 +13,7 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
     public class Veiculo : EntidadeBase
     {
 
-        public string placa;
+        public string Placa { get; }
         public string cor;
         public string marca;
         public int ano;
@@ -29,7 +29,7 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
 
         public Veiculo(string placa, string cor, string marca, int ano, string tipoCombustivel, byte[] foto, double quantidadeLitros, int numeroPortas, int capacidadeDePessoas, string tamanhoPortaMalas, int kilometragem, int id_grupoVeiculo)
         {
-            this.placa = placa;
+            this.Placa = placa;
             this.cor = cor;
             this.marca = marca;
             this.ano = ano;
@@ -77,7 +77,7 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
             {
                 return "                                                     Campo ano tem que ser valido";
             }
-            if (string.IsNullOrEmpty(placa))
+            if (string.IsNullOrEmpty(Placa))
             {
                 return "                                                     Campo placa é obrigatório";
             }        

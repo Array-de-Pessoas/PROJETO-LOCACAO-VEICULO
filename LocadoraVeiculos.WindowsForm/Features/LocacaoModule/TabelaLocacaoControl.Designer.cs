@@ -1,7 +1,7 @@
 ﻿
 namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 {
-    partial class TabelaLocacao
+    partial class TabelaLocacaoControl
     {
         /// <summary> 
         /// Required designer variable.
