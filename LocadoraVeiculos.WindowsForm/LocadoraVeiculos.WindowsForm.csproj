@@ -573,5 +573,8 @@
   <ItemGroup>
     <None Include="Resources\Editar imagem.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tipo de seguro.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
