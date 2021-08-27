@@ -32,10 +32,6 @@ namespace LocadoraVeiculos.WindowsForm
         private ICadastravel operacoes;
         private OperacoesLogin login;
         public static TelaPrincipalCadastros Instancia;
-        Dashboard dashboard = new Dashboard();
-        TabelaCarrosAlugados tabelaCarrosAlugados = new TabelaCarrosAlugados();
-        TabelaCarrosDisponiveis tabelaCarrosDisponiveis = new TabelaCarrosDisponiveis();
-        TabelaLocacoesPendentes tabelaLocacoes = new TabelaLocacoesPendentes();
 
         public TelaPrincipalCadastros()
         {
@@ -51,9 +47,6 @@ namespace LocadoraVeiculos.WindowsForm
             btnCarrosAlugados.Visible = false;
             btnCarrosDisponiveis.Visible = false;
             btnLocacoesPendentes.Visible = false;
-            txtV1.Visible = false;
-            txtV2.Visible = false;
-            txtV3.Visible = false;
             btnAdicionar.Visible = false;
             btnEditar.Visible = false;
             btnExcluir.Visible = false;
@@ -61,7 +54,7 @@ namespace LocadoraVeiculos.WindowsForm
             ImagemLinha.Visible = false;
             ImagemLinha2.Visible = false;
             TxtCadastroSelecionado.Text = "";
-            if (panelTabelas.Controls.Count >= 1)
+            if (panelTabelas.Controls.Count == 1)
             {
                 panelTabelas.Controls.Clear();
                 ImagemChave.Visible = true;
@@ -95,7 +88,6 @@ namespace LocadoraVeiculos.WindowsForm
 
         public void OpcaoCadastroFuncionarios_Click(object sender, EventArgs e)
         {
-            TxtCadastroSelecionado.Visible = true;
             TxtCadastroSelecionado.Text = "       FUNCIONÁRIO";
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
@@ -107,7 +99,6 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void OpcaoCadastroClientes_Click(object sender, EventArgs e)
         {
-            TxtCadastroSelecionado.Visible = true;
             TxtCadastroSelecionado.Text = "           CLIENTE";
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
@@ -140,12 +131,10 @@ namespace LocadoraVeiculos.WindowsForm
                     return;
                 }
             }
-            
         }
 
         private void gRUPODEVEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TxtCadastroSelecionado.Visible = true;
             TxtCadastroSelecionado.Text = " GRUPO DE VEÍCULOS";
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
@@ -201,7 +190,6 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void vEÍCULOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TxtCadastroSelecionado.Visible = true;
             TxtCadastroSelecionado.Text = "           VEÍCULOS";
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
@@ -238,7 +226,6 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void tAXASESERVIÇOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TxtCadastroSelecionado.Visible = true;
             TxtCadastroSelecionado.Text = "    TAXAS E SERVIÇOS";
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
@@ -249,7 +236,6 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void cOMBUSTÍVELToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TxtCadastroSelecionado.Visible = true;
             TxtCadastroSelecionado.Text = "       COMBUSTÍVEL";
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
@@ -258,9 +244,22 @@ namespace LocadoraVeiculos.WindowsForm
             btnFiltro.Visible = false;
         }
 
+        public void dASHBOARDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (login.GerarUsuario() != null)
+            {
+                panelTabelas.Controls.Clear();
+                Dashboard dashboard = new Dashboard();
+                panelTabelas.Controls.Add(dashboard);
+                ImagemChave.Visible = false;
+                btnCarrosDisponiveis.Visible = true;
+                btnCarrosAlugados.Visible = true;
+                btnLocacoesPendentes.Visible = true;
+            }
+        }
+
         private void sEGUROSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TxtCadastroSelecionado.Visible = true;
             TxtCadastroSelecionado.Text = "          SEGUROS";
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
@@ -271,112 +270,8 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void btnCarrosAlugados_Click(object sender, EventArgs e)
         {
-            panelTabelas.Controls.Remove(dashboard);
-            panelTabelas.Controls.Add(tabelaCarrosAlugados);
-            btnCarrosAlugados.Visible = false;
-            btnCarrosDisponiveis.Visible = false;
-            btnLocacoesPendentes.Visible = false;
-        }
-
-        private void btnCarrosDisponiveis_Click(object sender, EventArgs e)
-        {
-            panelTabelas.Controls.Remove(dashboard);
-            panelTabelas.Controls.Add(tabelaCarrosDisponiveis);
-            btnCarrosAlugados.Visible = false;
-            btnCarrosDisponiveis.Visible = false;
-            btnLocacoesPendentes.Visible = false;
-        }
-
-        private void btnLocacoesPendentes_Click(object sender, EventArgs e)
-        {
-            panelTabelas.Controls.Remove(dashboard);
-            panelTabelas.Controls.Add(tabelaLocacoes);
-            btnCarrosAlugados.Visible = false;
-            btnCarrosDisponiveis.Visible = false;
-            btnLocacoesPendentes.Visible = false;
-        }
-
-        private void TxtMenu_Click(object sender, EventArgs e)
-        {
-            if (login.GerarUsuario() != null)
-            {
-                if (operacoes != null)
-                {
-                    panelTabelas.Controls.Remove(operacoes.ObterTabela());
-                    panelTabelas.Controls.Add(btnCarrosAlugados);
-                    panelTabelas.Controls.Add(btnCarrosDisponiveis);
-                    panelTabelas.Controls.Add(btnLocacoesPendentes);
-                    panelTabelas.Controls.Add(txtV1);
-                    panelTabelas.Controls.Add(txtV2);
-                    panelTabelas.Controls.Add(txtV3);
-                   
-                }
-                
-                panelTabelas.Controls.Add(btnCarrosAlugados);
-                panelTabelas.Controls.Add(btnCarrosDisponiveis);
-                panelTabelas.Controls.Add(btnLocacoesPendentes);
-                panelTabelas.Controls.Add(txtV1);
-                panelTabelas.Controls.Add(txtV2);
-                panelTabelas.Controls.Add(txtV3);
-                panelTabelas.Controls.Remove(tabelaLocacoes);
-                panelTabelas.Controls.Remove(tabelaCarrosDisponiveis);
-                panelTabelas.Controls.Remove(tabelaCarrosAlugados);
-                panelTabelas.Controls.Add(dashboard);
-                ImagemChave.Visible = false;
-                btnAdicionar.Visible = false;
-                btnEditar.Visible = false;
-                btnExcluir.Visible = false;
-                TxtCadastroSelecionado.Visible = false;
-                ImagemLinha.Visible = false;
-                ImagemLinha2.Visible = false;
-                btnCarrosDisponiveis.Visible = true;
-                btnCarrosAlugados.Visible = true;
-                btnLocacoesPendentes.Visible = true;
-                txtV1.Visible = true;
-                txtV2.Visible = true;
-                txtV3.Visible = true;
-            }
-        }
-
-        public TelaPrincipalCadastros MudarPanel()
-        {
-            return Instancia;
-        }
-
-        private void btnLocacoesPendentes_Click_1(object sender, EventArgs e)
-        {
-            panelTabelas.Controls.Remove(dashboard);
-            panelTabelas.Controls.Add(tabelaLocacoes);
-            btnCarrosAlugados.Visible = false;
-            btnCarrosDisponiveis.Visible = false;
-            btnLocacoesPendentes.Visible = false;
-            txtV1.Visible = false;
-            txtV2.Visible = false;
-            txtV3.Visible = false;
-        }
-
-        private void btnCarrosDisponiveis_Click_1(object sender, EventArgs e)
-        {
-            panelTabelas.Controls.Remove(dashboard);
-            panelTabelas.Controls.Add(tabelaCarrosDisponiveis);
-            btnCarrosAlugados.Visible = false;
-            btnCarrosDisponiveis.Visible = false;
-            btnLocacoesPendentes.Visible = false;
-            txtV1.Visible = false;
-            txtV2.Visible = false;
-            txtV3.Visible = false;
-        }
-
-        private void btnCarrosAlugados_Click_1(object sender, EventArgs e)
-        {
-            panelTabelas.Controls.Remove(dashboard);
-            panelTabelas.Controls.Add(tabelaCarrosAlugados);
-            btnCarrosAlugados.Visible = false;
-            btnCarrosDisponiveis.Visible = false;
-            btnLocacoesPendentes.Visible = false;
-            txtV1.Visible = false;
-            txtV2.Visible = false;
-            txtV3.Visible = false;
+            panelTabelas.Controls.Clear();
+            panelTabelas.Controls.Add(new TabelaCarrosAlugados());
         }
 
         private void lOCAÇÃOToolStripMenuItem_Click(object sender, EventArgs e)

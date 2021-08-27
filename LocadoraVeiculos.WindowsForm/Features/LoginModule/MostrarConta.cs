@@ -49,8 +49,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.LoginModule
                 Status = "Sair";
                 btnEditarImagem.Visible = true;
                 ImagemConta1.Image = Properties.Resources.Imagem_3;
-                TelaPrincipalCadastros tela = new TelaPrincipalCadastros();
-                tela.MudarPanel();
                 return;
             }
 

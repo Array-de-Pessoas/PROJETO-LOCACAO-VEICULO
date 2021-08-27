@@ -29,38 +29,18 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridLocacoesPendentes = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridLocacoesPendentes)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridLocacoesPendentes
-            // 
-            this.dataGridLocacoesPendentes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridLocacoesPendentes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
-            this.dataGridLocacoesPendentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridLocacoesPendentes.Location = new System.Drawing.Point(3, 3);
-            this.dataGridLocacoesPendentes.Name = "dataGridLocacoesPendentes";
-            this.dataGridLocacoesPendentes.RowHeadersWidth = 51;
-            this.dataGridLocacoesPendentes.RowTemplate.Height = 24;
-            this.dataGridLocacoesPendentes.Size = new System.Drawing.Size(793, 586);
-            this.dataGridLocacoesPendentes.TabIndex = 0;
             // 
             // TabelaLocacoesPendentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridLocacoesPendentes);
             this.Name = "TabelaLocacoesPendentes";
-            this.Size = new System.Drawing.Size(799, 589);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridLocacoesPendentes)).EndInit();
+            this.Size = new System.Drawing.Size(638, 508);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridLocacoesPendentes;
     }
 }

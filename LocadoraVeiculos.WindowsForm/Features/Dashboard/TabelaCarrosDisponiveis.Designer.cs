@@ -29,38 +29,18 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridCarrosDisponiveis = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCarrosDisponiveis)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridCarrosDisponiveis
-            // 
-            this.dataGridCarrosDisponiveis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridCarrosDisponiveis.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
-            this.dataGridCarrosDisponiveis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCarrosDisponiveis.Location = new System.Drawing.Point(3, 3);
-            this.dataGridCarrosDisponiveis.Name = "dataGridCarrosDisponiveis";
-            this.dataGridCarrosDisponiveis.RowHeadersWidth = 51;
-            this.dataGridCarrosDisponiveis.RowTemplate.Height = 24;
-            this.dataGridCarrosDisponiveis.Size = new System.Drawing.Size(804, 621);
-            this.dataGridCarrosDisponiveis.TabIndex = 0;
             // 
             // TabelaCarrosDisponiveis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridCarrosDisponiveis);
             this.Name = "TabelaCarrosDisponiveis";
-            this.Size = new System.Drawing.Size(810, 627);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCarrosDisponiveis)).EndInit();
+            this.Size = new System.Drawing.Size(601, 479);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridCarrosDisponiveis;
     }
 }

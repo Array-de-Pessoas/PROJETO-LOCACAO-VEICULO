@@ -35,9 +35,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
             // 
             // dataGridCarrosAlugados
             // 
-            this.dataGridCarrosAlugados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridCarrosAlugados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
             this.dataGridCarrosAlugados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCarrosAlugados.Location = new System.Drawing.Point(0, 0);
