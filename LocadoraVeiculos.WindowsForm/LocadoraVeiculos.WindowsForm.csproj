@@ -82,6 +82,12 @@
     <Compile Include="Features\CombustivelModule\TelaCombustivelForm.Designer.cs">
       <DependentUpon>TelaCombustivelForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\CreditosModule\TelaCreditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\CreditosModule\TelaCreditos.Designer.cs">
+      <DependentUpon>TelaCreditos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\Dashboard\TabelaCarrosAlugados.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\CombustivelModule\TelaCombustivelForm.resx">
       <DependentUpon>TelaCombustivelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\CreditosModule\TelaCreditos.resx">
+      <DependentUpon>TelaCreditos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Dashboard\TabelaCarrosAlugados.resx">
       <DependentUpon>TabelaCarrosAlugados.cs</DependentUpon>
@@ -575,9 +584,6 @@
     <None Include="Resources\Nova imagem para menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Editar imagem.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\2213.png" />
   </ItemGroup>
   <ItemGroup>
@@ -609,6 +615,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Planos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tipo de seguro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar imagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Array de pessoas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

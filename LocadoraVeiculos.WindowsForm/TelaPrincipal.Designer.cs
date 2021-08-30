@@ -33,6 +33,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.StatusAplicacao = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.cRÉDITOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTelaPrincipal = new System.Windows.Forms.Panel();
             this.btnAcessar = new System.Windows.Forms.Button();
             this.ImagemInicio = new System.Windows.Forms.PictureBox();
@@ -64,12 +65,20 @@ namespace LocadoraVeiculos.WindowsForm
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cRÉDITOSToolStripMenuItem});
             this.toolStripDropDownButton1.Image = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Btn_Opções;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
+            // 
+            // cRÉDITOSToolStripMenuItem
+            // 
+            this.cRÉDITOSToolStripMenuItem.Name = "cRÉDITOSToolStripMenuItem";
+            this.cRÉDITOSToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cRÉDITOSToolStripMenuItem.Text = "CRÉDITOS";
+            this.cRÉDITOSToolStripMenuItem.Click += new System.EventHandler(this.cRÉDITOSToolStripMenuItem_Click);
             // 
             // panelTelaPrincipal
             // 
@@ -140,6 +149,7 @@ namespace LocadoraVeiculos.WindowsForm
         private System.Windows.Forms.Panel panelTelaPrincipal;
         private System.Windows.Forms.PictureBox ImagemInicio;
         private System.Windows.Forms.Button btnAcessar;
+        private System.Windows.Forms.ToolStripMenuItem cRÉDITOSToolStripMenuItem;
     }
 }
 

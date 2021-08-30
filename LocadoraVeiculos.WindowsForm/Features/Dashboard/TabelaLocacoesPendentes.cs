@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LocadoraVeiculos.WindowsForm.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,26 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
         public TabelaLocacoesPendentes()
         {
             InitializeComponent();
+            dataGridLocacoesPendentes.ConfigurarGridZebrado();
+            dataGridLocacoesPendentes.ConfigurarGridSomenteLeitura();
+            dataGridLocacoesPendentes.Columns.AddRange(ObterColunas());
+        }
+
+        private DataGridViewColumn[] ObterColunas()
+        {
+            var colunas = new DataGridViewColumn[]
+            {
+                new DataGridViewTextBoxColumn { DataPropertyName = "CLIENTE", HeaderText = "CLIENTE"},
+
+                new DataGridViewTextBoxColumn { DataPropertyName = "VEICULO", HeaderText = "VEÍCULO"},
+
+                new DataGridViewTextBoxColumn { DataPropertyName = "SAIDA", HeaderText = "SAÍDA"},
+
+                new DataGridViewTextBoxColumn { DataPropertyName = "DATARETORNO", HeaderText = "DATA DE RETORNO"},
+
+            };
+
+            return colunas;
         }
     }
 }

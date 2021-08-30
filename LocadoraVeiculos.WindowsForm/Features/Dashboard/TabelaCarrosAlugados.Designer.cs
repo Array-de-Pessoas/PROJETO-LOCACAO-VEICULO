@@ -35,13 +35,16 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
             // 
             // dataGridCarrosAlugados
             // 
+            this.dataGridCarrosAlugados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridCarrosAlugados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
             this.dataGridCarrosAlugados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCarrosAlugados.Location = new System.Drawing.Point(0, 0);
             this.dataGridCarrosAlugados.Name = "dataGridCarrosAlugados";
             this.dataGridCarrosAlugados.RowHeadersWidth = 51;
             this.dataGridCarrosAlugados.RowTemplate.Height = 24;
-            this.dataGridCarrosAlugados.Size = new System.Drawing.Size(852, 684);
+            this.dataGridCarrosAlugados.Size = new System.Drawing.Size(793, 627);
             this.dataGridCarrosAlugados.TabIndex = 0;
             // 
             // TabelaCarrosAlugados
@@ -51,7 +54,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(75)))), ((int)(((byte)(125)))));
             this.Controls.Add(this.dataGridCarrosAlugados);
             this.Name = "TabelaCarrosAlugados";
-            this.Size = new System.Drawing.Size(852, 684);
+            this.Size = new System.Drawing.Size(794, 629);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCarrosAlugados)).EndInit();
             this.ResumeLayout(false);
 
