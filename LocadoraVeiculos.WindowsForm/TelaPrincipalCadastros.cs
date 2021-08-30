@@ -7,6 +7,8 @@ using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
+using LocadoraVeiculos.Dominio.LocacaoModule;
+using LocadoraVeiculos.Dominio.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Features.ClienteModule;
 using LocadoraVeiculos.WindowsForm.Features.CombustivelModule;
 using LocadoraVeiculos.WindowsForm.Features.Dashboard;
@@ -29,6 +31,7 @@ namespace LocadoraVeiculos.WindowsForm
 {
     public partial class TelaPrincipalCadastros : UserControl
     {
+     
         private ICadastravel operacoes;
         private OperacoesLogin login;
         public static TelaPrincipalCadastros Instancia;
@@ -39,13 +42,14 @@ namespace LocadoraVeiculos.WindowsForm
 
         public TelaPrincipalCadastros()
         {
+           
             InitializeComponent();
             Instancia = this;
             ConfiguracoesDeInicio();
             login = new OperacoesLogin();
             panelTelaContaRegistradas.Visible = false;
         }
-
+     
         public void ConfiguracoesDeInicio()
         {
             btnCarrosAlugados.Visible = false;
