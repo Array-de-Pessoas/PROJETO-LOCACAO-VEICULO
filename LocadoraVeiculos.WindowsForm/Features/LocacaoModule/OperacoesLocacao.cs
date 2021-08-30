@@ -1,6 +1,7 @@
 ﻿using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.WindowsForm;
+using LocadoraVeiculos.WindowsForm.Features.Dashboard;
 using LocadoraVeiculos.WindowsForm.Features.LocacaoModule;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
     {
         ControladorLocacao controladorLocacao;
         TabelaLocacaoControl tabelaLocacaoControl;
+      
         public OperacoesLocacao(ControladorLocacao controladorLocacao)
         {
             this.controladorLocacao = controladorLocacao;

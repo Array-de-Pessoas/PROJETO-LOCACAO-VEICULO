@@ -86,6 +86,43 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             FROM
                 [TBLOCACAO] T";
 
+        private const string sqlCarrosAlugados =
+             @"INSERT INTO [TBCARROSALUGADOS]
+                     (
+                        [NomeCliente],
+                        [IdVeiculo]
+                     )
+                     VALUES
+                     (
+                        @NomeCliente,
+                        @IdVeiculo
+                     )";
+
+        private const string sqlLocacoesPendentes =
+            @"INSERT INTO [TBLOCAOCESPENDENTES]
+                     (
+                        [NomeCliente],
+                        [IdVeiculo],
+                        [DataLocacao],
+                        [DataDevolucao]
+                     )
+                     VALUES
+                     (
+                        @NomeCliente,
+                        @IdVeiculo,
+                        @DataLocacao,
+                        @DataDevolucao
+                     )";
+
+        private const string sqlSelecionarTodasLocacoesPendentes =
+            @"SELECT 
+                [ID],
+                [NOMECLIENTE],
+                [IDVEICULO],
+                [DATALOCACAO],
+                [DATADEVOLUCAO]
+            FROM
+                [TBLOCACOESPENDETES] T";
         #endregion
         public override string Editar(int id, Locacao registro)
         {
@@ -143,9 +180,35 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             if (resultadoValidacao == "VALIDO")
             {
                 registro.Id = Db.Insert(sqlInserirlocacaoVeiculo, ObtemParametrosLocacao(registro));
+                registro.Id = Db.Insert(sqlCarrosAlugados, ObtemParametrosAlugados(registro));
+                registro.Id = Db.Insert(sqlLocacoesPendentes, ObtemParametrosLocacoesPendentes(registro));
             }
 
             return resultadoValidacao;
+        }
+
+        private Dictionary<string, object> ObtemParametrosLocacoesPendentes(Locacao registro)
+        {
+            var parametros = new Dictionary<string, object>();
+
+            parametros.Add("Id", registro.Id);
+            parametros.Add("NomeCliente", registro.id_cliente);
+            parametros.Add("IdVeiculo", registro.id_veiculo);
+            parametros.Add("DataLocacao", registro.dataLocacao);
+            parametros.Add("DataDevolucao", registro.dataDevolucao);
+
+            return parametros;
+        }
+
+        private Dictionary<string, object> ObtemParametrosAlugados(Locacao registro)
+        {
+            var parametros = new Dictionary<string, object>();
+
+            parametros.Add("Id", registro.Id);
+            parametros.Add("NomeCliente", registro.id_cliente);
+            parametros.Add("IdVeiculo", registro.id_veiculo);
+
+            return parametros;
         }
 
         public override Locacao SelecionarPorId(int id)
@@ -156,6 +219,7 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
         public override List<Locacao> SelecionarTodos()
         {
             return Db.GetAll(sqlSelecionarTodaslocacoes, ConverterEmLocacao);
+                 
         }
 
         private Locacao ConverterEmLocacao(IDataReader reader)

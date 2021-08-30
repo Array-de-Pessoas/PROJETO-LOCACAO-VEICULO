@@ -88,6 +88,7 @@
     <Compile Include="Features\CreditosModule\TelaCreditos.Designer.cs">
       <DependentUpon>TelaCreditos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\Dashboard\CarrosAlugados\OperacoesCarrosAlugados.cs" />
     <Compile Include="Features\Dashboard\TabelaCarrosAlugados.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -327,6 +328,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Features\Dashboard\CarrosDisponiveis\" />
+    <Folder Include="Features\Dashboard\LocacoesPendentes\" />
     <Folder Include="Libraries\" />
   </ItemGroup>
   <ItemGroup>

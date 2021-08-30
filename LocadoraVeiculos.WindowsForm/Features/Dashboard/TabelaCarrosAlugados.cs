@@ -1,4 +1,6 @@
-﻿using LocadoraVeiculos.WindowsForm.Shared;
+﻿using LocadoraVeiculos.Dominio.LocacaoModule;
+using LocadoraVeiculos.Dominio.VeiculoModule;
+using LocadoraVeiculos.WindowsForm.Shared;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,19 +27,28 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
         {
             var colunas = new DataGridViewColumn[]
             {
-                new DataGridViewTextBoxColumn { DataPropertyName = "CLIENTE", HeaderText = "CLIENTE"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "NOMECLIENTE", HeaderText = "CLIENTE"},
 
-                new DataGridViewTextBoxColumn { DataPropertyName = "NOME", HeaderText = "NOME"},
-
-                new DataGridViewTextBoxColumn { DataPropertyName = "MARCA", HeaderText = "MARCA"},
-
-                new DataGridViewTextBoxColumn { DataPropertyName = "GRUPOVEICULO", HeaderText = "GRUPO DO VEÍCULO"},
-
-                new DataGridViewTextBoxColumn { DataPropertyName = "PLACA", HeaderText = "PLACA"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "IDVEICULO", HeaderText = "VEÍCULO"},
 
             };
 
             return colunas;
+        }
+
+        public int ObtemIdSelecionado()
+        {
+            return dataGridCarrosAlugados.SelecionarId<int>();
+        }
+
+        public void AtualizarRegistros(List<Locacao> locacaos)
+        {
+            dataGridCarrosAlugados.Rows.Clear();
+
+            foreach (Locacao item in locacaos)
+            {
+                dataGridCarrosAlugados.Rows.Add(item.Id, item.id_cliente, item.id_veiculo);
+            }
         }
     }
 }

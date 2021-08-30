@@ -10,6 +10,7 @@ using LocadoraVeiculos.Controladores.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Features.ClienteModule;
 using LocadoraVeiculos.WindowsForm.Features.CombustivelModule;
 using LocadoraVeiculos.WindowsForm.Features.Dashboard;
+using LocadoraVeiculos.WindowsForm.Features.Dashboard.CarrosAlugados;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using LocadoraVeiculos.WindowsForm.Features.LoginModule;
@@ -272,6 +273,8 @@ namespace LocadoraVeiculos.WindowsForm
             btnCarrosDisponiveis.Visible = false;
             btnCarrosAlugados.Visible = false;
             btnLocacoesPendentes.Visible = false;
+            operacoes = new OperacoesCarrosAlugados(new ControladorLocacao());
+            ConfigurarPanelRegistros();
         }
 
         private void lOCAÇÃOToolStripMenuItem_Click(object sender, EventArgs e)
