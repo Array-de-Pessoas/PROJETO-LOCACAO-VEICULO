@@ -14,6 +14,7 @@ namespace LocadoraVeiculos.WindowsForm
     {
         public Dashboard()
         {
+            //lbl
             InitializeComponent();
         }
 

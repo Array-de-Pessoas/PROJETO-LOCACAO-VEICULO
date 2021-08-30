@@ -276,6 +276,7 @@ namespace LocadoraVeiculos.WindowsForm
 
         private void lOCAÇÃOToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             TxtCadastroSelecionado.Visible = true;
             TxtCadastroSelecionado.Text = "          LOCAÇÃO";
             panelTabelas.Controls.Clear();
