@@ -28,9 +28,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
         {
             var colunas = new DataGridViewColumn[]
             {
-                new DataGridViewTextBoxColumn { DataPropertyName = "NOMECLIENTE", HeaderText = "CLIENTE"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "NOMECLIENTE", HeaderText = "ID do cliente"},
 
-                new DataGridViewTextBoxColumn { DataPropertyName = "IDVEICULO", HeaderText = "VEÍCULO"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "IDVEICULO", HeaderText = "ID do veículo"},
 
             };
 
