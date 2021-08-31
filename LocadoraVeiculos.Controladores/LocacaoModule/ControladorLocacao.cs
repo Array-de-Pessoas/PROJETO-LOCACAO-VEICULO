@@ -227,7 +227,10 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             var dataLocacao = Convert.ToDateTime(reader["dataLocacao"]);
             var dataDevolucao = Convert.ToDateTime(reader["dataDevolucao"]);
             var plano = Convert.ToString(reader["plano"]);
-            var dataDevolucaoRealizada = Convert.ToDateTime(reader["dataDevolucaoRealizada"]);
+            DateTime dataDevolucaoRealizada = DateTime.MinValue;
+            if (reader["dataDevolucaoRealizada"] != DBNull.Value){
+                dataDevolucaoRealizada = Convert.ToDateTime(reader["dataDevolucaoRealizada"]);
+            }           
             var locacaoAtiva = Convert.ToInt32(reader["locacaoAtiva"]);
 
             Locacao locacao = new Locacao(id_cliente, id_veiculo, id_taxas, id_seguro, preco, dataLocacao, dataDevolucao, plano, dataDevolucaoRealizada, locacaoAtiva);

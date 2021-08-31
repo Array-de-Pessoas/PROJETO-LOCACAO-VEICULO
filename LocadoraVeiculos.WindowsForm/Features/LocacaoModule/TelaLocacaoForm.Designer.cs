@@ -48,6 +48,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.btnRegistraDevolucao = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -89,9 +90,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(229, 430);
+            this.btnCancelar.Location = new System.Drawing.Point(115, 416);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(101, 43);
+            this.btnCancelar.Size = new System.Drawing.Size(101, 57);
             this.btnCancelar.TabIndex = 51;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -102,9 +103,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.btnGravar.BackColor = System.Drawing.Color.White;
             this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGravar.Location = new System.Drawing.Point(336, 430);
+            this.btnGravar.Location = new System.Drawing.Point(336, 416);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(101, 43);
+            this.btnGravar.Size = new System.Drawing.Size(101, 57);
             this.btnGravar.TabIndex = 50;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
@@ -248,6 +249,19 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.pictureBox9.TabIndex = 64;
             this.pictureBox9.TabStop = false;
             // 
+            // btnRegistraDevolucao
+            // 
+            this.btnRegistraDevolucao.BackColor = System.Drawing.Color.White;
+            this.btnRegistraDevolucao.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnRegistraDevolucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistraDevolucao.Location = new System.Drawing.Point(222, 416);
+            this.btnRegistraDevolucao.Name = "btnRegistraDevolucao";
+            this.btnRegistraDevolucao.Size = new System.Drawing.Size(108, 57);
+            this.btnRegistraDevolucao.TabIndex = 65;
+            this.btnRegistraDevolucao.Text = "Registrar devolução";
+            this.btnRegistraDevolucao.UseVisualStyleBackColor = false;
+            this.btnRegistraDevolucao.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TelaLocacaoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +269,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.BackgroundImage = global::LocadoraVeiculos.WindowsForm.Properties.Resources.Cadastro_de_combustivel;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(492, 515);
+            this.Controls.Add(this.btnRegistraDevolucao);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox6);
@@ -311,5 +326,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Button btnRegistraDevolucao;
     }
 }

@@ -141,9 +141,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 
             locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 1);
 
-            carrosAlugados = new CarrosAlugados(id_cliente, id_veiculo);
+            //carrosAlugados = new CarrosAlugados(id_cliente, id_veiculo);
 
-            locacoes = new LocacoesPendentes(id_cliente, id_veiculo, dataLocacao, dataDevolucao);
+            //locacoes = new LocacoesPendentes(id_cliente, id_veiculo, dataLocacao, dataDevolucao);
 
             if (locacao.Validar() != "VALIDO")
             {
@@ -151,6 +151,22 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
                 TelaPrincipal.Instancia.AtualizarRodape(primeiroErro);
                 DialogResult = DialogResult.None;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double preco = 0;
+
+            string plano = Convert.ToString(cbPlano.SelectedValue);
+            int id_seguro = Convert.ToInt32(cbSeguro.SelectedValue);
+            int id_cliente = Convert.ToInt32(cbCliente.SelectedValue);
+            int id_veiculo = Convert.ToInt32(cbVeiculo.SelectedValue);
+            int id_taxa = Convert.ToInt32(cbTaxa.SelectedValue);
+
+            DateTime dataLocacao = dtLocacao.Value;
+            DateTime dataDevolucao = dtDevolucao.Value;
+
+            locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 0);
         }
     }
 }
