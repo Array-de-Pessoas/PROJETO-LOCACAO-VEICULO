@@ -86,7 +86,58 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             FROM
                 [TBLOCACAO] T";
 
+        private const string sqlCarrosAlugados =
+             @"INSERT INTO [TBCARROSALUGADOS]
+                     (
+                        [NomeCliente],
+                        [IdVeiculo]
+                     )
+                     VALUES
+                     (
+                        @NomeCliente,
+                        @IdVeiculo
+                     )";
+
+        private const string sqlSelecionarCarrosAlugados =
+            @"SELECT 
+                [ID],
+                [NOMECLIENTE],
+                [IDVEICULO]
+            FROM
+                [TBCARROSALUGADOS] T";
+
+        private const string sqlLocacoesPendentes =
+            @"INSERT INTO [TBLOCAOCESPENDENTES]
+                     (
+                        [NomeCliente],
+                        [IdVeiculo],
+                        [DataLocacao],
+                        [DataDevolucao]
+                     )
+                     VALUES
+                     (
+                        @NomeCliente,
+                        @IdVeiculo,
+                        @DataLocacao,
+                        @DataDevolucao
+                     )";
+
+        private const string sqlSelecionarTodasLocacoesPendentes =
+            @"SELECT 
+                [ID],
+                [NOMECLIENTE],
+                [IDVEICULO],
+                [DATALOCACAO],
+                [DATADEVOLUCAO]
+            FROM
+                [TBLOCACOESPENDETES] T";
         #endregion
+
+        public List<Locacao> Selecionar()
+        {
+            return Db.GetAll(sqlSelecionarCarrosAlugados, ConverterEmLocacao);
+        }
+
         public override string Editar(int id, Locacao registro)
         {
             string resultadoValidacao = registro.Validar();

@@ -1,9 +1,12 @@
 ﻿using LocadoraLocacaos.WindowsForm.Features.LocacaoModule;
+using LocadoraVeiculos.Controladores.CarrosAlugadosModule;
+using LocadoraVeiculos.Controladores.CarrosDisponiveisModule;
 using LocadoraVeiculos.Controladores.ClienteModule;
 using LocadoraVeiculos.Controladores.CombustivelModule;
 using LocadoraVeiculos.Controladores.FuncionarioModule;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
 using LocadoraVeiculos.Controladores.LocacaoModule;
+using LocadoraVeiculos.Controladores.LocacoesPendentesModule;
 using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
@@ -12,6 +15,9 @@ using LocadoraVeiculos.Dominio.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Features.ClienteModule;
 using LocadoraVeiculos.WindowsForm.Features.CombustivelModule;
 using LocadoraVeiculos.WindowsForm.Features.Dashboard;
+using LocadoraVeiculos.WindowsForm.Features.Dashboard.CarrosAlugadosModule;
+using LocadoraVeiculos.WindowsForm.Features.Dashboard.CarrosDisponiveisModule;
+using LocadoraVeiculos.WindowsForm.Features.Dashboard.LocacoesPendentesModule;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using LocadoraVeiculos.WindowsForm.Features.LoginModule;
@@ -276,6 +282,8 @@ namespace LocadoraVeiculos.WindowsForm
             btnCarrosDisponiveis.Visible = false;
             btnCarrosAlugados.Visible = false;
             btnLocacoesPendentes.Visible = false;
+            operacoes = new OperacoesCarrosAlugados(new ControladorCarrosAlugados());
+            ConfigurarPanelRegistros();
         }
 
         private void lOCAÇÃOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -326,6 +334,8 @@ namespace LocadoraVeiculos.WindowsForm
             btnCarrosDisponiveis.Visible = false;
             btnCarrosAlugados.Visible = false;
             btnLocacoesPendentes.Visible = false;
+            operacoes = new OperacoesCarrosDisponiveis(new ControladorCarrosDisponiveis());
+            ConfigurarPanelRegistros();
         }
 
         private void btnLocacoesPendentes_Click(object sender, EventArgs e)
@@ -335,6 +345,8 @@ namespace LocadoraVeiculos.WindowsForm
             btnCarrosDisponiveis.Visible = false;
             btnCarrosAlugados.Visible = false;
             btnLocacoesPendentes.Visible = false;
+            operacoes = new OperacoesLocacoesPendentes(new ControladorLocacoesPendentes());
+            ConfigurarPanelRegistros();
         }
     }
 }

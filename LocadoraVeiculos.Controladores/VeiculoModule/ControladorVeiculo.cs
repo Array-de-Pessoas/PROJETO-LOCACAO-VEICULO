@@ -87,6 +87,18 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
             WHERE 
                 [Id] = @Id";
 
+        private const string sqlAdicionarCarrosDisponiveis =
+            @"INSERT INTO TBCARROSDISPONIVEIS(
+                [Marca],
+                [IdGrupoVeiculos],
+                [Placa]
+                )
+            VALUES(
+                @Marca,
+                @IdGrupoVeiculos,
+                @Placa)
+            ";
+
         #endregion
         public override string Editar(int id, Veiculo registro)
         {

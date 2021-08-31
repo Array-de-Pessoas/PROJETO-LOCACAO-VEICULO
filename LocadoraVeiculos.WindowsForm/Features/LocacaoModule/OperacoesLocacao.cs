@@ -1,6 +1,9 @@
-﻿using LocadoraVeiculos.Controladores.LocacaoModule;
+﻿using LocadoraVeiculos.Controladores.CarrosAlugadosModule;
+using LocadoraVeiculos.Controladores.LocacaoModule;
+using LocadoraVeiculos.Controladores.LocacoesPendentesModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.WindowsForm;
+using LocadoraVeiculos.WindowsForm.Features.Dashboard;
 using LocadoraVeiculos.WindowsForm.Features.LocacaoModule;
 using System;
 using System.Collections.Generic;
@@ -13,13 +16,17 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
 {
     public class OperacoesLocacao : ICadastravel
     {
+        ControladorLocacoesPendentes locacoesPendentes = new ControladorLocacoesPendentes();
+        ControladorCarrosAlugados carrosAlugados = new ControladorCarrosAlugados();
         ControladorLocacao controladorLocacao;
         TabelaLocacaoControl tabelaLocacaoControl;
+      
         public OperacoesLocacao(ControladorLocacao controladorLocacao)
         {
             this.controladorLocacao = controladorLocacao;
             tabelaLocacaoControl = new TabelaLocacaoControl();
         }
+
         public void EditarRegistro()
         {
             int id = tabelaLocacaoControl.ObtemIdSelecionado();
@@ -87,10 +94,13 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
 
             if (telaLocacaoForm.ShowDialog() == DialogResult.OK)
             {
-                
                 telaLocacaoForm.Locacao.preco = controladorLocacao.CalcularValorLocacao(telaLocacaoForm.Locacao);
 
                 controladorLocacao.InserirNovo(telaLocacaoForm.Locacao);
+
+                carrosAlugados.InserirNovo(telaLocacaoForm.CarrosAlugados);
+
+                locacoesPendentes.InserirNovo(telaLocacaoForm.LocacoesPendentes);
 
                 List<Locacao> locacaos = controladorLocacao.SelecionarTodos();
 

@@ -14,4 +14,46 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="plano" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="aff0aee1-a9d2-439d-9f10-80a4a858c657" ChangeDateTime="08/30/2021 21:52:07">
+    <Property Name="ElementName" Value="[dbo].[TBCARROSALUGADOS].[NomeCliente]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBCARROSALUGADOS]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id_cliente" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="996877b0-b573-4e1b-98a5-6291a36c93e3" ChangeDateTime="08/30/2021 21:52:17">
+    <Property Name="ElementName" Value="[dbo].[TBCARROSALUGADOS].[Id_cliente]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBCARROSALUGADOS]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id_Cliente" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="74683b50-9020-4b96-8ce3-5144c5403de8" ChangeDateTime="08/30/2021 21:52:27">
+    <Property Name="ElementName" Value="[dbo].[TBCARROSALUGADOS].[IdVeiculo]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBCARROSALUGADOS]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id_Veiculo" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4c6dcc77-aaac-4d6f-bf8c-cfb4e10fece2" ChangeDateTime="08/30/2021 21:52:55">
+    <Property Name="ElementName" Value="[dbo].[TBCARROSALUGADOS].[Id_Cliente]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBCARROSALUGADOS]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_cliente" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e3d5065f-cdb0-4cbc-8411-c4cc69721d12" ChangeDateTime="08/30/2021 21:53:14">
+    <Property Name="ElementName" Value="[dbo].[TBCARROSALUGADOS].[Id_Veiculo]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBCARROSALUGADOS]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="d_VeiculoI" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="982e814f-0e4c-4329-a502-d9c5a926e8ef" ChangeDateTime="08/30/2021 21:53:43">
+    <Property Name="ElementName" Value="[dbo].[TBCARROSALUGADOS].[d_VeiculoI]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBCARROSALUGADOS]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_veiculo" />
+  </Operation>
 </Operations>

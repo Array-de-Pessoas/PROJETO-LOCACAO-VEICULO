@@ -62,11 +62,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarrosAlugadosModule\ControladorCarrosAlugados.cs" />
+    <Compile Include="CarrosDisponiveisModule\ControladorCarrosDisponiveis.cs" />
     <Compile Include="ClienteModule\ControladorCliente.cs" />
     <Compile Include="CombustivelModule\ControladorCombustivel.cs" />
     <Compile Include="FuncionarioModule\ControladorFuncionario.cs" />
     <Compile Include="GrupoVeiculosModule\ControladorGrupoVeiculos.cs" />
     <Compile Include="LocacaoModule\ControladorLocacao.cs" />
+    <Compile Include="LocacoesPendentesModule\ControladorLocacoesPendentes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SegurosModule\ControladorSeguros.cs" />
     <Compile Include="Shared\Controlador.cs" />
