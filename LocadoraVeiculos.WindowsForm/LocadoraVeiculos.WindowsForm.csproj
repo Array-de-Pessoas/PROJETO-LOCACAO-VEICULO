@@ -88,23 +88,25 @@
     <Compile Include="Features\CreditosModule\TelaCreditos.Designer.cs">
       <DependentUpon>TelaCreditos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Features\Dashboard\CarrosAlugados\OperacoesCarrosAlugados.cs" />
-    <Compile Include="Features\Dashboard\TabelaCarrosAlugados.cs">
+    <Compile Include="Features\Dashboard\CarrosAlugadosModule\OperacoesCarrosAlugados.cs" />
+    <Compile Include="Features\Dashboard\CarrosDisponiveisModule\OperacoesCarrosDisponiveis.cs" />
+    <Compile Include="Features\Dashboard\CarrosAlugadosModule\TabelaCarrosAlugados.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Features\Dashboard\TabelaCarrosAlugados.Designer.cs">
+    <Compile Include="Features\Dashboard\CarrosAlugadosModule\TabelaCarrosAlugados.Designer.cs">
       <DependentUpon>TabelaCarrosAlugados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Features\Dashboard\TabelaCarrosDisponiveis.cs">
+    <Compile Include="Features\Dashboard\CarrosDisponiveisModule\TabelaCarrosDisponiveis.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Features\Dashboard\TabelaCarrosDisponiveis.Designer.cs">
+    <Compile Include="Features\Dashboard\CarrosDisponiveisModule\TabelaCarrosDisponiveis.Designer.cs">
       <DependentUpon>TabelaCarrosDisponiveis.cs</DependentUpon>
     </Compile>
-    <Compile Include="Features\Dashboard\TabelaLocacoesPendentes.cs">
+    <Compile Include="Features\Dashboard\LocacoesPendentesModule\OperacoesLocacoesPendentes.cs" />
+    <Compile Include="Features\Dashboard\LocacoesPendentesModule\TabelaLocacoesPendentes.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Features\Dashboard\TabelaLocacoesPendentes.Designer.cs">
+    <Compile Include="Features\Dashboard\LocacoesPendentesModule\TabelaLocacoesPendentes.Designer.cs">
       <DependentUpon>TabelaLocacoesPendentes.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\FuncionarioModule\ConfiguracaoFuncionarioTooBox.cs" />
@@ -238,13 +240,13 @@
     <EmbeddedResource Include="Features\CreditosModule\TelaCreditos.resx">
       <DependentUpon>TelaCreditos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Features\Dashboard\TabelaCarrosAlugados.resx">
+    <EmbeddedResource Include="Features\Dashboard\CarrosAlugadosModule\TabelaCarrosAlugados.resx">
       <DependentUpon>TabelaCarrosAlugados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Features\Dashboard\TabelaCarrosDisponiveis.resx">
+    <EmbeddedResource Include="Features\Dashboard\CarrosDisponiveisModule\TabelaCarrosDisponiveis.resx">
       <DependentUpon>TabelaCarrosDisponiveis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Features\Dashboard\TabelaLocacoesPendentes.resx">
+    <EmbeddedResource Include="Features\Dashboard\LocacoesPendentesModule\TabelaLocacoesPendentes.resx">
       <DependentUpon>TabelaLocacoesPendentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\LocacaoModule\TabelaLocacaoControl.resx">
@@ -328,8 +330,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\Dashboard\CarrosDisponiveis\" />
-    <Folder Include="Features\Dashboard\LocacoesPendentes\" />
     <Folder Include="Libraries\" />
   </ItemGroup>
   <ItemGroup>

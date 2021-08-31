@@ -138,21 +138,8 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
             if (resultadoValidacao == "VALIDO")
             {
                 registro.Id = Db.Insert(sqlInserirVeiculo, ObtemParametrosVeiculo(registro));
-                registro.Id = Db.Insert(sqlAdicionarCarrosDisponiveis, ObtemParametrosCarrosDisponiveis(registro));
             }
             return resultadoValidacao;
-        }
-
-        private Dictionary<string, object> ObtemParametrosCarrosDisponiveis(Veiculo veiculo)
-        {
-            var parametros = new Dictionary<string, object>();
-
-            parametros.Add("Id", veiculo.Id);
-            parametros.Add("Marca", veiculo.marca);
-            parametros.Add("IdGrupoVeiculos", veiculo.idGrupoVeiculo);
-            parametros.Add("Placa", veiculo.Placa);
-
-            return parametros;
         }
 
         public override Veiculo SelecionarPorId(int id)

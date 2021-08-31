@@ -1,4 +1,5 @@
-﻿using LocadoraVeiculos.Dominio.LocacaoModule;
+﻿using LocadoraVeiculos.Dominio.CarrosAlugadosModule;
+using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Shared;
 using System;
@@ -41,13 +42,13 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
             return dataGridCarrosAlugados.SelecionarId<int>();
         }
 
-        public void AtualizarRegistros(List<Locacao> locacaos)
+        public void AtualizarRegistros(List<CarrosAlugados> carros)
         {
             dataGridCarrosAlugados.Rows.Clear();
 
-            foreach (Locacao item in locacaos)
+            foreach (CarrosAlugados item in carros)
             {
-                dataGridCarrosAlugados.Rows.Add(item.Id, item.id_cliente, item.id_veiculo);
+                dataGridCarrosAlugados.Rows.Add(item.Id, item.IdCliente, item.IdVeiculo);
             }
         }
     }

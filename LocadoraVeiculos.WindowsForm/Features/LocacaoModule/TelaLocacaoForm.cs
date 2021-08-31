@@ -3,7 +3,9 @@ using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
 using LocadoraVeiculos.Dominio;
+using LocadoraVeiculos.Dominio.CarrosAlugadosModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
+using LocadoraVeiculos.Dominio.LocacoesPendentesModule;
 using LocadoraVeiculos.Dominio.SegurosModule;
 using LocadoraVeiculos.Dominio.TaxasServicosModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
@@ -27,6 +29,8 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         ControladorTaxasServicos controladorTaxasServicos;
         ControladorSeguros controladorSeguros;
         Locacao locacao;
+        CarrosAlugados carrosAlugados;
+        LocacoesPendentes locacoes;
         public TelaLocacaoForm()
         {
             InitializeComponent();
@@ -54,6 +58,35 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
                 cbPlano.ValueMember = locacao.plano;
             }
         }
+
+        public CarrosAlugados CarrosAlugados
+        {
+            get { return carrosAlugados; }
+
+            set
+            {
+                carrosAlugados = value;
+
+                cbCliente.ValueMember = carrosAlugados.IdCliente.ToString();
+                cbVeiculo.ValueMember = carrosAlugados.IdVeiculo.ToString();
+            }
+        }
+
+        public LocacoesPendentes LocacoesPendentes
+        {
+            get { return locacoes; }
+            set
+            {
+                locacoes = value;
+
+                cbCliente.ValueMember = locacoes.IdCliente.ToString();
+                cbVeiculo.ValueMember = locacoes.IdVeiculos.ToString();
+                dtLocacao.Value = Convert.ToDateTime(locacoes.DataLocacao.ToShortDateString());
+                dtDevolucao.Value = Convert.ToDateTime(locacoes.DataDevolucao.ToShortDateString());
+
+            }
+        }
+
         private void TelaLocacaoForm_Load(object sender, EventArgs e)
         {
             CarregarComboBoxs();
@@ -107,6 +140,10 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             DateTime dataDevolucao = dtDevolucao.Value;
 
             locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano);
+
+            carrosAlugados = new CarrosAlugados(id_cliente, id_veiculo);
+
+            locacoes = new LocacoesPendentes(id_cliente, id_veiculo, dataLocacao, dataDevolucao);
 
             if (locacao.Validar() != "VALIDO")
             {
