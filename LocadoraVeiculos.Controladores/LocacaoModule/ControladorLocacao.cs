@@ -30,7 +30,9 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
                         [dataLocacao],
                         [dataDevolucao],
                         [preco],
-                        [plano]
+                        [plano],
+                        [dataDevolucaoRealizada],
+                        [locacaoAtiva]
                      )
                      VALUES
                      (
@@ -41,7 +43,9 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
                         @dataLocacao,
                         @dataDevolucao,
                         @preco,
-                        @plano
+                        @plano,
+                        @dataDevolucaoRealizada,
+                        @locacaoAtiva
                      )";
 
         private const string sqlEditarLocacao =
@@ -54,7 +58,9 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
                         [dataLocacao] =         @dataLocacao,
                         [dataDevolucao] =          @dataDevolucao,
                         [preco] =       @preco,
-                        [plano] = @plano
+                        [plano] = @plano,
+                        [dataDevolucaoRealizada] = @dataDevolucaoRealizada,
+                        [locacaoAtiva] = @locacaoAtiva
                        
                     WHERE 
                         Id = @Id";
@@ -164,6 +170,8 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             parametros.Add("dataLocacao", registro.dataLocacao);
             parametros.Add("dataDevolucao", registro.dataDevolucao);
             parametros.Add("plano", registro.plano);
+            parametros.Add("locacaoAtiva", registro.plano);
+            parametros.Add("dataDevolucaoRealizada", registro.plano);
 
             return parametros;
         }
@@ -219,7 +227,10 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             var dataLocacao = Convert.ToDateTime(reader["dataLocacao"]);
             var dataDevolucao = Convert.ToDateTime(reader["dataDevolucao"]);
             var plano = Convert.ToString(reader["plano"]);
-            Locacao locacao = new Locacao(id_cliente, id_veiculo, id_taxas, id_seguro, preco, dataLocacao, dataDevolucao, plano);
+            var dataDevolucaoRealizada = Convert.ToDateTime(reader["dataDevolucaoRealizada"]);
+            var locacaoAtiva = Convert.ToBoolean(reader["locacaoAtiva"]);
+
+            Locacao locacao = new Locacao(id_cliente, id_veiculo, id_taxas, id_seguro, preco, dataLocacao, dataDevolucao, plano, dataDevolucaoRealizada, locacaoAtiva);
 
             locacao.Id = Convert.ToInt32(reader["Id"]);
 
@@ -254,7 +265,6 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             else if(locacao.plano == "Controlado")
             {
                 valorDiaria = grupoVeiculoDaLocacao.ValorDiariaPlanoControlado;
-
             }         
 
             return (diasAlugado.Days * valorDiaria) + Convert.ToDouble(taxasDaLocacao.Valor) + (Convert.ToDouble(seguroDaLocacao.Valor)*diasAlugado.Days);

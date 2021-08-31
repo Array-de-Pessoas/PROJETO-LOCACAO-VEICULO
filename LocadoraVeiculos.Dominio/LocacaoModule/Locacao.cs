@@ -15,10 +15,12 @@ namespace LocadoraVeiculos.Dominio.LocacaoModule
         public int id_seguro;
         public DateTime dataLocacao;
         public DateTime dataDevolucao;
+        public DateTime dataDevolucaoRealizada;
+        public bool locacaoAtiva;
         public double preco;
         public string plano;
 
-        public Locacao(int id_cliente, int id_veiculo, int id_taxa, int id_seguro, double preco, DateTime dataLocacao, DateTime dataDevolucao, string plano)
+        public Locacao(int id_cliente, int id_veiculo, int id_taxa, int id_seguro, double preco, DateTime dataLocacao, DateTime dataDevolucao, string plano, DateTime dataDevolucaoRealizada, bool locacaoAtiva)
         {
             this.plano = plano;
             this.id_cliente = id_cliente;
@@ -27,6 +29,8 @@ namespace LocadoraVeiculos.Dominio.LocacaoModule
             this.id_taxa = id_taxa;
             this.preco = preco;
             this.dataLocacao = dataLocacao;
+            this.dataDevolucaoRealizada = dataDevolucaoRealizada;
+            this.locacaoAtiva = locacaoAtiva;
             this.dataDevolucao = dataDevolucao;
         }
 
