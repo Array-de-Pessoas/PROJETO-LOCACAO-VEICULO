@@ -16,7 +16,7 @@ namespace LocadoraVeiculos.Tests.LocacaoModule
         public void deveRetornarVeiculoInvalido()
         {
             //arrange
-            Locacao locacaoInvalida = new Locacao(0, 1, 1, 1,1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE");
+            Locacao locacaoInvalida = new Locacao(0, 1, 1, 1,1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE", DateTime.Now.Date, 1);
             //act
             string resultado = locacaoInvalida.Validar();
            // assert
@@ -27,7 +27,7 @@ namespace LocadoraVeiculos.Tests.LocacaoModule
         public void deveRetornarVeiculoValido()
         {
             //arrange    
-            Locacao locacaoInvalida = new Locacao(1, 1, 1, 1, 1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE");
+            Locacao locacaoInvalida = new Locacao(1, 1, 1, 1, 1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE",DateTime.Now.Date, 1);
             //act
             string resultado = locacaoInvalida.Validar();
             //assert

@@ -170,8 +170,8 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             parametros.Add("dataLocacao", registro.dataLocacao);
             parametros.Add("dataDevolucao", registro.dataDevolucao);
             parametros.Add("plano", registro.plano);
-            parametros.Add("locacaoAtiva", registro.plano);
-            parametros.Add("dataDevolucaoRealizada", registro.plano);
+            parametros.Add("locacaoAtiva", registro.locacaoAtiva);
+            parametros.Add("dataDevolucaoRealizada", registro.dataDevolucaoRealizada);
 
             return parametros;
         }
@@ -228,7 +228,7 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             var dataDevolucao = Convert.ToDateTime(reader["dataDevolucao"]);
             var plano = Convert.ToString(reader["plano"]);
             var dataDevolucaoRealizada = Convert.ToDateTime(reader["dataDevolucaoRealizada"]);
-            var locacaoAtiva = Convert.ToBoolean(reader["locacaoAtiva"]);
+            var locacaoAtiva = Convert.ToInt32(reader["locacaoAtiva"]);
 
             Locacao locacao = new Locacao(id_cliente, id_veiculo, id_taxas, id_seguro, preco, dataLocacao, dataDevolucao, plano, dataDevolucaoRealizada, locacaoAtiva);
 

@@ -16,11 +16,11 @@ namespace LocadoraVeiculos.Dominio.LocacaoModule
         public DateTime dataLocacao;
         public DateTime dataDevolucao;
         public DateTime dataDevolucaoRealizada;
-        public bool locacaoAtiva;
+        public int locacaoAtiva;
         public double preco;
         public string plano;
 
-        public Locacao(int id_cliente, int id_veiculo, int id_taxa, int id_seguro, double preco, DateTime dataLocacao, DateTime dataDevolucao, string plano, DateTime dataDevolucaoRealizada, bool locacaoAtiva)
+        public Locacao(int id_cliente, int id_veiculo, int id_taxa, int id_seguro, double preco, DateTime dataLocacao, DateTime dataDevolucao, string plano, DateTime dataDevolucaoRealizada, int locacaoAtiva)
         {
             this.plano = plano;
             this.id_cliente = id_cliente;

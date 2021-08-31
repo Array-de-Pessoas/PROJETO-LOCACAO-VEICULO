@@ -139,7 +139,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             DateTime dataLocacao = dtLocacao.Value;
             DateTime dataDevolucao = dtDevolucao.Value;
 
-            locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano);
+            locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 1);
 
             carrosAlugados = new CarrosAlugados(id_cliente, id_veiculo);
 
