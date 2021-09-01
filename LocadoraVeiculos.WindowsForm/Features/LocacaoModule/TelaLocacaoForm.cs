@@ -141,9 +141,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 
             locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 1);
 
-            //carrosAlugados = new CarrosAlugados(id_cliente, id_veiculo);
+            carrosAlugados = new CarrosAlugados(id_cliente, id_veiculo);
 
-            //locacoes = new LocacoesPendentes(id_cliente, id_veiculo, dataLocacao, dataDevolucao);
+            locacoes = new LocacoesPendentes(id_cliente, id_veiculo, dataLocacao, dataDevolucao);
 
             if (locacao.Validar() != "VALIDO")
             {

@@ -15,14 +15,14 @@ namespace LocadoraVeiculos.Controladores.LocacoesPendentesModule
              @"INSERT INTO [TBLOCACOESPENDENTES]
                      (
                         [NOMECLIENTE],
-                        [NOMEVEICULO],
+                        [IDVEICULO],
                         [DATALOCACAO],
                         [DATADEVOLUCAO]
                      )
                      VALUES
                      (
                         @NOMECLIENTE,
-                        @NOMEVEICULO,
+                        @IDVEICULO,
                         @DATALOCACAO,
                         @DATADEVOLUCAO
                      )";
@@ -31,7 +31,7 @@ namespace LocadoraVeiculos.Controladores.LocacoesPendentesModule
             @"SELECT 
                 [ID],
                 [NOMECLIENTE],
-                [NOMEVEICULO],
+                [IDVEICULO],
                 [DATALOCACAO],
                 [DATADEVOLUCAO]
             FROM
@@ -70,7 +70,7 @@ namespace LocadoraVeiculos.Controladores.LocacoesPendentesModule
 
             parametros.Add("Id", registro.Id);
             parametros.Add("NOMECLIENTE", registro.IdCliente);
-            parametros.Add("NOMEVEICULO", registro.IdVeiculos);
+            parametros.Add("IDVEICULO", registro.IdVeiculos);
             parametros.Add("DATALOCACAO", registro.DataLocacao);
             parametros.Add("DATADEVOLUCAO", registro.DataDevolucao);
 
@@ -90,7 +90,7 @@ namespace LocadoraVeiculos.Controladores.LocacoesPendentesModule
         private LocacoesPendentes ConverterEmLocacoes(IDataReader reader)
         {
             var idCliente = Convert.ToInt32(reader["NOMECLIENTE"]);
-            var idVeiculo = Convert.ToInt32(reader["NOMEVEICULO"]);
+            var idVeiculo = Convert.ToInt32(reader["IDVEICULO"]);
             DateTime Datalocacao = Convert.ToDateTime(reader["DATALOCACAO"]);
             DateTime Datadevolucao = Convert.ToDateTime(reader["DATADEVOLUCAO"]);
 

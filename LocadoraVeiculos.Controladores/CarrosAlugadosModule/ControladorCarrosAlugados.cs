@@ -15,20 +15,20 @@ namespace LocadoraVeiculos.Controladores.CarrosAlugadosModule
         private const string sqlCarrosAlugados =
              @"INSERT INTO [TBCARROSALUGADOS]
                      (
-                        [NomeCliente],
-                        [IdVeiculo]
+                        [Id_Cliente],
+                        [Id_Veiculo]
                      )
                      VALUES
                      (
-                        @NomeCliente,
-                        @IdVeiculo
+                        @Id_Cliente,
+                        @Id_Veiculo
                      )";
 
         private const string sqlSelecionarCarrosAlugados =
             @"SELECT 
                 [ID],
-                [NOMECLIENTE],
-                [IDVEICULO]
+                [Id_Cliente],
+                [Id_Veiculo]
             FROM
                 [TBCARROSALUGADOS] T";
 
@@ -64,8 +64,8 @@ namespace LocadoraVeiculos.Controladores.CarrosAlugadosModule
             var parametros = new Dictionary<string, object>();
 
             parametros.Add("Id", registro.Id);
-            parametros.Add("NOMECLIENTE", registro.IdCliente);
-            parametros.Add("IDVEICULO", registro.IdVeiculo);
+            parametros.Add("Id_Cliente", registro.IdCliente);
+            parametros.Add("Id_Veiculo", registro.IdVeiculo);
            
             return parametros;
         }
@@ -82,8 +82,8 @@ namespace LocadoraVeiculos.Controladores.CarrosAlugadosModule
 
         private CarrosAlugados ConverterEmCarrosAlugados(IDataReader reader)
         {
-            var id_cliente = Convert.ToInt32(reader["NOMECLIENTE"]);
-            var id_veiculo = Convert.ToInt32(reader["IDVEICULO"]);
+            var id_cliente = Convert.ToInt32(reader["Id_Cliente"]);
+            var id_veiculo = Convert.ToInt32(reader["Id_Veiculo"]);
            
             CarrosAlugados carros = new CarrosAlugados(id_cliente, id_veiculo);
 

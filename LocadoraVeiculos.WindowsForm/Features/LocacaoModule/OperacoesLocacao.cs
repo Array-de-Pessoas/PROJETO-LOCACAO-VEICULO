@@ -97,9 +97,9 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
 
                 controladorLocacao.InserirNovo(telaLocacaoForm.Locacao);
 
-                //carrosAlugados.InserirNovo(telaLocacaoForm.CarrosAlugados);
+                carrosAlugados.InserirNovo(telaLocacaoForm.CarrosAlugados);
 
-                //locacoesPendentes.InserirNovo(telaLocacaoForm.LocacoesPendentes);
+                locacoesPendentes.InserirNovo(telaLocacaoForm.LocacoesPendentes);
 
                 List<Locacao> locacaos = controladorLocacao.SelecionarTodos();
 
