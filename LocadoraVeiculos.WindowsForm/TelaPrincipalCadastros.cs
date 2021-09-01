@@ -18,6 +18,7 @@ using LocadoraVeiculos.WindowsForm.Features.Dashboard;
 using LocadoraVeiculos.WindowsForm.Features.Dashboard.CarrosAlugadosModule;
 using LocadoraVeiculos.WindowsForm.Features.Dashboard.CarrosDisponiveisModule;
 using LocadoraVeiculos.WindowsForm.Features.Dashboard.LocacoesPendentesModule;
+using LocadoraVeiculos.WindowsForm.Features.Devolucao;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using LocadoraVeiculos.WindowsForm.Features.LoginModule;
@@ -346,6 +347,18 @@ namespace LocadoraVeiculos.WindowsForm
             btnCarrosAlugados.Visible = false;
             btnLocacoesPendentes.Visible = false;
             operacoes = new OperacoesLocacoesPendentes(new ControladorLocacoesPendentes());
+            ConfigurarPanelRegistros();
+        }
+
+        private void CadastroDevolucao_Click(object sender, EventArgs e)
+        {
+            btnAdicionar.Visible = false;
+            btnExcluir.Visible = false;
+            btnEditar.Visible = false;
+            ImagemLinha.Visible = false;
+            ImagemLinha2.Visible = false;
+            TxtCadastroSelecionado.Text = "        DEVOLUÇÃO";
+            operacoes = new OperacoesDevolucao(new ControladorLocacao());
             ConfigurarPanelRegistros();
         }
     }

@@ -109,6 +109,13 @@
     <Compile Include="Features\Dashboard\LocacoesPendentesModule\TabelaLocacoesPendentes.Designer.cs">
       <DependentUpon>TabelaLocacoesPendentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\Devolucao\OperacoesDevolucao.cs" />
+    <Compile Include="Features\Devolucao\TabelaDevolucao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Devolucao\TabelaDevolucao.Designer.cs">
+      <DependentUpon>TabelaDevolucao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\FuncionarioModule\ConfiguracaoFuncionarioTooBox.cs" />
     <Compile Include="Features\FuncionarioModule\OperacoesFuncionario.cs" />
     <Compile Include="Features\GrupoVeiculosModule\TelaGrupoDeVeiculosForm.cs">
@@ -248,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Dashboard\LocacoesPendentesModule\TabelaLocacoesPendentes.resx">
       <DependentUpon>TabelaLocacoesPendentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Devolucao\TabelaDevolucao.resx">
+      <DependentUpon>TabelaDevolucao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\LocacaoModule\TabelaLocacaoControl.resx">
       <DependentUpon>TabelaLocacaoControl.cs</DependentUpon>
