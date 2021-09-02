@@ -12,6 +12,7 @@ namespace LocadoraVeiculos.Dominio
         public string NomeCliente { get; }
         public string Endereco { get;}
         public string Telefone { get;}
+        public string Email { get; }
         public string TipoDeIdentidade { get;}
         public string CPFDoCondutor { get;}
         public string RGDoCondutor { get;}
@@ -20,11 +21,12 @@ namespace LocadoraVeiculos.Dominio
         public DateTime DataValidadeCNH { get;}
 
         
-        public Cliente(string nomeCliente, string endereco, string telefone, string tipoDeIdentidade, string nomeDoCondutor, string cpfCondutor, string rGDoCondutor, string cNH, DateTime dataValidadeCNH)
+        public Cliente(string nomeCliente, string endereco, string telefone, string email, string tipoDeIdentidade, string nomeDoCondutor, string cpfCondutor, string rGDoCondutor, string cNH, DateTime dataValidadeCNH)
         {
             NomeCliente = nomeCliente;
             Endereco = endereco;
             Telefone = telefone;
+            Email = email;
             TipoDeIdentidade = tipoDeIdentidade;
             NomeDoCondutor = nomeDoCondutor;
             CNH = cNH;
@@ -40,6 +42,7 @@ namespace LocadoraVeiculos.Dominio
                    NomeCliente == other.NomeCliente &&
                    Endereco == other.Endereco &&
                    Telefone == other.Telefone &&
+                   Email == other.Email &&
                    TipoDeIdentidade == other.TipoDeIdentidade &&
                    NomeDoCondutor == other.NomeDoCondutor &&
                    CNH == other.CNH &&
@@ -55,6 +58,7 @@ namespace LocadoraVeiculos.Dominio
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(NomeCliente);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Endereco);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Telefone);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Email);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(TipoDeIdentidade);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(NomeDoCondutor);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(CNH);
@@ -79,6 +83,10 @@ namespace LocadoraVeiculos.Dominio
             else if (string.IsNullOrEmpty(Telefone))
             {
                 return "                                                     O campo telefone não pode estar vazio";
+            }
+            else if (string.IsNullOrEmpty(Email))
+            {
+                return "                                                     O campo email não pode estar vazio";
             }
             else if (string.IsNullOrEmpty(TipoDeIdentidade))
             {

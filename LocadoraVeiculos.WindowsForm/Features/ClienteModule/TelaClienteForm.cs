@@ -38,6 +38,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.ClienteModule
                 txtNomeCliente.Text = cliente.NomeCliente;
                 txtEndereco.Text = cliente.Endereco;
                 txtTelefone.Text = cliente.Telefone;
+                txtEmail.Text = cliente.Email;
                 TipoId = cliente.TipoDeIdentidade;
                 txtNomeCondutor.Text = cliente.NomeDoCondutor;
                 txtCPFcondutor.Text = cliente.CPFDoCondutor;
@@ -61,6 +62,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.ClienteModule
             string NomeCliente = txtNomeCliente.Text;
             string Endereco = txtEndereco.Text;
             string Telefone = txtTelefone.Text;
+            string Email = txtEmail.Text;
             string Tipoid = TipoId;
             string NomeCondutor = txtNomeCondutor.Text;
             string CNH = txtCNH.Text;
@@ -68,7 +70,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.ClienteModule
             string RG = txtRG.Text;
             DateTime Validacao = dateTimeValidacaoCNH.Value;
 
-            cliente = new Cliente(NomeCliente,Endereco,Telefone,Tipoid,NomeCondutor,CNH,CPFCondutor,RG,Validacao);
+            cliente = new Cliente(NomeCliente,Endereco,Telefone,Email,Tipoid,NomeCondutor,CNH,CPFCondutor,RG,Validacao);
 
             string resultadoValidacao = cliente.Validar();
 
