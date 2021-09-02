@@ -14,7 +14,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveValidarTodosOsCampos()
         {
-            var cliente = new Cliente("Lucas", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var cliente = new Cliente("Lucas", "Lages SC", "30023254", "juca@gmail.com", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
 
             var resultadoValidacao = cliente.Validar();
 
@@ -24,7 +24,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveValidarNomeCliente()
         {
-            var cliente = new Cliente("", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var cliente = new Cliente("", "Lages SC", "30023254", "juca@gmail.com", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
 
             var resultadoValidacao = cliente.Validar();
 
@@ -34,7 +34,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveValidarEndereco()
         {
-            var cliente = new Cliente("Lucas", "", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var cliente = new Cliente("Lucas", "", "30023254", "juca@gmail.com", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
 
             var resultadoValidacao = cliente.Validar();
 
@@ -44,7 +44,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveValidarTelefone()
         {
-            var cliente = new Cliente("Lucas", "Lages SC", "", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var cliente = new Cliente("Lucas", "Lages SC", "", "juca@gmail.com", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
 
             var resultadoValidacao = cliente.Validar();
 
@@ -54,7 +54,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveValidarCPFouCNPJ()
         {
-            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "juca@gmail.com", "",  "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
 
             var resultadoValidacao = cliente.Validar();
 
@@ -64,7 +64,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveValidarNomeCondutor()
         {
-            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "CPF", "", "3222548", "6.111.792", "5547", DateTime.Now);
+            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "juca@gmail.com", "CPF", "", "3222548", "6.111.792", "5547", DateTime.Now);
 
             var resultadoValidacao = cliente.Validar();
 
@@ -74,7 +74,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveValidarCPFcondutor()
         {
-            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "CPF", "Lucas", "", "6.111.792", "5547", DateTime.Now);
+            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "juca@gmail.com", "CPF", "Lucas", "", "6.111.792", "5547", DateTime.Now);
 
             var resultadoValidacao = cliente.Validar();
 
@@ -84,7 +84,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveValidarRG()
         {
-            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "CPF", "Lucas", "554874554", "", "5547", DateTime.Now);
+            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "juca@gmail.com", "CPF", "Lucas", "554874554", "", "5547", DateTime.Now);
 
             var resultadoValidacao = cliente.Validar();
 
@@ -94,7 +94,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveValidarCNH()
         {
-            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "CPF", "Lucas", "554874554", "554877", "", DateTime.Now);
+            var cliente = new Cliente("Lucas", "Lages SC", "45454554", "juca@gmail.com", "CPF", "Lucas", "554874554", "554877", "", DateTime.Now);
 
             var resultadoValidacao = cliente.Validar();
 

@@ -25,7 +25,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         public void DeveInserir()
         {
             //arrange
-            var novoCliente = new Cliente("Lucas","Lages SC","30023254","CPF","Lucas","3222548","6.111.792","5547", DateTime.Now);
+            var novoCliente = new Cliente("Lucas","Lages SC","30023254","juca@gmail.com","CPF","Lucas","3222548","6.111.792","5547", DateTime.Now);
 
             //action
             controlador.InserirNovo(novoCliente);
@@ -38,10 +38,10 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveAtualizar()
         {
-            var cliente = new Cliente("Lucas", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var cliente = new Cliente("Lucas", "Lages SC", "30023254", "juca@gmail.com", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
             controlador.InserirNovo(cliente);
 
-            var novoCliente = new Cliente("João", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var novoCliente = new Cliente("João", "Lages SC", "30023254", "juca@gmail.com", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
 
             controlador.Editar(cliente.Id, novoCliente);
 
@@ -52,7 +52,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveExcluir()
         {
-            var cliente = new Cliente("Lucas", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var cliente = new Cliente("Lucas", "Lages SC", "30023254", "juca@gmail.com", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
             controlador.InserirNovo(cliente);
 
             controlador.Excluir(cliente.Id);
@@ -64,7 +64,7 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveSelecionar_TaxasServicos_PorId()
         {
-            var cliente = new Cliente("Lucas", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var cliente = new Cliente("Lucas", "Lages SC", "30023254", "juca@gmail.com", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
             controlador.InserirNovo(cliente);
 
             Cliente ClientePorId = controlador.SelecionarPorId(cliente.Id);
@@ -75,13 +75,13 @@ namespace LocadoraVeiculos.Tests.ClienteModule
         [TestMethod]
         public void DeveSelecionar_TodosFuncionarios_OrdenadosPorNome()
         {
-            var C1 = new Cliente("Lucas", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var C1 = new Cliente("Lucas", "Lages SC", "30023254", "juca@gmail.com", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
             controlador.InserirNovo(C1);
 
-            var C2 = new Cliente("Daniel", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var C2 = new Cliente("Daniel", "Lages SC", "30023254", "juca@gmail.com", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
             controlador.InserirNovo(C2);
 
-            var C3 = new Cliente("Pedro", "Lages SC", "30023254", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
+            var C3 = new Cliente("Pedro", "Lages SC", "30023254", "juca@gmail.com", "CPF", "Lucas", "3222548", "6.111.792", "5547", DateTime.Now);
             controlador.InserirNovo(C3);
 
             var clientes = controlador.SelecionarTodos();

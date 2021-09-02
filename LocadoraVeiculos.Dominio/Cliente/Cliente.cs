@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace LocadoraVeiculos.Dominio
@@ -70,6 +71,7 @@ namespace LocadoraVeiculos.Dominio
 
         public override string Validar()
         {
+            Regex templateEmail = new Regex(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$");
             string resultadoValidacao = "";
 
             if (string.IsNullOrEmpty(NomeCliente))
@@ -108,8 +110,9 @@ namespace LocadoraVeiculos.Dominio
             {
                 return "                                                     O campo RG não pode estar vazio";
             }
-            if (resultadoValidacao == "")
-                resultadoValidacao = "ESTA_VALIDO";
+            else if(templateEmail.IsMatch(Email) == false)
+                return "                                                     O campo Email está inválido";
+            
 
             return resultadoValidacao;
         }
