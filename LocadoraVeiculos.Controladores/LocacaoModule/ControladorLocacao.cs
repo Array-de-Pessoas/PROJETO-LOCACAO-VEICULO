@@ -242,7 +242,8 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
 
         public double CalcularValorLocacao(Locacao locacao)
         {
-            TimeSpan diasAlugado = locacao.dataDevolucao - locacao.dataLocacao;
+            TimeSpan diasAlugados = (TimeSpan)(locacao.dataDevolucaoRealizada - locacao.dataLocacao);
+            TimeSpan diasPrevistoAlugado = locacao.dataDevolucao - locacao.dataLocacao;
 
             ControladorVeiculo controladorVeiculo = new ControladorVeiculo();
             ControladorGrupoVeiculos controladorGrupoVeiculos = new ControladorGrupoVeiculos();
@@ -263,16 +264,27 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             else if (locacao.plano == "Livre")
             {
                 valorDiaria = grupoVeiculoDaLocacao.ValorDiariaPlanoLivre;
-
             }
-            else if(locacao.plano == "Controlado")
+            else 
             {
                 valorDiaria = grupoVeiculoDaLocacao.ValorDiariaPlanoControlado;
-            }         
+            }
 
-            return (diasAlugado.Days * valorDiaria) + Convert.ToDouble(taxasDaLocacao.Valor) + (Convert.ToDouble(seguroDaLocacao.Valor)*diasAlugado.Days);
+            double valorTotalSemMulta = (diasAlugados.Days * valorDiaria) + Convert.ToDouble(taxasDaLocacao.Valor) + (Convert.ToDouble(seguroDaLocacao.Valor) * diasAlugados.Days);
+            double gerarValorMulta = CalcularMulta(diasAlugados.Days, diasPrevistoAlugado.Days, valorTotalSemMulta);
+
+            return valorTotalSemMulta + gerarValorMulta;
             
         }
 
+        private double CalcularMulta(int diasAlugados, int diasPrevistos, double valorTotalSemMulta)
+        {
+            int diasParaMultar = diasAlugados - diasPrevistos;
+            if (diasParaMultar >0)
+            {           
+                return diasParaMultar * (valorTotalSemMulta * 0.1);
+            }
+            return 0;
+        }
     }
 }
