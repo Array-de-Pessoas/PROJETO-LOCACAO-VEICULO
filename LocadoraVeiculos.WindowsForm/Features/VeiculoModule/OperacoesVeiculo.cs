@@ -13,10 +13,10 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
     
     public class OperacoesVeiculo : ICadastravel
     {
-        ControladorCarrosDisponiveis carrosDisponiveis = new ControladorCarrosDisponiveis();
-        ControladorVeiculo controladorVeiculo;
+        Controladores.CarrosDisponiveisModule.ControladorCarrosDisponiveis carrosDisponiveis = new Controladores.CarrosDisponiveisModule.ControladorCarrosDisponiveis();
+        Controladores.VeiculoModule.ControladorVeiculo controladorVeiculo;
         TabelaVeiculosControl tabelaVeiculosControl;
-        public OperacoesVeiculo(ControladorVeiculo controladorVeiculo)
+        public OperacoesVeiculo(Controladores.VeiculoModule.ControladorVeiculo controladorVeiculo)
         {
             this.controladorVeiculo = controladorVeiculo;
             tabelaVeiculosControl = new TabelaVeiculosControl();

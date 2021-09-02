@@ -43,7 +43,18 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         {
             dataGridLocacao.Rows.Clear();
 
+            List<Locacao> locacaoesAbertas = new List<Locacao>();
+
             foreach (var locacao in locacoes)
+            {
+                bool locacaoEstaAberta = locacao.locacaoAtiva == 1;
+                if (locacaoEstaAberta)
+                {
+                    locacaoesAbertas.Add(locacao);
+                }
+            }
+
+            foreach (var locacao in locacaoesAbertas)
             {
                 dataGridLocacao.Rows.Add(locacao.Id,locacao.id_cliente, locacao.id_veiculo, locacao.dataLocacao, locacao.dataDevolucao, locacao.preco
                     );

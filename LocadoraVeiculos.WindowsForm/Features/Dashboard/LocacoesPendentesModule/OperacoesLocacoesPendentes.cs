@@ -1,4 +1,6 @@
-﻿using LocadoraVeiculos.Controladores.LocacoesPendentesModule;
+﻿using LocadoraVeiculos.Controladores.LocacaoModule;
+using LocadoraVeiculos.Controladores.LocacoesPendentesModule;
+using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.Dominio.LocacoesPendentesModule;
 using System;
 using System.Collections.Generic;
@@ -11,12 +13,12 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard.LocacoesPendentesModul
 {
     public class OperacoesLocacoesPendentes : ICadastravel
     {
-        ControladorLocacoesPendentes controlador;
+        ControladorLocacao controladorLocacao;
         TabelaLocacoesPendentes tabela;
 
-        public OperacoesLocacoesPendentes(ControladorLocacoesPendentes controlador)
+        public OperacoesLocacoesPendentes(ControladorLocacao controlador)
         {
-            this.controlador = controlador;
+            this.controladorLocacao = controlador;
             tabela = new TabelaLocacoesPendentes();
         }
 
@@ -42,9 +44,18 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard.LocacoesPendentesModul
 
         public UserControl ObterTabela()
         {
-            List<LocacoesPendentes> locacoes = controlador.SelecionarTodos();
+            List<Locacao> locacoes = controladorLocacao.SelecionarTodos();
+            List<Locacao> locacaoesAbertas = new List<Locacao>();
 
-            tabela.AtualizarRegistros(locacoes);
+            foreach (var locacao in locacoes)
+            {
+                bool locacaoEstaAberta = locacao.locacaoAtiva == 1;
+                if (locacaoEstaAberta)
+                {
+                    locacaoesAbertas.Add(locacao);
+                }
+            }
+            tabela.AtualizarRegistros(locacaoesAbertas);
 
             return tabela;
         }

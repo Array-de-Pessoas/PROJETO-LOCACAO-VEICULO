@@ -89,6 +89,7 @@
     <Compile Include="ClienteModule\ControladorClienteTest.cs" />
     <Compile Include="CombustivelModule\ControladorCombustivelTest.cs" />
     <Compile Include="CombustivelModule\CombustivelTest.cs" />
+    <Compile Include="DevolucaoModule\DevolucaoControladorTest.cs" />
     <Compile Include="FuncionarioModule\ControladorFuncionarioTest.cs" />
     <Compile Include="FuncionarioModule\FuncionarioTest.cs" />
     <Compile Include="GrupoVeiculosModule\ControladorGrupoVeiculosTest.cs" />

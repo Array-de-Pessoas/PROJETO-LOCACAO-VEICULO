@@ -1,4 +1,5 @@
-﻿using LocadoraVeiculos.Dominio.LocacoesPendentesModule;
+﻿using LocadoraVeiculos.Dominio.LocacaoModule;
+using LocadoraVeiculos.Dominio.LocacoesPendentesModule;
 using LocadoraVeiculos.WindowsForm.Shared;
 using System;
 using System.Collections.Generic;
@@ -44,13 +45,13 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
             return dataGridLocacoesPendentes.SelecionarId<int>();
         }
 
-        internal void AtualizarRegistros(List<LocacoesPendentes> locacoes)
+        internal void AtualizarRegistros(List<Locacao> locacoes)
         {
             dataGridLocacoesPendentes.Rows.Clear();
 
-            foreach (LocacoesPendentes item in locacoes)
+            foreach (var item in locacoes)
             {
-                dataGridLocacoesPendentes.Rows.Add(item.Id, item.IdCliente, item.IdVeiculos, item.DataLocacao, item.DataDevolucao);
+                dataGridLocacoesPendentes.Rows.Add(item.id_cliente, item.id_veiculo, item.dataLocacao, item.dataDevolucao);
             }
         }
     }

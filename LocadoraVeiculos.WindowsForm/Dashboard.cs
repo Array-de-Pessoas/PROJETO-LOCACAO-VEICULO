@@ -36,10 +36,21 @@ namespace LocadoraVeiculos.WindowsForm
             List<Veiculo> veiculos = controladorVeiculos.SelecionarTodos();
             List<Locacao> locacoes = controladorLocacao.SelecionarTodos();
 
+            List<Locacao> locacaoesAbertas = new List<Locacao>();
+
+            foreach (var locacao in locacoes)
+            {
+                bool locacaoEstaAberta = locacao.locacaoAtiva == 1;
+                if (locacaoEstaAberta)
+                {
+                    locacaoesAbertas.Add(locacao);
+                }
+            }
+
             int contadorCarrosAlugados = 0;
             int contadorCarrosDisponiveis = 0;
 
-            foreach (var locacao in locacoes)
+            foreach (var locacao in locacaoesAbertas)
             {
                 foreach (var veiculo in veiculos)
                 {
@@ -53,7 +64,7 @@ namespace LocadoraVeiculos.WindowsForm
             contadorCarrosDisponiveis = veiculos.Count - contadorCarrosAlugados;
 
             //config as lbls
-            btnLocacoesPendentes.Text = locacoes.Count.ToString();
+            btnLocacoesPendentes.Text = locacaoesAbertas.Count.ToString();
 
             btnCarrosAlugados.Text = contadorCarrosAlugados.ToString();
 

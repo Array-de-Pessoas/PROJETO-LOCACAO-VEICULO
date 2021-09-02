@@ -28,9 +28,11 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
         {
             var colunas = new DataGridViewColumn[]
             {
-                new DataGridViewTextBoxColumn { DataPropertyName = "NOMECLIENTE", HeaderText = "ID do cliente"},
+              new DataGridViewTextBoxColumn { DataPropertyName = "Marca", HeaderText = "Marca"},
 
-                new DataGridViewTextBoxColumn { DataPropertyName = "IDVEICULO", HeaderText = "ID do veículo"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "IdGrupoVeiculos", HeaderText = "ID do veículo"},
+
+                new DataGridViewTextBoxColumn { DataPropertyName = "Placa", HeaderText = "Placa"},
 
             };
 
@@ -42,13 +44,13 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
             return dataGridCarrosAlugados.SelecionarId<int>();
         }
 
-        public void AtualizarRegistros(List<CarrosAlugados> carros)
+        public void AtualizarRegistros(List<Veiculo> carros)
         {
             dataGridCarrosAlugados.Rows.Clear();
 
-            foreach (CarrosAlugados item in carros)
+            foreach (var item in carros)
             {
-                dataGridCarrosAlugados.Rows.Add(item.Id, item.IdCliente, item.IdVeiculo);
+                dataGridCarrosAlugados.Rows.Add( item.marca, item.idGrupoVeiculo, item.Placa);
             }
         }
     }

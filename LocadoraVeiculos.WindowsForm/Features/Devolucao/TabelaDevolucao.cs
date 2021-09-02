@@ -45,9 +45,19 @@ namespace LocadoraVeiculos.WindowsForm.Features.Devolucao
         {
             dataGridDevolucao.Rows.Clear();
 
+            List<Locacao> devolucoes = new List<Locacao>();
+
             foreach (var locacao in locacoes)
             {
-                dataGridDevolucao.Rows.Add(locacao.Id, locacao.id_cliente, locacao.id_veiculo, locacao.dataLocacao, locacao.dataDevolucao = DateTime.Now, locacao.preco
+                if (locacao.locacaoAtiva == 0)
+                {
+                    devolucoes.Add(locacao);
+                }
+            }
+
+            foreach (var devolucao in devolucoes)
+            {
+                dataGridDevolucao.Rows.Add(devolucao.Id, devolucao.id_cliente, devolucao.id_veiculo, devolucao.dataLocacao, devolucao.dataDevolucao = DateTime.Now, devolucao.preco
                     );
             }
         }

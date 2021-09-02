@@ -1,7 +1,9 @@
 ﻿using LocadoraVeiculos.Controladores.CarrosAlugadosModule;
 using LocadoraVeiculos.Controladores.LocacaoModule;
+using LocadoraVeiculos.Controladores.VeiculoModule;
 using LocadoraVeiculos.Dominio.CarrosAlugadosModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
+using LocadoraVeiculos.Dominio.VeiculoModule;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,13 +15,15 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard.CarrosAlugadosModule
 {
     public class OperacoesCarrosAlugados : ICadastravel
     {
+        ControladorLocacao controladorLocacao = new ControladorLocacao();
+        ControladorVeiculo controladorVeiculo = new ControladorVeiculo();
         ControladorCarrosAlugados controlador;
-        TabelaCarrosAlugados carrosAlugados;
+        TabelaCarrosAlugados tabelaCarrosAlugados;
 
         public OperacoesCarrosAlugados(ControladorCarrosAlugados controladorCarrosAlugados)
         {
             this.controlador = controladorCarrosAlugados;
-            carrosAlugados = new TabelaCarrosAlugados();
+            tabelaCarrosAlugados = new TabelaCarrosAlugados();
         }
 
         public void EditarRegistro()
@@ -44,11 +48,36 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard.CarrosAlugadosModule
 
         public UserControl ObterTabela()
         {
-            List<CarrosAlugados> carros = controlador.SelecionarTodos();
+            List<Veiculo> veiculos = controladorVeiculo.SelecionarTodos();
+            List<Locacao> locacoes = controladorLocacao.SelecionarTodos();
 
-            carrosAlugados.AtualizarRegistros(carros);
+            List<Veiculo> veiculosAlugados = new List<Veiculo>();
 
-            return carrosAlugados;
+            List<Locacao> locacaoesAbertas = new List<Locacao>();
+
+            foreach (var locacao in locacoes)
+            {
+                bool ehLocacao = locacao.locacaoAtiva == 1;
+                if (ehLocacao)
+                {
+                    locacaoesAbertas.Add(locacao);
+                }
+            }
+
+            foreach (var locacao in locacaoesAbertas)
+            {
+                foreach (var veiculo in veiculos)
+                {
+                    if (locacao.id_veiculo == veiculo.Id)
+                    {
+                        veiculosAlugados.Add(veiculo);
+                    }
+                }
+            }
+
+            tabelaCarrosAlugados.AtualizarRegistros(veiculosAlugados);
+
+            return tabelaCarrosAlugados;
         }
     }
 }

@@ -32,6 +32,10 @@ namespace LocadoraVeiculos.Controladores.CarrosDisponiveisModule
                 @Placa)
             ";
 
+        private const string sqlExcluirCarroDisponivel =
+           @"DELETE FROM [TBCARROSDISPONIVEIS]
+                    WHERE 
+                        [ID] = @ID";
         public override string Editar(int id, CarrosDisponiveis registro)
         {
             throw new NotImplementedException();
@@ -39,7 +43,16 @@ namespace LocadoraVeiculos.Controladores.CarrosDisponiveisModule
 
         public override bool Excluir(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Db.Delete(sqlExcluirCarroDisponivel, AdicionarParametro("ID", id));
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public override bool Existe(int id)

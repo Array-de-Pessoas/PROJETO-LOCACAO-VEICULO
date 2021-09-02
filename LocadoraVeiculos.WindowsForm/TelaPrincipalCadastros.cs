@@ -213,7 +213,7 @@ namespace LocadoraVeiculos.WindowsForm
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
             ImagemChave.Visible = false;
-            operacoes = new OperacoesVeiculo(new ControladorVeiculo());
+            operacoes = new OperacoesVeiculo(new Controladores.VeiculoModule.ControladorVeiculo());
             ConfigurarPanelRegistros();
             btnFiltro.Visible = false;
         }
@@ -317,6 +317,7 @@ namespace LocadoraVeiculos.WindowsForm
                     TxtCadastroSelecionado.Visible = false;
                 }
 
+                Dashboard dashboard = new Dashboard();
                 panelTabelas.Controls.Remove(tabelaLocacoesPendentes);
                 panelTabelas.Controls.Remove(tabelaCarrosAlugados);
                 panelTabelas.Controls.Remove(tabelaCarrosDisponiveis);
@@ -335,7 +336,7 @@ namespace LocadoraVeiculos.WindowsForm
             btnCarrosDisponiveis.Visible = false;
             btnCarrosAlugados.Visible = false;
             btnLocacoesPendentes.Visible = false;
-            operacoes = new OperacoesCarrosDisponiveis(new ControladorCarrosDisponiveis());
+            operacoes = new OperacoesCarrosDisponiveis();
             ConfigurarPanelRegistros();
         }
 
@@ -346,7 +347,7 @@ namespace LocadoraVeiculos.WindowsForm
             btnCarrosDisponiveis.Visible = false;
             btnCarrosAlugados.Visible = false;
             btnLocacoesPendentes.Visible = false;
-            operacoes = new OperacoesLocacoesPendentes(new ControladorLocacoesPendentes());
+            operacoes = new OperacoesLocacoesPendentes(new ControladorLocacao());
             ConfigurarPanelRegistros();
         }
 

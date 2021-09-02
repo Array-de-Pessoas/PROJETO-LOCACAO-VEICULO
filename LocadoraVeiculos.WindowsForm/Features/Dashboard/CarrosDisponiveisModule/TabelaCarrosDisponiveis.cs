@@ -1,4 +1,5 @@
 ﻿using LocadoraVeiculos.Dominio.CarrosDisponiveisModule;
+using LocadoraVeiculos.Dominio.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Shared;
 using System;
 using System.Collections.Generic;
@@ -42,13 +43,13 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard
             return dataGridCarrosDisponiveis.SelecionarId<int>();
         }
 
-        internal void AtualizarRegistros(List<CarrosDisponiveis> carros)
+        internal void AtualizarRegistros(List<Veiculo> carros)
         {
             dataGridCarrosDisponiveis.Rows.Clear();
 
-            foreach (CarrosDisponiveis item in carros)
+            foreach (var item in carros)
             {
-                dataGridCarrosDisponiveis.Rows.Add(item.Id, item.Marca, item.IdGrupo, item.Placa);
+                dataGridCarrosDisponiveis.Rows.Add( item.marca, item.idGrupoVeiculo, item.Placa);
             }
         }
     }

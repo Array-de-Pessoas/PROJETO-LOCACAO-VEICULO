@@ -1,4 +1,5 @@
-﻿using LocadoraVeiculos.Controladores.ClienteModule;
+﻿using LocadoraVeiculos.Controladores.CarrosDisponiveisModule;
+using LocadoraVeiculos.Controladores.ClienteModule;
 using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
@@ -167,6 +168,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             DateTime dataDevolucao = dtDevolucao.Value;
 
             locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 0);
+           
         }
     }
 }
