@@ -17,6 +17,7 @@ namespace LocadoraVeiculos.Controladores.ClienteModule
                          [NOME],
                          [ENDERECO],
                          [TELEFONE],
+                         [EMAIL],
                          [CPFouCNPJ],
                          [NOMECONDUTOR],
                          [CNH],
@@ -29,6 +30,7 @@ namespace LocadoraVeiculos.Controladores.ClienteModule
                          @NOME,
                          @ENDERECO,
                          @TELEFONE,
+                         @EMAIL,
                          @CPFouCNPJ,
                          @NOMECONDUTOR,
                          @CNH,
@@ -43,6 +45,7 @@ namespace LocadoraVeiculos.Controladores.ClienteModule
                          [NOME] = @NOME,
                          [ENDERECO] = @ENDERECO,
                          [TELEFONE] = @TELEFONE,
+                         [EMAIL] = @EMAIL,
                          [CPFouCNPJ] = @CPFouCNPJ,
                          [NOMECONDUTOR] = @NOMECONDUTOR,
                          [CNH] = @CNH,
@@ -71,6 +74,7 @@ namespace LocadoraVeiculos.Controladores.ClienteModule
                 [NOME],
                 [ENDERECO],
                 [TELEFONE],
+                [EMAIL],
                 [CPFouCNPJ],
                 [NOMECONDUTOR],
                 [CNH],
@@ -88,6 +92,7 @@ namespace LocadoraVeiculos.Controladores.ClienteModule
                 [NOME],
                 [ENDERECO],
                 [TELEFONE],
+                [EMAIL],
                 [CPFouCNPJ],
                 [NOMECONDUTOR],
                 [CNH],
@@ -118,6 +123,7 @@ namespace LocadoraVeiculos.Controladores.ClienteModule
             parametros.Add("NOME", registro.NomeCliente);
             parametros.Add("ENDERECO", registro.Endereco);
             parametros.Add("TELEFONE", registro.Telefone);
+            parametros.Add("EMAIL", registro.Email);
             parametros.Add("CPFouCNPJ", registro.TipoDeIdentidade);
             parametros.Add("NOMECONDUTOR", registro.NomeDoCondutor);
             parametros.Add("CNH", registro.CNH);
@@ -170,6 +176,7 @@ namespace LocadoraVeiculos.Controladores.ClienteModule
             string nomeCliente = Convert.ToString(reader["NOME"]);
             string endereco = Convert.ToString(reader["ENDERECO"]);
             string telefone = Convert.ToString(reader["TELEFONE"]);
+            string email = Convert.ToString(reader["EMAIL"]);
             string tipoDeIdentidade = Convert.ToString(reader["CPFouCNPJ"]);
             string nomeDoCondutor = Convert.ToString(reader["NOMECONDUTOR"]);
             string cNH = Convert.ToString(reader["CNH"]);
@@ -177,7 +184,7 @@ namespace LocadoraVeiculos.Controladores.ClienteModule
             string rGDoCondutor = Convert.ToString(reader["RG"]);
             DateTime dataValidadeCNH = Convert.ToDateTime(reader["DATAVALIDADECNH"]);
 
-            Cliente cliente = new Cliente(nomeCliente, endereco, telefone, tipoDeIdentidade, nomeDoCondutor, cNH, cpfCondutor, rGDoCondutor, dataValidadeCNH);
+            Cliente cliente = new Cliente(nomeCliente, endereco, telefone, email, tipoDeIdentidade, nomeDoCondutor, cNH, cpfCondutor, rGDoCondutor, dataValidadeCNH);
 
             cliente.Id = id;
 
