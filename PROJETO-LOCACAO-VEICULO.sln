@@ -19,6 +19,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LocadoraVeiculos.DataBase.S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recibos", "Recibos", "{5B52F4DF-D3A6-4BFB-83DD-1C0F98607667}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraVeiculos.GeradorPDF", "LocadoraVeiculos.GeradorPDF\LocadoraVeiculos.GeradorPDF.csproj", "{5542EADA-9558-4A5F-B90F-FC6418A930E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5542EADA-9558-4A5F-B90F-FC6418A930E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5542EADA-9558-4A5F-B90F-FC6418A930E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5542EADA-9558-4A5F-B90F-FC6418A930E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5542EADA-9558-4A5F-B90F-FC6418A930E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{F69C3646-BA00-43C5-ACB4-F04C49D95725} = {7D2673AF-BEE6-48F7-9D0B-097D22B3A266}
 		{06F3FC65-A81C-437B-A2D3-949E7CB17C8A} = {7D2673AF-BEE6-48F7-9D0B-097D22B3A266}
 		{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E} = {7D2673AF-BEE6-48F7-9D0B-097D22B3A266}
+		{5542EADA-9558-4A5F-B90F-FC6418A930E1} = {7D2673AF-BEE6-48F7-9D0B-097D22B3A266}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {339883FA-86C6-4BA5-AE1C-437FD0527FF6}
