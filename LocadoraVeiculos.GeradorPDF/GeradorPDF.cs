@@ -3,6 +3,7 @@ using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
+using iTextSharp.text.pdf;
 using LocadoraVeiculos.Controladores.ClienteModule;
 using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
@@ -15,8 +16,12 @@ using LocadoraVeiculos.Dominio.VeiculoModule;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using PdfDocument = iText.Kernel.Pdf.PdfDocument;
+using PdfWriter = iText.Kernel.Pdf.PdfWriter;
 
 namespace LocadoraVeiculos.GeradorPDF
 {
@@ -58,7 +63,43 @@ namespace LocadoraVeiculos.GeradorPDF
                 pdfDocument.Close();
             }
 
-            Task.Run(() => EmailEnviar(locacao));
+            Task.Run(() => EnviarRelatorioParaEmailCliente(cliente, locacao));
+        }
+
+        private static void EnviarRelatorioParaEmailCliente(Cliente cliente, Locacao locacao)
+        {
+            try
+            {
+                using (SmtpClient smtp = new SmtpClient())
+                {
+                    using (MailMessage email = new MailMessage())
+                    {
+                        //SERVIDOR
+                        smtp.Host = "smtp.gmail.com";
+                        smtp.UseDefaultCredentials = false;
+                        smtp.Credentials = new System.Net.NetworkCredential("arraydepessoas@gmail.com", "array2021");
+                        smtp.Port = 587;
+                        smtp.EnableSsl = true;
+
+                        //EMAIL
+                        email.From = new MailAddress("arraydepessoas@gmail.com");
+                        email.To.Add(cliente.Email);
+
+                        email.Subject = "ArrayDePessoas";
+                        email.IsBodyHtml = false;
+                        email.Body = "Obrigado por utilizar nossos serviços, volte sempre!";
+
+                        email.Attachments.Add(new Attachment($@"..\..\..\Recibos\recibo{locacao.Id}.pdf"));
+
+                        //ENVIAR
+                        smtp.Send(email);
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
         }
     }
 }
