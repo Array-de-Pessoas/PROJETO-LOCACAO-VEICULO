@@ -1,4 +1,4 @@
-﻿using LocadoraVeiculos.Controladores.CarrosDisponiveisModule;
+﻿
 using LocadoraVeiculos.Controladores.ClienteModule;
 using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
@@ -10,6 +10,7 @@ using LocadoraVeiculos.Dominio.LocacoesPendentesModule;
 using LocadoraVeiculos.Dominio.SegurosModule;
 using LocadoraVeiculos.Dominio.TaxasServicosModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
+using LocadoraVeiculos.GeradorPDF;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -140,7 +141,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             DateTime dataLocacao = dtLocacao.Value;
             DateTime dataDevolucao = dtDevolucao.Value;
 
-            locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 1);
+            locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 1);    
 
             carrosAlugados = new CarrosAlugados(id_cliente, id_veiculo);
 
@@ -153,6 +154,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
                 DialogResult = DialogResult.None;
             }
 
+            GeradorPDF.GeradorPDF.GerarPDF(locacao);
 
 
         }

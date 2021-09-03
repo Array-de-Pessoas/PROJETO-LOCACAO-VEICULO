@@ -25,7 +25,7 @@ using PdfWriter = iText.Kernel.Pdf.PdfWriter;
 
 namespace LocadoraVeiculos.GeradorPDF
 {
-    public class GeradorPDF
+    public  static class GeradorPDF
     {
         public static void GerarPDF(Locacao locacao)
         {

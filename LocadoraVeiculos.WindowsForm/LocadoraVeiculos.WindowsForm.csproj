@@ -402,6 +402,10 @@
       <Project>{FA47A745-B014-4153-B064-3E9AC4F7EBF7}</Project>
       <Name>LocadoraVeiculos.Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LocadoraVeiculos.GeradorPDF\LocadoraVeiculos.GeradorPDF.csproj">
+      <Project>{5542EADA-9558-4A5F-B90F-FC6418A930E1}</Project>
+      <Name>LocadoraVeiculos.GeradorPDF</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Btn Opções.png" />
