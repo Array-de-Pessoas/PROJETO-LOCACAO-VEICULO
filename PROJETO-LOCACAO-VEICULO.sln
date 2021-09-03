@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraVeiculos.WindowsFor
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LocadoraVeiculos.DataBase.SqlSever", "LocadoraVeiculos.DataBase.SqlSever\LocadoraVeiculos.DataBase.SqlSever.sqlproj", "{547EE4D6-3EAF-49C9-AF8F-E4D8F148715E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recibos", "Recibos", "{5B52F4DF-D3A6-4BFB-83DD-1C0F98607667}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
