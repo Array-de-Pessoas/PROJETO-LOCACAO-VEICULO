@@ -107,7 +107,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             cbVeiculo.ValueMember = "Id";
             cbVeiculo.DataSource = veiculos;
 
-            string[] planos= new string[3] { "Diário","Controlado","Livre"};
+            string[] planos = new string[3] { "Diário", "Controlado", "Livre" };
 
             cbPlano.DataSource = planos;
 
@@ -129,13 +129,13 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         }
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            double preco =0;
+            double preco = 0;
 
             string plano = Convert.ToString(cbPlano.SelectedValue);
             int id_seguro = Convert.ToInt32(cbSeguro.SelectedValue);
             int id_cliente = Convert.ToInt32(cbCliente.SelectedValue);
             int id_veiculo = Convert.ToInt32(cbVeiculo.SelectedValue);
-            int id_taxa = Convert.ToInt32(cbTaxa.SelectedValue);      
+            int id_taxa = Convert.ToInt32(cbTaxa.SelectedValue);
 
             DateTime dataLocacao = dtLocacao.Value;
             DateTime dataDevolucao = dtDevolucao.Value;
@@ -152,6 +152,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
                 TelaPrincipal.Instancia.AtualizarRodape(primeiroErro);
                 DialogResult = DialogResult.None;
             }
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -168,7 +171,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             DateTime dataDevolucao = dtDevolucao.Value;
 
             locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 0);
-           
+
         }
     }
 }
