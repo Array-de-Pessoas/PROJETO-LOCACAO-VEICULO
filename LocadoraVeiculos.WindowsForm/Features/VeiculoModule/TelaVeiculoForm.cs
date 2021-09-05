@@ -105,7 +105,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 
             carros = new CarrosDisponiveis(marca, id_grupoVeiculo, placa);
 
-            if (veiculo.Validar() != "VALIDO")
+            string resultadoValidacao = veiculo.Validar();
+
+            if (resultadoValidacao != "ESTA_VALIDO")
             {
                 string primeiroErro = new StringReader(veiculo.Validar()).ReadLine();
                 TelaPrincipal.Instancia.AtualizarRodape(primeiroErro);

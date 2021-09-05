@@ -110,9 +110,14 @@ namespace LocadoraVeiculos.Dominio
             {
                 return "                                                     O campo RG não pode estar vazio";
             }
+            else if (NomeDoCondutor == "Acesso negado")
+            {
+                return "                                                     O campo RG não pode estar vazio";
+            }
             else if(templateEmail.IsMatch(Email) == false)
                 return "                                                     O campo Email está inválido";
-            
+            if (resultadoValidacao == "")
+                resultadoValidacao = "ESTA_VALIDO";
 
             return resultadoValidacao;
         }

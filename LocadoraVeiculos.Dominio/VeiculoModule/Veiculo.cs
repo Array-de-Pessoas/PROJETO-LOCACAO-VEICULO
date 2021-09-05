@@ -45,6 +45,8 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
 
         public override string Validar()
         {
+            string resultadoValidacao = "";
+
             if (string.IsNullOrEmpty(tipoCombustivel))
             {
                 return "                                                     Campo tipo combustível é obrigatório";
@@ -97,7 +99,10 @@ namespace LocadoraVeiculos.Dominio.VeiculoModule
             {
                 return "                                                     Imagem do veículo é obrigatória";
             }
-            return "VALIDO";
+            if (resultadoValidacao == "")
+                resultadoValidacao = "ESTA_VALIDO";
+
+            return resultadoValidacao;  
         }
 
     }

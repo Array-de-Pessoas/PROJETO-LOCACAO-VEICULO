@@ -104,7 +104,7 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
         {
             string resultadoValidacao = registro.Validar();
 
-            if (resultadoValidacao == "VALIDO")
+            if (resultadoValidacao == "ESTA_VALIDO")
             {
                 registro.Id = id;
                 Db.Update(sqlEditarVeiculo, ObtemParametrosVeiculo(registro));
@@ -135,7 +135,7 @@ namespace LocadoraVeiculos.Controladores.VeiculoModule
         public override string InserirNovo(Veiculo registro)
         {
             string resultadoValidacao = registro.Validar();
-            if (resultadoValidacao == "VALIDO")
+            if (resultadoValidacao == "ESTA_VALIDO")
             {
                 registro.Id = Db.Insert(sqlInserirVeiculo, ObtemParametrosVeiculo(registro));
             }
