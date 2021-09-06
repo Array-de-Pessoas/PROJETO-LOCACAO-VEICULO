@@ -1,9 +1,10 @@
-﻿using iText.Kernel.Geom;
+﻿using iText.IO.Image;
+using iText.Kernel.Colors;
+using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
-using iTextSharp.text.pdf;
 using LocadoraVeiculos.Controladores.ClienteModule;
 using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
@@ -13,22 +14,17 @@ using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.Dominio.SegurosModule;
 using LocadoraVeiculos.Dominio.TaxasServicosModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mail;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PdfDocument = iText.Kernel.Pdf.PdfDocument;
-using PdfWriter = iText.Kernel.Pdf.PdfWriter;
 
 namespace LocadoraVeiculos.GeradorPDF
 {
     public  static class GeradorPDF
     {
         public static void GerarPDF(Locacao locacao)
-        {
+        {                 
+
             ControladorCliente controladorCliente = new ControladorCliente();
             ControladorVeiculo controladorVeiculo = new ControladorVeiculo();
             ControladorSeguros controladorSeguros = new ControladorSeguros();
@@ -54,7 +50,7 @@ namespace LocadoraVeiculos.GeradorPDF
                 document.Add(new Paragraph("Data para devolução: " + locacao.dataDevolucao.ToString("d")));
                 document.Add(new Paragraph("Plano Escolhido: " + locacao.plano));               
                 document.Add(new Paragraph("Serviço adicional escolhido: " + taxasServicos.Nome));
-                document.Add(new Paragraph("Seguro escolhido" + seguros.TipoSeguro));
+                document.Add(new Paragraph("Seguro escolhido: " + seguros.TipoSeguro));
                 document.Add(new Paragraph("\n\n"));
                 document.Add(new Paragraph("Locadora Rech"));
 
@@ -85,9 +81,9 @@ namespace LocadoraVeiculos.GeradorPDF
                         email.From = new MailAddress("arraydepessoas@gmail.com");
                         email.To.Add(cliente.Email);
 
-                        email.Subject = "ArrayDePessoas";
+                        email.Subject = "Recibo de locação";
                         email.IsBodyHtml = false;
-                        email.Body = "Obrigado por utilizar nossos serviços, volte sempre!";
+                        email.Body = "Obrigado por usar nossos serviços!";
 
                         email.Attachments.Add(new Attachment($@"..\..\..\Recibos\recibo{locacao.Id}.pdf"));
 

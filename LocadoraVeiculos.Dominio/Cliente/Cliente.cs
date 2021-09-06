@@ -72,8 +72,7 @@ namespace LocadoraVeiculos.Dominio
         public override string Validar()
         {
             Regex templateEmail = new Regex(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$");
-            string resultadoValidacao = "";
-
+           
             if (string.IsNullOrEmpty(NomeCliente))
             {
                 return "                                                     O campo nome do cliente não pode estar vazio";
@@ -112,9 +111,12 @@ namespace LocadoraVeiculos.Dominio
             }
             else if(templateEmail.IsMatch(Email) == false)
                 return "                                                     O campo Email está inválido";
-            
+            else
+            {
+                return "ESTA_VALIDO";
+            }
 
-            return resultadoValidacao;
+            
         }
 
         public override bool Equals(object obj)

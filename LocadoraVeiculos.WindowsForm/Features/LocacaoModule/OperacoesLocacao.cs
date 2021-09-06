@@ -2,6 +2,7 @@
 using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Controladores.LocacoesPendentesModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
+using LocadoraVeiculos.GeradorPDF;
 using LocadoraVeiculos.WindowsForm;
 using LocadoraVeiculos.WindowsForm.Features.Dashboard;
 using LocadoraVeiculos.WindowsForm.Features.LocacaoModule;
@@ -100,6 +101,8 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
                 carrosAlugados.InserirNovo(telaLocacaoForm.CarrosAlugados);
 
                 locacoesPendentes.InserirNovo(telaLocacaoForm.LocacoesPendentes);
+
+                GeradorPDF.GerarPDF(telaLocacaoForm.Locacao);
 
                 List<Locacao> locacaos = controladorLocacao.SelecionarTodos();
 

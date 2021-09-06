@@ -154,7 +154,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
                 DialogResult = DialogResult.None;
             }
 
-            GeradorPDF.GeradorPDF.GerarPDF(locacao);
+          
 
 
         }
