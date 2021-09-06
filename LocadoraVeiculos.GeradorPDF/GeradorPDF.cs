@@ -3,6 +3,7 @@ using iText.Kernel.Colors;
 using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
 using iText.Layout;
+using iText.Layout.Borders;
 using iText.Layout.Element;
 using iText.Layout.Properties;
 using LocadoraVeiculos.Controladores.ClienteModule;
@@ -16,6 +17,7 @@ using LocadoraVeiculos.Dominio.TaxasServicosModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
 using System.Net.Mail;
 using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace LocadoraVeiculos.GeradorPDF
@@ -24,7 +26,6 @@ namespace LocadoraVeiculos.GeradorPDF
     {
         public static void GerarPDF(Locacao locacao)
         {                 
-
             ControladorCliente controladorCliente = new ControladorCliente();
             ControladorVeiculo controladorVeiculo = new ControladorVeiculo();
             ControladorSeguros controladorSeguros = new ControladorSeguros();
@@ -39,22 +40,40 @@ namespace LocadoraVeiculos.GeradorPDF
             {
                 var pdfDocument = new PdfDocument(wPdf);
 
-                var document = new Document(pdfDocument, PageSize.A4);
-                document.Add(new Paragraph("Recibo de Locação").SetTextAlignment(TextAlignment.CENTER).SetBold().SetFontSize(20));
-                document.Add(new Paragraph("\n\n"));
-                document.Add(new Paragraph("Cliente: " + cliente.NomeCliente.ToString()));
-                document.Add(new Paragraph("Condutor: " + cliente.NomeDoCondutor.ToString()));
-                document.Add(new Paragraph("Marca do Veículo: " + veiculo.marca.ToString()));
-                document.Add(new Paragraph("Placa do Veículo: " + veiculo.Placa.ToString()));
-                document.Add(new Paragraph("Data da locação: " + locacao.dataLocacao.ToString("d")));
-                document.Add(new Paragraph("Data para devolução: " + locacao.dataDevolucao.ToString("d")));
-                document.Add(new Paragraph("Plano Escolhido: " + locacao.plano));               
-                document.Add(new Paragraph("Serviço adicional escolhido: " + taxasServicos.Nome));
-                document.Add(new Paragraph("Seguro escolhido: " + seguros.TipoSeguro));
-                document.Add(new Paragraph("\n\n"));
-                document.Add(new Paragraph("Locadora Rech"));
+                var documento = new Document(pdfDocument, PageSize.A4);
+                documento.SetMargins(40,40,40,40);                          
 
-                document.Close();
+                var img = new Image(ImageDataFactory.Create(@"..\..\..\LocadoraVeiculos.WindowsForm\Resources\Nova imagem para menu.png"));
+                img.ScaleAbsolute(80, 60);            
+                img.SetFixedPosition(40f, 740f);
+
+                documento.Add(img);
+                documento.Add(new Paragraph("Locadora Rech").SetTextAlignment(TextAlignment.CENTER).SetFontSize(22));
+                documento.Add(new Paragraph("\n\n"));
+                documento.Add(new Paragraph("Recibo de Locação").SetTextAlignment(TextAlignment.CENTER).SetBold().SetFontSize(22));
+                documento.Add(new Paragraph("\n\n"));
+                documento.Add(new Paragraph("Cliente: " + cliente.NomeCliente.ToString()));
+                documento.Add(new Paragraph("Condutor: " + cliente.NomeDoCondutor.ToString()));
+                documento.Add(new Paragraph("Marca do Veículo: " + veiculo.marca.ToString()));
+                documento.Add(new Paragraph("Placa do Veículo: " + veiculo.Placa.ToString())); 
+                
+                var imgDoVeiculo = new Image(ImageDataFactory.Create(veiculo.foto));
+                imgDoVeiculo.ScaleAbsolute(90, 80);
+                //imgDoVeiculo.SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER);            
+                documento.Add(imgDoVeiculo);
+
+                documento.Add(new Paragraph("\n"));
+                documento.Add(new Paragraph("Data da locação: " + locacao.dataLocacao.ToString("d")));
+                documento.Add(new Paragraph("Data para devolução: " + locacao.dataDevolucao.ToString("d")));
+                documento.Add(new Paragraph("Plano Escolhido: " + locacao.plano));               
+                documento.Add(new Paragraph("Serviço adicional escolhido: " + taxasServicos.Nome));
+                documento.Add(new Paragraph("Seguro escolhido: " + seguros.TipoSeguro));
+                              
+                documento.Add(new Paragraph("\n\n"));
+                Paragraph rodape = new Paragraph("Obrigado por usar nossos serviços!").SetTextAlignment(TextAlignment.LEFT).SetBold().SetFontSize(14);                  
+                documento.Add(rodape);
+
+                documento.Close();
 
                 pdfDocument.Close();
             }

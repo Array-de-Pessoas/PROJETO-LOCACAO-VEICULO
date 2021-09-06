@@ -133,7 +133,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 
             cbVeiculo.DisplayMember = "Placa";
             cbVeiculo.ValueMember = "Id";
-            cbVeiculo.DataSource = valor;
+            cbVeiculo.DataSource = veiculos;
 
             string[] planos = new string[3] { "Diário", "Controlado", "Livre" };
 
@@ -198,7 +198,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             double preco = 0;
