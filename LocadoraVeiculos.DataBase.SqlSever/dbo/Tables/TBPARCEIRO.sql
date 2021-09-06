@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[TBPARCEIRO]
+(
+	[Id]         INT           IDENTITY (1, 1) NOT NULL,
+    [NomeParceiro] NVARCHAR(100) NOT NULL
+	PRIMARY KEY CLUSTERED ([Id] ASC)
+)
