@@ -8,6 +8,7 @@ using LocadoraVeiculos.Controladores.FuncionarioModule;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
 using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Controladores.LocacoesPendentesModule;
+using LocadoraVeiculos.Controladores.ParceiroModule;
 using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
@@ -24,6 +25,7 @@ using LocadoraVeiculos.WindowsForm.Features.Devolucao;
 using LocadoraVeiculos.WindowsForm.Features.FuncionarioModule;
 using LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule;
 using LocadoraVeiculos.WindowsForm.Features.LoginModule;
+using LocadoraVeiculos.WindowsForm.Features.ParceiroModule;
 using LocadoraVeiculos.WindowsForm.Features.SeguroModule;
 using LocadoraVeiculos.WindowsForm.Features.TaxasServicosModule;
 using System;
@@ -372,6 +374,17 @@ namespace LocadoraVeiculos.WindowsForm
             panelTabelas.Controls.Clear();
             MostrarOpcoes();
             operacoes = new OperacoesCupom(new ControladorCupom());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
+        }
+
+        private void CadastroParceiro_Click(object sender, EventArgs e)
+        {
+            TxtCadastroSelecionado.Visible = true;
+            TxtCadastroSelecionado.Text = "          PARCEIRO";
+            panelTabelas.Controls.Clear();
+            MostrarOpcoes();
+            operacoes = new OperacoesParceiro(new ControladorParceiro());
             ConfigurarPanelRegistros();
             btnFiltro.Visible = false;
         }

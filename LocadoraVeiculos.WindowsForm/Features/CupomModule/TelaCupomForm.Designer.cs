@@ -139,9 +139,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.CupomModule
             // CmbParceiro
             // 
             this.CmbParceiro.FormattingEnabled = true;
-            this.CmbParceiro.Items.AddRange(new object[] {
-            "Lucas",
-            "Pedro"});
             this.CmbParceiro.Location = new System.Drawing.Point(245, 320);
             this.CmbParceiro.Name = "CmbParceiro";
             this.CmbParceiro.Size = new System.Drawing.Size(186, 24);
@@ -264,6 +261,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.CupomModule
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de cupom";
+            this.Load += new System.EventHandler(this.TelaCupomForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

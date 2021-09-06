@@ -613,6 +613,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Nome_do_parceiro {
+            get {
+                object obj = ResourceManager.GetObject("Nome_do_parceiro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Nova_imagem {
             get {
                 object obj = ResourceManager.GetObject("Nova_imagem", resourceCulture);
