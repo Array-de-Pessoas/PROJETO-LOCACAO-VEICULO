@@ -1,5 +1,7 @@
 ﻿using LocadoraVeiculos.Controladores.ClienteModule;
+using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Dominio;
+using LocadoraVeiculos.Dominio.LocacaoModule;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.ClienteModule
 {
     public class OperacoesCliente : ICadastravel
     {
+        ControladorLocacao controladorLocacao = new ControladorLocacao();
         private readonly ControladorCliente controlador = null;
         private readonly TabelaCliente tabela = null;
 
@@ -52,6 +55,18 @@ namespace LocadoraVeiculos.WindowsForm.Features.ClienteModule
         public void ExcluirRegistro()
         {
             int id = tabela.ObtemIdSelecionado();
+
+            List<Locacao> locacoes = controladorLocacao.SelecionarTodos();
+
+            foreach (var locacao in locacoes)
+            {
+                if (id == locacao.id_cliente)
+                {
+                    MessageBox.Show("Não é possível excluir um condutor ativo em locações!", "Exclusão de Clientes",
+                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
 
             if (id == 0)
             {

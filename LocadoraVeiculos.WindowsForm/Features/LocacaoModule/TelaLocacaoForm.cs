@@ -1,5 +1,6 @@
 ﻿
 using LocadoraVeiculos.Controladores.ClienteModule;
+using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
@@ -26,6 +27,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 {
     public partial class TelaLocacaoForm : Form
     {
+        ControladorLocacao controladorLocacao = new ControladorLocacao();
         ControladorCliente controladorCliente;
         ControladorVeiculo controladorVeiculo;
         ControladorTaxasServicos controladorTaxasServicos;
@@ -95,7 +97,6 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         }
         private void CarregarComboBoxs()
         {
-
             List<Cliente> clientes = controladorCliente.SelecionarTodos();
 
             cbCliente.DisplayMember = "NomeCliente";
@@ -104,9 +105,35 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 
             List<Veiculo> veiculos = controladorVeiculo.SelecionarTodos();
 
+            List<Locacao> locacaos = controladorLocacao.SelecionarTodos();
+
+            List<int> PegarVeiculos = new List<int>();
+
+            List<int> PegarLocacao = new List<int>();
+
+            List<int> valor = new List<int>();
+
+            foreach (var locacao in locacaos)
+            {
+                PegarLocacao.Add(locacao.id_veiculo);
+            }
+
+            foreach (var veiculo in veiculos)
+            {
+                PegarVeiculos.Add(veiculo.Id);
+            }
+
+            foreach (var item in PegarVeiculos)
+            {
+                if (PegarLocacao.Contains(item) == false)
+                {
+                    valor.Add(item);
+                }
+            }
+
             cbVeiculo.DisplayMember = "Placa";
             cbVeiculo.ValueMember = "Id";
-            cbVeiculo.DataSource = veiculos;
+            cbVeiculo.DataSource = valor;
 
             string[] planos = new string[3] { "Diário", "Controlado", "Livre" };
 
@@ -130,12 +157,25 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         }
         private void btnGravar_Click(object sender, EventArgs e)
         {
+            List<Locacao> locacaos = controladorLocacao.SelecionarTodos();
+
+            int id_veiculo = Convert.ToInt32(cbVeiculo.SelectedValue);
+
+            foreach (var locacao in locacaos)
+            {
+                if (id_veiculo == locacao.id_veiculo)
+                {
+                    MessageBox.Show("Não é possível locar um veículo já locado!", "Adição de locação",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+
             double preco = 0;
 
             string plano = Convert.ToString(cbPlano.SelectedValue);
             int id_seguro = Convert.ToInt32(cbSeguro.SelectedValue);
             int id_cliente = Convert.ToInt32(cbCliente.SelectedValue);
-            int id_veiculo = Convert.ToInt32(cbVeiculo.SelectedValue);
             int id_taxa = Convert.ToInt32(cbTaxa.SelectedValue);
 
             DateTime dataLocacao = dtLocacao.Value;
@@ -147,7 +187,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 
             locacoes = new LocacoesPendentes(id_cliente, id_veiculo, dataLocacao, dataDevolucao);
 
-            if (locacao.Validar() != "VALIDO")
+            if (locacao.Validar() != "ESTA_VALIDO")
             {
                 string primeiroErro = new StringReader(locacao.Validar()).ReadLine();
                 TelaPrincipal.Instancia.AtualizarRodape(primeiroErro);

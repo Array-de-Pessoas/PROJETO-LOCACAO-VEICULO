@@ -1,5 +1,7 @@
 ﻿using LocadoraVeiculos.Controladores.CarrosDisponiveisModule;
+using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
+using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
 using System;
 using System.Collections.Generic;
@@ -13,6 +15,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
     
     public class OperacoesVeiculo : ICadastravel
     {
+        ControladorLocacao controladorLocacao = new ControladorLocacao();
         Controladores.CarrosDisponiveisModule.ControladorCarrosDisponiveis carrosDisponiveis = new Controladores.CarrosDisponiveisModule.ControladorCarrosDisponiveis();
         Controladores.VeiculoModule.ControladorVeiculo controladorVeiculo;
         TabelaVeiculosControl tabelaVeiculosControl;
@@ -54,6 +57,18 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
         public void ExcluirRegistro()
         {
             int id = tabelaVeiculosControl.ObtemIdSelecionado();
+
+            List<Locacao> locacaos = controladorLocacao.SelecionarTodos();
+
+            foreach (var locacao in locacaos)
+            {
+                if (id == locacao.id_veiculo)
+                {
+                    MessageBox.Show("Não é possível excluir um veículo ativo em locações!", "Exclusão de Clientes",
+                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
 
             if (id == 0)
             {

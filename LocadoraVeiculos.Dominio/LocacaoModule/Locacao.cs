@@ -36,6 +36,8 @@ namespace LocadoraVeiculos.Dominio.LocacaoModule
 
         public override string Validar()
         {
+            string resultadoValidacao = "";
+
             if (id_cliente == 0)
             {
                 return "O campo Cliente é obrigatório";
@@ -63,8 +65,11 @@ namespace LocadoraVeiculos.Dominio.LocacaoModule
             if (dataDevolucao == DateTime.MinValue)
             {
                 return "O campo Data de devolução é obrigatório";
-            }          
-            return "VALIDO";
+            }
+            if (resultadoValidacao == "")
+                resultadoValidacao = "ESTA_VALIDO";
+
+            return resultadoValidacao;
         }
     }
 }

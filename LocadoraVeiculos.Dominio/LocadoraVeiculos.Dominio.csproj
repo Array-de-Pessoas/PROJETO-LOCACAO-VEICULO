@@ -46,6 +46,7 @@
     <Compile Include="CarrosDisponiveisModule\CarrosDisponiveis.cs" />
     <Compile Include="Cliente\Cliente.cs" />
     <Compile Include="CombustivelModule\Combustivel.cs" />
+    <Compile Include="CupomModule\Cupom.cs" />
     <Compile Include="FuncionarioModule\Funcionario.cs" />
     <Compile Include="GrupoVeiculosModule\GrupoVeiculos.cs" />
     <Compile Include="LocacaoModule\Locacao.cs" />

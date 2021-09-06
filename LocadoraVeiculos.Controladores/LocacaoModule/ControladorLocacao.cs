@@ -199,7 +199,7 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
         {
             string resultadoValidacao = registro.Validar();
 
-            if (resultadoValidacao == "VALIDO")
+            if (resultadoValidacao == "ESTA_VALIDO")
             {
                 registro.Id = Db.Insert(sqlInserirlocacaoVeiculo, ObtemParametrosLocacao(registro));
             }

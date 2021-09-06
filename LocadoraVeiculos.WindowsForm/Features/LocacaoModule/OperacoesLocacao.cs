@@ -95,12 +95,11 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
 
             if (telaLocacaoForm.ShowDialog() == DialogResult.OK)
             {            
-
                 controladorLocacao.InserirNovo(telaLocacaoForm.Locacao);
 
-                carrosAlugados.InserirNovo(telaLocacaoForm.CarrosAlugados);
-
-                locacoesPendentes.InserirNovo(telaLocacaoForm.LocacoesPendentes);
+                //carrosAlugados.InserirNovo(telaLocacaoForm.CarrosAlugados);
+                
+                //locacoesPendentes.InserirNovo(telaLocacaoForm.LocacoesPendentes);
 
                 GeradorPDF.GerarPDF(telaLocacaoForm.Locacao);
 
