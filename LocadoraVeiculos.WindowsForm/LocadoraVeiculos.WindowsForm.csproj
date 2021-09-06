@@ -88,6 +88,19 @@
     <Compile Include="Features\CreditosModule\TelaCreditos.Designer.cs">
       <DependentUpon>TelaCreditos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\CupomModule\OperacoesCupom.cs" />
+    <Compile Include="Features\CupomModule\TabelaCupom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\CupomModule\TabelaCupom.Designer.cs">
+      <DependentUpon>TabelaCupom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CupomModule\TelaCupomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\CupomModule\TelaCupomForm.Designer.cs">
+      <DependentUpon>TelaCupomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\Dashboard\CarrosAlugadosModule\OperacoesCarrosAlugados.cs" />
     <Compile Include="Features\Dashboard\CarrosDisponiveisModule\OperacoesCarrosDisponiveis.cs" />
     <Compile Include="Features\Dashboard\CarrosAlugadosModule\TabelaCarrosAlugados.cs">
@@ -246,6 +259,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\CreditosModule\TelaCreditos.resx">
       <DependentUpon>TelaCreditos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\CupomModule\TabelaCupom.resx">
+      <DependentUpon>TabelaCupom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\CupomModule\TelaCupomForm.resx">
+      <DependentUpon>TelaCupomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Dashboard\CarrosAlugadosModule\TabelaCarrosAlugados.resx">
       <DependentUpon>TabelaCarrosAlugados.cs</DependentUpon>

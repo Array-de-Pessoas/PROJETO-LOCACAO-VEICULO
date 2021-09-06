@@ -3,6 +3,7 @@ using LocadoraVeiculos.Controladores.CarrosAlugadosModule;
 using LocadoraVeiculos.Controladores.CarrosDisponiveisModule;
 using LocadoraVeiculos.Controladores.ClienteModule;
 using LocadoraVeiculos.Controladores.CombustivelModule;
+using LocadoraVeiculos.Controladores.CupomModule;
 using LocadoraVeiculos.Controladores.FuncionarioModule;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
 using LocadoraVeiculos.Controladores.LocacaoModule;
@@ -14,6 +15,7 @@ using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Features.ClienteModule;
 using LocadoraVeiculos.WindowsForm.Features.CombustivelModule;
+using LocadoraVeiculos.WindowsForm.Features.CupomModule;
 using LocadoraVeiculos.WindowsForm.Features.Dashboard;
 using LocadoraVeiculos.WindowsForm.Features.Dashboard.CarrosAlugadosModule;
 using LocadoraVeiculos.WindowsForm.Features.Dashboard.CarrosDisponiveisModule;
@@ -361,6 +363,17 @@ namespace LocadoraVeiculos.WindowsForm
             TxtCadastroSelecionado.Text = "        DEVOLUÇÃO";
             operacoes = new OperacoesDevolucao(new ControladorLocacao());
             ConfigurarPanelRegistros();
+        }
+
+        private void CadastroCupom_Click(object sender, EventArgs e)
+        {
+            TxtCadastroSelecionado.Visible = true;
+            TxtCadastroSelecionado.Text = "          CUPOM";
+            panelTabelas.Controls.Clear();
+            MostrarOpcoes();
+            operacoes = new OperacoesCupom(new ControladorCupom());
+            ConfigurarPanelRegistros();
+            btnFiltro.Visible = false;
         }
     }
 }
