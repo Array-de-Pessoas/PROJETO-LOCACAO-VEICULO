@@ -213,6 +213,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Código {
+            get {
+                object obj = ResourceManager.GetObject("Código", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Combustivel {
             get {
                 object obj = ResourceManager.GetObject("Combustivel", resourceCulture);
@@ -306,6 +316,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Detalhes {
             get {
                 object obj = ResourceManager.GetObject("Detalhes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dia_de_vencimento {
+            get {
+                object obj = ResourceManager.GetObject("Dia_de_vencimento", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -683,6 +703,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Parceiro {
+            get {
+                object obj = ResourceManager.GetObject("Parceiro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Placa {
             get {
                 object obj = ResourceManager.GetObject("Placa", resourceCulture);
@@ -716,6 +746,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Preco {
             get {
                 object obj = ResourceManager.GetObject("Preco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Quantidade_de_uso {
+            get {
+                object obj = ResourceManager.GetObject("Quantidade_de_uso", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -833,6 +873,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Tipo {
+            get {
+                object obj = ResourceManager.GetObject("Tipo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tipo_de_combustivel {
             get {
                 object obj = ResourceManager.GetObject("Tipo_de_combustivel", resourceCulture);
@@ -896,6 +946,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Valor_km_excedente {
             get {
                 object obj = ResourceManager.GetObject("Valor_km_excedente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Valor_minimo {
+            get {
+                object obj = ResourceManager.GetObject("Valor_minimo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

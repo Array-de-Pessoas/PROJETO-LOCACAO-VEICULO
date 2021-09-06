@@ -664,5 +664,23 @@
   <ItemGroup>
     <None Include="Resources\Email.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Código.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dia de vencimento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Parceiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quantidade de uso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valor minimo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
