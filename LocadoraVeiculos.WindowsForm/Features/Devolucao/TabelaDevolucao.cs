@@ -1,4 +1,8 @@
-﻿using LocadoraVeiculos.Dominio.LocacaoModule;
+﻿using LocadoraVeiculos.Controladores.ClienteModule;
+using LocadoraVeiculos.Controladores.VeiculoModule;
+using LocadoraVeiculos.Dominio;
+using LocadoraVeiculos.Dominio.LocacaoModule;
+using LocadoraVeiculos.Dominio.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Shared;
 using System;
 using System.Collections.Generic;
@@ -14,12 +18,16 @@ namespace LocadoraVeiculos.WindowsForm.Features.Devolucao
 {
     public partial class TabelaDevolucao : UserControl
     {
+        ControladorCliente controladorCliente;
+        ControladorVeiculo controladorVeiculo;
         public TabelaDevolucao()
         {
             InitializeComponent();
             dataGridDevolucao.ConfigurarGridZebrado();
             dataGridDevolucao.ConfigurarGridSomenteLeitura();
             dataGridDevolucao.Columns.AddRange(ObterColunas());
+            controladorVeiculo = new ControladorVeiculo();
+            controladorCliente = new ControladorCliente();
         }
 
         private DataGridViewColumn[] ObterColunas()
@@ -27,8 +35,8 @@ namespace LocadoraVeiculos.WindowsForm.Features.Devolucao
             var colunas = new DataGridViewColumn[]
            {
                 new DataGridViewTextBoxColumn { DataPropertyName = "id", HeaderText = "id"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "id_cliente", HeaderText = "Cliente"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "id_veiculo", HeaderText = "Veículo"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "NomeCliente", HeaderText = "Nome do Cliente"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "Placa", HeaderText = "Placa do Veículo"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "DataLocacao", HeaderText = "Data locação"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "DataDevolucao", HeaderText = "Data devolução"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Preco", HeaderText = "Preço"},
@@ -57,8 +65,10 @@ namespace LocadoraVeiculos.WindowsForm.Features.Devolucao
 
             foreach (var devolucao in devolucoes)
             {
-                dataGridDevolucao.Rows.Add(devolucao.Id, devolucao.id_cliente, devolucao.id_veiculo, devolucao.dataLocacao, devolucao.dataDevolucao = DateTime.Now, devolucao.preco
-                    );
+                Cliente cliente = controladorCliente.SelecionarPorId(devolucao.id_cliente);
+                Veiculo veiculo = controladorVeiculo.SelecionarPorId(devolucao.id_veiculo);
+
+                dataGridDevolucao.Rows.Add(devolucao.Id, cliente.NomeCliente, veiculo.Placa, devolucao.dataLocacao, devolucao.dataDevolucao, devolucao.preco); 
             }
         }
     }

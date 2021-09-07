@@ -32,9 +32,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         ControladorVeiculo controladorVeiculo;
         ControladorTaxasServicos controladorTaxasServicos;
         ControladorSeguros controladorSeguros;
-        Locacao locacao;
-        CarrosAlugados carrosAlugados;
-        LocacoesPendentes locacoes;
+        Locacao locacao;     
         public TelaLocacaoForm()
         {
             InitializeComponent();
@@ -60,37 +58,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
                 dtLocacao.Value = Convert.ToDateTime(locacao.dataLocacao.ToShortDateString());
                 dtDevolucao.Value = Convert.ToDateTime(locacao.dataDevolucao.ToShortDateString());
                 cbPlano.ValueMember = locacao.plano;
-            }
-        }
-
-        public CarrosAlugados CarrosAlugados
-        {
-            get { return carrosAlugados; }
-
-            set
-            {
-                carrosAlugados = value;
-
-                cbCliente.ValueMember = carrosAlugados.IdCliente.ToString();
-                cbVeiculo.ValueMember = carrosAlugados.IdVeiculo.ToString();
-            }
-        }
-
-        public LocacoesPendentes LocacoesPendentes
-        {
-            get { return locacoes; }
-            set
-            {
-                locacoes = value;
-
-                cbCliente.ValueMember = locacoes.IdCliente.ToString();
-                cbVeiculo.ValueMember = locacoes.IdVeiculos.ToString();
-                dtLocacao.Value = Convert.ToDateTime(locacoes.DataLocacao.ToShortDateString());
-                dtDevolucao.Value = Convert.ToDateTime(locacoes.DataDevolucao.ToShortDateString());
 
             }
         }
-
         private void TelaLocacaoForm_Load(object sender, EventArgs e)
         {
             CarregarComboBoxs();
@@ -157,22 +127,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         }
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            List<Locacao> locacaos = controladorLocacao.SelecionarTodos();
-
-            int id_veiculo = Convert.ToInt32(cbVeiculo.SelectedValue);
-
-            foreach (var locacao in locacaos)
-            {
-                if (id_veiculo == locacao.id_veiculo)
-                {
-                    MessageBox.Show("Não é possível locar um veículo já locado!", "Adição de locação",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-            }
-
+                            
             double preco = 0;
-
+            int id_veiculo = Convert.ToInt32(cbVeiculo.SelectedValue);
             string plano = Convert.ToString(cbPlano.SelectedValue);
             int id_seguro = Convert.ToInt32(cbSeguro.SelectedValue);
             int id_cliente = Convert.ToInt32(cbCliente.SelectedValue);
@@ -183,22 +140,15 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 
             locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 1);    
 
-            carrosAlugados = new CarrosAlugados(id_cliente, id_veiculo);
-
-            locacoes = new LocacoesPendentes(id_cliente, id_veiculo, dataLocacao, dataDevolucao);
-
             if (locacao.Validar() != "ESTA_VALIDO")
             {
                 string primeiroErro = new StringReader(locacao.Validar()).ReadLine();
                 TelaPrincipal.Instancia.AtualizarRodape(primeiroErro);
                 DialogResult = DialogResult.None;
-            }
-
-          
-
+            }         
 
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnRegistraDevolucao_Click(object sender, EventArgs e)
         {
             double preco = 0;
 
@@ -213,6 +163,12 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 
             locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 0);
 
+            if (locacao.Validar() != "ESTA_VALIDO")
+            {
+                string primeiroErro = new StringReader(locacao.Validar()).ReadLine();
+                TelaPrincipal.Instancia.AtualizarRodape(primeiroErro);
+                DialogResult = DialogResult.None;
+            }
         }
     }
 }

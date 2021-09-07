@@ -264,7 +264,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             this.btnRegistraDevolucao.TabIndex = 65;
             this.btnRegistraDevolucao.Text = "Registrar devolução";
             this.btnRegistraDevolucao.UseVisualStyleBackColor = false;
-            this.btnRegistraDevolucao.Click += new System.EventHandler(this.button1_Click);
+            this.btnRegistraDevolucao.Click += new System.EventHandler(this.btnRegistraDevolucao_Click);
             // 
             // pictureBox7
             // 

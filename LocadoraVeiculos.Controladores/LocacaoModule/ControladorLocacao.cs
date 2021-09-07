@@ -92,51 +92,22 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             FROM
                 [TBLOCACAO] T";
 
-        private const string sqlCarrosAlugados =
-             @"INSERT INTO [TBCARROSALUGADOS]
-                     (
-                        [NomeCliente],
-                        [IdVeiculo]
-                     )
-                     VALUES
-                     (
-                        @NomeCliente,
-                        @IdVeiculo
-                     )";
-
+        private const string sqlSelecionarTodaslocacoesAtivas =
+           @"SELECT 
+                *  
+            FROM
+                [TBLOCACAO] 
+            WHERE 
+                locacaoAtiva = 1";
+       
         private const string sqlSelecionarCarrosAlugados =
             @"SELECT 
                 [ID],
                 [NOMECLIENTE],
                 [IDVEICULO]
             FROM
-                [TBCARROSALUGADOS] T";
-
-        private const string sqlLocacoesPendentes =
-            @"INSERT INTO [TBLOCAOCESPENDENTES]
-                     (
-                        [NomeCliente],
-                        [IdVeiculo],
-                        [DataLocacao],
-                        [DataDevolucao]
-                     )
-                     VALUES
-                     (
-                        @NomeCliente,
-                        @IdVeiculo,
-                        @DataLocacao,
-                        @DataDevolucao
-                     )";
-
-        private const string sqlSelecionarTodasLocacoesPendentes =
-            @"SELECT 
-                [ID],
-                [NOMECLIENTE],
-                [IDVEICULO],
-                [DATALOCACAO],
-                [DATADEVOLUCAO]
-            FROM
-                [TBLOCACOESPENDETES] T";
+                [TBCARROSALUGADOS] T";     
+     
         #endregion
 
         public List<Locacao> Selecionar()
@@ -215,6 +186,11 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
         public override List<Locacao> SelecionarTodos()
         {
             return Db.GetAll(sqlSelecionarTodaslocacoes, ConverterEmLocacao);
+        }
+
+        public List<Locacao> SelecionarTodasLocacoesAtivas()
+        {
+            return Db.GetAll(sqlSelecionarTodaslocacoesAtivas, ConverterEmLocacao);
         }
 
         private Locacao ConverterEmLocacao(IDataReader reader)

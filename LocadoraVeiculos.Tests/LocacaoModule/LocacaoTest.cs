@@ -31,7 +31,7 @@ namespace LocadoraVeiculos.Tests.LocacaoModule
             //act
             string resultado = locacaoInvalida.Validar();
             //assert
-            Assert.AreEqual("VALIDO", resultado);
+            Assert.AreEqual("ESTA_VALIDO", resultado);
         }
     }
 }

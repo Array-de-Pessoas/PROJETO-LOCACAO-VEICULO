@@ -22,6 +22,21 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
         ControladorLocacao controladorLocacao;
         TabelaLocacaoControl tabelaLocacaoControl;
       
+        //private bool ValidarVeiculo()
+        //{
+        //    List<Locacao> locacaos = controladorLocacao.SelecionarTodasLocacoesAtivas();
+
+        //    foreach (var locacao in locacaos)
+        //    {
+        //        if (id_veiculo == locacao.id_veiculo)
+        //        {
+        //            MessageBox.Show("Não é possível locar um veículo já locado!", "Adição de locação",
+        //            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //            return;
+        //        }
+        //    }
+        //}
+
         public OperacoesLocacao(ControladorLocacao controladorLocacao)
         {
             this.controladorLocacao = controladorLocacao;
@@ -34,7 +49,7 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
 
             if (id == 0)
             {
-                MessageBox.Show("Selecione um Veículo para poder editar!", "Edição de veículos",
+                MessageBox.Show("Selecione uma locação para poder editar!", "Edição de locação",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
@@ -47,10 +62,10 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
 
             if (telaLocacaoForm.ShowDialog() == DialogResult.OK)
             {
-                telaLocacaoForm.Locacao.preco = controladorLocacao.CalcularValorLocacao(telaLocacaoForm.Locacao);
+                
                 controladorLocacao.Editar(id, telaLocacaoForm.Locacao);
 
-                List<Locacao> locacaos = controladorLocacao.SelecionarTodos();
+                List<Locacao> locacaos = controladorLocacao.SelecionarTodasLocacoesAtivas();
 
                 tabelaLocacaoControl.AtualizarRegistros(locacaos);
 
@@ -95,11 +110,7 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
 
             if (telaLocacaoForm.ShowDialog() == DialogResult.OK)
             {            
-                controladorLocacao.InserirNovo(telaLocacaoForm.Locacao);
-
-                //carrosAlugados.InserirNovo(telaLocacaoForm.CarrosAlugados);
-                
-                //locacoesPendentes.InserirNovo(telaLocacaoForm.LocacoesPendentes);
+                controladorLocacao.InserirNovo(telaLocacaoForm.Locacao);         
 
                 GeradorPDF.GerarPDF(telaLocacaoForm.Locacao);
 
