@@ -1,11 +1,13 @@
 ﻿
 using LocadoraVeiculos.Controladores.ClienteModule;
+using LocadoraVeiculos.Controladores.CupomModule;
 using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
 using LocadoraVeiculos.Dominio;
 using LocadoraVeiculos.Dominio.CarrosAlugadosModule;
+using LocadoraVeiculos.Dominio.CupomModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.Dominio.LocacoesPendentesModule;
 using LocadoraVeiculos.Dominio.SegurosModule;
@@ -31,6 +33,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
         ControladorCliente controladorCliente;
         ControladorVeiculo controladorVeiculo;
         ControladorTaxasServicos controladorTaxasServicos;
+        ControladorCupom controladorCupom;
         ControladorSeguros controladorSeguros;
         Locacao locacao;     
         public TelaLocacaoForm()
@@ -39,6 +42,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             controladorCliente = new ControladorCliente();
             controladorVeiculo = new ControladorVeiculo();
             controladorTaxasServicos = new ControladorTaxasServicos();
+            controladorCupom = new ControladorCupom();
             controladorSeguros = new ControladorSeguros();
         }
         public Locacao Locacao
@@ -120,6 +124,12 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             cbSeguro.DisplayMember = "TipoSeguro";
             cbSeguro.ValueMember = "Id";
             cbSeguro.DataSource = seguros;
+
+            List<Cupom> cupom = controladorCupom.SelecionarTodos();
+
+            CbCupom.DisplayMember = "Codigo";
+            CbCupom.ValueMember = "Id";
+            CbCupom.DataSource = cupom;
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {

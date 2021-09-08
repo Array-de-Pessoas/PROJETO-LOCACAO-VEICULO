@@ -397,4 +397,7 @@
   <data name="Nome_do_parceiro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nome do parceiro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cupom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cupom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
