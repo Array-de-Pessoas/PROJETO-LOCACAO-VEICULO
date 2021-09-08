@@ -39,11 +39,9 @@ namespace LocadoraVeiculos.Tests.ParceiroModule
         [TestMethod]
         public void DeveExcluir()
         {
-            
             var novoParceiro = new Parceiro("Lucas");
             controlador.InserirNovo(novoParceiro);
            
-         
             controlador.Excluir(novoParceiro.Id);
 
             Parceiro ParceiroExcluido = controlador.SelecionarPorId(novoParceiro.Id);

@@ -29,7 +29,7 @@ namespace LocadoraVeiculos.Controladores.ParceiroModule
                         [ID] = @ID";
 
         private const string sqlExcluirParceiro =
-            @"DELETE FROM [TBCOMBUSTIVEL]
+            @"DELETE FROM [TBPARCEIRO]
                     WHERE 
                         [ID] = @ID";
 
