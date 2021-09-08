@@ -42,17 +42,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard.LocacoesPendentesModul
 
         public UserControl ObterTabela()
         {
-            List<Locacao> locacoes = controladorLocacao.SelecionarTodos();
-            List<Locacao> locacaoesAbertas = new List<Locacao>();
+           
+            List<Locacao> locacaoesAbertas = controladorLocacao.SelecionarTodasLocacoesAtivas();
 
-            foreach (var locacao in locacoes)
-            {
-                bool locacaoEstaAberta = locacao.locacaoAtiva == 1;
-                if (locacaoEstaAberta)
-                {
-                    locacaoesAbertas.Add(locacao);
-                }
-            }
             tabela.AtualizarRegistros(locacaoesAbertas);
 
             return tabela;

@@ -127,7 +127,7 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
         {
             string resultadoValidacao = registro.Validar();
 
-            if (resultadoValidacao == "VALIDO")
+            if (resultadoValidacao == "ESTA_VALIDO")
             {
                 registro.Id = id;
                 Db.Update(sqlEditarLocacao, ObtemParametrosLocacao(registro));
@@ -201,7 +201,7 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             return Db.GetAll(sqlSelecionarTodaslocacoesAtivas, ConverterEmLocacao);
         }
 
-        public List<Locacao> SelecionarTodasDevolucao()
+        public List<Locacao> SelecionarTodasDevolucoes()
         {
             return Db.GetAll(sqlSelecionarTodasDevolucoes, ConverterEmLocacao);
         }
