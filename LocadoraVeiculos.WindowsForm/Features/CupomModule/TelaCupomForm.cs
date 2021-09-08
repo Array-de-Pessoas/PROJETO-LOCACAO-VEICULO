@@ -1,5 +1,7 @@
 ﻿using LocadoraVeiculos.Controladores.CupomModule;
+using LocadoraVeiculos.Controladores.ParceiroModule;
 using LocadoraVeiculos.Dominio.CupomModule;
+using LocadoraVeiculos.Dominio.ParceiroModule;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,11 +19,13 @@ namespace LocadoraVeiculos.WindowsForm.Features.CupomModule
     {
         private Cupom cupom;
         private readonly ControladorCupom controlador = null;
+        ControladorParceiro controladorParceiro;
 
         public TelaCupomForm()
         {
             InitializeComponent();
             controlador = new ControladorCupom();
+            controladorParceiro = new ControladorParceiro();
         }
 
         public Cupom Cupom
@@ -67,6 +71,20 @@ namespace LocadoraVeiculos.WindowsForm.Features.CupomModule
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TelaCupomForm_Load(object sender, EventArgs e)
+        {
+            CarregarComboBox();
+        }
+
+        private void CarregarComboBox()
+        {
+            List<Parceiro> parceiros = controladorParceiro.SelecionarTodos();
+
+            CmbParceiro.DisplayMember = "NomeParceiro";
+            CmbParceiro.ValueMember = "Id";
+            CmbParceiro.DataSource = parceiros;
         }
     }
 }

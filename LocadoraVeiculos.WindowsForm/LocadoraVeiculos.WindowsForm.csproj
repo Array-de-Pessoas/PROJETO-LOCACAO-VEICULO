@@ -165,6 +165,19 @@
     <Compile Include="Features\LoginModule\TelaMudarImagem.Designer.cs">
       <DependentUpon>TelaMudarImagem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\ParceiroModule\OperacoesParceiro.cs" />
+    <Compile Include="Features\ParceiroModule\TabelaParceiro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\ParceiroModule\TabelaParceiro.Designer.cs">
+      <DependentUpon>TabelaParceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\ParceiroModule\TelaParceiroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\ParceiroModule\TelaParceiroForm.Designer.cs">
+      <DependentUpon>TelaParceiroForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\SeguroModule\OperacoesSeguros.cs" />
     <Compile Include="Features\SeguroModule\TabelaSeguros.cs">
       <SubType>UserControl</SubType>
@@ -292,6 +305,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\LoginModule\TelaMudarImagem.resx">
       <DependentUpon>TelaMudarImagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\ParceiroModule\TabelaParceiro.resx">
+      <DependentUpon>TabelaParceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\ParceiroModule\TelaParceiroForm.resx">
+      <DependentUpon>TelaParceiroForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\SeguroModule\TabelaSeguros.resx">
       <DependentUpon>TabelaSeguros.cs</DependentUpon>
@@ -688,6 +707,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Valor minimo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nome do parceiro.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

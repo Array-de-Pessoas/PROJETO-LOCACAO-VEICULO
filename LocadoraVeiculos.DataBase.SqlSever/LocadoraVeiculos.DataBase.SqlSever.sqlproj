@@ -74,6 +74,7 @@
     <Build Include="dbo\Tables\TBCARROSDISPONIVEIS.sql" />
     <Build Include="dbo\Tables\TBLOCACOESPENDENTES.sql" />
     <Build Include="dbo\Tables\TBCUPOM.sql" />
+    <Build Include="dbo\Tables\TBPARCEIRO.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="LocadoraVeiculos.DataBase.SqlSever.refactorlog" />
