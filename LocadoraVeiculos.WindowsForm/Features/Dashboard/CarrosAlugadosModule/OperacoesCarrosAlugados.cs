@@ -1,7 +1,6 @@
-﻿using LocadoraVeiculos.Controladores.CarrosAlugadosModule;
+﻿
 using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
-using LocadoraVeiculos.Dominio.CarrosAlugadosModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
 using System;
@@ -16,13 +15,12 @@ namespace LocadoraVeiculos.WindowsForm.Features.Dashboard.CarrosAlugadosModule
     public class OperacoesCarrosAlugados : ICadastravel
     {
         ControladorLocacao controladorLocacao = new ControladorLocacao();
-        ControladorVeiculo controladorVeiculo = new ControladorVeiculo();
-        ControladorCarrosAlugados controlador;
+        ControladorVeiculo controladorVeiculo = new ControladorVeiculo();    
         TabelaCarrosAlugados tabelaCarrosAlugados;
 
-        public OperacoesCarrosAlugados(ControladorCarrosAlugados controladorCarrosAlugados)
+        public OperacoesCarrosAlugados()
         {
-            this.controlador = controladorCarrosAlugados;
+         
             tabelaCarrosAlugados = new TabelaCarrosAlugados();
         }
 

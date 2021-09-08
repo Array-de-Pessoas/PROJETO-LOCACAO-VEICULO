@@ -99,7 +99,15 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
                 [TBLOCACAO] 
             WHERE 
                 locacaoAtiva = 1";
-       
+
+        private const string sqlSelecionarTodasDevolucoes =
+           @"SELECT 
+                *  
+            FROM
+                [TBLOCACAO] 
+            WHERE 
+                locacaoAtiva = 0";
+
         private const string sqlSelecionarCarrosAlugados =
             @"SELECT 
                 [ID],
@@ -191,6 +199,11 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
         public List<Locacao> SelecionarTodasLocacoesAtivas()
         {
             return Db.GetAll(sqlSelecionarTodaslocacoesAtivas, ConverterEmLocacao);
+        }
+
+        public List<Locacao> SelecionarTodasDevolucao()
+        {
+            return Db.GetAll(sqlSelecionarTodasDevolucoes, ConverterEmLocacao);
         }
 
         private Locacao ConverterEmLocacao(IDataReader reader)

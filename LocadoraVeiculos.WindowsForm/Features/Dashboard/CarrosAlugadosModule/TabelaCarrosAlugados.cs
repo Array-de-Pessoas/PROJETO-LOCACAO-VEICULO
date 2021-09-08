@@ -1,4 +1,4 @@
-﻿using LocadoraVeiculos.Dominio.CarrosAlugadosModule;
+﻿
 using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
 using LocadoraVeiculos.WindowsForm.Shared;

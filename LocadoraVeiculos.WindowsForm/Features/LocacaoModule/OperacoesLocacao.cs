@@ -1,6 +1,5 @@
-﻿using LocadoraVeiculos.Controladores.CarrosAlugadosModule;
+﻿
 using LocadoraVeiculos.Controladores.LocacaoModule;
-using LocadoraVeiculos.Controladores.LocacoesPendentesModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.GeradorPDF;
 using LocadoraVeiculos.WindowsForm;
@@ -17,8 +16,7 @@ namespace LocadoraLocacaos.WindowsForm.Features.LocacaoModule
 {
     public class OperacoesLocacao : ICadastravel
     {
-        ControladorLocacoesPendentes locacoesPendentes = new ControladorLocacoesPendentes();
-        ControladorCarrosAlugados carrosAlugados = new ControladorCarrosAlugados();
+       
         ControladorLocacao controladorLocacao;
         TabelaLocacaoControl tabelaLocacaoControl;
       

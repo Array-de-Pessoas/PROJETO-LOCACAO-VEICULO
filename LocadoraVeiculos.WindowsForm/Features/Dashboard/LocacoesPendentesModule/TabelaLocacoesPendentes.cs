@@ -1,5 +1,4 @@
 ﻿using LocadoraVeiculos.Dominio.LocacaoModule;
-using LocadoraVeiculos.Dominio.LocacoesPendentesModule;
 using LocadoraVeiculos.WindowsForm.Shared;
 using System;
 using System.Collections.Generic;

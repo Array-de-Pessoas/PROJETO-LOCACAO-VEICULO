@@ -1,7 +1,6 @@
-﻿using LocadoraVeiculos.Controladores.CarrosDisponiveisModule;
+﻿
 using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
-using LocadoraVeiculos.Dominio.CarrosDisponiveisModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
 using System;

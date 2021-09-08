@@ -1,6 +1,5 @@
 ﻿using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
-using LocadoraVeiculos.Dominio.CarrosDisponiveisModule;
 using LocadoraVeiculos.Dominio.GrupoVeiculosModule;
 using LocadoraVeiculos.Dominio.VeiculoModule;
 using System;
@@ -22,7 +21,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
         ControladorVeiculo controladorVeiculo = new ControladorVeiculo();
         ControladorGrupoVeiculos controladorGrupoVeiculos = new ControladorGrupoVeiculos();
         Veiculo veiculo;
-        CarrosDisponiveis carros;
+        
         public TelaVeiculoForm()
         {
             InitializeComponent();
@@ -57,20 +56,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             }
         }
 
-        public CarrosDisponiveis CarrosDisponiveis
-        {
-            get { return carros; }
-
-            set
-            {
-                carros = value;
-
-                txtMarca.Text = carros.Marca;
-                cbTipoVeiculo.SelectedValue = carros.IdGrupo;
-                txtPlaca.Text = carros.Placa;
-                
-            }
-        }
+       
 
         private void btnAdicionarImagem_Click_1(object sender, EventArgs e)
         {
@@ -101,9 +87,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
             int id_grupoVeiculo = Convert.ToInt32(cbTipoVeiculo.SelectedValue);
 
             veiculo = new Veiculo(placa, cor, marca, ano, tipoCombustivel, image, quantidadeLitros,
-                numeroPortas, capacidadePessoas, tamanhoPortaMalas, kilometragem, id_grupoVeiculo);
-
-            carros = new CarrosDisponiveis(marca, id_grupoVeiculo, placa);
+                numeroPortas, capacidadePessoas, tamanhoPortaMalas, kilometragem, id_grupoVeiculo);           
 
             string resultadoValidacao = veiculo.Validar();
 

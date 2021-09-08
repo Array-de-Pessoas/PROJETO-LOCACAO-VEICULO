@@ -4,7 +4,7 @@ using LocadoraVeiculos.Dominio.LocacaoModule;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace LocadoraVeiculos.Tests.DevolucaoModule
+namespace LocadoraVeiculos.Tests.zDevolucaoModule
 {
     [TestClass]
     public class DevolucaoControladorTest

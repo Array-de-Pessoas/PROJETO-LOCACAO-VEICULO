@@ -1,7 +1,5 @@
 ﻿using LocadoraVeiculos.Controladores.LocacaoModule;
-using LocadoraVeiculos.Controladores.LocacoesPendentesModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
-using LocadoraVeiculos.Dominio.LocacoesPendentesModule;
 using System;
 using System.Collections.Generic;
 using System.Linq;

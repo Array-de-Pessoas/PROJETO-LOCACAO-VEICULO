@@ -56,4 +56,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="id_veiculo" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="60a8dd7e-25e6-4b2a-9227-66dad80e2853" ChangeDateTime="09/08/2021 21:15:52">
+    <Property Name="ElementName" Value="[dbo].[TBCUPOM].[Quantidade]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBCUPOM]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="QUANTIDADEUSO" />
+  </Operation>
 </Operations>

@@ -70,9 +70,6 @@
     <Build Include="dbo\Tables\TBCOMBUSTIVEL.sql" />
     <Build Include="dbo\Tables\TBSEGUROS.sql" />
     <Build Include="dbo\Tables\TBLOCACAO.sql" />
-    <Build Include="dbo\Tables\TBCARROSALUGADOS.sql" />
-    <Build Include="dbo\Tables\TBCARROSDISPONIVEIS.sql" />
-    <Build Include="dbo\Tables\TBLOCACOESPENDENTES.sql" />
     <Build Include="dbo\Tables\TBCUPOM.sql" />
     <Build Include="dbo\Tables\TBPARCEIRO.sql" />
   </ItemGroup>

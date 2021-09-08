@@ -9,10 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocadoraVeiculos.Tests.LocacaoModule
+namespace LocadoraVeiculos.Tests.xLocacaoModule
 {
     [TestClass]
-    public class ControladorLocacaoTest
+    public class xControladorLocacaoTest
     {
         ControladorLocacao controladorLocacao;
         Locacao locacaoX, locacaoY;
@@ -24,7 +24,7 @@ namespace LocadoraVeiculos.Tests.LocacaoModule
         {
             locacaoX = new Locacao(1, 1, 1, 1, 1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE", DateTime.Now.Date, 1);
         }
-        public ControladorLocacaoTest()
+        public xControladorLocacaoTest()
         {
             controladorLocacao = new ControladorLocacao();
         }

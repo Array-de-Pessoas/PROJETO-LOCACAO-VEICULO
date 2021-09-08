@@ -7,6 +7,6 @@
     [ValorMinimo] DECIMAL(18, 2) NOT NULL, 
     [Parceiro] NVARCHAR(100) NOT NULL, 
     [DiaVencimento] DATETIME NOT NULL, 
-    [Quantidade] INT NOT NULL
+    [QUANTIDADEUSO] INT NOT NULL
     PRIMARY KEY CLUSTERED ([Id] ASC)
 )

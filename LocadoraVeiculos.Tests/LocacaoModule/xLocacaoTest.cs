@@ -6,10 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocadoraVeiculos.Tests.LocacaoModule
+namespace LocadoraVeiculos.Tests.xLocacaoModule
 {
     [TestClass]
-    public class LocacaoTest
+    public class xLocacaoTest
     {
         //cenário 1
         [TestMethod]

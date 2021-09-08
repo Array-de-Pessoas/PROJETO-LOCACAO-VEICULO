@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B066717A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7D2673AF-BEE6-48F7-9D0B-097D22B3A266}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraVeiculos.Tests", "LocadoraVeiculos.Tests\LocadoraVeiculos.Tests.csproj", "{69E2FDD5-2BDF-4AEC-93CB-2C19C2200A60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraVeiculos.UnitTests", "LocadoraVeiculos.Tests\LocadoraVeiculos.UnitTests.csproj", "{69E2FDD5-2BDF-4AEC-93CB-2C19C2200A60}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraVeiculos.Controladores", "LocadoraVeiculos.Controladores\LocadoraVeiculos.Controladores.csproj", "{F69C3646-BA00-43C5-ACB4-F04C49D95725}"
 EndProject

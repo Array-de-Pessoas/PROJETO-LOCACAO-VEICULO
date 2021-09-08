@@ -1,13 +1,10 @@
 ﻿using LocadoraLocacaos.WindowsForm.Features.LocacaoModule;
-using LocadoraVeiculos.Controladores.CarrosAlugadosModule;
-using LocadoraVeiculos.Controladores.CarrosDisponiveisModule;
 using LocadoraVeiculos.Controladores.ClienteModule;
 using LocadoraVeiculos.Controladores.CombustivelModule;
 using LocadoraVeiculos.Controladores.CupomModule;
 using LocadoraVeiculos.Controladores.FuncionarioModule;
 using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
 using LocadoraVeiculos.Controladores.LocacaoModule;
-using LocadoraVeiculos.Controladores.LocacoesPendentesModule;
 using LocadoraVeiculos.Controladores.ParceiroModule;
 using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
@@ -287,7 +284,7 @@ namespace LocadoraVeiculos.WindowsForm
             btnCarrosDisponiveis.Visible = false;
             btnCarrosAlugados.Visible = false;
             btnLocacoesPendentes.Visible = false;
-            operacoes = new OperacoesCarrosAlugados(new ControladorCarrosAlugados());
+            operacoes = new OperacoesCarrosAlugados();
             ConfigurarPanelRegistros();
         }
 

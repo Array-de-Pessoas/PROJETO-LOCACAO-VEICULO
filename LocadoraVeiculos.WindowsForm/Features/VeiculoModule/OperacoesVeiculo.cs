@@ -1,4 +1,4 @@
-﻿using LocadoraVeiculos.Controladores.CarrosDisponiveisModule;
+﻿
 using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
@@ -15,8 +15,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
     
     public class OperacoesVeiculo : ICadastravel
     {
-        ControladorLocacao controladorLocacao = new ControladorLocacao();
-        Controladores.CarrosDisponiveisModule.ControladorCarrosDisponiveis carrosDisponiveis = new Controladores.CarrosDisponiveisModule.ControladorCarrosDisponiveis();
+        ControladorLocacao controladorLocacao = new ControladorLocacao();     
         Controladores.VeiculoModule.ControladorVeiculo controladorVeiculo;
         TabelaVeiculosControl tabelaVeiculosControl;
         public OperacoesVeiculo(Controladores.VeiculoModule.ControladorVeiculo controladorVeiculo)
@@ -103,9 +102,7 @@ namespace LocadoraVeiculos.WindowsForm.Features.GrupoVeiculosModule
 
             if (telaVeiculoForm.ShowDialog() == DialogResult.OK)
             {
-                controladorVeiculo.InserirNovo(telaVeiculoForm.Veiculo);
-
-                carrosDisponiveis.InserirNovo(telaVeiculoForm.CarrosDisponiveis);
+                controladorVeiculo.InserirNovo(telaVeiculoForm.Veiculo);       
 
                 List<Veiculo> veiculos = controladorVeiculo.SelecionarTodos();
 
