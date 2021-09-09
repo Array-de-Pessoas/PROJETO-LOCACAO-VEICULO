@@ -46,6 +46,7 @@ namespace LocadoraVeiculos.WindowsForm
             this.lOCAÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CadastroDevolucao = new System.Windows.Forms.ToolStripMenuItem();
             this.CadastroCupom = new System.Windows.Forms.ToolStripMenuItem();
+            this.CadastroParceiro = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ImagemChave = new System.Windows.Forms.PictureBox();
@@ -63,7 +64,6 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnCarrosAlugados = new System.Windows.Forms.Button();
             this.btnCarrosDisponiveis = new System.Windows.Forms.Button();
             this.btnLocacoesPendentes = new System.Windows.Forms.Button();
-            this.CadastroParceiro = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemChave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemLinha)).BeginInit();
@@ -192,6 +192,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             // lOCAÇÃOToolStripMenuItem
             // 
+            this.lOCAÇÃOToolStripMenuItem.Font = new System.Drawing.Font("Bahnschrift Light", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lOCAÇÃOToolStripMenuItem.Name = "lOCAÇÃOToolStripMenuItem";
             this.lOCAÇÃOToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.lOCAÇÃOToolStripMenuItem.Text = "LOCAÇÃO";
@@ -199,6 +200,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             // CadastroDevolucao
             // 
+            this.CadastroDevolucao.Font = new System.Drawing.Font("Bahnschrift Light", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastroDevolucao.Name = "CadastroDevolucao";
             this.CadastroDevolucao.Size = new System.Drawing.Size(224, 28);
             this.CadastroDevolucao.Text = "DEVOLUÇÃO";
@@ -206,10 +208,19 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             // CadastroCupom
             // 
+            this.CadastroCupom.Font = new System.Drawing.Font("Bahnschrift Light", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastroCupom.Name = "CadastroCupom";
             this.CadastroCupom.Size = new System.Drawing.Size(224, 28);
             this.CadastroCupom.Text = "CUPOM";
             this.CadastroCupom.Click += new System.EventHandler(this.CadastroCupom_Click);
+            // 
+            // CadastroParceiro
+            // 
+            this.CadastroParceiro.Font = new System.Drawing.Font("Bahnschrift Light", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CadastroParceiro.Name = "CadastroParceiro";
+            this.CadastroParceiro.Size = new System.Drawing.Size(224, 28);
+            this.CadastroParceiro.Text = "PARCEIRO";
+            this.CadastroParceiro.Click += new System.EventHandler(this.CadastroParceiro_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -410,13 +421,6 @@ namespace LocadoraVeiculos.WindowsForm
             this.btnLocacoesPendentes.Text = "Vizualizar";
             this.btnLocacoesPendentes.UseVisualStyleBackColor = false;
             this.btnLocacoesPendentes.Click += new System.EventHandler(this.btnLocacoesPendentes_Click);
-            // 
-            // CadastroParceiro
-            // 
-            this.CadastroParceiro.Name = "CadastroParceiro";
-            this.CadastroParceiro.Size = new System.Drawing.Size(224, 28);
-            this.CadastroParceiro.Text = "PARCEIRO";
-            this.CadastroParceiro.Click += new System.EventHandler(this.CadastroParceiro_Click);
             // 
             // TelaPrincipalCadastros
             // 
