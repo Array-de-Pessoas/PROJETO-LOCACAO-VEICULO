@@ -1,8 +1,10 @@
-﻿using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
+﻿using LocadoraVeiculos.Controladores.CupomModule;
+using LocadoraVeiculos.Controladores.GrupoVeiculosModule;
 using LocadoraVeiculos.Controladores.SegurosModule;
 using LocadoraVeiculos.Controladores.Shared;
 using LocadoraVeiculos.Controladores.TaxasServicosModule;
 using LocadoraVeiculos.Controladores.VeiculoModule;
+using LocadoraVeiculos.Dominio.CupomModule;
 using LocadoraVeiculos.Dominio.GrupoVeiculosModule;
 using LocadoraVeiculos.Dominio.LocacaoModule;
 using LocadoraVeiculos.Dominio.SegurosModule;
@@ -19,6 +21,8 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
 {
     public class ControladorLocacao : Controlador<Locacao>
     {
+        ControladorCupom controladorCupom = new ControladorCupom();
+
         #region queries sql
         private const string sqlInserirlocacaoVeiculo =
            @"INSERT INTO [TBLOCACAO]
@@ -32,7 +36,8 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
                         [preco],
                         [plano],
                         [dataDevolucaoRealizada],
-                        [locacaoAtiva]
+                        [locacaoAtiva],
+                        [id_cupom]
                      )
                      VALUES
                      (
@@ -45,7 +50,8 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
                         @preco,
                         @plano,
                         @dataDevolucaoRealizada,
-                        @locacaoAtiva
+                        @locacaoAtiva,
+                        @id_cupom
                      )";
 
         private const string sqlEditarLocacao =
@@ -60,7 +66,8 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
                         [preco] =       @preco,
                         [plano] = @plano,
                         [dataDevolucaoRealizada] = @dataDevolucaoRealizada,
-                        [locacaoAtiva] = @locacaoAtiva
+                        [locacaoAtiva] = @locacaoAtiva,
+                        [id_cupom] = @id_cupom
                        
                     WHERE 
                         Id = @Id";
@@ -106,22 +113,9 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             FROM
                 [TBLOCACAO] 
             WHERE 
-                locacaoAtiva = 0";
-
-        private const string sqlSelecionarCarrosAlugados =
-            @"SELECT 
-                [ID],
-                [NOMECLIENTE],
-                [IDVEICULO]
-            FROM
-                [TBCARROSALUGADOS] T";     
+                locacaoAtiva = 0";   
      
         #endregion
-
-        public List<Locacao> Selecionar()
-        {
-            return Db.GetAll(sqlSelecionarCarrosAlugados, ConverterEmLocacao);
-        }
 
         public override string Editar(int id, Locacao registro)
         {
@@ -151,6 +145,7 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             parametros.Add("plano", registro.plano);
             parametros.Add("locacaoAtiva", registro.locacaoAtiva);
             parametros.Add("dataDevolucaoRealizada", registro.dataDevolucaoRealizada);
+            parametros.Add("id_cupom", registro.cupom.Id);
 
             return parametros;
         }
@@ -222,7 +217,14 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             }           
             var locacaoAtiva = Convert.ToInt32(reader["locacaoAtiva"]);
 
-            Locacao locacao = new Locacao(id_cliente, id_veiculo, id_taxas, id_seguro, preco, dataLocacao, dataDevolucao, plano, dataDevolucaoRealizada, locacaoAtiva);
+            Cupom cupom = null;
+            var id_cupom = Convert.ToInt32(reader["id_cupom"]);
+            if (id_cupom != 0)
+            {
+                cupom = controladorCupom.SelecionarPorId(id_cupom);
+            }           
+
+            Locacao locacao = new Locacao(id_cliente, id_veiculo, id_taxas, id_seguro, preco, dataLocacao, dataDevolucao, plano, dataDevolucaoRealizada, locacaoAtiva, cupom);
 
             locacao.Id = Convert.ToInt32(reader["Id"]);
 
@@ -276,9 +278,6 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             return 0;
         }
 
-        //private double CalcularDesconto(double valorLocacao)
-        //{
-            
-        //}
+        
     }
 }

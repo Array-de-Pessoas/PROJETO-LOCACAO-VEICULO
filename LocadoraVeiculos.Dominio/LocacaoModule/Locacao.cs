@@ -1,4 +1,5 @@
-﻿using LocadoraVeiculos.Dominio.Shared;
+﻿using LocadoraVeiculos.Dominio.CupomModule;
+using LocadoraVeiculos.Dominio.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +20,9 @@ namespace LocadoraVeiculos.Dominio.LocacaoModule
         public int locacaoAtiva;
         public double preco;
         public string plano;
+        public Cupom cupom;
 
-        public Locacao(int id_cliente, int id_veiculo, int id_taxa, int id_seguro, double preco, DateTime dataLocacao, DateTime dataDevolucao, string plano, DateTime? dataDevolucaoRealizada, int locacaoAtiva)
+        public Locacao(int id_cliente, int id_veiculo, int id_taxa, int id_seguro, double preco, DateTime dataLocacao, DateTime dataDevolucao, string plano, DateTime? dataDevolucaoRealizada, int locacaoAtiva, Cupom cupom)
         {
             this.plano = plano;
             this.id_cliente = id_cliente;
@@ -32,6 +34,7 @@ namespace LocadoraVeiculos.Dominio.LocacaoModule
             this.dataDevolucaoRealizada = dataDevolucaoRealizada;
             this.locacaoAtiva = locacaoAtiva;
             this.dataDevolucao = dataDevolucao;
+            this.cupom = cupom;
         }
 
         public override string Validar()

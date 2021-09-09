@@ -11,6 +11,7 @@
     [plano] NVARCHAR(50) NOT NULL, 
     [locacaoAtiva] BIT NULL, 
     [dataDevolucaoRealizada] DATE NULL, 
+    [id_cupom] INT NULL, 
     PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_TBLOCACAO_TBCLIENTE] FOREIGN KEY ([id_cliente]) REFERENCES [dbo].[TBCLIENTE] ([Id]),
     CONSTRAINT [FK_TBLOCACAO_TBVEICULO] FOREIGN KEY ([id_veiculo]) REFERENCES [dbo].[TBVEICULO] ([Id]),
