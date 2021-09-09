@@ -18,17 +18,15 @@ namespace LocadoraVeiculos.Tests.xLocacaoModule
             controladorCupom = new ControladorCupom();
         }
 
-
-
         //cenário 1
         [TestMethod]
         public void deveRetornarVeiculoInvalido()
         {
             //arrange
-            Locacao locacaoInvalida = new Locacao(0, 1, 1, 1,1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE", DateTime.Now.Date, 1, controladorCupom.SelecionarPorId(1));
+            Locacao locacaoInvalida = new Locacao(0, 1, 1, 1, 1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE", DateTime.Now.Date, 1, controladorCupom.SelecionarPorId(1));
             //act
             string resultado = locacaoInvalida.Validar();
-           // assert
+            // assert
             Assert.AreEqual("O campo Cliente é obrigatório", resultado);
         }
         //cenário 2
@@ -36,7 +34,7 @@ namespace LocadoraVeiculos.Tests.xLocacaoModule
         public void deveRetornarVeiculoValido()
         {
             //arrange    
-            Locacao locacaoInvalida = new Locacao(1, 1, 1, 1, 1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE",DateTime.Now.Date, 1, controladorCupom.SelecionarPorId(1));
+            Locacao locacaoInvalida = new Locacao(1, 1, 1, 1, 1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE", DateTime.Now.Date, 1, controladorCupom.SelecionarPorId(1));
             //act
             string resultado = locacaoInvalida.Validar();
             //assert

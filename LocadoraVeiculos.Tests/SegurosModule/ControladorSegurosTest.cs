@@ -23,7 +23,7 @@ namespace LocadoraVeiculos.Tests.SegurosModule
         public void DeveInserir()
         {
             //arrange
-            var novoSeguro = new Seguros("Contra Incêndio", 5000.50m);
+            var novoSeguro = new Seguros("Condutor", 1000m);
 
             //action
             controlador.InserirNovo(novoSeguro);
@@ -36,10 +36,10 @@ namespace LocadoraVeiculos.Tests.SegurosModule
         [TestMethod]
         public void DeveAtualizar()
         {
-            var seguro = new Seguros("Contra Incêndio", 5000.50m);
+            var seguro = new Seguros("Condutor", 1000m);
             controlador.InserirNovo(seguro);
 
-            var NovoSeguro = new Seguros("Pneu furado", 5000.50m);
+            var NovoSeguro = new Seguros("Condutor Plus", 1000m);
 
             controlador.Editar(seguro.Id, NovoSeguro);
 
@@ -50,7 +50,7 @@ namespace LocadoraVeiculos.Tests.SegurosModule
         [TestMethod]
         public void DeveExcluir()
         {
-            var seguro = new Seguros("Contra Incêndio", 5000.50m);
+            var seguro = new Seguros("Condutor", 5000.50m);
             controlador.InserirNovo(seguro);
 
             controlador.Excluir(seguro.Id);
@@ -62,7 +62,7 @@ namespace LocadoraVeiculos.Tests.SegurosModule
         [TestMethod]
         public void DeveSelecionar_TaxasServicos_PorId()
         {
-            var seguro = new Seguros("Contra Incêndio", 5000.50m);
+            var seguro = new Seguros("Terceiros", 1000m);
             controlador.InserirNovo(seguro);
 
             Seguros SeguroAtualizado = controlador.SelecionarPorId(seguro.Id);
@@ -73,21 +73,21 @@ namespace LocadoraVeiculos.Tests.SegurosModule
         [TestMethod]
         public void DeveSelecionar_TodosFuncionarios_OrdenadosPorNome()
         {
-            var S1 = new Seguros("Pneu furado", 5000.50m);
+            var S1 = new Seguros("Condutor Plus", 1000m);
             controlador.InserirNovo(S1);
 
-            var S2 = new Seguros("Pegou fogo",5000.50m);
+            var S2 = new Seguros("Condutor",1000m);
             controlador.InserirNovo(S2);
 
-            var S3 = new Seguros("Barbeiro", 5000.50m);
+            var S3 = new Seguros("Terceiros", 1000m);
             controlador.InserirNovo(S3);
 
             var seguros = controlador.SelecionarTodos();
 
             seguros.Should().HaveCount(3);
-            seguros[0].TipoSeguro.Should().Be("Pneu furado");
-            seguros[1].TipoSeguro.Should().Be("Pegou fogo");
-            seguros[2].TipoSeguro.Should().Be("Barbeiro");
+            seguros[0].TipoSeguro.Should().Be("Condutor Plus");
+            seguros[1].TipoSeguro.Should().Be("Condutor");
+            seguros[2].TipoSeguro.Should().Be("Terceiros");
         }
     }
 }

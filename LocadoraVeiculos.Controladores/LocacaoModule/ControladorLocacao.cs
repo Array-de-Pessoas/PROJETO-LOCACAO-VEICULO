@@ -262,9 +262,10 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             }
 
             double valorTotalSemMulta = (diasAlugados.Days * valorDiaria) + Convert.ToDouble(taxasDaLocacao.Valor) + (Convert.ToDouble(seguroDaLocacao.Valor) * diasAlugados.Days);
-            double gerarValorMulta = CalcularMulta(diasAlugados.Days, diasPrevistoAlugado.Days, valorTotalSemMulta);
+            double ValorMulta = CalcularMulta(diasAlugados.Days, diasPrevistoAlugado.Days, valorTotalSemMulta);
+            double valorComDesconto = CalcularDescontoCupom(valorTotalSemMulta, locacao.cupom);
 
-            return valorTotalSemMulta + gerarValorMulta;
+            return ValorMulta + valorComDesconto;
             
         }
 
@@ -278,6 +279,16 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             return 0;
         }
 
-        
+        private double CalcularDescontoCupom(double valorLocacao, Cupom cupom)
+        {
+            bool semDescontouValido = cupom == null || valorLocacao < (double)cupom.ValorMinimo;
+            if (semDescontouValido)
+            {
+                return valorLocacao;
+            }
+            double valorDoDesconto = valorLocacao * ((double)cupom.Valor / 100);
+            return valorLocacao - valorDoDesconto;
+            
+        }
     }
 }

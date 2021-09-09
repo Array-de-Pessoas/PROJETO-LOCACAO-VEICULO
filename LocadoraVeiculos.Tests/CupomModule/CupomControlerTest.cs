@@ -23,7 +23,7 @@ namespace LocadoraVeiculos.Tests.CupomModule
         public void DeveInserir()
         {
             //arrange
-            var novoCupom = new Cupom("GHTRS","Desconto", 5000.50m, 5000.50m, "Lucas", DateTime.Now, 1);
+            var novoCupom = new Cupom("GHTRS","Desconto", 10m, 1000m, "Lucas", DateTime.Now, 1);
 
             //action
             controlador.InserirNovo(novoCupom);
@@ -37,7 +37,7 @@ namespace LocadoraVeiculos.Tests.CupomModule
         public void DeveExlcuir()
         {
             //arrange
-            var novoCupom = new Cupom("GHTRS", "Desconto", 5000.50m, 5000.50m, "Lucas", DateTime.Now, 1);
+            var novoCupom = new Cupom("GHTRS", "Desconto", 10m, 1000m, "Lucas", DateTime.Now, 1);
 
             //action
             controlador.InserirNovo(novoCupom);
@@ -52,12 +52,12 @@ namespace LocadoraVeiculos.Tests.CupomModule
         public void DeveEditar()
         {
             //arrange
-            var Cupom = new Cupom("GHTRS", "Desconto", 5000.50m, 5000.50m, "Lucas", DateTime.Now, 1);
+            var Cupom = new Cupom("GHTRS", "Desconto", 10m, 1000m, "Lucas", DateTime.Now, 1);
 
             //action
             controlador.InserirNovo(Cupom);
 
-            var novoCupom = new Cupom("GHTRS", "Desconto", 5000.50m, 5000.50m, "Lucas", DateTime.Now, 1);
+            var novoCupom = new Cupom("GHTRS", "Desconto", 10m, 1000m, "Lucas", DateTime.Now, 1);
 
             controlador.Editar(Cupom.Id, novoCupom);
 
@@ -70,7 +70,7 @@ namespace LocadoraVeiculos.Tests.CupomModule
         public void DeveSelecionarTodosPorId()
         {
             //arrange
-            var Cupom = new Cupom("GHTRS", "Desconto", 5000.50m, 5000.50m, "Lucas", DateTime.Now, 1);
+            var Cupom = new Cupom("GHTRS", "Desconto", 10m, 1000m, "Lucas", DateTime.Now, 1);
 
             //action
             controlador.InserirNovo(Cupom);
@@ -85,13 +85,13 @@ namespace LocadoraVeiculos.Tests.CupomModule
         public void DeveSelecionarTodosCuponsOrdenadosPorNome()
         {
             //arrange
-            var C1 = new Cupom("GHTRS", "Desconto", 5000.50m, 5000.50m, "Lucas", DateTime.Now, 1);
+            var C1 = new Cupom("GHTRS", "Desconto", 10m, 1000m, "Lucas", DateTime.Now, 1);
             controlador.InserirNovo(C1);
 
-            var C2 = new Cupom("GHJSS", "Desconto", 5000.50m, 5000.50m, "Lucas", DateTime.Now, 1);
+            var C2 = new Cupom("GHJSS", "Desconto", 10m, 1000m, "Lucas", DateTime.Now, 1);
             controlador.InserirNovo(C2);
 
-            var C3 = new Cupom("MJNHDS", "Desconto", 5000.50m, 5000.50m, "Lucas", DateTime.Now, 1);
+            var C3 = new Cupom("MJNHDS", "Desconto", 10m, 1000m, "Lucas", DateTime.Now, 1);
             controlador.InserirNovo(C3);
 
             //action

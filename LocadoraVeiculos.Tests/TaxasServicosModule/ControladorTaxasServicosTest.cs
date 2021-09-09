@@ -23,7 +23,7 @@ namespace LocadoraVeiculos.Tests.TaxasServicosModule
         public void DeveInserir()
         {
             //arrange
-            var novaTaxaServico = new TaxasServicos("Fixa","Lavar o carro", 5000.50m);
+            var novaTaxaServico = new TaxasServicos("Fixa","Lavar o carro", 1000m);
 
             //action
             controlador.InserirNovo(novaTaxaServico);
@@ -36,10 +36,10 @@ namespace LocadoraVeiculos.Tests.TaxasServicosModule
         [TestMethod] 
         public void DeveAtualizar()
         {
-            var taxasServicos = new TaxasServicos("Diária", "Melhor opção", 5000.50m);
+            var taxasServicos = new TaxasServicos("Diária", "Melhor opção", 1000m);
             controlador.InserirNovo(taxasServicos);
 
-            var NovataxasServicos = new TaxasServicos("Fixa", "Melhor opção", 5000.50m);
+            var NovataxasServicos = new TaxasServicos("Fixa", "Melhor opção", 1000m);
 
             controlador.Editar(taxasServicos.Id, NovataxasServicos);
 
@@ -50,7 +50,7 @@ namespace LocadoraVeiculos.Tests.TaxasServicosModule
         [TestMethod]
         public void DeveExcluir()
         {
-            var taxasServicos = new TaxasServicos("Diária", "Melhor opção", 5000.50m);
+            var taxasServicos = new TaxasServicos("Diária", "Melhor opção", 1000m);
             controlador.InserirNovo(taxasServicos);
 
             controlador.Excluir(taxasServicos.Id);
@@ -62,7 +62,7 @@ namespace LocadoraVeiculos.Tests.TaxasServicosModule
         [TestMethod]
         public void DeveSelecionar_TaxasServicos_PorId()
         {
-            var taxasServicos = new TaxasServicos("Diária", "Melhor opção", 5000.50m);
+            var taxasServicos = new TaxasServicos("Diária", "Melhor opção", 1000m);
             controlador.InserirNovo(taxasServicos);
 
             TaxasServicos TaxasServicosAtualizado = controlador.SelecionarPorId(taxasServicos.Id);
@@ -73,13 +73,13 @@ namespace LocadoraVeiculos.Tests.TaxasServicosModule
         [TestMethod]
         public void DeveSelecionar_TodosFuncionarios_OrdenadosPorNome()
         {
-            var TF1 = new TaxasServicos("Diária", "Cadeirinha", 5000.50m);
+            var TF1 = new TaxasServicos("Diária", "Cadeirinha", 1000m);
             controlador.InserirNovo(TF1);
 
-            var TF2 = new TaxasServicos("Novo", "Gps", 5000.50m);
+            var TF2 = new TaxasServicos("Novo", "Gps", 1000m);
             controlador.InserirNovo(TF2);
 
-            var TF3 = new TaxasServicos("Fixa", "Lavar o carro", 5000.50m);
+            var TF3 = new TaxasServicos("Fixa", "Lavar o carro", 1000m);
             controlador.InserirNovo(TF3);
 
             var taxas = controlador.SelecionarTodos();

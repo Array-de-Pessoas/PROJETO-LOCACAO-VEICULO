@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using LocadoraVeiculos.Controladores.CupomModule;
 using LocadoraVeiculos.Controladores.LocacaoModule;
 using LocadoraVeiculos.Controladores.Shared;
 using LocadoraVeiculos.Dominio.LocacaoModule;
@@ -15,17 +16,19 @@ namespace LocadoraVeiculos.Tests.xLocacaoModule
     public class xControladorLocacaoTest
     {
         ControladorLocacao controladorLocacao;
+        ControladorCupom controladorCupom;
         Locacao locacaoX, locacaoY;
         private void GerarLocacaoY()
         {
-            locacaoY = new Locacao(1, 1, 1, 1, 1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE", DateTime.Now.Date, 1);
+            locacaoY = new Locacao(1, 1, 1, 1, 1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE", DateTime.Now.Date, 1, controladorCupom.SelecionarPorId(1));
         }
         private void GerarLocacaoX()
         {
-            locacaoX = new Locacao(1, 1, 1, 1, 1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE", DateTime.Now.Date, 1);
+            locacaoX = new Locacao(1, 1, 1, 1, 1000, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(1).Day), "LIVRE", DateTime.Now.Date, 1, controladorCupom.SelecionarPorId(1));
         }
         public xControladorLocacaoTest()
         {
+            controladorCupom = new ControladorCupom();
             controladorLocacao = new ControladorLocacao();
         }
         private void ResetarBancoDeDados()
@@ -98,5 +101,8 @@ namespace LocadoraVeiculos.Tests.xLocacaoModule
             resultado.Should().Be(true);
             ResetarBancoDeDados();
         }
+
+       
+
     }
 }

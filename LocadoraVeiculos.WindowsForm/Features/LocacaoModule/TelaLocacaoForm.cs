@@ -142,11 +142,14 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             int id_seguro = Convert.ToInt32(cbSeguro.SelectedValue);
             int id_cliente = Convert.ToInt32(cbCliente.SelectedValue);
             int id_taxa = Convert.ToInt32(cbTaxa.SelectedValue);
-
+           
             DateTime dataLocacao = dtLocacao.Value;
             DateTime dataDevolucao = dtDevolucao.Value;
 
-            locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 1);    
+            int id_cupom = Convert.ToInt32(CbCupom.SelectedValue);
+            Cupom cupom = controladorCupom.SelecionarPorId(id_cupom);
+
+            locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 1, cupom);    
 
             if (locacao.Validar() != "ESTA_VALIDO")
             {
@@ -169,7 +172,10 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
             DateTime dataLocacao = dtLocacao.Value;
             DateTime dataDevolucao = dtDevolucao.Value;
 
-            locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 0);
+            int id_cupom = Convert.ToInt32(CbCupom.SelectedValue);
+            Cupom cupom = controladorCupom.SelecionarPorId(id_cupom);
+
+            locacao = new Locacao(id_cliente, id_veiculo, id_taxa, id_seguro, preco, dataLocacao, dataDevolucao, plano, DateTime.Now.Date, 0, cupom);
 
             if (locacao.Validar() != "ESTA_VALIDO")
             {
