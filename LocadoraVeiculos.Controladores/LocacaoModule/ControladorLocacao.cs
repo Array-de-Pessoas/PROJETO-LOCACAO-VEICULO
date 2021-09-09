@@ -275,5 +275,10 @@ namespace LocadoraVeiculos.Controladores.LocacaoModule
             }
             return 0;
         }
+
+        //private double CalcularDesconto(double valorLocacao)
+        //{
+            
+        //}
     }
 }
