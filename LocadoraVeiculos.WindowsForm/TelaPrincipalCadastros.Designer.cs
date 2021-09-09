@@ -192,7 +192,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             // lOCAÇÃOToolStripMenuItem
             // 
-            this.lOCAÇÃOToolStripMenuItem.Font = new System.Drawing.Font("Bahnschrift Light", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lOCAÇÃOToolStripMenuItem.Font = new System.Drawing.Font("Bahnschrift Light", 10.2F);
             this.lOCAÇÃOToolStripMenuItem.Name = "lOCAÇÃOToolStripMenuItem";
             this.lOCAÇÃOToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.lOCAÇÃOToolStripMenuItem.Text = "LOCAÇÃO";
@@ -200,7 +200,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             // CadastroDevolucao
             // 
-            this.CadastroDevolucao.Font = new System.Drawing.Font("Bahnschrift Light", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CadastroDevolucao.Font = new System.Drawing.Font("Bahnschrift Light", 10.2F);
             this.CadastroDevolucao.Name = "CadastroDevolucao";
             this.CadastroDevolucao.Size = new System.Drawing.Size(224, 28);
             this.CadastroDevolucao.Text = "DEVOLUÇÃO";
@@ -208,7 +208,7 @@ namespace LocadoraVeiculos.WindowsForm
             // 
             // CadastroCupom
             // 
-            this.CadastroCupom.Font = new System.Drawing.Font("Bahnschrift Light", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CadastroCupom.Font = new System.Drawing.Font("Bahnschrift Light", 10.2F);
             this.CadastroCupom.Name = "CadastroCupom";
             this.CadastroCupom.Size = new System.Drawing.Size(224, 28);
             this.CadastroCupom.Text = "CUPOM";
