@@ -400,4 +400,10 @@
   <data name="Cupom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cupom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="quilometragem_do_veículo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quilometragem do veículo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Velocimetro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Velocimetro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

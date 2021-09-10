@@ -151,6 +151,12 @@
     <Compile Include="Features\LocacaoModule\TabelaLocacaoControl.Designer.cs">
       <DependentUpon>TabelaLocacaoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\LocacaoModule\TelaDevolucaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\LocacaoModule\TelaDevolucaoForm.Designer.cs">
+      <DependentUpon>TelaDevolucaoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\LocacaoModule\TelaLocacaoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\LocacaoModule\TabelaLocacaoControl.resx">
       <DependentUpon>TabelaLocacaoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\LocacaoModule\TelaDevolucaoForm.resx">
+      <DependentUpon>TelaDevolucaoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\LocacaoModule\TelaLocacaoForm.resx">
       <DependentUpon>TelaLocacaoForm.cs</DependentUpon>
@@ -713,6 +722,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cupom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quilometragem do veículo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Velocimetro.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

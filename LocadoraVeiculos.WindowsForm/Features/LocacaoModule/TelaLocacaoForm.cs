@@ -27,6 +27,9 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 {
     public partial class TelaLocacaoForm : Form
     {
+        public static string PegarId;
+        public static string PegarDataLocacao;
+        public static int PegarIdVeiculo;
         ControladorLocacao controladorLocacao = new ControladorLocacao();
         ControladorCliente controladorCliente;
         ControladorVeiculo controladorVeiculo;
@@ -157,6 +160,33 @@ namespace LocadoraVeiculos.WindowsForm.Features.LocacaoModule
 
         }
         private void btnRegistraDevolucao_Click(object sender, EventArgs e)
+        {
+            PegarId = txtId.Text;
+            PegarDataLocacao = dtLocacao.Value.ToShortDateString();
+
+            List<Veiculo> veiculo = controladorVeiculo.SelecionarTodos();
+
+            foreach (var item in veiculo)
+            {
+                if (item.Placa == cbVeiculo.Text)
+                {
+                    Veiculo veiculoSelecionado = controladorVeiculo.SelecionarPorId(item.Id);
+
+                    TelaDevolucaoForm telaDevolucao = new TelaDevolucaoForm();
+
+                    telaDevolucao.Veiculo = veiculoSelecionado;
+
+                    if (telaDevolucao.ShowDialog() == DialogResult.OK)
+                    {
+                        controladorVeiculo.Editar(item.Id, telaDevolucao.Veiculo);
+
+                        GravarDevolucao();
+                    }
+                }
+            }
+        }
+
+        private void GravarDevolucao()
         {
             double preco = 0;
 

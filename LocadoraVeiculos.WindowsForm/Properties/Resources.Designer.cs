@@ -783,6 +783,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap quilometragem_do_veículo {
+            get {
+                object obj = ResourceManager.GetObject("quilometragem_do_veículo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Rg {
             get {
                 object obj = ResourceManager.GetObject("Rg", resourceCulture);
@@ -996,6 +1006,16 @@ namespace LocadoraVeiculos.WindowsForm.Properties {
         internal static System.Drawing.Bitmap Veiculo {
             get {
                 object obj = ResourceManager.GetObject("Veiculo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Velocimetro {
+            get {
+                object obj = ResourceManager.GetObject("Velocimetro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
